@@ -1,0 +1,374 @@
+/* =========================
+   GLOBAL SECTION SPACING
+========================= */
+
+.pillars-section {
+  position: relative;
+  padding: 90px 0 70px;
+  background: linear-gradient(
+    to bottom,
+    #4f90df 0%,
+    #4f90df 38%,
+    #f4f4f4 38%,
+    #f4f4f4 100%
+  );
+  overflow: hidden;
+}
+
+.pillars-section::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 58%;
+  width: 100%;
+  height: 120px;
+  background: #f4f4f4;
+  border-radius: 50% 50% 0 0;
+}
+
+.pillars-heading {
+  position: relative;
+  z-index: 2;
+  margin-bottom: 45px;
+}
+
+.pillars-heading h2 {
+  font-size: 14px;
+  font-weight: 700;
+  color: #fff;
+  letter-spacing: 2px;
+  margin: 0;
+}
+
+/* =========================
+   PILLAR CARD
+========================= */
+
+.pillar-card {
+  position: relative;
+  z-index: 3;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+  transition: 0.35s ease;
+  height: 100%;
+}
+
+.pillar-card:hover {
+  transform: translateY(-8px);
+}
+
+.pillar-card-image {
+  position: relative;
+  overflow: hidden;
+}
+
+.pillar-card-image img {
+  width: 100%;
+  height: 210px;
+  object-fit: cover;
+  display: block;
+  transition: 0.4s ease;
+}
+
+.pillar-card:hover .pillar-card-image img {
+  transform: scale(1.05);
+}
+
+.pillar-card-link-icon {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  width: 42px;
+  height: 42px;
+  background: #2f7df4;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  font-size: 18px;
+  text-decoration: none;
+  box-shadow: 0 6px 16px rgba(47, 125, 244, 0.3);
+}
+
+.pillar-card-content {
+  padding: 22px;
+}
+
+.pillar-card-title {
+  font-size: 20px;
+  font-weight: 700;
+  color: #111827;
+  margin-bottom: 12px;
+}
+
+.pillar-card-description {
+  font-size: 15px;
+  line-height: 1.7;
+  color: #6b7280;
+  margin-bottom: 18px;
+}
+
+.pillar-card-link {
+  color: #2f7df4;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.pillar-card-link:hover {
+  color: #0f5dd8;
+}
+
+/* =========================
+   REACH SECTION
+========================= */
+
+.reach-section {
+  padding: 40px 0 90px;
+  background: #f4f4f4;
+}
+
+.reach-wrapper {
+  background: #ffd600;
+  border-radius: 26px;
+  padding: 60px;
+  overflow: hidden;
+  position: relative;
+}
+
+.section-tag {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 22px;
+  font-size: 13px;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #f97316;
+  letter-spacing: 1px;
+}
+
+.section-tag span {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #f97316;
+}
+
+.reach-content h2 {
+  font-size: 48px;
+  line-height: 1.2;
+  font-weight: 800;
+  color: #111827;
+  margin-bottom: 22px;
+}
+
+.reach-content h2 span {
+  display: block;
+}
+
+.reach-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  color: #374151;
+  margin-bottom: 28px;
+  max-width: 480px;
+}
+
+.reach-points {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.reach-point {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  color: #111827;
+}
+
+.reach-point i {
+  color: #2f7df4;
+  font-size: 18px;
+}
+
+.india-map {
+  text-align: center;
+}
+
+.india-map img {
+  width: 100%;
+  max-width: 420px;
+  object-fit: contain;
+}
+
+/* =========================
+   STATS SECTION
+========================= */
+
+.stats-wrapper {
+  margin-top: 35px;
+  background: #fff;
+  border-radius: 18px;
+  padding: 28px 20px;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.05);
+}
+
+.stat-box {
+  text-align: center;
+}
+
+.stat-box h3 {
+  font-size: 34px;
+  font-weight: 800;
+  color: #2f7df4;
+  margin-bottom: 10px;
+}
+
+.stat-box p {
+  margin: 0;
+  color: #6b7280;
+  font-size: 14px;
+  font-weight: 500;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1199px) {
+  .reach-content h2 {
+    font-size: 40px;
+  }
+
+  .reach-wrapper {
+    padding: 50px;
+  }
+}
+
+@media (max-width: 991px) {
+  .pillars-section {
+    padding: 70px 0 60px;
+  }
+
+  .pillars-section::after {
+    bottom: 62%;
+  }
+
+  .reach-wrapper {
+    padding: 40px 30px;
+  }
+
+  .reach-content {
+    margin-bottom: 40px;
+  }
+
+  .reach-content h2 {
+    font-size: 34px;
+  }
+
+  .pillar-card-image img {
+    height: 240px;
+  }
+}
+
+@media (max-width: 767px) {
+  .pillars-heading {
+    text-align: center;
+  }
+
+  .pillar-card-content {
+    padding: 18px;
+  }
+
+  .pillar-card-title {
+    font-size: 18px;
+  }
+
+  .reach-wrapper {
+    padding: 35px 24px;
+    border-radius: 20px;
+  }
+
+  .reach-content h2 {
+    font-size: 28px;
+  }
+
+  .reach-content p {
+    font-size: 15px;
+  }
+
+  .stats-wrapper {
+    padding: 20px;
+  }
+
+  .stat-box h3 {
+    font-size: 26px;
+  }
+}
+
+@media (max-width: 575px) {
+  .pillars-section {
+    background: linear-gradient(
+      to bottom,
+      #4f90df 0%,
+      #4f90df 20%,
+      #f4f4f4 20%,
+      #f4f4f4 100%
+    );
+  }
+
+  .pillars-section::after {
+    display: none;
+  }
+
+  .pillar-card-image img {
+    height: 220px;
+  }
+
+  .reach-wrapper {
+    padding: 28px 18px;
+  }
+
+  .reach-content h2 {
+    font-size: 24px;
+  }
+
+  .reach-point {
+    font-size: 14px;
+  }
+
+  .stat-box {
+    margin-bottom: 20px;
+  }
+}
+
+/* =========================
+   3 + 2 CARD LAYOUT
+========================= */
+
+.pillars-section .row:last-child {
+  justify-content: center;
+}
+
+.pillars-section .row:last-child .col-lg-3 {
+  width: 28%;
+}
+
+@media (max-width: 991px) {
+  .pillars-section .row:last-child .col-lg-3 {
+    width: 50%;
+  }
+}
+
+@media (max-width: 767px) {
+  .pillars-section .row:last-child .col-lg-3 {
+    width: 100%;
+  }
+}

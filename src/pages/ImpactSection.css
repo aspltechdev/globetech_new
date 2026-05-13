@@ -1,0 +1,333 @@
+/* ImpactSection.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.impact-main-section{
+  width:100%;
+  background:#f5f5f5;
+  padding:60px 0;
+  font-family:Arial, Helvetica, sans-serif;
+}
+
+.impact-main-container{
+  width:100%;
+  max-width:1180px;
+  margin:auto;
+  padding:0 20px;
+}
+
+/* HEADER */
+
+.impact-header-area{
+  margin-bottom:35px;
+}
+
+.impact-main-title{
+  font-size:48px;
+  font-weight:700;
+  color:#111111;
+  margin-bottom:14px;
+}
+
+.impact-main-description{
+  max-width:980px;
+  font-size:14px;
+  line-height:1.7;
+  color:#555555;
+}
+
+/* STATS */
+
+.impact-stats-grid{
+  display:grid;
+  grid-template-columns:repeat(4,1fr);
+  gap:22px;
+  margin-bottom:55px;
+}
+
+.impact-single-stat-card{
+  background:#ffffff;
+  border-radius:14px;
+  padding:30px 20px;
+  box-shadow:0 3px 12px rgba(0,0,0,0.08);
+  text-align:center;
+}
+
+.impact-single-stat-card h3{
+  color:#0066ff;
+  font-size:42px;
+  font-weight:700;
+  margin-bottom:10px;
+}
+
+.impact-single-stat-card p{
+  color:#666666;
+  font-size:15px;
+}
+
+/* VOICES */
+
+.impact-voices-header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  margin-bottom:25px;
+}
+
+.impact-voices-header h2{
+  font-size:36px;
+  color:#0066ff;
+  margin-bottom:8px;
+}
+
+.impact-voices-header p{
+  font-size:14px;
+  color:#666666;
+}
+
+.impact-slider-buttons{
+  display:flex;
+  gap:12px;
+}
+
+.impact-slider-buttons button{
+  width:34px;
+  height:34px;
+  border-radius:50%;
+  border:none;
+  background:#ffffff;
+  box-shadow:0 2px 10px rgba(0,0,0,0.08);
+  cursor:pointer;
+  font-size:18px;
+}
+
+/* SLIDER */
+
+.impact-slider-wrapper{
+  width:100%;
+  overflow:hidden;
+  margin-bottom:70px;
+}
+
+.impact-slider-track{
+  display:flex;
+  gap:22px;
+  width:max-content;
+  animation:impactSlideLeft 24s linear infinite;
+}
+
+@keyframes impactSlideLeft{
+  0%{
+    transform:translateX(0);
+  }
+  100%{
+    transform:translateX(-50%);
+  }
+}
+
+.impact-image-card{
+  position:relative;
+  min-width:520px;
+  height:370px;
+  border-radius:22px;
+  overflow:hidden;
+  flex-shrink:0;
+}
+
+.impact-image-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.impact-image-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.15)
+  );
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-end;
+  padding:24px;
+}
+
+.impact-image-overlay span{
+  color:#ffffff;
+  font-size:11px;
+  letter-spacing:1.4px;
+  margin-bottom:10px;
+}
+
+.impact-image-overlay h3{
+  color:#ffffff;
+  font-size:30px;
+  margin-bottom:10px;
+}
+
+.impact-image-overlay p{
+  color:#e7e7e7;
+  font-size:14px;
+  line-height:1.6;
+}
+
+/* TESTIMONIAL */
+
+.impact-testimonial-layout{
+  display:grid;
+  grid-template-columns:320px 1fr;
+  gap:28px;
+}
+
+.impact-testimonial-left{
+  padding-top:15px;
+}
+
+.impact-quote-icon{
+  width:44px;
+  height:44px;
+  border-radius:12px;
+  background:#e8f0ff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  color:#0066ff;
+  font-size:22px;
+  margin-bottom:18px;
+}
+
+.impact-testimonial-left h2{
+  font-size:42px;
+  line-height:1.1;
+  color:#0066ff;
+  margin-bottom:20px;
+}
+
+.impact-testimonial-left p{
+  color:#666666;
+  font-size:14px;
+  line-height:1.8;
+}
+
+/* RIGHT */
+
+.impact-testimonial-grid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:18px;
+}
+
+.impact-testimonial-card{
+  background:#ffffff;
+  border-radius:16px;
+  padding:22px;
+  box-shadow:0 3px 10px rgba(0,0,0,0.06);
+}
+
+.impact-testimonial-card p{
+  color:#555555;
+  font-size:14px;
+  line-height:1.8;
+  margin-bottom:22px;
+}
+
+.impact-user-info{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.impact-user-info img{
+  width:42px;
+  height:42px;
+  border-radius:50%;
+  object-fit:cover;
+}
+
+.impact-user-info h4{
+  font-size:14px;
+  color:#111111;
+  margin-bottom:4px;
+}
+
+.impact-user-info span{
+  font-size:11px;
+  color:#777777;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+
+  .impact-stats-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .impact-testimonial-layout{
+    grid-template-columns:1fr;
+  }
+
+  .impact-image-card{
+    min-width:420px;
+    height:320px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .impact-main-title{
+    font-size:38px;
+  }
+
+  .impact-voices-header{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:20px;
+  }
+
+  .impact-image-card{
+    min-width:340px;
+    height:280px;
+  }
+
+  .impact-testimonial-grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .impact-stats-grid{
+    grid-template-columns:1fr;
+  }
+
+  .impact-main-title{
+    font-size:32px;
+  }
+
+  .impact-voices-header h2{
+    font-size:28px;
+  }
+
+  .impact-image-card{
+    min-width:280px;
+    height:240px;
+  }
+
+  .impact-image-overlay h3{
+    font-size:22px;
+  }
+
+  .impact-testimonial-left h2{
+    font-size:32px;
+  }
+
+}

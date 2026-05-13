@@ -1,0 +1,696 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Outfit",sans-serif;
+  background:#f3f3f3;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.auroPlacementSection{
+  width:100%;
+  padding:90px 0 40px;
+  overflow:hidden;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.auroPlacementContainer{
+  width:100%;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.auroPlacementHeading{
+  max-width:1320px;
+  margin:0 auto 54px;
+  padding:0 28px;
+}
+
+/* TAG */
+
+.auroPlacementTag{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  margin-bottom:16px;
+}
+
+.auroPlacementTag span{
+  width:52px;
+  height:2px;
+
+  background:#ef835c;
+
+  border-radius:999px;
+}
+
+.auroPlacementTag p{
+  color:#ef835c;
+
+  font-size:15px;
+  font-weight:500;
+}
+
+/* TITLE */
+
+.auroPlacementHeading h2{
+  font-size:44px;
+  line-height:1.1;
+
+  color:#171717;
+
+  font-weight:700;
+
+  letter-spacing:-1px;
+}
+
+/* =========================================
+   SLIDER WRAPPER
+========================================= */
+
+.auroSliderWrapper{
+  width:100%;
+  overflow:hidden;
+
+  margin-bottom:34px;
+}
+
+/* =========================================
+   TRACK
+========================================= */
+
+.auroSliderTrack{
+  display:flex;
+  align-items:center;
+
+  gap:42px;
+
+  width:max-content;
+}
+
+/* =========================================
+   FIRST ROW
+========================================= */
+
+.auroSlideRight{
+  animation:slideRight 35s linear infinite;
+}
+
+/* =========================================
+   SECOND ROW
+========================================= */
+
+.auroSlideLeft{
+  animation:slideLeft 35s linear infinite;
+}
+
+/* =========================================
+   ANIMATIONS
+========================================= */
+
+@keyframes slideRight{
+
+  0%{
+    transform:translateX(-50%);
+  }
+
+  100%{
+    transform:translateX(0%);
+  }
+}
+
+@keyframes slideLeft{
+
+  0%{
+    transform:translateX(0%);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+}
+
+/* =========================================
+   LOGO CARD
+========================================= */
+
+.auroPlacementLogoCard{
+  min-width:220px;
+  height:86px;
+
+  background:#ffffff;
+
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:18px;
+
+  box-shadow:
+    0 2px 3px rgba(0,0,0,0.05),
+    0 4px 10px rgba(0,0,0,0.06);
+
+  transition:0.3s ease;
+}
+
+.auroPlacementLogoCard:hover{
+  transform:translateY(-2px);
+}
+
+/* SMALL CARD */
+
+.smallCard{
+  min-width:180px;
+  height:72px;
+}
+
+/* LOGO */
+
+.auroPlacementLogoCard img{
+  max-width:78%;
+  max-height:44px;
+
+  object-fit:contain;
+}
+
+/* =========================================
+   TECH ADVANTAGE SECTION
+========================================= */
+
+.auroTechWrapper{
+  width:100%;
+
+  max-width:1100px;
+
+  margin:44px auto 0;
+
+  display:flex;
+  align-items:flex-start;
+  justify-content:center;
+
+  gap:70px;
+
+  padding:0 24px;
+}
+
+/* =========================================
+   LEFT CONTENT
+========================================= */
+
+.auroTechContent{
+  width:430px;
+
+  background:#ffffff;
+
+  border-radius:22px;
+
+  padding:42px 38px;
+
+  box-shadow:
+    0 2px 3px rgba(0,0,0,0.05),
+    0 6px 14px rgba(0,0,0,0.06);
+}
+
+/* TITLE */
+
+.auroTechContent h3{
+  font-size:22px;
+
+  color:#111;
+
+  font-weight:700;
+
+  text-align:center;
+
+  margin-bottom:34px;
+}
+
+/* ITEM */
+
+.auroTechItem{
+  text-align:center;
+
+  margin-bottom:34px;
+}
+
+.auroTechItem:last-child{
+  margin-bottom:0;
+}
+
+/* ITEM TITLE */
+
+.auroTechItem h4{
+  font-size:20px;
+
+  color:#111;
+
+  font-weight:700;
+
+  margin-bottom:14px;
+}
+
+/* ITEM TEXT */
+
+.auroTechItem p{
+  font-size:15px;
+  line-height:1.7;
+
+  color:#3d3d3d;
+}
+
+/* =========================================
+   RIGHT GRID
+========================================= */
+
+.auroTechGrid{
+  flex:1;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:28px;
+}
+
+/* GRID CARD */
+
+.auroTechGridCard{
+  height:94px;
+
+  background:#ffffff;
+
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:16px;
+
+  box-shadow:
+    0 2px 3px rgba(0,0,0,0.05),
+    0 6px 14px rgba(0,0,0,0.06);
+
+  transition:0.3s ease;
+}
+
+.auroTechGridCard:hover{
+  transform:translateY(-2px);
+}
+
+/* LOGO */
+
+.auroTechGridCard img{
+  max-width:78%;
+  max-height:52px;
+
+  object-fit:contain;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:1100px){
+
+  .auroTechWrapper{
+    flex-direction:column;
+
+    align-items:center;
+  }
+
+  .auroTechGrid{
+    width:100%;
+  }
+
+  .auroTechContent{
+    width:100%;
+    max-width:700px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .auroPlacementSection{
+    padding:70px 0 30px;
+  }
+
+  .auroPlacementHeading{
+    padding:0 16px;
+
+    margin-bottom:36px;
+  }
+
+  .auroPlacementTag p{
+    font-size:14px;
+  }
+
+  .auroPlacementHeading h2{
+    font-size:32px;
+  }
+
+  .auroSliderTrack{
+    gap:20px;
+  }
+
+  .auroPlacementLogoCard{
+    min-width:170px;
+    height:72px;
+
+    border-radius:14px;
+  }
+
+  .smallCard{
+    min-width:150px;
+    height:64px;
+  }
+
+  .auroPlacementLogoCard img{
+    max-height:34px;
+  }
+
+  .auroTechWrapper{
+    margin-top:30px;
+
+    gap:30px;
+
+    padding:0 16px;
+  }
+
+  .auroTechContent{
+    padding:30px 24px;
+  }
+
+  .auroTechContent h3{
+    font-size:20px;
+  }
+
+  .auroTechItem h4{
+    font-size:18px;
+  }
+
+  .auroTechItem p{
+    font-size:14px;
+  }
+
+  .auroTechGrid{
+    grid-template-columns:repeat(2,1fr);
+
+    gap:18px;
+  }
+
+  .auroTechGridCard{
+    height:82px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .auroPlacementHeading h2{
+    font-size:26px;
+  }
+
+  .auroPlacementLogoCard{
+    min-width:145px;
+    height:64px;
+  }
+
+  .smallCard{
+    min-width:135px;
+    height:60px;
+  }
+
+  .auroTechGrid{
+    grid-template-columns:1fr;
+  }
+
+  .auroTechGridCard{
+    height:74px;
+  }
+}
+
+
+
+
+
+
+
+/* =========================================
+   STRATEGIC SECTION
+========================================= */
+
+.auroStrategicSection{
+  width:100%;
+
+  margin-top:60px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.auroStrategicTitle{
+  text-align:center;
+
+  font-size:22px;
+  font-weight:700;
+
+  color:#111;
+
+  margin-bottom:46px;
+}
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.auroTechWrapper{
+  width:100%;
+
+  max-width:980px;
+
+  margin:0 auto;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  gap:70px;
+
+  padding:0 24px;
+}
+
+/* =========================================
+   LEFT CARD
+========================================= */
+
+.auroTechContent{
+  width:430px;
+
+  background:#ffffff;
+
+  border-radius:22px;
+
+  padding:42px 36px;
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.05),
+    0 8px 18px rgba(0,0,0,0.06);
+}
+
+/* =========================================
+   ITEM
+========================================= */
+
+.auroTechItem{
+  text-align:center;
+
+  margin-bottom:34px;
+}
+
+.auroTechItem:last-child{
+  margin-bottom:0;
+}
+
+/* ITEM TITLE */
+
+.auroTechItem h4{
+  font-size:20px;
+
+  color:#111;
+
+  font-weight:700;
+
+  margin-bottom:14px;
+}
+
+/* ITEM TEXT */
+
+.auroTechItem p{
+  font-size:15px;
+
+  line-height:1.7;
+
+  color:#3e3e3e;
+}
+
+/* =========================================
+   RIGHT GRID
+========================================= */
+
+.auroTechGrid{
+  flex:1;
+
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:24px;
+}
+
+/* =========================================
+   GRID CARD
+========================================= */
+
+.auroTechGridCard{
+  height:96px;
+
+  background:#ffffff;
+
+  border-radius:16px;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  padding:16px;
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.05),
+    0 8px 18px rgba(0,0,0,0.06);
+
+  transition:0.3s ease;
+}
+
+.auroTechGridCard:hover{
+  transform:translateY(-2px);
+}
+
+/* LOGO */
+
+.auroTechGridCard img{
+  max-width:75%;
+  max-height:52px;
+
+  object-fit:contain;
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:992px){
+
+  .auroTechWrapper{
+    flex-direction:column;
+
+    gap:34px;
+  }
+
+  .auroTechContent{
+    width:100%;
+    max-width:700px;
+  }
+
+  .auroTechGrid{
+    width:100%;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .auroStrategicSection{
+    margin-top:44px;
+  }
+
+  .auroStrategicTitle{
+    font-size:18px;
+
+    margin-bottom:30px;
+  }
+
+  .auroTechWrapper{
+    padding:0 16px;
+  }
+
+  .auroTechContent{
+    padding:30px 24px;
+  }
+
+  .auroTechItem{
+    margin-bottom:28px;
+  }
+
+  .auroTechItem h4{
+    font-size:18px;
+  }
+
+  .auroTechItem p{
+    font-size:14px;
+  }
+
+  .auroTechGrid{
+    grid-template-columns:repeat(2,1fr);
+
+    gap:16px;
+  }
+
+  .auroTechGridCard{
+    height:82px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .auroTechGrid{
+    grid-template-columns:1fr;
+  }
+
+  .auroTechGridCard{
+    height:74px;
+  }
+}

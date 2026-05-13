@@ -1,0 +1,303 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Outfit",sans-serif;
+  background:#f3f3f3;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.auroCareerSection{
+  width:100%;
+  padding:90px 24px;
+  overflow:hidden;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.auroCareerContainer{
+  width:100%;
+  max-width:1320px;
+  margin:0 auto;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.auroCareerHeading{
+  margin-bottom:42px;
+}
+
+/* TAG */
+
+.auroCareerTag{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  margin-bottom:18px;
+}
+
+.auroCareerTag span{
+  width:56px;
+  height:2px;
+
+  background:#ef835c;
+
+  border-radius:999px;
+}
+
+.auroCareerTag p{
+  color:#ef835c;
+
+  font-size:16px;
+  font-weight:500;
+}
+
+/* TITLE */
+
+.auroCareerHeading h2{
+  font-size:52px;
+  line-height:1.1;
+
+  color:#171717;
+
+  font-weight:700;
+
+  letter-spacing:-1.5px;
+
+  max-width:760px;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.auroCareerGrid{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+
+  gap:34px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.auroCareerCard{
+  position:relative;
+
+  width:100%;
+  height:330px;
+
+  border-radius:26px;
+
+  overflow:hidden;
+
+  cursor:pointer;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,0.08);
+
+  transition:0.4s ease;
+}
+
+.auroCareerCard:hover{
+  transform:translateY(-5px);
+}
+
+/* IMAGE */
+
+.auroCareerCard img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+}
+
+/* =========================================
+   OVERLAY
+========================================= */
+
+.auroCareerOverlay{
+  position:absolute;
+  inset:0;
+
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.85) 0%,
+    rgba(0,0,0,0.38) 45%,
+    rgba(0,0,0,0.08) 100%
+  );
+
+  z-index:2;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.auroCareerContent{
+  position:absolute;
+
+  left:28px;
+  bottom:28px;
+
+  z-index:5;
+}
+
+/* TITLE */
+
+.auroCareerContent h3{
+  color:#fff;
+
+  font-size:34px;
+  line-height:1.1;
+
+  font-weight:600;
+
+  margin-bottom:12px;
+}
+
+/* DESCRIPTION */
+
+.auroCareerContent p{
+  color:rgba(255,255,255,0.88);
+
+  font-size:18px;
+  line-height:1.7;
+
+  max-width:470px;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+  .auroCareerHeading h2{
+    font-size:44px;
+  }
+
+  .auroCareerCard{
+    height:300px;
+  }
+
+  .auroCareerContent h3{
+    font-size:28px;
+  }
+
+  .auroCareerContent p{
+    font-size:16px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:992px){
+
+  .auroCareerGrid{
+    grid-template-columns:1fr;
+  }
+
+  .auroCareerCard{
+    height:360px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .auroCareerSection{
+    padding:70px 16px;
+  }
+
+  .auroCareerHeading{
+    margin-bottom:32px;
+  }
+
+  .auroCareerTag p{
+    font-size:14px;
+  }
+
+  .auroCareerHeading h2{
+    font-size:34px;
+
+    line-height:1.2;
+
+    letter-spacing:-1px;
+  }
+
+  .auroCareerGrid{
+    gap:24px;
+  }
+
+  .auroCareerCard{
+    height:280px;
+
+    border-radius:22px;
+  }
+
+  .auroCareerContent{
+    left:20px;
+    bottom:20px;
+  }
+
+  .auroCareerContent h3{
+    font-size:24px;
+
+    margin-bottom:8px;
+  }
+
+  .auroCareerContent p{
+    font-size:14px;
+
+    line-height:1.6;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .auroCareerHeading h2{
+    font-size:28px;
+  }
+
+  .auroCareerCard{
+    height:240px;
+  }
+
+  .auroCareerContent h3{
+    font-size:20px;
+  }
+
+  .auroCareerContent p{
+    font-size:13px;
+  }
+}

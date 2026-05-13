@@ -1,0 +1,291 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Outfit",sans-serif;
+  background:#f3f3f3;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.auroTestimonialSection{
+  width:100%;
+  padding:90px 0;
+  overflow:hidden;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.auroTestimonialContainer{
+  width:100%;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.auroTestimonialHeading{
+  text-align:center;
+
+  margin-bottom:54px;
+}
+
+.auroTestimonialHeading h2{
+  font-size:42px;
+  line-height:1.2;
+
+  color:#171717;
+
+  font-weight:700;
+}
+
+/* =========================================
+   SLIDER WRAPPER
+========================================= */
+
+.auroSliderWrapper{
+  width:100%;
+  overflow:hidden;
+
+  margin-bottom:36px;
+}
+
+.bottomSpacing{
+  margin-bottom:0;
+}
+
+/* =========================================
+   TRACK
+========================================= */
+
+.auroSliderTrack{
+  display:flex;
+  align-items:stretch;
+
+  gap:34px;
+
+  width:max-content;
+}
+
+/* =========================================
+   RIGHT SLIDE
+========================================= */
+
+.auroSlideRight{
+  animation:auroSlideRight 40s linear infinite;
+}
+
+/* =========================================
+   LEFT SLIDE
+========================================= */
+
+.auroSlideLeft{
+  animation:auroSlideLeft 40s linear infinite;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes auroSlideRight{
+
+  0%{
+    transform:translateX(-50%);
+  }
+
+  100%{
+    transform:translateX(0%);
+  }
+}
+
+@keyframes auroSlideLeft{
+
+  0%{
+    transform:translateX(0%);
+  }
+
+  100%{
+    transform:translateX(-50%);
+  }
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.auroTestimonialCard{
+  min-width:420px;
+
+  background:#ffffff;
+
+  border-radius:22px;
+
+  padding:34px 30px;
+
+  min-height:350px;
+
+  box-shadow:
+    0 2px 4px rgba(0,0,0,0.05),
+    0 10px 24px rgba(0,0,0,0.06);
+
+  transition:0.3s ease;
+}
+
+.auroTestimonialCard:hover{
+  transform:translateY(-4px);
+}
+
+/* =========================================
+   BLUE BORDER
+========================================= */
+
+.blueBorder{
+  border:2px dashed #2196ff;
+}
+
+/* =========================================
+   NAME
+========================================= */
+
+.auroTestimonialCard h3{
+  font-size:28px;
+  line-height:1.2;
+
+  color:#171717;
+
+  font-weight:700;
+
+  margin-bottom:10px;
+}
+
+/* =========================================
+   ROLE
+========================================= */
+
+.auroTestimonialCard h4{
+  font-size:20px;
+
+  color:#2e2e2e;
+
+  font-weight:600;
+
+  line-height:1.5;
+
+  margin-bottom:20px;
+}
+
+/* =========================================
+   STARS
+========================================= */
+
+.auroStars{
+  display:flex;
+  align-items:center;
+
+  gap:8px;
+
+  margin-bottom:24px;
+}
+
+/* =========================================
+   TEXT
+========================================= */
+
+.auroTestimonialCard p{
+  font-size:17px;
+  line-height:1.8;
+
+  color:#4b4b4b;
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .auroTestimonialSection{
+    padding:70px 0;
+  }
+
+  .auroTestimonialHeading{
+    margin-bottom:34px;
+  }
+
+  .auroTestimonialHeading h2{
+    font-size:30px;
+  }
+
+  .auroSliderTrack{
+    gap:20px;
+  }
+
+  .auroTestimonialCard{
+    min-width:300px;
+
+    min-height:auto;
+
+    border-radius:18px;
+
+    padding:26px 22px;
+  }
+
+  .auroTestimonialCard h3{
+    font-size:22px;
+  }
+
+  .auroTestimonialCard h4{
+    font-size:16px;
+  }
+
+  .auroStars{
+    gap:6px;
+
+    margin-bottom:18px;
+  }
+
+  .auroTestimonialCard p{
+    font-size:14px;
+    line-height:1.7;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .auroTestimonialHeading h2{
+    font-size:26px;
+  }
+
+  .auroTestimonialCard{
+    min-width:260px;
+  }
+
+  .auroTestimonialCard h3{
+    font-size:20px;
+  }
+
+  .auroTestimonialCard h4{
+    font-size:15px;
+  }
+
+  .auroTestimonialCard p{
+    font-size:13px;
+  }
+}

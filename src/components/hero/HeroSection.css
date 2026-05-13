@@ -1,0 +1,389 @@
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Outfit", sans-serif;
+  background:#f3f3f3;
+}
+
+/* =========================================
+   HERO SECTION
+========================================= */
+
+.auroHeroSection{
+  width:100%;
+  padding:0;
+  overflow:hidden;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.auroHeroContainer{
+  width:100%;
+  max-width:100%;
+  margin:0 auto;
+  padding:0;
+}
+
+/* =========================================
+   HERO WRAPPER
+========================================= */
+
+.auroHeroWrapper{
+  width:100%;
+  min-height:300px;
+  border-radius:0 0 0 0;
+  overflow:hidden;
+  display:flex;
+  position:relative;
+
+  background:linear-gradient(
+    135deg,
+    #6d95c3 0%,
+    #1869d0 100%
+  );
+}
+
+/* =========================================
+   LEFT SIDE
+========================================= */
+
+.auroHeroLeft{
+  width:56%;
+  padding:28px 0 90px 72px;
+  position:relative;
+  z-index:5;
+  display:flex;
+  flex-direction:column;
+  justify-content:flex-start;
+}
+
+/* =========================================
+   HERO CONTENT
+========================================= */
+
+.auroHeroContent{
+  max-width:540px;
+}
+
+.auroHeroContent h1{
+  font-size:60px;
+  line-height:0.98;
+  font-weight:700;
+  color:#fff;
+  letter-spacing:-2px;
+  margin-bottom:14px;
+}
+
+.auroHeroContent p{
+  color:rgba(255,255,255,0.84);
+  font-size:15px;
+  line-height:1.8;
+  font-weight:300;
+  max-width:520px;
+  margin-bottom:22px;
+}
+
+/* =========================================
+   BUTTONS
+========================================= */
+
+.auroHeroButtons{
+  display:flex;
+  align-items:center;
+  gap:22px;
+}
+
+/* DONATE BUTTON */
+
+.auroDonateBtn{
+  height:36px;
+  padding:0 18px;
+  border:none;
+  border-radius:999px;
+  background:#fff;
+  color:#111;
+  font-size:11px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.auroDonateBtn i{
+  font-size:15px;
+}
+
+.auroDonateBtn:hover{
+  transform:translateY(-2px);
+}
+
+/* PROCESS BUTTON */
+
+.auroProcessBtn{
+  border:none;
+  background:transparent;
+  color:#fff;
+  font-size:12px;
+  font-weight:500;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  cursor:pointer;
+}
+
+.auroProcessBtn span{
+  width:30px;
+  height:30px;
+  border-radius:50%;
+  background:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* =========================================
+   NAVIGATION BUTTONS
+========================================= */
+
+.auroHeroNavigation{
+  position:absolute;
+  left:22px;
+  bottom:0;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  z-index:10;
+}
+
+.auroHeroNavigation button{
+  width:56px;
+  height:56px;
+  border:none;
+  border-radius:50%;
+  background:#0d6efd;
+  color:#fff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.auroHeroNavigation button:hover{
+  transform:scale(1.05);
+}
+
+/* =========================================
+   RIGHT IMAGE SIDE
+========================================= */
+
+.auroHeroRight{
+  width:44%;
+  position:relative;
+  overflow:hidden;
+}
+
+.auroHeroRight img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  object-position:center;
+  display:block;
+  position:relative;
+  z-index:3;
+}
+
+/* =========================================
+   CIRCLE PATTERN
+========================================= */
+
+.auroPatternCircle{
+  position:absolute;
+  top:28px;
+  left:38px;
+  width:230px;
+  height:230px;
+  border-radius:50%;
+  z-index:1;
+
+  background-image:radial-gradient(
+    rgba(255,255,255,0.95) 3px,
+    transparent 3px
+  );
+
+  background-size:18px 18px;
+}
+
+/* =========================================
+   BOTTOM CURVE
+========================================= */
+
+.auroHeroWrapper::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:118px;
+  height:58px;
+  background:#f3f3f3;
+  border-top-right-radius:40px;
+  z-index:2;
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1200px){
+
+  .auroHeroWrapper{
+    flex-direction:column;
+  }
+
+  .auroHeroLeft,
+  .auroHeroRight{
+    width:100%;
+  }
+
+  .auroHeroLeft{
+    padding:50px 40px 110px;
+  }
+
+  .auroHeroRight{
+    height:450px;
+  }
+
+  .auroHeroContent h1{
+    font-size:52px;
+  }
+
+  .auroHeroNavigation{
+    bottom:24px;
+    left:40px;
+  }
+
+  .auroHeroWrapper::after{
+    display:none;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:768px){
+
+  .auroHeroWrapper{
+    border-radius:0;
+  }
+
+  .auroHeroLeft{
+    padding:38px 22px 110px;
+  }
+
+  .auroHeroContent h1{
+    font-size:38px;
+    line-height:1;
+    letter-spacing:-1px;
+  }
+
+  .auroHeroContent p{
+    font-size:14px;
+    line-height:1.7;
+  }
+
+  .auroHeroButtons{
+    flex-direction:column;
+    align-items:flex-start;
+    gap:16px;
+  }
+
+  .auroDonateBtn{
+    width:100%;
+    justify-content:center;
+    height:46px;
+    font-size:14px;
+  }
+
+  .auroProcessBtn{
+    font-size:14px;
+  }
+
+  .auroProcessBtn span{
+    width:38px;
+    height:38px;
+  }
+
+  .auroHeroRight{
+    height:320px;
+  }
+
+  .auroPatternCircle{
+    width:170px;
+    height:170px;
+    top:18px;
+    left:20px;
+    background-size:14px 14px;
+  }
+
+  .auroHeroNavigation{
+    left:22px;
+    bottom:26px;
+  }
+
+  .auroHeroNavigation button{
+    width:52px;
+    height:52px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .auroHeroLeft{
+    padding:32px 18px 100px;
+  }
+
+  .auroHeroContent h1{
+    font-size:30px;
+  }
+
+  .auroHeroContent p{
+    font-size:13px;
+  }
+
+  .auroHeroRight{
+    height:250px;
+  }
+
+  .auroHeroNavigation button{
+    width:48px;
+    height:48px;
+  }
+
+  .auroPatternCircle{
+    width:130px;
+    height:130px;
+  }
+}

@@ -1,0 +1,222 @@
+/* Navbar.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.globetech-navbar-wrapper{
+  width:100%;
+  background:#ffffff;
+  border-top:1px solid #d9d9d9;
+  box-shadow:0 2px 6px rgba(0,0,0,0.03);
+  position:sticky;
+  top:0;
+  z-index:999;
+}
+
+.globetech-navbar-container{
+  width:100%;
+  max-width:1320px;
+  margin:auto;
+  height:86px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 28px;
+}
+
+/* =========================
+   LOGO
+========================= */
+
+.globetech-navbar-logo-area{
+  display:flex;
+  align-items:center;
+  text-decoration:none;
+}
+
+.globetech-navbar-logo{
+  width:74px;
+  height:auto;
+  object-fit:contain;
+}
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.globetech-navbar-menu{
+  display:flex;
+  align-items:center;
+  gap:34px;
+}
+
+/* NAV LINK */
+
+.globetech-navbar-link{
+  position:relative;
+  text-decoration:none;
+  color:#222222;
+  font-size:18px;
+  font-weight:500;
+  transition:0.3s ease;
+  padding-bottom:6px;
+}
+
+/* HOVER */
+
+.globetech-navbar-link:hover{
+  color:#0066df;
+}
+
+/* BOTTOM LINE */
+
+.globetech-navbar-link::after{
+  content:"";
+  position:absolute;
+  left:0;
+  bottom:0;
+  width:0%;
+  height:2px;
+  background:#0066df;
+  border-radius:10px;
+  transition:0.3s ease;
+}
+
+.globetech-navbar-link:hover::after{
+  width:100%;
+}
+
+/* ACTIVE */
+
+.active-nav-link{
+  color:#0066df;
+}
+
+.active-nav-link::after{
+  width:100%;
+}
+
+/* =========================
+   DONATE BUTTON
+========================= */
+
+.globetech-navbar-donate-btn{
+  height:50px;
+  padding:0 18px 0 22px;
+  background:#f3702a;
+  border-radius:10px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  text-decoration:none;
+  color:#ffffff;
+  font-size:15px;
+  font-weight:700;
+  transition:0.3s ease;
+}
+
+.globetech-navbar-donate-btn:hover{
+  background:#dd5e1d;
+  transform:translateY(-2px);
+}
+
+/* ICON */
+
+.globetech-navbar-btn-icon{
+  width:26px;
+  height:26px;
+  border-radius:50%;
+  background:#ffffff;
+  color:#f3702a;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:11px;
+}
+
+/* =========================
+   MOBILE TOGGLE
+========================= */
+
+.globetech-mobile-toggle{
+  display:none;
+  border:none;
+  background:none;
+  font-size:28px;
+  color:#222222;
+  cursor:pointer;
+}
+
+/* =========================
+   MOBILE MENU
+========================= */
+
+.globetech-mobile-menu{
+  display:none;
+  flex-direction:column;
+  background:#ffffff;
+  padding:10px 24px 24px;
+  border-top:1px solid #ececec;
+}
+
+.globetech-mobile-link{
+  text-decoration:none;
+  color:#222222;
+  font-size:16px;
+  padding:14px 0;
+  border-bottom:1px solid #f1f1f1;
+  transition:0.3s ease;
+}
+
+.globetech-mobile-link:hover{
+  color:#0066df;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+  .globetech-navbar-menu{
+    gap:24px;
+  }
+
+  .globetech-navbar-link{
+    font-size:16px;
+  }
+
+}
+
+@media(max-width:992px){
+
+  .globetech-navbar-menu,
+  .globetech-navbar-donate-btn{
+    display:none;
+  }
+
+  .globetech-mobile-toggle{
+    display:block;
+  }
+
+  .globetech-mobile-menu{
+    display:flex;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .globetech-navbar-container{
+    height:74px;
+    padding:0 18px;
+  }
+
+  .globetech-navbar-logo{
+    width:62px;
+  }
+
+}

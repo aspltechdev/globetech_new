@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+   RESET
+========================================= */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Outfit",sans-serif;
+  background:#f3f3f3;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.auroGallerySection{
+  width:100%;
+  padding:90px 24px;
+  overflow:hidden;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.auroGalleryContainer{
+  width:100%;
+  max-width:1320px;
+  margin:0 auto;
+}
+
+/* =========================================
+   HEADING
+========================================= */
+
+.auroGalleryHeading{
+  text-align:center;
+
+  margin-bottom:54px;
+}
+
+/* TITLE */
+
+.auroGalleryHeading h2{
+  font-size:42px;
+  line-height:1.2;
+
+  color:#171717;
+
+  font-weight:700;
+
+  letter-spacing:-1px;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.auroGalleryGrid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+
+  gap:42px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.auroGalleryCard{
+  position:relative;
+
+  width:100%;
+  height:255px;
+
+  border-radius:20px;
+
+  overflow:hidden;
+
+  background:#dcdcdc;
+
+  box-shadow:
+    0 3px 8px rgba(0,0,0,0.04),
+    0 10px 24px rgba(0,0,0,0.06);
+
+  transition:0.4s ease;
+}
+
+/* HOVER */
+
+.auroGalleryCard:hover{
+  transform:translateY(-4px);
+}
+
+/* IMAGE */
+
+.auroGalleryCard img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  display:block;
+
+  transition:0.5s ease;
+}
+
+/* IMAGE ZOOM */
+
+.auroGalleryCard:hover img{
+  transform:scale(1.04);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:992px){
+
+  .auroGalleryGrid{
+    grid-template-columns:repeat(2,1fr);
+
+    gap:28px;
+  }
+
+  .auroGalleryCard{
+    height:220px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .auroGallerySection{
+    padding:70px 16px;
+  }
+
+  .auroGalleryHeading{
+    margin-bottom:34px;
+  }
+
+  .auroGalleryHeading h2{
+    font-size:30px;
+  }
+
+  .auroGalleryGrid{
+    gap:20px;
+  }
+
+  .auroGalleryCard{
+    height:190px;
+
+    border-radius:16px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .auroGalleryHeading h2{
+    font-size:26px;
+  }
+
+  .auroGalleryGrid{
+    grid-template-columns:1fr;
+  }
+
+  .auroGalleryCard{
+    height:220px;
+  }
+}

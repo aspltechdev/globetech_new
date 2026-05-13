@@ -1,0 +1,291 @@
+/* SkillDevelopmentCourses.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.skill-development-main-section{
+  width:100%;
+  background:#f6f6f6;
+  padding:55px 0 70px;
+  font-family:"Poppins", sans-serif;
+}
+
+.skill-development-container{
+  width:100%;
+  max-width:1220px;
+  margin:auto;
+  padding:0 24px;
+}
+
+/* =========================
+   TOP SECTION
+========================= */
+
+.skill-development-top-layout{
+  display:grid;
+  grid-template-columns:1fr 360px;
+  gap:60px;
+  align-items:flex-start;
+  margin-bottom:55px;
+}
+
+/* LEFT */
+
+.skill-development-left-content{
+  padding-top:10px;
+}
+
+.skill-development-badge{
+  display:inline-block;
+  background:#dff6df;
+  color:#3ba94d;
+  font-size:11px;
+  font-weight:700;
+  padding:7px 14px;
+  border-radius:30px;
+  margin-bottom:20px;
+}
+
+.skill-development-left-content h2{
+  color:#0066df;
+  font-size:64px;
+  line-height:0.95;
+  font-weight:800;
+  letter-spacing:-2px;
+  margin-bottom:24px;
+}
+
+.skill-development-left-content p{
+  max-width:520px;
+  color:#6a6a6a;
+  font-size:15px;
+  line-height:1.9;
+}
+
+/* =========================
+   STUDENT CARD
+========================= */
+
+.skill-development-student-card{
+  background:#f8f8f8;
+  border-radius:18px;
+  overflow:hidden;
+  box-shadow:
+    0 8px 18px rgba(0,0,0,0.05),
+    0 2px 5px rgba(0,0,0,0.03);
+}
+
+.skill-development-image-wrapper{
+  width:100%;
+  height:230px;
+  overflow:hidden;
+}
+
+.skill-development-image-wrapper img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+}
+
+.skill-development-student-footer{
+  display:flex;
+  align-items:center;
+  gap:14px;
+  padding:18px 22px;
+  background:#ffffff;
+}
+
+.student-green-icon{
+  width:28px;
+  height:28px;
+  border-radius:50%;
+  background:#1ea84b;
+  color:#ffffff;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-size:14px;
+}
+
+.skill-development-student-footer h3{
+  color:#333333;
+  font-size:18px;
+  font-weight:700;
+}
+
+/* =========================
+   COURSE GRID
+========================= */
+
+.skill-development-course-grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:22px;
+  margin-bottom:50px;
+}
+
+/* COLUMN */
+
+.skill-development-course-column{
+  display:flex;
+  flex-direction:column;
+  gap:14px;
+}
+
+/* CARD */
+
+.skill-development-course-card{
+  background:#ffffff;
+  border-radius:14px;
+  padding:18px 18px;
+  display:flex;
+  align-items:center;
+  gap:18px;
+  box-shadow:
+    0 4px 10px rgba(0,0,0,0.04),
+    0 1px 3px rgba(0,0,0,0.03);
+  transition:0.3s ease;
+  cursor:pointer;
+}
+
+.skill-development-course-card:hover{
+  transform:translateY(-4px);
+}
+
+/* NUMBER */
+
+.course-number{
+  color:#cfd7e3;
+  font-size:32px;
+  font-weight:700;
+  min-width:42px;
+}
+
+/* CONTENT */
+
+.course-content{
+  flex:1;
+}
+
+.course-content h4{
+  color:#333333;
+  font-size:17px;
+  font-weight:700;
+  margin-bottom:6px;
+}
+
+.course-content p{
+  color:#8a8a8a;
+  font-size:12px;
+  line-height:1.7;
+}
+
+/* ICON */
+
+.course-icon{
+  color:#1ea84b;
+  font-size:16px;
+}
+
+/* =========================
+   BUTTON AREA
+========================= */
+
+.skill-development-button-area{
+  text-align:center;
+}
+
+.skill-development-button-area button{
+  height:52px;
+  padding:0 34px;
+  border:none;
+  border-radius:30px;
+  background:#0066df;
+  color:#ffffff;
+  font-size:14px;
+  font-weight:700;
+  cursor:pointer;
+  margin-bottom:16px;
+  transition:0.3s ease;
+}
+
+.skill-development-button-area button:hover{
+  background:#0054b7;
+}
+
+.skill-development-button-area p{
+  color:#9b9b9b;
+  font-size:12px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+  .skill-development-top-layout{
+    grid-template-columns:1fr;
+  }
+
+  .skill-development-left-content h2{
+    font-size:52px;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .skill-development-main-section{
+    padding:50px 0 60px;
+  }
+
+  .skill-development-course-grid{
+    grid-template-columns:1fr;
+  }
+
+  .skill-development-left-content h2{
+    font-size:42px;
+  }
+
+  .skill-development-left-content p{
+    font-size:14px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .skill-development-container{
+    padding:0 16px;
+  }
+
+  .skill-development-left-content h2{
+    font-size:34px;
+  }
+
+  .skill-development-course-card{
+    padding:16px;
+    gap:14px;
+  }
+
+  .course-number{
+    font-size:26px;
+  }
+
+  .course-content h4{
+    font-size:15px;
+  }
+
+  .course-content p{
+    font-size:11px;
+  }
+
+  .skill-development-button-area button{
+    width:100%;
+  }
+
+}

@@ -1,0 +1,149 @@
+/* Topbar.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.globetech-topbar-main{
+  width:100%;
+  background:#0066df;
+  border-bottom:1px solid rgba(255,255,255,0.12);
+}
+
+.globetech-topbar-container{
+  width:100%;
+  max-width:1320px;
+  margin:auto;
+  height:42px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  padding:0 26px;
+}
+
+/* =========================
+   SOCIAL ICONS
+========================= */
+
+.globetech-topbar-socials{
+  display:flex;
+  align-items:center;
+  gap:12px;
+}
+
+.globetech-topbar-socials a{
+  width:24px;
+  height:24px;
+  border-radius:50%;
+  background:#ffffff;
+  color:#0066df;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-decoration:none;
+  font-size:11px;
+  transition:0.3s ease;
+}
+
+.globetech-topbar-socials a:hover{
+  background:#f3702a;
+  color:#ffffff;
+  transform:translateY(-2px);
+}
+
+/* =========================
+   RIGHT CONTENT
+========================= */
+
+.globetech-topbar-right{
+  display:flex;
+  align-items:center;
+  gap:16px;
+}
+
+/* ITEM */
+
+.globetech-topbar-item{
+  display:flex;
+  align-items:center;
+  gap:8px;
+  color:#ffffff;
+  font-size:12px;
+  font-weight:400;
+}
+
+.globetech-topbar-item svg{
+  font-size:11px;
+  color:#ffffff;
+}
+
+.globetech-topbar-item span{
+  white-space:nowrap;
+}
+
+/* DIVIDER */
+
+.globetech-topbar-divider{
+  width:1px;
+  height:14px;
+  background:rgba(255,255,255,0.25);
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:992px){
+
+  .globetech-topbar-container{
+    height:auto;
+    flex-direction:column;
+    justify-content:center;
+    gap:10px;
+    padding:12px 18px;
+  }
+
+  .globetech-topbar-right{
+    flex-wrap:wrap;
+    justify-content:center;
+    gap:12px;
+  }
+
+  .globetech-topbar-divider{
+    display:none;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .globetech-topbar-item{
+    font-size:11px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .globetech-topbar-socials{
+    gap:8px;
+  }
+
+  .globetech-topbar-socials a{
+    width:22px;
+    height:22px;
+    font-size:10px;
+  }
+
+  .globetech-topbar-right{
+    flex-direction:column;
+    gap:8px;
+  }
+
+  .globetech-topbar-item{
+    justify-content:center;
+  }
+
+}

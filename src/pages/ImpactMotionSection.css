@@ -1,0 +1,187 @@
+/* ImpactMotionSection.css */
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+.impact-motion-main-section{
+  width:100%;
+  background:#f7f7f7;
+  padding:60px 0 70px;
+  font-family:"Poppins", sans-serif;
+}
+
+.impact-motion-container{
+  width:100%;
+  max-width:1280px;
+  margin:auto;
+  padding:0 30px;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.impact-motion-header{
+  text-align:center;
+  margin-bottom:58px;
+}
+
+.impact-motion-header h2{
+  color:#0066df;
+  font-size:58px;
+  font-weight:800;
+  line-height:1;
+  letter-spacing:-1px;
+  margin-bottom:18px;
+}
+
+.impact-motion-header p{
+  color:#6e6e6e;
+  font-size:16px;
+  line-height:1.9;
+  max-width:720px;
+  margin:auto;
+}
+
+/* =========================
+   GALLERY GRID
+========================= */
+
+.impact-motion-gallery-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:42px 34px;
+}
+
+/* =========================
+   CARD
+========================= */
+
+.impact-motion-gallery-card{
+  position:relative;
+  width:100%;
+  height:240px;
+  border-radius:22px;
+  overflow:hidden;
+  cursor:pointer;
+  box-shadow:
+    0 10px 20px rgba(0,0,0,0.08),
+    0 3px 8px rgba(0,0,0,0.04);
+  transition:0.4s ease;
+}
+
+.impact-motion-gallery-card img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.5s ease;
+}
+
+/* HOVER */
+
+.impact-motion-gallery-card:hover{
+  transform:translateY(-8px);
+}
+
+.impact-motion-gallery-card:hover img{
+  transform:scale(1.08);
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.impact-motion-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,0.65),
+    rgba(0,0,0,0.08)
+  );
+  opacity:0;
+  transition:0.35s ease;
+  display:flex;
+  align-items:flex-end;
+  padding:22px;
+}
+
+.impact-motion-gallery-card:hover .impact-motion-overlay{
+  opacity:1;
+}
+
+.impact-motion-overlay span{
+  color:#ffffff;
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:0.4px;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1100px){
+
+  .impact-motion-gallery-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+}
+
+@media(max-width:768px){
+
+  .impact-motion-main-section{
+    padding:50px 0 60px;
+  }
+
+  .impact-motion-container{
+    padding:0 20px;
+  }
+
+  .impact-motion-header{
+    margin-bottom:42px;
+  }
+
+  .impact-motion-header h2{
+    font-size:40px;
+  }
+
+  .impact-motion-header p{
+    font-size:14px;
+  }
+
+  .impact-motion-gallery-grid{
+    gap:24px;
+  }
+
+  .impact-motion-gallery-card{
+    height:220px;
+    border-radius:18px;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .impact-motion-gallery-grid{
+    grid-template-columns:1fr;
+  }
+
+  .impact-motion-header h2{
+    font-size:32px;
+  }
+
+  .impact-motion-header p{
+    font-size:13px;
+    line-height:1.7;
+  }
+
+  .impact-motion-gallery-card{
+    height:210px;
+  }
+
+}
