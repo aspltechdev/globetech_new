@@ -111,9 +111,10 @@ const AboutSection = () => {
 
             <div className="auroAboutTag">
 
-              <span></span>
+            
 
               <p>Who We Are</p>
+                <span></span>
 
             </div>
 
@@ -133,9 +134,9 @@ const AboutSection = () => {
               institutions, industry partners, and local communities to
               create meaningful opportunities that improve livelihoods
               and support long-term growth.
-            </p>
+            
 
-            <p className="auroAboutDescription">
+         
               Our programs focus on youth empowerment, women and child
               welfare, career readiness, infrastructure support,
               and community upliftment. By bridging the gap between

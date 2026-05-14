@@ -6,15 +6,21 @@ import "./WaysImpactSection.css";
 import {
   FaHandsHelping,
   FaUserPlus,
+  FaCheckCircle,
 } from "react-icons/fa";
 
 const WaysImpactSection = () => {
+
   return (
+
     <section className="ways-impact-section">
 
       <div className="ways-impact-container">
 
-        {/* HEADER */}
+        {/* ======================================
+            HEADER
+        ======================================= */}
+
         <div className="ways-impact-header">
 
           <h2>
@@ -28,13 +34,21 @@ const WaysImpactSection = () => {
 
         </div>
 
-        {/* TOP CARDS */}
+        {/* ======================================
+            TOP CARDS
+        ======================================= */}
+
         <div className="ways-impact-cards">
 
           {/* LEFT CARD */}
+
           <div className="ways-impact-card">
 
-            <FaHandsHelping className="ways-impact-icon" />
+            <div className="ways-impact-icon-wrap">
+
+              <FaHandsHelping className="ways-impact-icon" />
+
+            </div>
 
             <h3>
               Empower Through Donation
@@ -53,9 +67,14 @@ const WaysImpactSection = () => {
           </div>
 
           {/* RIGHT CARD */}
+
           <div className="ways-impact-card ways-impact-blue-card">
 
-            <FaUserPlus className="ways-impact-icon ways-impact-white-icon" />
+            <div className="ways-impact-icon-wrap ways-impact-white-wrap">
+
+              <FaUserPlus className="ways-impact-icon ways-impact-white-icon" />
+
+            </div>
 
             <h3>
               Be the Hands and Feet
@@ -74,10 +93,14 @@ const WaysImpactSection = () => {
 
         </div>
 
-        {/* CORPORATE SECTION */}
+        {/* ======================================
+            CORPORATE SECTION
+        ======================================= */}
+
         <div className="ways-impact-corporate">
 
-          {/* LEFT CONTENT */}
+          {/* LEFT */}
+
           <div className="ways-impact-corporate-left">
 
             <h4>
@@ -92,20 +115,44 @@ const WaysImpactSection = () => {
 
             <div className="ways-impact-list">
 
-              <div>
-                Branded Impact Reports
+              <div className="ways-impact-list-item">
+
+                <FaCheckCircle className="ways-impact-check" />
+
+                <span>
+                  Branded Impact Reports
+                </span>
+
               </div>
 
-              <div>
-                Employee Engagement
+              <div className="ways-impact-list-item">
+
+                <FaCheckCircle className="ways-impact-check" />
+
+                <span>
+                  Employee Engagement
+                </span>
+
               </div>
 
-              <div>
-                Tax-Deductible Contributions
+              <div className="ways-impact-list-item">
+
+                <FaCheckCircle className="ways-impact-check" />
+
+                <span>
+                  Tax-Deductible Contributions
+                </span>
+
               </div>
 
-              <div>
-                Joint Public Relations
+              <div className="ways-impact-list-item">
+
+                <FaCheckCircle className="ways-impact-check" />
+
+                <span>
+                  Joint Public Relations
+                </span>
+
               </div>
 
             </div>
@@ -116,31 +163,44 @@ const WaysImpactSection = () => {
 
           </div>
 
-          {/* RIGHT LOGOS */}
+          {/* RIGHT */}
+
           <div className="ways-impact-logo-grid">
 
             <div className="ways-impact-logo-card">
-              <span className="bosch">
-                BOSCH
-              </span>
+
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Bosch.svg"
+                alt="Bosch"
+              />
+
             </div>
 
             <div className="ways-impact-logo-card">
-              <span className="tata">
-                TATA
-              </span>
+
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Tata_logo.svg"
+                alt="Tata"
+              />
+
             </div>
 
             <div className="ways-impact-logo-card">
-              <span className="icici">
-                ICICI Bank
-              </span>
+
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg"
+                alt="ICICI"
+              />
+
             </div>
 
             <div className="ways-impact-logo-card">
-              <span className="tvs">
-                TVS
-              </span>
+
+              <img
+                src="https://upload.wikimedia.org/wikipedia/commons/f/f5/TVS_Motor_Company_logo.svg"
+                alt="TVS"
+              />
+
             </div>
 
           </div>
@@ -150,6 +210,7 @@ const WaysImpactSection = () => {
       </div>
 
     </section>
+
   );
 };
 

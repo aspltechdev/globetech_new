@@ -1,279 +1,363 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* =========================================
+   HERO
+========================================= */
 
 .hero {
   width: 100%;
+  padding: 10px;
   background: #ffffff;
-  padding: 8px;
   overflow: hidden;
-  font-family: "Inter", sans-serif;
+  font-family: "Poppins", sans-serif;
+  box-sizing: border-box;
 }
+
+/* =========================================
+   WRAPPER
+========================================= */
 
 .hero-wrapper {
   width: 100%;
-  height: 620px;
- 
-  overflow: hidden;
-  display: flex;
-  position: relative;
- border-top-left-radius: 110px;
+  height: 610px;
 
-  
-  background: linear-gradient(
-    135deg,
-    #5f95de 0%,
-    #3f81d8 45%,
-    #2d73d5 100%
-  );
+  border-radius: 62px 0 0 0;
+
+  overflow: hidden;
+
+  position: relative;
+
+  display: grid;
+  grid-template-columns: 1.06fr 0.94fr;
+
+  background:
+    linear-gradient(
+      135deg,
+      #649ce9 0%,
+      #3378da 44%,
+      #1c6ed7 100%
+    );
 }
 
-/* ===================================
-   LEFT SIDE
-=================================== */
+/* =========================================
+   LEFT
+========================================= */
 
 .hero-left {
-  width: 56%;
   position: relative;
-  padding: 74px 0 0 70px;
   z-index: 3;
+
+  padding: 42px 0 0 64px;
+
+  display: flex;
+  flex-direction: column;
 }
+
+/* =========================================
+   CONTENT
+========================================= */
 
 .hero-content {
-  max-width: 680px;
+  max-width: 620px;
 }
+
+/* =========================================
+   TITLE
+========================================= */
 
 .hero-content h1 {
-  font-size: 68px;
-  line-height: 1.05;
-  font-weight: 700;
-  letter-spacing: -2px;
-  color: white;
-  margin-bottom: 28px;
+  
+  line-height: 1.02;
+ 
+  letter-spacing: -3px;
+
+  color: #ffffff;
+
+  margin-bottom: 18px;
+
+  white-space: pre-line;
+
+
+  font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 60px;
+
+line-height: 120%;
+letter-spacing: 0%;
+
 }
 
+/* =========================================
+   DESCRIPTION
+========================================= */
+
 .hero-content p {
-  width: 620px;
-  color: rgba(255, 255, 255, 0.88);
-  font-size: 18px;
-  line-height: 1.85;
+  max-width: 610px;
+
+  font-size: 17px;
+  line-height: 38px;
   font-weight: 400;
+
+  color: rgba(255,255,255,0.9);
+
   margin-bottom: 34px;
 }
 
-/* ===================================
-   CTA BUTTONS
-=================================== */
+/* =========================================
+   CTA
+========================================= */
 
 .hero-cta {
   display: flex;
   align-items: center;
-  gap: 28px;
+  gap: 22px;
+  width: 323px;
 }
+
+/* =========================================
+   DONATE BUTTON
+========================================= */
 
 .hero-donate-btn {
   height: 52px;
-  padding: 0 8px 0 24px;
-  border-radius: 12px;
+
+  padding: 2px 15px 2px 15px;
+
   border: none;
+  border-radius: 10px;
+
   background: #ffffff;
-
-  display: flex;
-  align-items: center;
-  gap: 16px;
-
-  font-size: 15px;
-  font-weight: 600;
-  color: #111827;
-
-  cursor: pointer;
-}
-
-.arrow-box {
-  width: 36px;
-  height: 36px;
-  border-radius: 9px;
-
-  background: #111827;
-  color: white;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.process-btn {
-  background: transparent;
-  border: none;
 
   display: flex;
   align-items: center;
   gap: 14px;
 
-  color: white;
-  font-size: 16px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 600;
+
+  color: #111111;
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+}
+
+.hero-donate-btn:hover {
+  transform: translateY(-3px);
+}
+
+/* =========================================
+   ARROW BOX
+========================================= */
+
+.arrow-box {
+  width: 26px;
+  height: 26px;
+
+  border-radius: 50%;
+
+  background: #28496e;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ffffff;
+}
+
+/* =========================================
+   PROCESS BUTTON
+========================================= */
+
+.process-btn {
+  border: none;
+  background: transparent;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  color: #ffffff;
+
+  font-size: 12px;
+  font-weight: 600;
 
   cursor: pointer;
 }
 
+/* =========================================
+   PLAY
+========================================= */
+
 .play-circle {
-  width: 42px;
-  height: 42px;
+  width: 38px;
+  height: 38px;
+
   border-radius: 50%;
-  background: white;
+
+  background: #ffffff;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* ===================================
-   RIGHT IMAGE
-=================================== */
+/* =========================================
+   RIGHT
+========================================= */
 
 .hero-right {
-  width: 44%;
   position: relative;
-  overflow: hidden;
-
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
 }
 
 .hero-right img {
+  position: absolute;
+
+  right: 0;
+  bottom: 0;
+
   width: 100%;
   height: 100%;
+
   object-fit: cover;
-  position: relative;
-  z-index: 2;
 }
 
-/* ===================================
-   DOT PATTERN
-=================================== */
+/* =========================================
+   DOTS
+========================================= */
 
 .dots-circle {
   position: absolute;
-  top: 28px;
-  right: 90px;
 
-  width: 250px;
-  height: 250px;
+  top: 42px;
+  right: 108px;
+
+  width: 448px;
+  height: 450px;
+
   border-radius: 50%;
 
-  background-image: radial-gradient(
-    rgba(255, 255, 255, 0.95) 2px,
-    transparent 2px
-  );
+  background-image:
+    radial-gradient(
+      rgba(255,255,255,0.96) 2.8px,
+      transparent 2.8px
+    );
 
-  background-size: 18px 18px;
+  background-size: 16px 16px;
 
-  z-index: 1;
+  opacity: 0.95;
+
+  /* z-index: 3; */
 }
 
-/* ===================================
-   BOTTOM CURVE
-=================================== */
+/* =========================================
+   WHITE CURVE
+========================================= */
 
 .bottom-curve {
   position: absolute;
-  left: 0;
-  bottom: 0;
 
-  width: 230px;
-  height: 118px;
+  left: -10px;
+  bottom: 0px;
 
-  background: white;
+  width: 275px;
+  height: 125px;
 
-  border-top-right-radius: 110px;
-  /* border-top-left-radius: 110px; */
+  background: #ffffff;
+
+  border-radius: 0px 100px 0 0;
+  
+
+  z-index: 2;
 }
 
-/* ===================================
-   SLIDER BUTTONS
-=================================== */
+/* =========================================
+   NAV BUTTONS
+========================================= */
 
 .slider-btns {
   position: absolute;
-  left: 22px;
-  bottom: 24px;
+
+  left: 18px;
+  bottom: 14px;
 
   display: flex;
-  gap: 18px;
+  align-items: center;
+  gap: 12px;
 
-  z-index: 10;
+  z-index: 5;
 }
 
+/* BUTTON */
+
 .slider-btns button {
-  width: 66px;
-  height: 66px;
+  width: 95px;
+  height: 95px;
+
   border-radius: 50%;
   border: none;
 
-  background: #2d73d5;
-  color: white;
+  background: #0a67d5;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
+  color: #ffffff;
+
   cursor: pointer;
 
-  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0px 12px 24px rgba(0,0,0,0.12);
 }
 
-/* ===================================
+.slider-btns button:hover {
+  transform: translateY(-4px);
+
+  background: #0859b6;
+}
+
+/* =========================================
    RESPONSIVE
-=================================== */
+========================================= */
 
-@media (max-width: 1400px) {
-  .hero-content h1 {
-    font-size: 58px;
-  }
+@media screen and (max-width: 1200px) {
 
-  .hero-content p {
-    width: 95%;
-    font-size: 17px;
-  }
-}
-
-@media (max-width: 1100px) {
   .hero-wrapper {
-    flex-direction: column;
     height: auto;
+    grid-template-columns: 1fr;
   }
 
   .hero-left {
-    width: 100%;
-    padding: 60px 40px 150px;
+    padding: 50px 34px 130px;
+  }
+
+  .hero-content h1 {
+    font-size: 56px;
   }
 
   .hero-right {
-    width: 100%;
-    height: 500px;
+    height: 480px;
   }
 
-  .hero-content p {
-    width: 100%;
-  }
-
-  .bottom-curve {
-    display: none;
-  }
-
-  .slider-btns {
-    left: 40px;
-    bottom: 45px;
+  .dots-circle {
+    right: 70px;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
   .hero {
-    padding: 10px;
+    padding: 6px;
   }
 
   .hero-wrapper {
@@ -281,24 +365,23 @@
   }
 
   .hero-left {
-    padding: 45px 24px 130px;
+    padding: 40px 24px 120px;
   }
 
   .hero-content h1 {
-    font-size: 40px;
-    line-height: 1.12;
-    letter-spacing: -1px;
+    font-size: 42px;
+    line-height: 1;
+    letter-spacing: -2px;
   }
 
   .hero-content p {
     font-size: 15px;
-    line-height: 1.75;
+    line-height: 30px;
   }
 
   .hero-cta {
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 18px;
+    flex-wrap: wrap;
+    gap: 16px;
   }
 
   .hero-right {
@@ -306,33 +389,50 @@
   }
 
   .dots-circle {
-    width: 160px;
-    height: 160px;
-    right: 18px;
-    top: 18px;
-    background-size: 14px 14px;
+    width: 170px;
+    height: 170px;
+
+    top: 30px;
+    right: 36px;
+
+    background-size: 12px 12px;
+  }
+
+  .bottom-curve {
+    width: 150px;
+    height: 82px;
   }
 
   .slider-btns button {
-    width: 56px;
-    height: 56px;
+    width: 54px;
+    height: 54px;
   }
 }
 
-@media (max-width: 480px) {
+@media screen and (max-width: 480px) {
+
   .hero-content h1 {
     font-size: 34px;
   }
 
   .hero-content p {
     font-size: 14px;
+    line-height: 28px;
   }
 
   .hero-right {
-    height: 270px;
+    height: 260px;
   }
 
-  .slider-btns {
-    gap: 12px;
+  .dots-circle {
+    width: 120px;
+    height: 120px;
+  }
+
+  .slider-btns button {
+    width: 46px;
+    height: 46px;
   }
 }
+
+

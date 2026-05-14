@@ -1,274 +1,337 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
+/* =========================================
+   GOOGLE FONT
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* =========================================
+   SECTION
+========================================= */
 
 .auroAboutSection {
   width: 100%;
   background: #ffffff;
-  padding: 70px 0 90px;
+  padding: 28px 0 40px;
   overflow: hidden;
-  font-family: "Inter", sans-serif;
-}
-
-.auroAboutContainer {
-  width: 100%;
-  max-width: 1476px;
-  margin: 0 auto;
-  padding: 0 52px;
-}
-
-.auroAboutWrapper {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 70px;
+  font-family: "Poppins", sans-serif;
 }
 
 /* =========================================
-   LEFT SIDE
+   CONTAINER
+========================================= */
+
+.auroAboutContainer {
+  width: 100%;
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0 28px;
+  box-sizing: border-box;
+}
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.auroAboutWrapper {
+  display: grid;
+  grid-template-columns: 1.02fr 0.98fr;
+  align-items: center;
+  gap: 30px;
+}
+
+/* =========================================
+   LEFT
 ========================================= */
 
 .auroAboutLeft {
-  width: 48%;
+  max-width: 610px;
 }
 
-/* TAG */
+/* =========================================
+   TAG
+========================================= */
 
 .auroAboutTag {
   display: flex;
   align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+  gap: 12px;
+
+  margin-bottom: 10px;
 }
 
 .auroAboutTag span {
-  width: 48px;
+  width: 62px;
   height: 1.5px;
-  background: #f47c34;
-  display: block;
+  background: #ff8458;
 }
 
 .auroAboutTag p {
-  font-size: 14px;
-  font-weight: 600;
-  color: #f47c34;
-  line-height: 1;
-}
-
-/* TITLE */
-
-.auroAboutLeft h2 {
-  font-size: 42px;
-  font-weight: 700;
-  color: #111111;
-  margin-bottom: 30px;
-  line-height: 1;
-  letter-spacing: -1px;
-}
-
-/* DESCRIPTION */
-
-.auroAboutDescription {
-  font-size: 17px;
-  line-height: 2;
-  color: #4d4d4d;
-  font-weight: 400;
-  margin-bottom: 18px;
-  max-width: 620px;
-}
-
-/* BUTTON */
-
-.auroKnowBtn {
-  margin-top: 28px;
-  width: 132px;
-  height: 48px;
-  border: none;
-  border-radius: 10px;
-
-  background: #0b74ff;
-  color: #ffffff;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-
-  font-size: 14px;
-  font-weight: 600;
-
-  cursor: pointer;
-
-  box-shadow: 0 8px 20px rgba(11, 116, 255, 0.22);
-
-  transition: 0.3s ease;
-}
-
-.auroKnowBtn:hover {
-  transform: translateY(-2px);
+  font-size: 15px;
+  font-weight: 500;
+  color: #ff8458;
 }
 
 /* =========================================
-   RIGHT SIDE
+   TITLE
 ========================================= */
 
-.auroAboutRight {
-  width: 52%;
-  display: flex;
-  justify-content: flex-end;
-}
-
-.auroAboutImages {
-  width: 100%;
-  max-width: 640px;
-  height: 470px;
-  position: relative;
-}
-
-/* LARGE IMAGE */
-
-.auroAboutLargeImg {
-  position: absolute;
-  top: 0;
-  right: 0;
-
-  width: 470px;
-  height: 305px;
-
-  object-fit: cover;
-
-  border-radius: 18px;
-}
-
-/* SMALL IMAGE */
-
-.auroAboutSmallImg {
-  position: absolute;
-  left: 40px;
-  bottom: 32px;
-
-  width: 320px;
-  height: 230px;
-
-  object-fit: cover;
-
-  border-radius: 18px;
-
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
-}
-
-/* IMPACT BOX */
-
-.auroImpactBox {
-  position: absolute;
-  left: 260px;
-  bottom: 6px;
-
-  width: 195px;
-  height: 122px;
-
-  background: #f47c34;
-
-  border-radius: 14px;
-
-  padding: 22px 24px;
-
-  z-index: 3;
-
-  box-shadow: 0 12px 25px rgba(244, 124, 52, 0.3);
-}
-
-.auroImpactBox h3 {
-  font-size: 46px;
-  font-weight: 700;
-  color: #ffffff;
+.auroAboutLeft h2 {
+  font-size: 24px;
   line-height: 1;
-  margin-bottom: 10px;
+  font-weight: 600;
+
+  color: #111111;
+
+  margin-bottom: 24px;
+
+  letter-spacing: -1.5px;
+}
+
+/* =========================================
+   DESCRIPTION
+========================================= */
+
+.auroAboutDescription {
+  font-family: Arial;
+font-weight: 400;
+font-style: Regular;
+font-size: 18px;
+
+line-height: 160%;
+letter-spacing: 0%;
+vertical-align: middle;
+
+
+  color: #2c2c2c;
+
+  margin-bottom: 34px;
+}
+
+/* =========================================
+   BUTTON
+========================================= */
+
+.auroKnowBtn {
+  height: 58px;
+  padding: 0 24px;
+
+  border: none;
+  border-radius: 12px;
+
+  background:
+    linear-gradient(
+      180deg,
+      #2d7ce2 0%,
+      #0665d8 100%
+    );
 
   display: flex;
   align-items: center;
+  gap: 12px;
+
+  font-size: 15px;
+  font-weight: 600;
+
+  color: #ffffff;
+
+  cursor: pointer;
+
+  transition: all 0.35s ease;
+
+  box-shadow:
+    0px 12px 22px rgba(0,0,0,0.12);
+}
+
+.auroKnowBtn:hover {
+  transform: translateY(-4px);
+}
+
+/* =========================================
+   ICON CIRCLE
+========================================= */
+
+.auroKnowBtn svg {
+  width: 18px;
+  height: 18px;
+
+  padding: 5px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.18);
+}
+
+/* =========================================
+   RIGHT
+========================================= */
+
+.auroAboutRight {
+  position: relative;
+}
+
+.auroAboutImages {
+  position: relative;
+  width: 100%;
+  height: 600px;
+}
+
+/* =========================================
+   LARGE IMAGE
+========================================= */
+
+.auroAboutLargeImg {
+  position: absolute;
+
+  top: 95px;
+  right: 0;
+
+  width: 74%;
+  height: 348px;
+
+  object-fit: cover;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0px 16px 36px rgba(0,0,0,0.10);
+}
+
+/* =========================================
+   SMALL IMAGE
+========================================= */
+
+.auroAboutSmallImg {
+  position: absolute;
+
+  left: 0;
+  bottom: 70px;
+
+
+  width: 58%;
+  height: 267px;
+
+  object-fit: cover;
+
+  border-radius: 26px;
+
+  z-index: 2;
+  border: 10px solid #ffffff;
+
+  box-shadow:
+    0px 16px 36px rgba(248, 246, 246, 0.1);
+}
+
+/* =========================================
+   IMPACT BOX
+========================================= */
+
+.auroImpactBox {
+  position: absolute;
+
+  left: 34%;
+  bottom: 46px;
+
+  width: 208px;
+  height: 117px;
+
+  border-radius: 22px;
+
+  background: #f46b2f;
+
+  padding: 22px 26px;
+
+  box-sizing: border-box;
+
+  z-index: 4;
+
+  box-shadow:
+    0px 16px 30px rgba(244,107,47,0.28);
+}
+
+/* NUMBER */
+
+.auroImpactBox h3 {
+  display: flex;
+  align-items: baseline;
   gap: 8px;
+
+  font-size: 46px;
+  line-height: 1;
+  font-weight: 700;
+
+  color: #ffffff;
+
+  margin-bottom: 10px;
 }
 
 .auroImpactBox h3 span {
-  font-size: 18px;
-  font-weight: 600;
-  margin-top: 12px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 10px;
 }
+
+/* TEXT */
 
 .auroImpactBox p {
-  font-size: 25px;
-  line-height: 1.3;
-  font-weight: 600;
-  color: #ffffff;
+  font-family: Poppins;
+font-weight: 500;
+font-style: Medium;
+font-size: 20px;
+
+line-height: 140%;
+letter-spacing: 0%;
+vertical-align: bottom;
+color: #ffffff;
+
 }
 
-/* YELLOW ARROW */
+/* =========================================
+   YELLOW ARROW
+========================================= */
 
 .auroYellowArrow {
   position: absolute;
-  right: 35px;
-  bottom: 10px;
 
-  width: 135px;
-  z-index: 2;
+  right: 30px;
+  bottom: 32px;
+
+  width: 170px;
+
+  z-index: 3;
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 1300px) {
+@media screen and (max-width: 1200px) {
+
   .auroAboutWrapper {
-    gap: 40px;
+    grid-template-columns: 1fr;
+    gap: 60px;
   }
 
-  .auroAboutLargeImg {
-    width: 430px;
-    height: 285px;
-  }
-
-  .auroAboutSmallImg {
-    width: 290px;
-    height: 210px;
-  }
-
-  .auroImpactBox {
-    left: 230px;
-  }
-}
-
-@media (max-width: 1100px) {
-  .auroAboutWrapper {
-    flex-direction: column;
-    align-items: flex-start;
-  }
-
-  .auroAboutLeft,
-  .auroAboutRight {
-    width: 100%;
+  .auroAboutLeft {
+    max-width: 100%;
   }
 
   .auroAboutDescription {
     max-width: 100%;
   }
 
-  .auroAboutRight {
-    justify-content: center;
-    margin-top: 30px;
+  .auroAboutImages {
+    height: 620px;
   }
 }
 
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
+
   .auroAboutSection {
-    padding: 60px 0;
+    padding: 20px 0 30px;
   }
 
   .auroAboutContainer {
-    padding: 0 22px;
+    padding: 0 18px;
   }
 
   .auroAboutLeft h2 {
@@ -277,118 +340,87 @@
 
   .auroAboutDescription {
     font-size: 15px;
-    line-height: 1.9;
+    line-height: 32px;
   }
 
   .auroAboutImages {
-    height: 420px;
+    height: 520px;
   }
 
   .auroAboutLargeImg {
-    width: 100%;
-    height: 250px;
-    border-radius: 16px;
+    height: 320px;
+    border-radius: 22px;
   }
 
   .auroAboutSmallImg {
-    width: 220px;
-    height: 170px;
-    left: 0;
-    bottom: 55px;
-    border-radius: 16px;
+    height: 240px;
+    border-radius: 20px;
   }
 
   .auroImpactBox {
-    width: 155px;
+    width: 210px;
     height: 100px;
 
-    left: 160px;
-    bottom: 10px;
-
-    padding: 16px 18px;
+    padding: 18px 20px;
   }
 
   .auroImpactBox h3 {
-    font-size: 34px;
+    font-size: 40px;
   }
 
   .auroImpactBox h3 span {
-    font-size: 15px;
-    margin-top: 8px;
+    font-size: 22px;
   }
 
   .auroImpactBox p {
-    font-size: 18px;
+    font-size: 16px;
   }
 
   .auroYellowArrow {
-    width: 90px;
-    right: 0;
-    bottom: 18px;
+    width: 130px;
   }
 }
 
-@media (max-width: 480px) {
-  .auroAboutSection {
-    padding: 45px 0;
-  }
-
-  .auroAboutContainer {
-    padding: 0 16px;
-  }
+@media screen and (max-width: 480px) {
 
   .auroAboutLeft h2 {
     font-size: 30px;
   }
 
-  .auroAboutTag p {
-    font-size: 13px;
-  }
-
   .auroAboutDescription {
     font-size: 14px;
-    line-height: 1.85;
-  }
-
-  .auroKnowBtn {
-    width: 124px;
-    height: 45px;
-    font-size: 13px;
+    line-height: 28px;
   }
 
   .auroAboutImages {
-    height: 350px;
+    height: 430px;
   }
 
   .auroAboutLargeImg {
-    height: 210px;
+    width: 84%;
+    height: 240px;
   }
 
   .auroAboutSmallImg {
-    width: 170px;
-    height: 135px;
-    bottom: 72px;
+    width: 66%;
+    height: 180px;
+    bottom: 90px;
   }
 
   .auroImpactBox {
-    width: 130px;
-    height: 82px;
+    left: 26%;
+    bottom: 48px;
 
-    left: 120px;
-    bottom: 28px;
-
-    padding: 12px 14px;
-    border-radius: 12px;
+    width: 180px;
+    height: 88px;
   }
 
   .auroImpactBox h3 {
-    font-size: 26px;
-    margin-bottom: 6px;
+    font-size: 34px;
   }
 
   .auroImpactBox h3 span {
-    font-size: 12px;
-    margin-top: 6px;
+    font-size: 18px;
   }
 
   .auroImpactBox p {
@@ -396,8 +428,7 @@
   }
 
   .auroYellowArrow {
-    width: 70px;
-    right: -5px;
-    bottom: 25px;
+    width: 100px;
+    right: 10px;
   }
 }

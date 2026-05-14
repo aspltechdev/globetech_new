@@ -1,18 +1,138 @@
 // ImpactSection.jsx
 
-import React from "react";
+import React, { useEffect, useRef, useState } from "react";
+
 import "./ImpactSection.css";
 
-import impactImg1 from "./../assets/impact/impact-1.png";
-import impactImg2 from "./../assets/impact/impact-2.png";
+const statsData = [
+  {
+    number: 10000,
+    suffix: "+",
+    label: "Lives Impacted",
+  },
+  {
+    number: 500,
+    suffix: "+",
+    label: "Students Guided",
+  },
+  {
+    number: 50,
+    suffix: "+",
+    label: "Community Programs",
+  },
+  {
+    number: 20,
+    suffix: "+",
+    label: "Partner Organizations",
+  },
+];
+
+const CountUp = ({ end, suffix }) => {
+
+  const [count, setCount] = useState(0);
+
+  const countRef = useRef(null);
+
+  const hasAnimated = useRef(false);
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+
+      ([entry]) => {
+
+        if (entry.isIntersecting && !hasAnimated.current) {
+
+          hasAnimated.current = true;
+
+          let start = 0;
+
+          const duration = 2000;
+
+          const increment = end / (duration / 16);
+
+          const timer = setInterval(() => {
+
+            start += increment;
+
+            if (start >= end) {
+
+              setCount(end);
+
+              clearInterval(timer);
+
+            } else {
+
+              setCount(Math.floor(start));
+
+            }
+
+          }, 16);
+
+        }
+
+      },
+
+      {
+        threshold: 0.4,
+      }
+
+    );
+
+    if (countRef.current) {
+
+      observer.observe(countRef.current);
+
+    }
+
+    return () => observer.disconnect();
+
+  }, [end]);
+
+  return (
+
+    <h3 ref={countRef}>
+
+      {count.toLocaleString()}
+      {suffix}
+
+    </h3>
+
+  );
+};
 
 const ImpactSection = () => {
+
+  const sliderRef = useRef(null);
+
+  const scrollLeft = () => {
+
+    sliderRef.current.scrollBy({
+      left: -450,
+      behavior: "smooth",
+    });
+
+  };
+
+  const scrollRight = () => {
+
+    sliderRef.current.scrollBy({
+      left: 450,
+      behavior: "smooth",
+    });
+
+  };
+
   return (
+
     <section className="impact-main-section">
 
       <div className="impact-main-container">
 
-        {/* TOP */}
+        {/* =====================================
+            TOP
+        ====================================== */}
+
         <div className="impact-header-area">
 
           <h2 className="impact-main-title">
@@ -20,68 +140,116 @@ const ImpactSection = () => {
           </h2>
 
           <p className="impact-main-description">
-            Our impact is a reflection of the lives we have touched and the communities we have helped transform. Through our initiatives, we have created opportunities for individuals to access education, develop skills, and build sustainable livelihoods. Each number represents a story of growth, resilience, and change, highlighting the difference that access and support can make.
-We believe that true impact goes beyond statistics—it is about empowering individuals, strengthening communities, and creating lasting change. By continuously measuring and improving our efforts, we ensure that our initiatives remain effective, scalable, and meaningful. Our commitment is to create impact that not only addresses present challenges but also builds a stronger foundation for the future.
+
+            Our impact is a reflection of the lives we have touched and
+            the communities we have helped transform. Through our initiatives,
+            we have created opportunities for individuals to access education,
+            develop skills, and build sustainable livelihoods.
+
+           
+
+            Each number represents a story of growth, resilience,
+            and change, highlighting the difference that access and support can make.
+
+            
+
+            We believe that true impact goes beyond statistics — it is about
+            empowering individuals, strengthening communities, and creating
+            lasting change.
+
           </p>
 
         </div>
 
-        {/* STATS */}
+        {/* =====================================
+            STATS
+        ====================================== */}
+
         <div className="impact-stats-grid">
 
-          <div className="impact-single-stat-card">
-            <h3>10,000+</h3>
-            <p>Lives Impacted</p>
-          </div>
+          {statsData.map((item, index) => (
 
-          <div className="impact-single-stat-card">
-            <h3>500+</h3>
-            <p>Students Guided</p>
-          </div>
+            <div
+              className="impact-single-stat-card"
+              key={index}
+            >
 
-          <div className="impact-single-stat-card">
-            <h3>50+</h3>
-            <p>Community Programs</p>
-          </div>
+              <CountUp
+                end={item.number}
+                suffix={item.suffix}
+              />
 
-          <div className="impact-single-stat-card">
-            <h3>20+</h3>
-            <p>Partner Organizations</p>
-          </div>
+              <p>
+                {item.label}
+              </p>
+
+            </div>
+
+          ))}
 
         </div>
 
-        {/* VOICES */}
+        {/* =====================================
+            VOICES HEADER
+        ====================================== */}
+
         <div className="impact-voices-header">
 
           <div>
-            <h2>Voices from the Field</h2>
+
+            <h2>
+              Voices from the Field
+            </h2>
+
             <p>
               Real stories of resilience and progress from our global community.
             </p>
+
           </div>
 
           <div className="impact-slider-buttons">
-            <button>‹</button>
-            <button>›</button>
+
+            <button onClick={scrollLeft}>
+              ‹
+            </button>
+
+            <button onClick={scrollRight}>
+              ›
+            </button>
+
           </div>
 
         </div>
 
-        {/* IMAGE SLIDER */}
-        <div className="impact-slider-wrapper">
+        {/* =====================================
+            IMAGE SLIDER
+        ====================================== */}
+
+        <div
+          className="impact-slider-wrapper"
+          ref={sliderRef}
+        >
 
           <div className="impact-slider-track">
 
+            {/* CARD 1 */}
+
             <div className="impact-image-card">
 
-              <img src={impactImg1} alt="Impact" />
+              <img
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
+                alt="Skilling & Placement"
+              />
 
               <div className="impact-image-overlay">
 
-                <span>SUSTAINABILITY</span>
+                <span>
+                  SUSTAINABILITY
+                </span>
 
-                <h3>Skilling & Placement</h3>
+                <h3>
+                  Skilling & Placement
+                </h3>
 
                 <p>
                   Empowering youth for career opportunities and growth.
@@ -91,15 +259,24 @@ We believe that true impact goes beyond statistics—it is about empowering indi
 
             </div>
 
+            {/* CARD 2 */}
+
             <div className="impact-image-card">
 
-              <img src={impactImg2} alt="Impact" />
+              <img
+                src="https://images.unsplash.com/photo-1492496913980-501348b61469?q=80&w=1200&auto=format&fit=crop"
+                alt="Environmental Protection"
+              />
 
               <div className="impact-image-overlay">
 
-                <span>ENVIRONMENT</span>
+                <span>
+                  ENVIRONMENT
+                </span>
 
-                <h3>Environmental Protection</h3>
+                <h3>
+                  Environmental Protection
+                </h3>
 
                 <p>
                   Creating awareness and protecting nature together.
@@ -109,38 +286,54 @@ We believe that true impact goes beyond statistics—it is about empowering indi
 
             </div>
 
-            {/* DUPLICATE FOR SMOOTH LOOP */}
+            {/* CARD 3 */}
 
             <div className="impact-image-card">
 
-              <img src={impactImg1} alt="Impact" />
+              <img
+                src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
+                alt="Skill Development"
+              />
 
               <div className="impact-image-overlay">
 
-                <span>SUSTAINABILITY</span>
+                <span>
+                  EDUCATION
+                </span>
 
-                <h3>Skilling & Placement</h3>
+                <h3>
+                  Skill Development
+                </h3>
 
                 <p>
-                  Empowering youth for career opportunities and growth.
+                  Supporting students with industry-based training initiatives.
                 </p>
 
               </div>
 
             </div>
 
+            {/* CARD 4 */}
+
             <div className="impact-image-card">
 
-              <img src={impactImg2} alt="Impact" />
+              <img
+                src="https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1200&auto=format&fit=crop"
+                alt="Community Support"
+              />
 
               <div className="impact-image-overlay">
 
-                <span>ENVIRONMENT</span>
+                <span>
+                  COMMUNITY
+                </span>
 
-                <h3>Environmental Protection</h3>
+                <h3>
+                  Community Empowerment
+                </h3>
 
                 <p>
-                  Creating awareness and protecting nature together.
+                  Building inclusive opportunities for underserved communities.
                 </p>
 
               </div>
@@ -151,10 +344,12 @@ We believe that true impact goes beyond statistics—it is about empowering indi
 
         </div>
 
-        {/* TESTIMONIALS */}
+        {/* =====================================
+            TESTIMONIAL SECTION
+        ====================================== */}
+
         <div className="impact-testimonial-layout">
 
-          {/* LEFT */}
           <div className="impact-testimonial-left">
 
             <div className="impact-quote-icon">
@@ -162,92 +357,154 @@ We believe that true impact goes beyond statistics—it is about empowering indi
             </div>
 
             <h2>
+
               What the
               <br />
               Community Says
+
             </h2>
 
             <p>
-              The impact of Globetech Foundation is visible in the stories
-              of transformation shared by students and communities who have
-              benefited from our training, development, and empowerment initiatives.
+
+              The impact of Globetech Foundation is reflected in the
+              experiences of students, institutions, and communities
+              who have benefited from our training, development,
+              and empowerment initiatives.
+
             </p>
 
           </div>
 
-          {/* RIGHT */}
           <div className="impact-testimonial-grid">
 
             <div className="impact-testimonial-card">
+
               <p>
-                “The industrial visits and workshops helped me understand
-                real-world industry environments and improved my confidence.”
+
+                “The industrial visits and workshops helped me
+                understand real-world industry environments
+                and improved my confidence.”
+
               </p>
 
               <div className="impact-user-info">
+
                 <img
                   src="https://i.pravatar.cc/100?img=12"
-                  alt=""
+                  alt="Harish"
                 />
+
                 <div>
-                  <h4>Harish P</h4>
-                  <span>Student Participant</span>
+
+                  <h4>
+                    Harish P
+                  </h4>
+
+                  <span>
+                    Student Participant
+                  </span>
+
                 </div>
+
               </div>
+
             </div>
 
             <div className="impact-testimonial-card">
+
               <p>
-                “The training programs provided practical exposure and
-                industry-oriented learning that prepared students for workplace needs.”
+
+                “The training programs provided practical
+                exposure and industry-oriented learning
+                that prepared students for workplace needs.”
+
               </p>
 
               <div className="impact-user-info">
+
                 <img
                   src="https://i.pravatar.cc/100?img=32"
-                  alt=""
+                  alt="Priya"
                 />
+
                 <div>
-                  <h4>Priya K</h4>
-                  <span>Program Coordinator</span>
+
+                  <h4>
+                    Priya K
+                  </h4>
+
+                  <span>
+                    Program Coordinator
+                  </span>
+
                 </div>
+
               </div>
+
             </div>
 
             <div className="impact-testimonial-card">
+
               <p>
-                “Globetech’s skill development initiatives are helping local
-                youth professionals gain employability and professional confidence.”
+
+                “Globetech’s initiatives are helping local youth
+                professionals gain employability and professional confidence.”
+
               </p>
 
               <div className="impact-user-info">
+
                 <img
                   src="https://i.pravatar.cc/100?img=48"
-                  alt=""
+                  alt="Arun"
                 />
+
                 <div>
-                  <h4>Arun M</h4>
-                  <span>Industry Trainer</span>
+
+                  <h4>
+                    Arun M
+                  </h4>
+
+                  <span>
+                    Industry Trainer
+                  </span>
+
                 </div>
+
               </div>
+
             </div>
 
             <div className="impact-testimonial-card">
+
               <p>
-                “The nation’s workshops and career guidance sessions inspired
-                our students to become more responsible and skilled individuals.”
+
+                “Career guidance and technical workshops inspired
+                our students to become more skilled and responsible individuals.”
+
               </p>
 
               <div className="impact-user-info">
+
                 <img
                   src="https://i.pravatar.cc/100?img=15"
-                  alt=""
+                  alt="Bhavi"
                 />
+
                 <div>
-                  <h4>Bhavi R</h4>
-                  <span>Training Program Volunteer</span>
+
+                  <h4>
+                    Bhavi R
+                  </h4>
+
+                  <span>
+                    Training Volunteer
+                  </span>
+
                 </div>
+
               </div>
+
             </div>
 
           </div>
@@ -257,6 +514,7 @@ We believe that true impact goes beyond statistics—it is about empowering indi
       </div>
 
     </section>
+
   );
 };
 
