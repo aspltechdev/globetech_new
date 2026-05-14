@@ -1,434 +1,476 @@
 /* =========================================
-   GOOGLE FONT
+   ABOUT SECTION - PIXEL PERFECT
 ========================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-/* =========================================
-   SECTION
-========================================= */
-
-.auroAboutSection {
-  width: 100%;
-  background: #ffffff;
-  padding: 28px 0 40px;
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
-
-.auroAboutContainer {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 0 28px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================================
-   WRAPPER
-========================================= */
+.auroAboutSection {
+  width: 100%;
+
+  background: #fff;
+
+  padding: 62px 0 68px;
+
+  overflow: hidden;
+
+  font-family: "Poppins", sans-serif;
+}
+
+.auroAboutContainer {
+  width: 100%;
+  max-width: 1240px;
+
+  margin: auto;
+
+  padding: 0 42px;
+}
 
 .auroAboutWrapper {
-  display: grid;
-  grid-template-columns: 1.02fr 0.98fr;
-  align-items: center;
-  gap: 30px;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 40px;
 }
 
 /* =========================================
-   LEFT
+   LEFT SIDE
 ========================================= */
 
 .auroAboutLeft {
-  max-width: 610px;
+  width: 49%;
+
+  padding-top: 6px;
 }
 
-/* =========================================
-   TAG
-========================================= */
+/* TAG */
 
 .auroAboutTag {
   display: flex;
   align-items: center;
-  gap: 12px;
 
-  margin-bottom: 10px;
-}
+  gap: 10px;
 
-.auroAboutTag span {
-  width: 62px;
-  height: 1.5px;
-  background: #ff8458;
+  margin-bottom: 12px;
 }
 
 .auroAboutTag p {
-  font-size: 15px;
+  color: #f26a2d;
+
+  font-size: 13px;
   font-weight: 500;
-  color: #ff8458;
+
+  line-height: 1;
 }
 
-/* =========================================
-   TITLE
-========================================= */
+.auroAboutTag span {
+  width: 50px;
+  height: 1.5px;
+
+  background: #efb293;
+
+  display: block;
+}
+
+/* TITLE */
 
 .auroAboutLeft h2 {
+  color: #171717;
+
   font-size: 24px;
-  line-height: 1;
   font-weight: 600;
 
-  color: #111111;
+  line-height: 1;
 
-  margin-bottom: 24px;
-
-  letter-spacing: -1.5px;
+  margin-bottom: 22px;
 }
 
-/* =========================================
-   DESCRIPTION
-========================================= */
+/* DESCRIPTION */
 
 .auroAboutDescription {
-  font-family: Arial;
-font-weight: 400;
-font-style: Regular;
-font-size: 18px;
+  width: 100%;
+  max-width: 560px;
 
-line-height: 160%;
-letter-spacing: 0%;
-vertical-align: middle;
+  color: #2b2b2b;
 
+  font-size: 15px;
+  font-weight: 400;
 
-  color: #2c2c2c;
+  line-height: 2.05;
+
+  letter-spacing: 0.1px;
 
   margin-bottom: 34px;
 }
 
-/* =========================================
-   BUTTON
-========================================= */
+/* BUTTON */
 
 .auroKnowBtn {
-  height: 58px;
-  padding: 0 24px;
+  width: 122px;
+  height: 40px;
 
   border: none;
-  border-radius: 12px;
+  outline: none;
 
-  background:
-    linear-gradient(
-      180deg,
-      #2d7ce2 0%,
-      #0665d8 100%
-    );
+  border-radius: 7px;
+
+  background: #0d6efd;
+
+  color: white;
+
+  font-size: 12px;
+  font-weight: 600;
 
   display: flex;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
 
-  font-size: 15px;
-  font-weight: 600;
-
-  color: #ffffff;
+  gap: 8px;
 
   cursor: pointer;
 
-  transition: all 0.35s ease;
+  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.2);
 
-  box-shadow:
-    0px 12px 22px rgba(0,0,0,0.12);
+  transition: 0.3s ease;
 }
 
 .auroKnowBtn:hover {
-  transform: translateY(-4px);
+  background: #005ee2;
 }
 
 /* =========================================
-   ICON CIRCLE
-========================================= */
-
-.auroKnowBtn svg {
-  width: 18px;
-  height: 18px;
-
-  padding: 5px;
-
-  border-radius: 50%;
-
-  background: rgba(255,255,255,0.18);
-}
-
-/* =========================================
-   RIGHT
+   RIGHT SIDE
 ========================================= */
 
 .auroAboutRight {
-  position: relative;
+  width: 51%;
+
+  display: flex;
+  justify-content: flex-end;
 }
 
 .auroAboutImages {
+  width: 560px;
+  height: 360px;
+
   position: relative;
-  width: 100%;
-  height: 600px;
 }
 
-/* =========================================
-   LARGE IMAGE
-========================================= */
+/* MAIN IMAGE */
 
 .auroAboutLargeImg {
-  position: absolute;
-
-  top: 95px;
-  right: 0;
-
-  width: 74%;
+  width: 482px;
   height: 348px;
 
   object-fit: cover;
 
-  border-radius: 28px;
+  border-radius: 18px;
 
-  box-shadow:
-    0px 16px 36px rgba(0,0,0,0.10);
-}
-
-/* =========================================
-   SMALL IMAGE
-========================================= */
-
-.auroAboutSmallImg {
   position: absolute;
 
-  left: 0;
-  bottom: 70px;
+  top: 0;
+  right: 0;
 
+  z-index: 1;
+}
 
-  width: 58%;
+/* SMALL IMAGE */
+
+.auroAboutSmallImg {
+  width: 281px;
   height: 267px;
 
   object-fit: cover;
 
-  border-radius: 26px;
+  border-radius: 18px;
 
-  z-index: 2;
-  border: 10px solid #ffffff;
-
-  box-shadow:
-    0px 16px 36px rgba(248, 246, 246, 0.1);
-}
-
-/* =========================================
-   IMPACT BOX
-========================================= */
-
-.auroImpactBox {
   position: absolute;
 
-  left: 34%;
-  bottom: 46px;
+  left: 15px;
+  top: 174px;
 
-  width: 208px;
-  height: 117px;
+  z-index: 3;
+  border: 10px solid #fff;
 
-  border-radius: 22px;
-
-  background: #f46b2f;
-
-  padding: 22px 26px;
-
-  box-sizing: border-box;
-
-  z-index: 4;
-
-  box-shadow:
-    0px 16px 30px rgba(244,107,47,0.28);
+  /* box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12); */
 }
 
-/* NUMBER */
+/* IMPACT BOX */
+
+/* .auroImpactBox {
+  width: 165px;
+  height: 95px;
+
+  background: #f26a2d;
+
+  border-radius: 14px;
+
+  position: absolute;
+
+  left: 180px;
+  bottom: -90px;
+
+  z-index: 5;
+
+  padding: 14px 16px;
+
+  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
+}
 
 .auroImpactBox h3 {
-  display: flex;
-  align-items: baseline;
-  gap: 8px;
+  color: white;
 
   font-size: 46px;
-  line-height: 1;
   font-weight: 700;
 
-  color: #ffffff;
-
-  margin-bottom: 10px;
+  line-height: 1;
 }
 
 .auroImpactBox h3 span {
   font-size: 20px;
   font-weight: 500;
-  margin-bottom: 10px;
+  line-height: 160%;
+}
+
+.auroImpactBox p {
+  margin-top: 10px;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 500;
+
+  line-height: 1.4;
+} */
+
+
+
+
+/* IMPACT BOX */
+
+.auroImpactBox {
+  width: 170px;
+  height: 98px;
+
+  background: #f26a2d;
+
+  border-radius: 0px;
+
+  padding: 14px 16px;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+   position: absolute;
+
+  left: 180px;
+  bottom: -90px;
+
+  z-index: 5;
+  border-radius: 16px;
+}
+
+/* TOP ROW */
+
+.auroImpactBox h3 {
+  display: flex;
+  align-items: center;
+
+  gap: 8px;
+
+  color: #ffffff;
+
+  font-size: 38px;
+  font-weight: 600;
+
+  line-height: 1;
+
+  letter-spacing: -1px;
+
+  margin: 0;
+}
+
+/* LAKH */
+
+.auroImpactBox h3 span {
+  font-size: 16px;
+  font-weight: 500;
+
+  letter-spacing: 0;
 }
 
 /* TEXT */
 
 .auroImpactBox p {
-  font-family: Poppins;
-font-weight: 500;
-font-style: Medium;
-font-size: 20px;
+  margin-top: 10px;
 
-line-height: 140%;
-letter-spacing: 0%;
-vertical-align: bottom;
-color: #ffffff;
+  color: #ffffff;
 
+  font-size: 17px;
+  font-weight: 500;
+
+  line-height: 1.2;
+
+  margin-bottom: 0;
 }
-
-/* =========================================
-   YELLOW ARROW
-========================================= */
+/* YELLOW ARROW */
 
 .auroYellowArrow {
+  width: 112px;
+
   position: absolute;
 
-  right: 30px;
-  bottom: 32px;
+  right: 120px;
+  bottom: -50px;
 
-  width: 170px;
-
-  z-index: 3;
+  z-index: 2;
 }
 
 /* =========================================
-   RESPONSIVE
+   TABLET
 ========================================= */
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 992px) {
 
   .auroAboutWrapper {
-    grid-template-columns: 1fr;
-    gap: 60px;
+    flex-direction: column;
+
+    gap: 55px;
   }
 
-  .auroAboutLeft {
-    max-width: 100%;
+  .auroAboutLeft,
+  .auroAboutRight {
+    width: 100%;
   }
 
   .auroAboutDescription {
     max-width: 100%;
   }
 
-  .auroAboutImages {
-    height: 620px;
+  .auroAboutRight {
+    justify-content: center;
   }
 }
 
-@media screen and (max-width: 768px) {
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
 
   .auroAboutSection {
-    padding: 20px 0 30px;
+    padding: 55px 0;
   }
 
   .auroAboutContainer {
-    padding: 0 18px;
+    padding: 0 20px;
   }
 
   .auroAboutLeft h2 {
-    font-size: 34px;
-  }
-
-  .auroAboutDescription {
-    font-size: 15px;
-    line-height: 32px;
-  }
-
-  .auroAboutImages {
-    height: 520px;
-  }
-
-  .auroAboutLargeImg {
-    height: 320px;
-    border-radius: 22px;
-  }
-
-  .auroAboutSmallImg {
-    height: 240px;
-    border-radius: 20px;
-  }
-
-  .auroImpactBox {
-    width: 210px;
-    height: 100px;
-
-    padding: 18px 20px;
-  }
-
-  .auroImpactBox h3 {
-    font-size: 40px;
-  }
-
-  .auroImpactBox h3 span {
-    font-size: 22px;
-  }
-
-  .auroImpactBox p {
-    font-size: 16px;
-  }
-
-  .auroYellowArrow {
-    width: 130px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-
-  .auroAboutLeft h2 {
-    font-size: 30px;
+    font-size: 28px;
   }
 
   .auroAboutDescription {
     font-size: 14px;
-    line-height: 28px;
+
+    line-height: 1.9;
   }
 
   .auroAboutImages {
-    height: 430px;
+    width: 100%;
+    height: 310px;
   }
 
   .auroAboutLargeImg {
-    width: 84%;
-    height: 240px;
+    width: 100%;
+    height: 180px;
   }
 
   .auroAboutSmallImg {
-    width: 66%;
-    height: 180px;
-    bottom: 90px;
+    width: 160px;
+    height: 125px;
+
+    left: 0;
+    top: 110px;
   }
 
   .auroImpactBox {
-    left: 26%;
-    bottom: 48px;
+    width: 140px;
+    height: 82px;
 
-    width: 180px;
-    height: 88px;
+    left: 120px;
+    bottom: 5px;
+
+    padding: 12px;
   }
 
   .auroImpactBox h3 {
-    font-size: 34px;
+    font-size: 20px;
   }
 
-  .auroImpactBox h3 span {
+  .auroImpactBox p {
+    margin-top: 6px;
+
+    font-size: 12px;
+  }
+
+  .auroYellowArrow {
+    width: 82px;
+
+    right: 0;
+    bottom: 0;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .auroAboutLeft h2 {
+    font-size: 24px;
+  }
+
+  .auroAboutDescription {
+    font-size: 13px;
+  }
+
+  .auroAboutImages {
+    height: 270px;
+  }
+
+  .auroAboutLargeImg {
+    height: 160px;
+  }
+
+  .auroAboutSmallImg {
+    width: 135px;
+    height: 110px;
+  }
+
+  .auroImpactBox {
+    width: 126px;
+    height: 72px;
+
+    left: 95px;
+  }
+
+  .auroImpactBox h3 {
     font-size: 18px;
   }
 
   .auroImpactBox p {
-    font-size: 14px;
+    font-size: 11px;
   }
 
   .auroYellowArrow {
-    width: 100px;
-    right: 10px;
+    width: 70px;
   }
 }

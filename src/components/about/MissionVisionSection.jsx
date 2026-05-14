@@ -1,114 +1,10 @@
-// const MissionVisionSection = () => {
-//   return (
-//     <section className="mission-section">
-
-//       <div className="container-fluid px-lg-5">
-
-//         <div className="mission-wrapper">
-
-//           <div className="row align-items-center g-5">
-
-//             {/* LEFT SIDE */}
-
-//             <div className="col-lg-5">
-
-//               <div className="mission-left">
-
-//                 <div className="dot-circle"></div>
-
-//                 {/* MISSION CARD */}
-
-//                 <div className="mission-card top-card">
-
-//                   <div className="card-tag">
-//                     Our Mission
-//                   </div>
-
-//                   <p>
-//                     Empowering underserved communities through education,
-//                     skill development, and technology-driven initiatives.
-//                     We create practical, scalable solutions that improve
-//                     livelihoods and enable individuals to build a better future.
-//                   </p>
-
-//                 </div>
-
-//                 {/* VISION CARD */}
-
-//                 <div className="mission-card bottom-card">
-
-//                   <div className="card-tag">
-//                     Our Vision
-//                   </div>
-
-//                   <p>
-//                     To build a future where everyone has access to opportunities,
-//                     resources, and the tools needed to thrive.
-//                     We aim to create inclusive, resilient communities
-//                     that drive lasting positive change.
-//                   </p>
-
-//                 </div>
-
-//               </div>
-
-//             </div>
-
-//             {/* RIGHT SIDE */}
-
-//             <div className="col-lg-7">
-
-//               <div className="mission-content">
-
-//                 <h2>Closing the Gap.</h2>
-
-//                 <p className="mission-text">
-//                   Access to opportunities is still out of reach for many communities.
-//                   We exist to create inclusive pathways through education,
-//                   technology, and sustainable support.
-//                 </p>
-
-//                 <div className="mission-points">
-
-//                   <div className="mission-point">
-//                     <i className="bi bi-check-circle"></i>
-//                     Improving access to quality education and digital literacy.
-//                   </div>
-
-//                   <div className="mission-point">
-//                     <i className="bi bi-check-circle"></i>
-//                     Empowering individuals with skills for sustainable livelihoods.
-//                   </div>
-
-//                   <div className="mission-point">
-//                     <i className="bi bi-check-circle"></i>
-//                     Strengthening communities through inclusive and scalable initiatives.
-//                   </div>
-
-//                 </div>
-
-//               </div>
-
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//     </section>
-//   );
-// };
-
-// export default MissionVisionSection;
-
 
 
 
 
 import React from "react";
 import { CheckCircle2 } from "lucide-react";
+import dotCircleImg from "../../assets/reachvector.png";
 
 import "./MissionVisionSection.css";
 
@@ -127,7 +23,14 @@ const MissionVisionSection = () => {
 
             {/* DOT CIRCLE */}
 
-            <div className="auroMissionDotCircle"></div>
+            {/* <div className="auroMissionDotCircle"></div> */}
+            {/* DOT CIRCLE IMAGE */}
+
+<img
+  src={dotCircleImg}
+  alt="Dot Circle"
+  className="auroMissionDotCircle"
+/>
 
             {/* TOP CARD */}
 
