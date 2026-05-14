@@ -1,303 +1,291 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
-/* =========================================
-   RESET
-========================================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:"Outfit",sans-serif;
-  background:#f3f3f3;
+.auroCareerSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 0 90px;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
 }
 
-/* =========================================
-   SECTION
-========================================= */
-
-.auroCareerSection{
-  width:100%;
-  padding:90px 24px;
-  overflow:hidden;
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
-
-.auroCareerContainer{
-  width:100%;
-  max-width:1320px;
-  margin:0 auto;
+.auroCareerContainer {
+  width: 100%;
+  max-width: 1476px;
+  margin: 0 auto;
+  padding: 0 58px;
 }
 
 /* =========================================
    HEADING
 ========================================= */
 
-.auroCareerHeading{
-  margin-bottom:42px;
+.auroCareerHeading {
+  margin-bottom: 48px;
 }
 
 /* TAG */
 
-.auroCareerTag{
-  display:flex;
-  align-items:center;
-  gap:12px;
+.auroCareerTag {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 
-  margin-bottom:18px;
+  margin-bottom: 18px;
 }
 
-.auroCareerTag span{
-  width:56px;
-  height:2px;
+.auroCareerTag span {
+  width: 54px;
+  height: 1.5px;
 
-  background:#ef835c;
+  background: #f47c34;
 
-  border-radius:999px;
+  display: block;
 }
 
-.auroCareerTag p{
-  color:#ef835c;
+.auroCareerTag p {
+  font-size: 15px;
+  font-weight: 600;
 
-  font-size:16px;
-  font-weight:500;
+  color: #f47c34;
 }
 
 /* TITLE */
 
-.auroCareerHeading h2{
-  font-size:52px;
-  line-height:1.1;
+.auroCareerHeading h2 {
+  font-size: 52px;
+  line-height: 1.15;
+  font-weight: 700;
 
-  color:#171717;
+  color: #111111;
 
-  font-weight:700;
+  letter-spacing: -1.4px;
 
-  letter-spacing:-1.5px;
-
-  max-width:760px;
+  max-width: 900px;
 }
 
 /* =========================================
    GRID
 ========================================= */
 
-.auroCareerGrid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
+.auroCareerGrid {
+  width: 100%;
 
-  gap:34px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 34px;
 }
 
 /* =========================================
    CARD
 ========================================= */
 
-.auroCareerCard{
-  position:relative;
+.auroCareerCard {
+  position: relative;
 
-  width:100%;
-  height:330px;
+  width: 100%;
+  height: 300px;
 
-  border-radius:26px;
+  border-radius: 28px;
 
-  overflow:hidden;
+  overflow: hidden;
 
-  cursor:pointer;
+  cursor: pointer;
 
-  box-shadow:
-    0 10px 30px rgba(0,0,0,0.08);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
 
-  transition:0.4s ease;
+  transition: 0.4s ease;
 }
 
-.auroCareerCard:hover{
-  transform:translateY(-5px);
+.auroCareerCard:hover {
+  transform: translateY(-6px);
 }
 
 /* IMAGE */
 
-.auroCareerCard img{
-  width:100%;
-  height:100%;
+.auroCareerCard img {
+  width: 100%;
+  height: 100%;
 
-  object-fit:cover;
+  object-fit: cover;
 
-  display:block;
+  transition: 0.5s ease;
+}
+
+.auroCareerCard:hover img {
+  transform: scale(1.05);
 }
 
 /* =========================================
    OVERLAY
 ========================================= */
 
-.auroCareerOverlay{
-  position:absolute;
-  inset:0;
+.auroCareerOverlay {
+  position: absolute;
+  inset: 0;
 
-  background:linear-gradient(
+  background: linear-gradient(
     to top,
-    rgba(0,0,0,0.85) 0%,
-    rgba(0,0,0,0.38) 45%,
-    rgba(0,0,0,0.08) 100%
+    rgba(0, 0, 0, 0.78) 0%,
+    rgba(0, 0, 0, 0.35) 45%,
+    rgba(0, 0, 0, 0.1) 100%
   );
 
-  z-index:2;
+  z-index: 1;
 }
 
 /* =========================================
    CONTENT
 ========================================= */
 
-.auroCareerContent{
-  position:absolute;
+.auroCareerContent {
+  position: absolute;
 
-  left:28px;
-  bottom:28px;
+  left: 34px;
+  bottom: 30px;
 
-  z-index:5;
+  z-index: 2;
+
+  max-width: 82%;
 }
 
-/* TITLE */
+.auroCareerContent h3 {
+  font-size: 34px;
+  line-height: 1.1;
+  font-weight: 700;
 
-.auroCareerContent h3{
-  color:#fff;
+  color: #ffffff;
 
-  font-size:34px;
-  line-height:1.1;
+  margin-bottom: 14px;
 
-  font-weight:600;
-
-  margin-bottom:12px;
+  letter-spacing: -0.8px;
 }
 
-/* DESCRIPTION */
+.auroCareerContent p {
+  font-size: 18px;
+  line-height: 1.75;
+  font-weight: 400;
 
-.auroCareerContent p{
-  color:rgba(255,255,255,0.88);
-
-  font-size:18px;
-  line-height:1.7;
-
-  max-width:470px;
+  color: rgba(255, 255, 255, 0.92);
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
-@media(max-width:1200px){
+@media (max-width: 1400px) {
 
-  .auroCareerHeading h2{
-    font-size:44px;
+  .auroCareerHeading h2 {
+    font-size: 46px;
   }
 
-  .auroCareerCard{
-    height:300px;
+  .auroCareerCard {
+    height: 270px;
   }
 
-  .auroCareerContent h3{
-    font-size:28px;
+  .auroCareerContent h3 {
+    font-size: 30px;
   }
 
-  .auroCareerContent p{
-    font-size:16px;
-  }
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media(max-width:992px){
-
-  .auroCareerGrid{
-    grid-template-columns:1fr;
-  }
-
-  .auroCareerCard{
-    height:360px;
+  .auroCareerContent p {
+    font-size: 16px;
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
+@media (max-width: 1100px) {
 
-@media(max-width:768px){
-
-  .auroCareerSection{
-    padding:70px 16px;
+  .auroCareerGrid {
+    gap: 24px;
   }
 
-  .auroCareerHeading{
-    margin-bottom:32px;
+  .auroCareerCard {
+    height: 240px;
   }
 
-  .auroCareerTag p{
-    font-size:14px;
-  }
-
-  .auroCareerHeading h2{
-    font-size:34px;
-
-    line-height:1.2;
-
-    letter-spacing:-1px;
-  }
-
-  .auroCareerGrid{
-    gap:24px;
-  }
-
-  .auroCareerCard{
-    height:280px;
-
-    border-radius:22px;
-  }
-
-  .auroCareerContent{
-    left:20px;
-    bottom:20px;
-  }
-
-  .auroCareerContent h3{
-    font-size:24px;
-
-    margin-bottom:8px;
-  }
-
-  .auroCareerContent p{
-    font-size:14px;
-
-    line-height:1.6;
+  .auroCareerHeading h2 {
+    font-size: 40px;
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+@media (max-width: 768px) {
 
-@media(max-width:480px){
-
-  .auroCareerHeading h2{
-    font-size:28px;
+  .auroCareerSection {
+    padding: 20px 0 60px;
   }
 
-  .auroCareerCard{
-    height:240px;
+  .auroCareerContainer {
+    padding: 0 18px;
   }
 
-  .auroCareerContent h3{
-    font-size:20px;
+  .auroCareerHeading {
+    margin-bottom: 34px;
   }
 
-  .auroCareerContent p{
-    font-size:13px;
+  .auroCareerTag {
+    margin-bottom: 14px;
+  }
+
+  .auroCareerTag p {
+    font-size: 13px;
+  }
+
+  .auroCareerTag span {
+    width: 42px;
+  }
+
+  .auroCareerHeading h2 {
+    font-size: 32px;
+    line-height: 1.2;
+    letter-spacing: -1px;
+  }
+
+  .auroCareerGrid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .auroCareerCard {
+    height: 230px;
+    border-radius: 22px;
+  }
+
+  .auroCareerContent {
+    left: 22px;
+    bottom: 22px;
+    max-width: 88%;
+  }
+
+  .auroCareerContent h3 {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+
+  .auroCareerContent p {
+    font-size: 14px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .auroCareerHeading h2 {
+    font-size: 28px;
+  }
+
+  .auroCareerCard {
+    height: 210px;
+    border-radius: 18px;
+  }
+
+  .auroCareerContent h3 {
+    font-size: 21px;
+  }
+
+  .auroCareerContent p {
+    font-size: 13px;
   }
 }

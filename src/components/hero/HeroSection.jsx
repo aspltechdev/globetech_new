@@ -1,66 +1,65 @@
-// import heroImg from "../../assets/heroimg.png";
+// import React from "react";
+// import { ChevronLeft, ChevronRight, Play } from "lucide-react";
+// import heroImage from "../../assets/heroimg.png";
 
 // const HeroSection = () => {
 //   return (
 //     <section className="hero-section">
+//       <div className="hero-container">
+        
+//         {/* LEFT CONTENT */}
+//         <div className="hero-left">
+//           <div className="hero-content">
+//             <h1>
+//               Empowering Youth <br />
+//               Skills & Opportunities
+//             </h1>
 
-//       <div className="container-fluid px-lg-4">
+//             <p>
+//               We support young individuals in gaining industry-relevant skills
+//               that open doors to sustainable employment and entrepreneurship.
+//               Our programs focus on making vocational training more accessible
+//               and inclusive, especially for underserved and marginalized
+//               communities, helping bridge the gap between talent and
+//               opportunity.
+//             </p>
 
-//         <div className="hero-wrapper">
+//             <div className="hero-buttons">
+//               <button className="donate-btn">
+//                 Donate Now
+//               </button>
 
-//           <div className="row align-items-center g-0">
-
-//             <div className="col-lg-6">
-
-//               <div className="hero-content">
-
-//                 <h1>
-//                   Empowering Youth
-//                   Skills & Opportunities
-//                 </h1>
-
-//                 <p>
-//                   We support young individuals in gaining industry-relevant skills
-//                   that open doors to sustainable employment and entrepreneurship.
-//                 </p>
-
-//                 <div className="hero-buttons">
-
-//                   <a href="#" className="hero-btn">
-//                     Donate Now
-//                   </a>
-
-//                   <a href="#" className="process-btn">
-//                     <span>
-//                       <i className="bi bi-play-fill"></i>
-//                     </span>
-//                     Our process
-//                   </a>
-
-//                 </div>
-
-//               </div>
-
+//               <button className="process-btn">
+//                 <span className="play-icon">
+//                   <Play size={14} fill="#1d4ed8" strokeWidth={2} />
+//                 </span>
+//                 Our process
+//               </button>
 //             </div>
-
-//             <div className="col-lg-6">
-
-//               <div className="hero-image">
-
-//                 <div className="circle-pattern"></div>
-
-//                 <img src={heroImg} alt="Students" />
-
-//               </div>
-
-//             </div>
-
 //           </div>
-
 //         </div>
 
-//       </div>
+//         {/* RIGHT IMAGE */}
+//         <div className="hero-right">
+//           <div className="dot-pattern"></div>
 
+//           <img src={heroImage} alt="Students" />
+
+//           {/* BOTTOM CURVE */}
+//           <div className="curve-shape"></div>
+//         </div>
+
+//         {/* SLIDER BUTTONS */}
+//         <div className="slider-controls">
+//           <button>
+//             <ChevronLeft size={24} />
+//           </button>
+
+//           <button>
+//             <ChevronRight size={24} />
+//           </button>
+//         </div>
+//       </div>
 //     </section>
 //   );
 // };
@@ -68,204 +67,89 @@
 // export default HeroSection;
 
 
-import React, { useEffect, useState } from "react";
+import React from "react";
 import {
   ChevronLeft,
   ChevronRight,
   Play,
-  ArrowUpRight
+  ArrowUpRight,
 } from "lucide-react";
 
-import hero1 from "../../assets/heroimg.png";
-import hero2 from "../../assets/heroimg.png";
-import hero3 from "../../assets/heroimg.png";
-import hero4 from "../../assets/heroimg.png";
-import hero5 from "../../assets/heroimg.png";
+import heroImage from "../../assets/heroimg.png";
 
 import "./HeroSection.css";
 
-const slides = [
-  {
-    id: 1,
-    title: "Empowering Youth\nSkills & Opportunities",
-    description:
-      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities, helping bridge the gap between talent and opportunity.",
-    image: hero1,
-  },
-
-  {
-    id: 2,
-    title: "Digital Learning\nFor Future Careers",
-    description:
-      "Providing practical learning experiences and digital education that prepares students for modern industries and entrepreneurship opportunities.",
-    image: hero2,
-  },
-
-  {
-    id: 3,
-    title: "Education That\nCreates Impact",
-    description:
-      "Creating meaningful career opportunities through mentorship, industry guidance and skill-based training programs.",
-    image: hero3,
-  },
-
-  {
-    id: 4,
-    title: "Technology Driven\nSkill Development",
-    description:
-      "Helping students and youth become industry-ready through technology, creativity and innovation-focused learning.",
-    image: hero4,
-  },
-
-  {
-    id: 5,
-    title: "Building Better\nCareer Opportunities",
-    description:
-      "Connecting education with employability by enabling accessible and practical learning ecosystems.",
-    image: hero5,
-  },
-];
-
 const HeroSection = () => {
-
-  const [currentSlide, setCurrentSlide] = useState(0);
-
-  // AUTO SLIDE
-
-  useEffect(() => {
-
-    const interval = setInterval(() => {
-
-      nextSlide();
-
-    }, 5000);
-
-    return () => clearInterval(interval);
-
-  }, [currentSlide]);
-
-  // NEXT SLIDE
-
-  const nextSlide = () => {
-
-    setCurrentSlide((prev) =>
-      prev === slides.length - 1 ? 0 : prev + 1
-    );
-
-  };
-
-  // PREV SLIDE
-
-  const prevSlide = () => {
-
-    setCurrentSlide((prev) =>
-      prev === 0 ? slides.length - 1 : prev - 1
-    );
-
-  };
-
   return (
+    <section className="hero">
+      <div className="hero-wrapper">
+        
+        {/* LEFT CONTENT */}
+        <div className="hero-left">
 
-    <section className="auroHeroSection">
+          <div className="hero-content">
+            <h1>
+              Empowering Youth
+              <br />
+              Skills & Opportunities
+            </h1>
 
-      <div className="auroHeroContainer">
+            <p>
+              We support young individuals in gaining industry-relevant skills
+              that open doors to sustainable employment and entrepreneurship.
+              Our programs focus on making vocational training more accessible
+              and inclusive, especially for underserved and marginalized
+              communities, helping bridge the gap between talent and
+              opportunity.
+            </p>
 
-        <div className="auroHeroWrapper">
+            <div className="hero-cta">
 
-          {/* LEFT CONTENT */}
+              {/* DONATE BUTTON */}
+              <button className="hero-donate-btn">
+                Donate Now
 
-          <div className="auroHeroLeft">
-
-            <div className="auroHeroContent">
-
-              <h1>
-                {slides[currentSlide].title
-                  .split("\n")
-                  .map((line, index) => (
-                    <span key={index}>
-                      {line}
-                      <br />
-                    </span>
-                  ))}
-              </h1>
-
-              <p>
-                {slides[currentSlide].description}
-              </p>
-
-              {/* BUTTONS */}
-
-              <div className="auroHeroButtons">
-
-                <button className="auroDonateBtn">
-
-                  Donate Now
-
-                  <ArrowUpRight size={16} />
-
-                </button>
-
-                <button className="auroProcessBtn">
-
-                  <span>
-                    <Play
-                      size={14}
-                      fill="#1E63C6"
-                      color="#1E63C6"
-                    />
-                  </span>
-
-                  Our process
-
-                </button>
-
-              </div>
-
-            </div>
-
-            {/* NAVIGATION */}
-
-            <div className="auroHeroNavigation">
-
-              <button onClick={prevSlide}>
-
-                <ChevronLeft size={26} />
-
+                <span className="arrow-box">
+                  <ArrowUpRight size={13} />
+                </span>
               </button>
 
-              <button onClick={nextSlide}>
+              {/* PROCESS BUTTON */}
+              <button className="process-btn">
+                <span className="play-circle">
+                  <Play size={11} fill="#2D73D5" strokeWidth={2.5} />
+                </span>
 
-                <ChevronRight size={26} />
-
+                <span>Our process</span>
               </button>
-
             </div>
-
           </div>
 
-          {/* RIGHT IMAGE */}
+          {/* BOTTOM WHITE CURVE */}
+          <div className="bottom-curve"></div>
 
-          <div className="auroHeroRight">
+          {/* SLIDER BUTTONS */}
+          <div className="slider-btns">
+            <button>
+              <ChevronLeft size={28} strokeWidth={2.4} />
+            </button>
 
-            {/* DOT PATTERN */}
-
-            <div className="auroPatternCircle"></div>
-
-            {/* IMAGE */}
-
-            <img
-              src={slides[currentSlide].image}
-              alt="Hero Banner"
-            />
-
+            <button>
+              <ChevronRight size={28} strokeWidth={2.4} />
+            </button>
           </div>
-
         </div>
 
+        {/* RIGHT IMAGE SECTION */}
+        <div className="hero-right">
+
+          {/* DOT CIRCLE */}
+          <div className="dots-circle"></div>
+
+          <img src={heroImage} alt="Students" />
+        </div>
       </div>
-
     </section>
-
   );
 };
 

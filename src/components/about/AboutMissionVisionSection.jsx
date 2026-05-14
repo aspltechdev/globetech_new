@@ -59,21 +59,21 @@ export default function AboutMissionVisionSection() {
             and opportunity in underserved communities. Through education and
             career guidance, we help individuals make informed decisions and
             access better learning pathways.
-          </p>
+          
 
-          <p>
+          
             Our skill development initiatives equip people with industry-relevant
             capabilities, enabling them to secure sustainable employment and
             build stable livelihoods.
-          </p>
+         
 
-          <p>
+          
             At the same time, we leverage technology to solve real-world
             community challenges, improving access to resources and creating
             efficient, scalable solutions.
-          </p>
+         
 
-          <p>
+         
             Our work is deeply rooted in community development, where we support
             grassroots initiatives that uplift local communities. By fostering
             collaboration, inclusivity, and long-term growth, we aim to create

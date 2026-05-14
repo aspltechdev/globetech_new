@@ -1,414 +1,401 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
-/* ===================================
-   RESET
-=================================== */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:"Outfit", sans-serif;
-  background:#f4f4f4;
+.auroMissionSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 24px 0;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
 }
 
-/* ===================================
-   SECTION
-=================================== */
-
-.auroMissionSection{
-  width:100%;
-  padding:90px 24px;
-  overflow:hidden;
+.auroMissionContainer {
+  width: 100%;
+  max-width: 1476px;
+  margin: 0 auto;
+  padding: 0 22px;
 }
 
-/* ===================================
-   CONTAINER
-=================================== */
+.auroMissionWrapper {
+  width: 100%;
+  min-height: 760px;
 
-.auroMissionContainer{
-  width:100%;
-  max-width:1320px;
-  margin:0 auto;
+  background: #f8cf00;
+
+  border-radius: 34px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  position: relative;
+
+  overflow: hidden;
+
+  padding: 70px 70px 70px 60px;
 }
 
-/* ===================================
-   WRAPPER
-=================================== */
-
-.auroMissionWrapper{
-  width:100%;
-  min-height:650px;
-  background:#f7cf00;
-  border-radius:28px;
-
-  display:flex;
-  align-items:center;
-  justify-content:space-between;
-
-  padding:70px 70px;
-
-  position:relative;
-  overflow:hidden;
-}
-
-/* ===================================
+/* =========================================
    LEFT SIDE
-=================================== */
+========================================= */
 
-.auroMissionLeft{
-  width:42%;
-  position:relative;
-  height:100%;
-  min-height:520px;
+.auroMissionLeft {
+  width: 46%;
+  height: 100%;
+  position: relative;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
-/* ===================================
-   DOT CIRCLE
-=================================== */
+/* DOT CIRCLE */
 
-.auroMissionDotCircle{
-  position:absolute;
+.auroMissionDotCircle {
+  position: absolute;
+  left: 10px;
+  top: 50%;
+  transform: translateY(-50%);
 
-  left:10px;
-  top:90px;
+  width: 430px;
+  height: 430px;
+  border-radius: 50%;
 
-  width:330px;
-  height:330px;
-
-  border-radius:50%;
-
-  background-image:radial-gradient(
-    #1566d5 3px,
-    transparent 3px
+  background-image: radial-gradient(
+    #0d6efd 2.8px,
+    transparent 2.8px
   );
 
-  background-size:18px 18px;
+  background-size: 18px 18px;
 
-  z-index:1;
+  z-index: 1;
+
+  opacity: 0.95;
 }
 
-/* ===================================
+/* =========================================
    CARDS
-=================================== */
+========================================= */
 
-.auroMissionCard{
-  width:260px;
-  background:#ffffff;
+.auroMissionCard {
+  width: 430px;
 
-  border-radius:22px;
+  background: #ffffff;
 
-  padding:20px 20px 18px;
+  border-radius: 24px;
 
-  position:absolute;
+  padding: 28px 30px;
 
-  z-index:5;
+  position: relative;
 
-  box-shadow:0 16px 40px rgba(0,0,0,0.18);
+  z-index: 2;
+
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
-/* TOP CARD */
-
-.auroMissionTopCard{
-  top:0;
-  right:20px;
+.auroMissionTopCard {
+  margin-left: 120px;
+  margin-bottom: 85px;
 }
 
-/* BOTTOM CARD */
-
-.auroMissionBottomCard{
-  left:0;
-  bottom:0;
+.auroMissionBottomCard {
+  margin-left: 0;
 }
 
-/* ===================================
-   CARD TAG
-=================================== */
+/* TAG */
 
-.auroMissionCardTag{
-  width:max-content;
+.auroMissionCardTag {
+  width: fit-content;
+  height: 44px;
 
-  padding:10px 16px;
+  background: #0d6efd;
 
-  background:#1566d5;
+  border-radius: 999px;
 
-  color:#fff;
+  padding: 0 24px;
 
-  border-radius:999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  font-size:15px;
-  font-weight:600;
+  color: #ffffff;
+  font-size: 18px;
+  font-weight: 600;
 
-  margin-bottom:16px;
+  margin-bottom: 24px;
 }
 
-/* ===================================
-   CARD TEXT
-=================================== */
+/* CARD TEXT */
 
-.auroMissionCard p{
-  color:#313131;
-  font-size:16px;
-  line-height:1.75;
-  font-weight:400;
+.auroMissionCard p {
+  font-size: 20px;
+  line-height: 1.9;
+  color: #222222;
+  font-weight: 400;
 }
 
-/* ===================================
+/* =========================================
    RIGHT SIDE
-=================================== */
+========================================= */
 
-.auroMissionRight{
-  width:48%;
+.auroMissionRight {
+  width: 48%;
+  position: relative;
+  z-index: 3;
 }
 
-/* ===================================
-   TITLE
-=================================== */
+.auroMissionRight h2 {
+  font-size: 74px;
+  line-height: 1.08;
+  font-weight: 700;
+  color: #111111;
 
-.auroMissionRight h2{
-  font-size:68px;
-  line-height:1;
-  font-weight:700;
-  color:#18223b;
+  margin-bottom: 34px;
 
-  margin-bottom:26px;
-
-  letter-spacing:-2px;
+  letter-spacing: -2px;
 }
 
-.auroMissionRight h2 span{
-  color:#1566d5;
+.auroMissionRight h2 span {
+  color: #0d6efd;
 }
 
-/* ===================================
-   DESCRIPTION
-=================================== */
+.auroMissionDescription {
+  max-width: 620px;
 
-.auroMissionDescription{
-  font-size:24px;
-  line-height:1.8;
-  color:#3f3f3f;
+  font-size: 24px;
+  line-height: 1.9;
 
-  margin-bottom:42px;
+  color: #4b4b4b;
 
-  max-width:650px;
+  margin-bottom: 48px;
 }
 
-/* ===================================
+/* =========================================
    POINTS
-=================================== */
+========================================= */
 
-.auroMissionPoints{
-  display:flex;
-  flex-direction:column;
-  gap:24px;
+.auroMissionPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 34px;
 }
 
-/* SINGLE POINT */
-
-.auroMissionPoint{
-  display:flex;
-  align-items:flex-start;
-  gap:16px;
+.auroMissionPoint {
+  display: flex;
+  align-items: flex-start;
+  gap: 20px;
 }
 
-/* ICON */
+.auroMissionIcon {
+  min-width: 34px;
+  width: 34px;
+  height: 34px;
 
-.auroMissionIcon{
-  width:34px;
-  height:34px;
+  border-radius: 50%;
 
-  min-width:34px;
+  background: rgba(13, 110, 253, 0.1);
 
-  border-radius:10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
-  background:#f5db4d;
+  color: #0d6efd;
 
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  color:#1566d5;
+  margin-top: 4px;
 }
 
-/* POINT TEXT */
-
-.auroMissionPoint p{
-  font-size:18px;
-  line-height:1.7;
-  color:#232323;
+.auroMissionPoint p {
+  font-size: 21px;
+  line-height: 1.8;
+  color: #222222;
+  font-weight: 500;
 }
 
-/* ===================================
+/* =========================================
    RESPONSIVE
-=================================== */
+========================================= */
 
-@media(max-width:1200px){
+@media (max-width: 1400px) {
 
-  .auroMissionWrapper{
-    padding:60px 50px;
+  .auroMissionWrapper {
+    padding: 60px 55px;
   }
 
-  .auroMissionRight h2{
-    font-size:56px;
+  .auroMissionRight h2 {
+    font-size: 62px;
   }
 
-  .auroMissionDescription{
-    font-size:20px;
+  .auroMissionDescription {
+    font-size: 21px;
+  }
+
+  .auroMissionPoint p {
+    font-size: 19px;
+  }
+
+  .auroMissionCard {
+    width: 390px;
+  }
+
+  .auroMissionCard p {
+    font-size: 18px;
   }
 }
 
-/* ===================================
-   TABLET
-=================================== */
+@media (max-width: 1150px) {
 
-@media(max-width:992px){
+  .auroMissionWrapper {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 70px;
 
-  .auroMissionWrapper{
-    flex-direction:column;
-    gap:80px;
-
-    padding:60px 40px;
+    padding: 60px 40px;
   }
 
   .auroMissionLeft,
-  .auroMissionRight{
-    width:100%;
+  .auroMissionRight {
+    width: 100%;
   }
 
-  .auroMissionLeft{
-    min-height:480px;
+  .auroMissionDotCircle {
+    left: 50%;
+    transform: translate(-50%, -50%);
   }
 
-  .auroMissionRight h2{
-    font-size:52px;
+  .auroMissionTopCard {
+    margin-left: auto;
   }
 
-  .auroMissionDescription{
-    max-width:100%;
-  }
-}
-
-/* ===================================
-   MOBILE
-=================================== */
-
-@media(max-width:768px){
-
-  .auroMissionSection{
-    padding:70px 16px;
-  }
-
-  .auroMissionWrapper{
-    border-radius:22px;
-
-    padding:50px 24px;
-  }
-
-  .auroMissionLeft{
-    min-height:420px;
-  }
-
-  .auroMissionDotCircle{
-    width:240px;
-    height:240px;
-
-    left:50%;
-    transform:translateX(-50%);
-
-    background-size:14px 14px;
-  }
-
-  .auroMissionCard{
-    width:220px;
-
-    padding:18px;
-  }
-
-  .auroMissionTopCard{
-    right:0;
-  }
-
-  .auroMissionBottomCard{
-    left:0;
-  }
-
-  .auroMissionCardTag{
-    font-size:14px;
-    padding:8px 14px;
-  }
-
-  .auroMissionCard p{
-    font-size:14px;
-  }
-
-  .auroMissionRight h2{
-    font-size:40px;
-    letter-spacing:-1px;
-  }
-
-  .auroMissionDescription{
-    font-size:17px;
-    line-height:1.8;
-    margin-bottom:34px;
-  }
-
-  .auroMissionPoint p{
-    font-size:15px;
+  .auroMissionBottomCard {
+    margin-left: 0;
   }
 }
 
-/* ===================================
-   SMALL MOBILE
-=================================== */
+@media (max-width: 768px) {
 
-@media(max-width:480px){
-
-  .auroMissionWrapper{
-    padding:44px 18px;
+  .auroMissionSection {
+    padding: 12px 0;
   }
 
-  .auroMissionLeft{
-    min-height:380px;
+  .auroMissionContainer {
+    padding: 0 14px;
   }
 
-  .auroMissionCard{
-    width:180px;
-    border-radius:18px;
+  .auroMissionWrapper {
+    border-radius: 24px;
+    padding: 45px 24px;
+    min-height: auto;
   }
 
-  .auroMissionCard p{
-    font-size:13px;
-    line-height:1.6;
+  .auroMissionDotCircle {
+    width: 280px;
+    height: 280px;
+    background-size: 14px 14px;
   }
 
-  .auroMissionDotCircle{
-    width:200px;
-    height:200px;
+  .auroMissionCard {
+    width: 100%;
+    border-radius: 18px;
+    padding: 22px 20px;
   }
 
-  .auroMissionRight h2{
-    font-size:32px;
+  .auroMissionTopCard {
+    margin-left: 40px;
+    margin-bottom: 45px;
   }
 
-  .auroMissionDescription{
-    font-size:15px;
+  .auroMissionBottomCard {
+    margin-left: 0;
   }
 
-  .auroMissionPoint{
-    gap:12px;
+  .auroMissionCardTag {
+    height: 38px;
+    padding: 0 18px;
+    font-size: 15px;
+    margin-bottom: 18px;
   }
 
-  .auroMissionIcon{
-    width:28px;
-    height:28px;
-    min-width:28px;
+  .auroMissionCard p {
+    font-size: 15px;
+    line-height: 1.8;
   }
 
-  .auroMissionPoint p{
-    font-size:14px;
+  .auroMissionRight h2 {
+    font-size: 42px;
+    margin-bottom: 22px;
+    letter-spacing: -1px;
+  }
+
+  .auroMissionDescription {
+    font-size: 16px;
+    line-height: 1.8;
+    margin-bottom: 34px;
+  }
+
+  .auroMissionPoints {
+    gap: 24px;
+  }
+
+  .auroMissionPoint {
+    gap: 14px;
+  }
+
+  .auroMissionIcon {
+    width: 28px;
+    height: 28px;
+    min-width: 28px;
+  }
+
+  .auroMissionPoint p {
+    font-size: 15px;
+    line-height: 1.7;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .auroMissionWrapper {
+    padding: 38px 18px;
+  }
+
+  .auroMissionDotCircle {
+    width: 220px;
+    height: 220px;
+    background-size: 12px 12px;
+  }
+
+  .auroMissionTopCard {
+    margin-left: 18px;
+    margin-bottom: 32px;
+  }
+
+  .auroMissionCard {
+    padding: 18px 16px;
+  }
+
+  .auroMissionCardTag {
+    height: 34px;
+    font-size: 14px;
+    padding: 0 16px;
+  }
+
+  .auroMissionCard p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+
+  .auroMissionRight h2 {
+    font-size: 34px;
+  }
+
+  .auroMissionDescription {
+    font-size: 14px;
+  }
+
+  .auroMissionPoint p {
+    font-size: 14px;
   }
 }

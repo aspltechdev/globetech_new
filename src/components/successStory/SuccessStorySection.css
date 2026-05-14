@@ -1,418 +1,425 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
-/* =========================================
-   RESET
-========================================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:"Outfit",sans-serif;
-  background:#f3f3f3;
+.auroSuccessSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 34px 0 80px;
+  overflow: hidden;
+  font-family: "Poppins", sans-serif;
 }
 
-/* =========================================
-   SECTION
-========================================= */
-
-.auroSuccessSection{
-  width:100%;
-  padding:90px 24px;
-  overflow:hidden;
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
-
-.auroSuccessContainer{
-  width:100%;
-  max-width:1320px;
-  margin:0 auto;
+.auroSuccessContainer {
+  width: 100%;
+  max-width: 1470px;
+  margin: 0 auto;
+  padding: 0 66px;
 }
 
 /* =========================================
    HEADING
 ========================================= */
 
-.auroSuccessHeading{
-  margin-bottom:54px;
+.auroSuccessHeading {
+  margin-bottom: 52px;
 }
 
 /* TAG */
 
-.auroSuccessTag{
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  margin-bottom:18px;
+.auroSuccessTag {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-bottom: 18px;
 }
 
-.auroSuccessTag span{
-  width:56px;
-  height:2px;
-
-  background:#ef835c;
-
-  border-radius:999px;
+.auroSuccessTag span {
+  width: 86px;
+  height: 1.5px;
+  background: #f47c34;
+  display: block;
 }
 
-.auroSuccessTag p{
-  color:#ef835c;
-
-  font-size:16px;
-  font-weight:500;
+.auroSuccessTag p {
+  color: #f47c34;
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 0.2px;
 }
 
 /* TITLE */
 
-.auroSuccessHeading h2{
-  font-size:46px;
-  line-height:1.2;
+.auroSuccessHeading h2 {
+ 
+  line-height: 1.3;
 
-  color:#171717;
+  color: #111111;
+  max-width: 860px;
+  letter-spacing: -0.5px;
 
-  font-weight:700;
 
-  letter-spacing:-1px;
+  font-family: Poppins;
+font-weight: 600;
+font-style: SemiBold;
+font-size: 24px;
+leading-trim: NONE;
+line-height: 140%;
+letter-spacing: 0%;
 
-  max-width:920px;
 }
 
 /* =========================================
-   MAIN WRAPPER
+   WRAPPER
 ========================================= */
 
-.auroSuccessWrapper{
-  display:flex;
-  align-items:flex-start;
-  justify-content:space-between;
-
-  gap:70px;
+.auroSuccessWrapper {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 70px;
 }
 
 /* =========================================
    LEFT SIDE
 ========================================= */
 
-.auroSuccessLeft{
-  width:48%;
+.auroSuccessLeft {
+  width: 46%;
 }
 
 /* NAME */
 
-.auroSuccessLeft h3{
-  font-size:56px;
-  line-height:1.1;
+.auroSuccessLeft h3 {
 
-  color:#111;
+  line-height: 1.05;
 
-  font-weight:600;
+  color: #111111;
+  letter-spacing: -1.5px;
+  margin-bottom: 8px;
 
-  margin-bottom:14px;
+
+  font-family: Poppins;
+font-weight: 500;
+font-style: Medium;
+font-size: 40px;
+leading-trim: NONE;
+line-height: 140%;
+letter-spacing: 0%;
+
 }
 
 /* ROLE */
 
-.auroSuccessLeft h4{
-  font-size:32px;
-
-  color:#3d82f6;
-
-  font-weight:500;
-
-  margin-bottom:36px;
+.auroSuccessLeft h4 {
+  font-size: 22px;
+  line-height: 1.4;
+  font-weight: 500;
+  color: #0d6efd;
+  margin-bottom: 28px;
 }
 
 /* =========================================
    IMAGE CARD
 ========================================= */
 
-.auroSuccessImageCard{
-  position:relative;
+.auroSuccessImageCard {
+  position: relative;
 
-  width:100%;
-  height:640px;
+  width: 100%;
+  max-width: 610px;
+  height: 760px;
 
-  border-radius:30px;
+  border-radius: 28px;
 
-  overflow:hidden;
+  overflow: hidden;
 
-  background:#8d8d8d;
+  background: #7d7d7d;
 }
 
 /* IMAGE */
 
-.auroSuccessImageCard img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  display:block;
+.auroSuccessImageCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
 }
 
 /* OVERLAY */
 
-.auroSuccessOverlay{
-  position:absolute;
-  inset:0;
+.auroSuccessOverlay {
+  position: absolute;
+  inset: 0;
 
-  background:linear-gradient(
+  background: linear-gradient(
     to top,
-    rgba(0,0,0,0.75) 0%,
-    rgba(0,0,0,0.15) 45%,
-    rgba(0,0,0,0.05) 100%
+    rgba(0, 0, 0, 0.7) 0%,
+    rgba(0, 0, 0, 0.15) 40%,
+    rgba(0, 0, 0, 0) 100%
   );
+
+  z-index: 1;
 }
 
 /* QUOTE */
 
-.auroSuccessQuote{
-  position:absolute;
+.auroSuccessQuote {
+  position: absolute;
 
-  left:34px;
-  bottom:34px;
+  left: 26px;
+  right: 26px;
+  bottom: 24px;
 
-  max-width:85%;
+  z-index: 2;
 
-  color:#ffffff;
+  color: rgba(255, 255, 255, 0.92);
 
-  font-size:20px;
-  line-height:1.7;
+  font-size: 19px;
+  line-height: 1.7;
+  font-weight: 400;
 
-  font-weight:400;
-
-  z-index:5;
+  letter-spacing: -0.2px;
 }
 
 /* =========================================
    RIGHT SIDE
 ========================================= */
 
-.auroSuccessRight{
-  width:52%;
+.auroSuccessRight {
+  width: 43%;
 
-  display:flex;
-  flex-direction:column;
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
 
-  gap:28px;
-
-  padding-top:150px;
+  padding-top: 180px;
 }
 
 /* =========================================
    TIMELINE CARD
 ========================================= */
 
-.auroTimelineCard{
-  background:#ffffff;
+.auroTimelineCard {
+  position: relative;
 
-  border-radius:22px;
+  width: 100%;
+  min-height: 177px;
 
-  padding:34px 34px 30px;
+  background: #ffffff;
 
-  box-shadow:
-    0 2px 4px rgba(0,0,0,0.05),
-    0 10px 24px rgba(0,0,0,0.06);
+  border-radius: 22px;
 
-  position:relative;
+  padding: 24px 28px;
+
+  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
+
+  overflow: hidden;
 }
 
-/* LEFT COLOR BORDER */
+/* LEFT BORDER */
 
-.auroTimelineCard::before{
-  content:"";
+.auroTimelineCard::before {
+  content: "";
 
-  position:absolute;
+  position: absolute;
+  left: 0;
+  top: 0;
 
-  left:0;
-  top:0;
-
-  width:8px;
-  height:100%;
-
-  border-radius:22px 0 0 22px;
+  width: 6px;
+  height: 100%;
 }
 
-/* RED */
+/* BORDER COLORS */
 
-.redBorder::before{
-  background:#ff3131;
+.redBorder::before {
+  background: #ff2d2d;
 }
 
-/* YELLOW */
-
-.yellowBorder::before{
-  background:#ffd400;
+.yellowBorder::before {
+  background: #ffd500;
 }
 
-/* GREEN */
-
-.greenBorder::before{
-  background:#67ff1f;
+.greenBorder::before {
+  background: #65ff00;
 }
 
-/* CARD TITLE */
+/* TITLES */
 
-.auroTimelineCard h3{
-  font-size:32px;
+.auroTimelineCard h3 {
+  font-size: 20px;
+  line-height: 1.3;
+  font-weight: 700;
 
-  font-weight:700;
-
-  margin-bottom:18px;
+  margin-bottom: 14px;
 }
 
 /* TITLE COLORS */
 
-.redBorder h3{
-  color:#ff3131;
+.redBorder h3 {
+  color: #ff2d2d;
 }
 
-.yellowBorder h3{
-  color:#e8c300;
+.yellowBorder h3 {
+  color: #ffd500;
 }
 
-.greenBorder h3{
-  color:#67d620;
+.greenBorder h3 {
+  color: #65ff00;
 }
 
-/* TEXT */
+/* DESCRIPTION */
 
-.auroTimelineCard p{
-  font-size:18px;
-  line-height:1.8;
+.auroTimelineCard p {
+  font-size: 16px;
+  line-height: 1.6;
+  font-weight: 400;
 
-  color:#4a4a4a;
+  color: #3d3d3d;
+
+  max-width: 95%;
 }
 
 /* =========================================
-   TABLET
+   RESPONSIVE
 ========================================= */
 
-@media(max-width:1100px){
+@media (max-width: 1200px) {
 
-  .auroSuccessWrapper{
-    flex-direction:column;
+  .auroSuccessWrapper {
+    gap: 40px;
+  }
+
+  .auroSuccessLeft h3 {
+    font-size: 50px;
+  }
+
+  .auroSuccessImageCard {
+    height: 650px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .auroSuccessWrapper {
+    flex-direction: column;
   }
 
   .auroSuccessLeft,
-  .auroSuccessRight{
-    width:100%;
+  .auroSuccessRight {
+    width: 100%;
   }
 
-  .auroSuccessRight{
-    padding-top:0;
-  }
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:768px){
-
-  .auroSuccessSection{
-    padding:70px 16px;
+  .auroSuccessRight {
+    padding-top: 0;
   }
 
-  .auroSuccessHeading{
-    margin-bottom:34px;
-  }
-
-  .auroSuccessTag p{
-    font-size:14px;
-  }
-
-  .auroSuccessHeading h2{
-    font-size:32px;
-
-    line-height:1.3;
-  }
-
-  .auroSuccessLeft h3{
-    font-size:38px;
-  }
-
-  .auroSuccessLeft h4{
-    font-size:22px;
-
-    margin-bottom:24px;
-  }
-
-  .auroSuccessImageCard{
-    height:420px;
-
-    border-radius:24px;
-  }
-
-  .auroSuccessQuote{
-    left:22px;
-    bottom:22px;
-
-    font-size:15px;
-
-    max-width:90%;
-  }
-
-  .auroSuccessRight{
-    gap:20px;
-  }
-
-  .auroTimelineCard{
-    padding:26px 22px 24px;
-
-    border-radius:18px;
-  }
-
-  .auroTimelineCard h3{
-    font-size:24px;
-
-    margin-bottom:14px;
-  }
-
-  .auroTimelineCard p{
-    font-size:15px;
-    line-height:1.7;
+  .auroSuccessImageCard {
+    max-width: 100%;
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+@media (max-width: 768px) {
 
-@media(max-width:480px){
-
-  .auroSuccessHeading h2{
-    font-size:28px;
+  .auroSuccessSection {
+    padding: 20px 0 60px;
   }
 
-  .auroSuccessLeft h3{
-    font-size:32px;
+  .auroSuccessContainer {
+    padding: 0 18px;
   }
 
-  .auroSuccessLeft h4{
-    font-size:18px;
+  .auroSuccessHeading {
+    margin-bottom: 32px;
   }
 
-  .auroSuccessImageCard{
-    height:360px;
+  .auroSuccessTag {
+    margin-bottom: 12px;
   }
 
-  .auroSuccessQuote{
-    font-size:14px;
+  .auroSuccessTag span {
+    width: 54px;
   }
 
-  .auroTimelineCard h3{
-    font-size:20px;
+  .auroSuccessTag p {
+    font-size: 12px;
   }
 
-  .auroTimelineCard p{
-    font-size:14px;
+  .auroSuccessHeading h2 {
+    font-size: 22px;
+    line-height: 1.5;
+  }
+
+  .auroSuccessLeft h3 {
+    font-size: 42px;
+  }
+
+  .auroSuccessLeft h4 {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .auroSuccessImageCard {
+    height: 480px;
+    border-radius: 20px;
+  }
+
+  .auroSuccessQuote {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
+
+    font-size: 15px;
+    line-height: 1.6;
+  }
+
+  .auroSuccessRight {
+    gap: 18px;
+  }
+
+  .auroTimelineCard {
+    min-height: auto;
+    padding: 20px;
+    border-radius: 18px;
+  }
+
+  .auroTimelineCard h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .auroTimelineCard p {
+    font-size: 14px;
+    line-height: 1.65;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .auroSuccessLeft h3 {
+    font-size: 34px;
+  }
+
+  .auroSuccessLeft h4 {
+    font-size: 16px;
+  }
+
+  .auroSuccessImageCard {
+    height: 420px;
+  }
+
+  .auroSuccessQuote {
+    font-size: 14px;
+  }
+
+  .auroTimelineCard h3 {
+    font-size: 17px;
+  }
+
+  .auroTimelineCard p {
+    font-size: 13px;
   }
 }

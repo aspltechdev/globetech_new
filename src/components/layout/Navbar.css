@@ -20,7 +20,7 @@
   width:100%;
   max-width:1320px;
   margin:auto;
-  height:86px;
+  height:91px;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -59,10 +59,20 @@
   position:relative;
   text-decoration:none;
   color:#222222;
-  font-size:18px;
-  font-weight:500;
+  /* font-size:18px; */
+  /* font-weight:500; */
   transition:0.3s ease;
   padding-bottom:6px;
+
+  font-family: Arial;
+font-weight: 400;
+font-style: Regular;
+font-size: 20px;
+
+line-height: 150%;
+letter-spacing: 0%;
+vertical-align: middle;
+
 }
 
 /* HOVER */

@@ -1,183 +1,168 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
-/* =========================================
-   RESET
-========================================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:"Outfit",sans-serif;
-  background:#f3f3f3;
+.auroGallerySection {
+  width: 100%;
+  background: #ffffff;
+  padding: 30px 0 90px;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
 }
 
-/* =========================================
-   SECTION
-========================================= */
-
-.auroGallerySection{
-  width:100%;
-  padding:90px 24px;
-  overflow:hidden;
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
-
-.auroGalleryContainer{
-  width:100%;
-  max-width:1320px;
-  margin:0 auto;
+.auroGalleryContainer {
+  width: 100%;
+  max-width: 1476px;
+  margin: 0 auto;
+  padding: 0 42px;
 }
 
 /* =========================================
    HEADING
 ========================================= */
 
-.auroGalleryHeading{
-  text-align:center;
-
-  margin-bottom:54px;
+.auroGalleryHeading {
+  text-align: center;
+  margin-bottom: 42px;
 }
 
-/* TITLE */
+.auroGalleryHeading h2 {
+  font-size: 44px;
+  line-height: 1.15;
+  font-weight: 700;
 
-.auroGalleryHeading h2{
-  font-size:42px;
-  line-height:1.2;
+  color: #111111;
 
-  color:#171717;
-
-  font-weight:700;
-
-  letter-spacing:-1px;
+  letter-spacing: -1px;
 }
 
 /* =========================================
    GRID
 ========================================= */
 
-.auroGalleryGrid{
-  display:grid;
-  grid-template-columns:repeat(3,1fr);
+.auroGalleryGrid {
+  width: 100%;
 
-  gap:42px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+
+  gap: 34px;
 }
 
 /* =========================================
    CARD
 ========================================= */
 
-.auroGalleryCard{
-  position:relative;
+.auroGalleryCard {
+  position: relative;
 
-  width:100%;
-  height:255px;
+  width: 100%;
+  height: 260px;
 
-  border-radius:20px;
+  border-radius: 22px;
 
-  overflow:hidden;
+  overflow: hidden;
 
-  background:#dcdcdc;
+  cursor: pointer;
 
-  box-shadow:
-    0 3px 8px rgba(0,0,0,0.04),
-    0 10px 24px rgba(0,0,0,0.06);
+  background: #f4f4f4;
 
-  transition:0.4s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.08);
+
+  transition: 0.4s ease;
 }
 
-/* HOVER */
-
-.auroGalleryCard:hover{
-  transform:translateY(-4px);
+.auroGalleryCard:hover {
+  transform: translateY(-6px);
 }
 
 /* IMAGE */
 
-.auroGalleryCard img{
-  width:100%;
-  height:100%;
+.auroGalleryCard img {
+  width: 100%;
+  height: 100%;
 
-  object-fit:cover;
+  object-fit: cover;
 
-  display:block;
+  display: block;
 
-  transition:0.5s ease;
+  transition: 0.5s ease;
 }
 
-/* IMAGE ZOOM */
-
-.auroGalleryCard:hover img{
-  transform:scale(1.04);
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media(max-width:992px){
-
-  .auroGalleryGrid{
-    grid-template-columns:repeat(2,1fr);
-
-    gap:28px;
-  }
-
-  .auroGalleryCard{
-    height:220px;
-  }
+.auroGalleryCard:hover img {
+  transform: scale(1.05);
 }
 
 /* =========================================
-   MOBILE
+   RESPONSIVE
 ========================================= */
 
-@media(max-width:768px){
+@media (max-width: 1400px) {
 
-  .auroGallerySection{
-    padding:70px 16px;
+  .auroGalleryHeading h2 {
+    font-size: 40px;
   }
 
-  .auroGalleryHeading{
-    margin-bottom:34px;
-  }
-
-  .auroGalleryHeading h2{
-    font-size:30px;
-  }
-
-  .auroGalleryGrid{
-    gap:20px;
-  }
-
-  .auroGalleryCard{
-    height:190px;
-
-    border-radius:16px;
+  .auroGalleryCard {
+    height: 240px;
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+@media (max-width: 1100px) {
 
-@media(max-width:480px){
-
-  .auroGalleryHeading h2{
-    font-size:26px;
+  .auroGalleryGrid {
+    gap: 24px;
   }
 
-  .auroGalleryGrid{
-    grid-template-columns:1fr;
+  .auroGalleryCard {
+    height: 220px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .auroGallerySection {
+    padding: 20px 0 60px;
   }
 
-  .auroGalleryCard{
-    height:220px;
+  .auroGalleryContainer {
+    padding: 0 18px;
+  }
+
+  .auroGalleryHeading {
+    margin-bottom: 28px;
+  }
+
+  .auroGalleryHeading h2 {
+    font-size: 30px;
+    letter-spacing: -1px;
+  }
+
+  .auroGalleryGrid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+
+  .auroGalleryCard {
+    height: 170px;
+    border-radius: 16px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .auroGalleryHeading h2 {
+    font-size: 26px;
+  }
+
+  .auroGalleryGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .auroGalleryCard {
+    height: 210px;
+    border-radius: 14px;
   }
 }

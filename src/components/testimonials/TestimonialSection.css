@@ -1,124 +1,97 @@
-@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap");
-
-/* =========================================
-   RESET
-========================================= */
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  font-family:"Outfit",sans-serif;
-  background:#f3f3f3;
+.auroTestimonialSection {
+  width: 100%;
+  background: #ffffff;
+  padding: 40px 0 90px;
+  overflow: hidden;
+  font-family: "Inter", sans-serif;
 }
 
-/* =========================================
-   SECTION
-========================================= */
-
-.auroTestimonialSection{
-  width:100%;
-  padding:90px 0;
-  overflow:hidden;
-}
-
-/* =========================================
-   CONTAINER
-========================================= */
-
-.auroTestimonialContainer{
-  width:100%;
+.auroTestimonialContainer {
+  width: 100%;
+  max-width: 1476px;
+  margin: 0 auto;
+  padding: 0 40px;
 }
 
 /* =========================================
    HEADING
 ========================================= */
 
-.auroTestimonialHeading{
-  text-align:center;
-
-  margin-bottom:54px;
+.auroTestimonialHeading {
+  text-align: center;
+  margin-bottom: 54px;
 }
 
-.auroTestimonialHeading h2{
-  font-size:42px;
-  line-height:1.2;
+.auroTestimonialHeading h2 {
+  font-size: 48px;
+  line-height: 1.15;
+  font-weight: 700;
 
-  color:#171717;
+  color: #111111;
 
-  font-weight:700;
+  letter-spacing: -1.2px;
 }
 
 /* =========================================
    SLIDER WRAPPER
 ========================================= */
 
-.auroSliderWrapper{
-  width:100%;
-  overflow:hidden;
-
-  margin-bottom:36px;
+.auroSliderWrapper {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
 }
 
-.bottomSpacing{
-  margin-bottom:0;
+.bottomSpacing {
+  margin-top: 38px;
 }
 
-/* =========================================
-   TRACK
-========================================= */
+/* TRACK */
 
-.auroSliderTrack{
-  display:flex;
-  align-items:stretch;
-
-  gap:34px;
-
-  width:max-content;
+.auroSliderTrack {
+  display: flex;
+  align-items: stretch;
+  width: max-content;
+  gap: 34px;
 }
 
 /* =========================================
-   RIGHT SLIDE
+   AUTO ANIMATION
 ========================================= */
 
-.auroSlideRight{
-  animation:auroSlideRight 40s linear infinite;
+.auroSlideRight {
+  animation: auroSlideRight 38s linear infinite;
 }
 
-/* =========================================
-   LEFT SLIDE
-========================================= */
-
-.auroSlideLeft{
-  animation:auroSlideLeft 40s linear infinite;
+.auroSlideLeft {
+  animation: auroSlideLeft 38s linear infinite;
 }
 
-/* =========================================
-   ANIMATION
-========================================= */
+@keyframes auroSlideRight {
 
-@keyframes auroSlideRight{
-
-  0%{
-    transform:translateX(-50%);
+  0% {
+    transform: translateX(0%);
   }
 
-  100%{
-    transform:translateX(0%);
+  100% {
+    transform: translateX(-50%);
   }
 }
 
-@keyframes auroSlideLeft{
+@keyframes auroSlideLeft {
 
-  0%{
-    transform:translateX(0%);
+  0% {
+    transform: translateX(-50%);
   }
 
-  100%{
-    transform:translateX(-50%);
+  100% {
+    transform: translateX(0%);
   }
 }
 
@@ -126,166 +99,198 @@ body{
    CARD
 ========================================= */
 
-.auroTestimonialCard{
-  min-width:420px;
+.auroTestimonialCard {
+  position: relative;
 
-  background:#ffffff;
+  width: 430px;
+  min-height: 340px;
 
-  border-radius:22px;
+  background: #ffffff;
 
-  padding:34px 30px;
+  border-radius: 24px;
 
-  min-height:350px;
+  padding: 34px 34px 30px;
 
-  box-shadow:
-    0 2px 4px rgba(0,0,0,0.05),
-    0 10px 24px rgba(0,0,0,0.06);
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.08);
 
-  transition:0.3s ease;
+  transition: 0.35s ease;
+
+  overflow: hidden;
+
+  flex-shrink: 0;
 }
 
-.auroTestimonialCard:hover{
-  transform:translateY(-4px);
+.auroTestimonialCard:hover {
+  transform: translateY(-6px);
 }
 
-/* =========================================
-   BLUE BORDER
-========================================= */
+/* OPTIONAL BLUE BORDER */
 
-.blueBorder{
-  border:2px dashed #2196ff;
+.blueBorder::before {
+  content: "";
+
+  position: absolute;
+  left: 0;
+  top: 0;
+
+  width: 6px;
+  height: 100%;
+
+  background: #0d6efd;
 }
 
 /* =========================================
    NAME
 ========================================= */
 
-.auroTestimonialCard h3{
-  font-size:28px;
-  line-height:1.2;
+.auroTestimonialCard h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  font-weight: 700;
 
-  color:#171717;
+  color: #111111;
 
-  font-weight:700;
+  margin-bottom: 10px;
 
-  margin-bottom:10px;
+  letter-spacing: -0.5px;
 }
 
-/* =========================================
-   ROLE
-========================================= */
+/* ROLE */
 
-.auroTestimonialCard h4{
-  font-size:20px;
+.auroTestimonialCard h4 {
+  font-size: 20px;
+  line-height: 1.5;
+  font-weight: 600;
 
-  color:#2e2e2e;
+  color: #222222;
 
-  font-weight:600;
-
-  line-height:1.5;
-
-  margin-bottom:20px;
+  margin-bottom: 20px;
 }
 
 /* =========================================
    STARS
 ========================================= */
 
-.auroStars{
-  display:flex;
-  align-items:center;
+.auroStars {
+  display: flex;
+  align-items: center;
+  gap: 6px;
 
-  gap:8px;
-
-  margin-bottom:24px;
+  margin-bottom: 22px;
 }
 
 /* =========================================
    TEXT
 ========================================= */
 
-.auroTestimonialCard p{
-  font-size:17px;
-  line-height:1.8;
+.auroTestimonialCard p {
+  font-size: 17px;
+  line-height: 1.9;
+  font-weight: 400;
 
-  color:#4b4b4b;
+  color: #4a4a4a;
 }
 
 /* =========================================
-   MOBILE
+   RESPONSIVE
 ========================================= */
 
-@media(max-width:768px){
+@media (max-width: 1400px) {
 
-  .auroTestimonialSection{
-    padding:70px 0;
+  .auroTestimonialHeading h2 {
+    font-size: 42px;
   }
 
-  .auroTestimonialHeading{
-    margin-bottom:34px;
+  .auroTestimonialCard {
+    width: 390px;
   }
 
-  .auroTestimonialHeading h2{
-    font-size:30px;
+  .auroTestimonialCard h3 {
+    font-size: 24px;
   }
 
-  .auroSliderTrack{
-    gap:20px;
+  .auroTestimonialCard h4 {
+    font-size: 18px;
   }
 
-  .auroTestimonialCard{
-    min-width:300px;
-
-    min-height:auto;
-
-    border-radius:18px;
-
-    padding:26px 22px;
-  }
-
-  .auroTestimonialCard h3{
-    font-size:22px;
-  }
-
-  .auroTestimonialCard h4{
-    font-size:16px;
-  }
-
-  .auroStars{
-    gap:6px;
-
-    margin-bottom:18px;
-  }
-
-  .auroTestimonialCard p{
-    font-size:14px;
-    line-height:1.7;
+  .auroTestimonialCard p {
+    font-size: 16px;
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
+@media (max-width: 768px) {
 
-@media(max-width:480px){
-
-  .auroTestimonialHeading h2{
-    font-size:26px;
+  .auroTestimonialSection {
+    padding: 20px 0 60px;
   }
 
-  .auroTestimonialCard{
-    min-width:260px;
+  .auroTestimonialContainer {
+    padding: 0 18px;
   }
 
-  .auroTestimonialCard h3{
-    font-size:20px;
+  .auroTestimonialHeading {
+    margin-bottom: 36px;
   }
 
-  .auroTestimonialCard h4{
-    font-size:15px;
+  .auroTestimonialHeading h2 {
+    font-size: 30px;
+    letter-spacing: -1px;
   }
 
-  .auroTestimonialCard p{
-    font-size:13px;
+  .auroSliderTrack {
+    gap: 18px;
+  }
+
+  .auroTestimonialCard {
+    width: 310px;
+    min-height: 280px;
+
+    border-radius: 18px;
+
+    padding: 24px 22px;
+  }
+
+  .auroTestimonialCard h3 {
+    font-size: 20px;
+    margin-bottom: 8px;
+  }
+
+  .auroTestimonialCard h4 {
+    font-size: 15px;
+    margin-bottom: 14px;
+  }
+
+  .auroStars {
+    margin-bottom: 16px;
+  }
+
+  .auroTestimonialCard p {
+    font-size: 14px;
+    line-height: 1.75;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .auroTestimonialHeading h2 {
+    font-size: 26px;
+  }
+
+  .auroTestimonialCard {
+    width: 280px;
+    min-height: 260px;
+    padding: 22px 18px;
+  }
+
+  .auroTestimonialCard h3 {
+    font-size: 18px;
+  }
+
+  .auroTestimonialCard h4 {
+    font-size: 14px;
+  }
+
+  .auroTestimonialCard p {
+    font-size: 13px;
   }
 }
