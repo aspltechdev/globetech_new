@@ -1,223 +1,173 @@
 // HeroSection.jsx
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 
 import {
   ChevronLeft,
   ChevronRight,
-  Play,
-  ArrowUpRight,
   HandHeart,
 } from "lucide-react";
 
-
 import "./HeroSection.css";
 
-/* =========================================
-   LOCAL IMAGES
-========================================= */
+/* =========================
+   IMAGES
+========================= */
 
 import heroImg1 from "../../assets/hero/hero1.png";
 import heroImg2 from "../../assets/hero/hero2.png";
 import heroImg3 from "../../assets/hero/hero3.png";
 import heroImg4 from "../../assets/hero/hero4.png";
 
-/* =========================================
+/* =========================
+   BG SHAPES
+========================= */
+
+import bg1 from "../../assets/hero/Subtract.png";
+import bg2 from "../../assets/hero/Subtract.png";
+import bg3 from "../../assets/hero/Subtract.png";
+import bg4 from "../../assets/hero/Subtract.png";
+
+/* =========================
    SLIDES
-========================================= */
+========================= */
 
 const slides = [
-
   {
-    title: "Empowering Youth Skills & Opportunities",
+    title: "Empowering Youth\nSkills & Opportunities",
 
     description:
-      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities, helping bridge the gap between talent and opportunity.",
+      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities, helping bridge the gap between talent and opportunity for long-term social and economic growth.",
 
     image: heroImg1,
+    bg: bg1,
   },
 
   {
-    title: "Promoting Health, Safety & Community Well-Being",
+    title: "Empowering Youth\nSkills & Opportunities",
 
     description:
-      "Our community-focused initiatives strengthen healthcare access, safety awareness, and holistic well-being for vulnerable populations.",
+      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities, helping bridge the gap between talent and opportunity for long-term social and economic growth.",
 
     image: heroImg2,
+    bg: bg2,
   },
 
   {
-    title: "Protecting Nature Through Sustainable Action",
+    title: "Empowering Youth\nSkills & Opportunities",
 
     description:
-      "We work alongside communities to drive environmental sustainability through awareness, conservation, and green initiatives.",
+      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities, helping bridge the gap between talent and opportunity for long-term social and economic growth.",
 
     image: heroImg3,
+    bg: bg3,
   },
 
   {
-    title: "Empowering Women & Children For a Brighter Future",
+    title: "Empowering Youth\nSkills & Opportunities",
 
     description:
-      "Our programs uplift women and children through education, protection, skill-building, and inclusive support systems.",
+      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities, helping bridge the gap between talent and opportunity for long-term social and economic growth.",
 
     image: heroImg4,
+    bg: bg4,
   },
-
 ];
 
 const HeroSection = () => {
-
   const [activeSlide, setActiveSlide] = useState(0);
 
-  /* =========================================
-     PREVIOUS
-  ========================================= */
+  /* =========================
+     AUTO SLIDE - 3 SEC
+  ========================= */
+
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000);
+
+    return () => clearInterval(interval);
+  }, [activeSlide]);
+
+  /* =========================
+     PREV
+  ========================= */
 
   const prevSlide = () => {
-
     setActiveSlide((prev) =>
-      prev === 0
-        ? slides.length - 1
-        : prev - 1
+      prev === 0 ? slides.length - 1 : prev - 1
     );
-
   };
 
-  /* =========================================
+  /* =========================
      NEXT
-  ========================================= */
+  ========================= */
 
   const nextSlide = () => {
-
     setActiveSlide((prev) =>
-      prev === slides.length - 1
-        ? 0
-        : prev + 1
+      prev === slides.length - 1 ? 0 : prev + 1
     );
-
   };
 
   return (
-
     <section className="hero">
 
-      <div className="hero-wrapper">
+      <div
+        className="hero-card"
+        style={{
+          backgroundImage: `url(${slides[activeSlide].bg})`,
+        }}
+      >
 
-        {/* =================================
-            LEFT
-        ================================== */}
+        {/* LEFT CONTENT */}
 
         <div className="hero-left">
 
           <div className="hero-content">
 
-            {/* TITLE */}
-
             <h1>
               {slides[activeSlide].title}
             </h1>
-
-            {/* DESCRIPTION */}
 
             <p>
               {slides[activeSlide].description}
             </p>
 
-            {/* CTA */}
+            <button className="hero-donate-btn">
 
-            <div className="hero-cta">
+              <span>Donate Now</span>
 
-              {/* DONATE */}
-
-              <button className="hero-donate-btn">
-
-                <span>
-                  Donate Now
-                </span>
-
-                <span className="arrow-box">
-
-                 
-                  <HandHeart
-                  size={20}
-                    strokeWidth={1} />
-
-                </span>
-
-              </button>
-
-              {/* PROCESS */}
-
-              <button className="process-btn">
-
-                <span className="play-circle">
-
-                  <Play
-                    size={20}
-                    fill="#243C4B"
-                    
-
-                    strokeWidth={1}
-                  />
-
-                </span>
-
-                <span>
-                  Our process
-                </span>
-
-              </button>
-
-            </div>
-
-          </div>
-
-          {/* WHITE CURVE */}
-
-          <div className="bottom-curve"></div>
-
-          {/* NAV BUTTONS */}
-
-          <div className="slider-btns">
-
-            <button onClick={prevSlide}>
-
-              <ChevronLeft
-                size={50}
-                strokeWidth={1.8}
-              />
+              <span className="icon-box">
+                <HandHeart size={16} />
+              </span>
 
             </button>
 
+          </div>
+
+          {/* BOTTOM NAV */}
+
+          <div className="slider-controls">
+
+            <button onClick={prevSlide}>
+              <ChevronLeft size={34} />
+            </button>
+
             <button onClick={nextSlide}>
-
-              <ChevronRight
-                size={50}
-                strokeWidth={1.8}
-              />
-
+              <ChevronRight size={34} />
             </button>
 
           </div>
 
         </div>
 
-        {/* =================================
-            RIGHT IMAGE
-        ================================== */}
+        {/* RIGHT IMAGE */}
 
         <div className="hero-right">
-
-          {/* DOT PATTERN */}
-
-          <div className="dots-circle"></div>
-
-          {/* IMAGE */}
-
+  <div className="dot-circle"></div>
           <img
             src={slides[activeSlide].image}
-            alt="Hero"
+            alt="hero"
           />
 
         </div>
@@ -225,7 +175,6 @@ const HeroSection = () => {
       </div>
 
     </section>
-
   );
 };
 

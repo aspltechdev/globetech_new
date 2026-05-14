@@ -1,122 +1,87 @@
 /* =========================================
-   GOOGLE FONT
-========================================= */
-
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
-
-/* =========================================
-   HERO
+   HERO SECTION
 ========================================= */
 
 .hero {
   width: 100%;
-  padding: 10px;
-  background: #ffffff;
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
-  box-sizing: border-box;
+  padding: 40px 20px;
+ 
+  background: #FFFFFF;
+
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 /* =========================================
-   WRAPPER
+   HERO CARD
 ========================================= */
 
-.hero-wrapper {
+.hero-card {
   width: 100%;
-  height: 610px;
-
-  border-radius: 62px 0 0 0;
-
-  overflow: hidden;
+  max-width: 1247px;
+  min-height: 530px;
 
   position: relative;
+  overflow: hidden;
 
-  display: grid;
-  grid-template-columns: 1.06fr 0.94fr;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 
-  background:
-    linear-gradient(
-      135deg,
-      #649ce9 0%,
-      #3378da 44%,
-      #1c6ed7 100%
-    );
+  border-radius:  40px 0 0px 0px;
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  transition: all 0.6s ease;
 }
 
 /* =========================================
-   LEFT
+   LEFT SIDE
 ========================================= */
 
 .hero-left {
-  position: relative;
-  z-index: 3;
+  width: 55%;
+  height: 100%;
 
-  padding: 42px 0 0 64px;
+  position: relative;
+  z-index: 5;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
+
+  padding: 55px 50px 120px;
 }
 
 /* =========================================
    CONTENT
 ========================================= */
 
-.hero-content {
-  max-width: 620px;
-}
-
-/* =========================================
-   TITLE
-========================================= */
-
 .hero-content h1 {
-  
-  line-height: 1.02;
- 
-  letter-spacing: -3px;
+  font-size: 54px;
+  line-height: 1.1;
 
-  color: #ffffff;
+  color: #fff;
+  font-weight: 600;
 
-  margin-bottom: 18px;
+  margin-bottom: 28px;
 
   white-space: pre-line;
-
-
-  font-family: Poppins;
-font-weight: 600;
-font-style: SemiBold;
-font-size: 60px;
-
-line-height: 120%;
-letter-spacing: 0%;
-
 }
-
-/* =========================================
-   DESCRIPTION
-========================================= */
 
 .hero-content p {
-  max-width: 610px;
+  max-width: 620px;
 
-  font-size: 17px;
-  line-height: 38px;
-  font-weight: 400;
+  font-size: 15px;
+  line-height: 1.9;
 
-  color: rgba(255,255,255,0.9);
+  color: rgba(255,255,255,0.92);
 
-  margin-bottom: 34px;
-}
-
-/* =========================================
-   CTA
-========================================= */
-
-.hero-cta {
-  display: flex;
-  align-items: center;
-  gap: 22px;
-  width: 323px;
+  margin-bottom: 38px;
 }
 
 /* =========================================
@@ -124,83 +89,41 @@ letter-spacing: 0%;
 ========================================= */
 
 .hero-donate-btn {
-  height: 52px;
-
-  padding: 2px 15px 2px 15px;
-
-  border: none;
-  border-radius: 10px;
-
-  background: #ffffff;
+  width: fit-content;
 
   display: flex;
   align-items: center;
   gap: 14px;
 
-  font-size: 12px;
-  font-weight: 600;
+  border: none;
+  outline: none;
 
-  color: #111111;
+  background: #fff;
+
+  padding: 5px 6px 5px 18px;
+
+  border-radius: 100px;
 
   cursor: pointer;
 
-  transition: all 0.35s ease;
+  font-size: 14px;
+  font-weight: 600;
+
+  transition: all 0.3s ease;
 }
 
 .hero-donate-btn:hover {
-  transform: translateY(-3px);
+  transform: translateY(-2px);
 }
 
-/* =========================================
-   ARROW BOX
-========================================= */
-
-.arrow-box {
-  width: 26px;
-  height: 26px;
+.icon-box {
+  width: 36px;
+  height: 36px;
 
   border-radius: 50%;
 
-  background: #28496e;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  color: #ffffff;
-}
-
-/* =========================================
-   PROCESS BUTTON
-========================================= */
-
-.process-btn {
-  border: none;
-  background: transparent;
-
-  display: flex;
-  align-items: center;
-  gap: 12px;
-
-  color: #ffffff;
-
-  font-size: 12px;
-  font-weight: 600;
-
-  cursor: pointer;
-}
-
-/* =========================================
-   PLAY
-========================================= */
-
-.play-circle {
-  width: 38px;
-  height: 38px;
-
-  border-radius: 50%;
-
-  background: #ffffff;
+  background: #1f2937;
+  color: #fff;
 
   display: flex;
   align-items: center;
@@ -208,160 +131,219 @@ letter-spacing: 0%;
 }
 
 /* =========================================
-   RIGHT
+   RIGHT SIDE
 ========================================= */
 
 .hero-right {
+  width: 45%;
+  height: 100%;
+
   position: relative;
-  width: 100%;
-  height: 100%;
-}
 
-.hero-right img {
-  position: absolute;
-
-  right: 0;
-  bottom: 0;
-
-  width: 100%;
-  height: 100%;
-
-  object-fit: cover;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
 }
 
 /* =========================================
-   DOTS
+   HERO IMAGE
 ========================================= */
 
-.dots-circle {
+.hero-right img {
+  width: 100%;
+  max-width: 610px;
+
+  object-fit: contain;
+
+  position: relative;
+  z-index: 2;
+
+  animation: fadeZoom 0.7s ease;
+}
+
+/* =========================================
+   DOT CIRCLE
+========================================= */
+
+.dot-circle {
   position: absolute;
 
-  top: 42px;
-  right: 108px;
-
-  width: 448px;
-  height: 450px;
+  width: 420px;
+  height: 420px;
 
   border-radius: 50%;
 
-  background-image:
-    radial-gradient(
-      rgba(255,255,255,0.96) 2.8px,
-      transparent 2.8px
-    );
-
-  background-size: 16px 16px;
+  top: 12px;
+  right: 80px;
 
   opacity: 0.95;
 
-  /* z-index: 3; */
+  z-index: 1;
+
+  background-image: radial-gradient(
+    rgba(255,255,255,0.95) 2px,
+    transparent 2px
+  );
+
+  background-size: 18px 18px;
+
+  mask-image: radial-gradient(
+    circle,
+    rgba(0,0,0,1) 45%,
+    transparent 75%
+  );
+
+  -webkit-mask-image: radial-gradient(
+    circle,
+    rgba(0,0,0,1) 45%,
+    transparent 75%
+  );
 }
 
 /* =========================================
-   WHITE CURVE
+   SLIDER CONTROLS
 ========================================= */
 
-.bottom-curve {
+.slider-controls {
   position: absolute;
 
-  left: -10px;
-  bottom: 0px;
-
-  width: 275px;
-  height: 125px;
-
-  background: #ffffff;
-
-  border-radius: 0px 100px 0 0;
-  
-
-  z-index: 2;
-}
-
-/* =========================================
-   NAV BUTTONS
-========================================= */
-
-.slider-btns {
-  position: absolute;
-
-  left: 18px;
-  bottom: 14px;
+  left: 10px;
+  bottom: 18px;
 
   display: flex;
   align-items: center;
-  gap: 12px;
+  gap: 14px;
 
-  z-index: 5;
+  z-index: 10;
+}
+
+/* WHITE CURVE */
+
+.slider-controls::before {
+  content: "";
+
+  position: absolute;
+
+  width: 140px;
+  height: 88px;
+
+  left: -12px;
+  bottom: -18px;
+
+
+  background: #FFFFFF;
+
+
+  border-top-right-radius: 55px;
+
+  z-index: -1;
 }
 
 /* BUTTON */
 
-.slider-btns button {
-  width: 95px;
-  height: 95px;
+.slider-controls button {
+  width: 58px;
+  height: 58px;
 
   border-radius: 50%;
   border: none;
 
-  background: #0a67d5;
+  background: #1677ff;
+  color: #fff;
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  color: #ffffff;
-
   cursor: pointer;
 
-  transition: all 0.35s ease;
+  transition: all 0.3s ease;
 
-  box-shadow:
-    0px 12px 24px rgba(0,0,0,0.12);
+  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-.slider-btns button:hover {
-  transform: translateY(-4px);
+.slider-controls button:hover {
+  transform: translateY(-2px);
+}
 
-  background: #0859b6;
+/* ICON */
+
+.slider-controls button svg {
+  width: 24px;
+  height: 24px;
+
+  stroke-width: 2.2;
+}
+
+/* =========================================
+   ANIMATION
+========================================= */
+
+@keyframes fadeZoom {
+  from {
+    opacity: 0;
+    transform: scale(1.04);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
-@media screen and (max-width: 1200px) {
+@media (max-width: 1200px) {
 
-  .hero-wrapper {
-    height: auto;
-    grid-template-columns: 1fr;
+  .hero-card {
+    flex-direction: column;
+    min-height: auto;
+  }
+
+  .hero-left,
+  .hero-right {
+    width: 100%;
   }
 
   .hero-left {
-    padding: 50px 34px 130px;
+    padding: 60px 35px 120px;
   }
 
   .hero-content h1 {
-    font-size: 56px;
+    font-size: 42px;
+  }
+
+  .hero-content p {
+    max-width: 100%;
   }
 
   .hero-right {
-    height: 480px;
+    justify-content: center;
   }
 
-  .dots-circle {
-    right: 70px;
+  .hero-right img {
+    max-width: 520px;
+  }
+
+  .dot-circle {
+    width: 340px;
+    height: 340px;
+
+    right: 50%;
+    transform: translateX(50%);
   }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
   .hero {
-    padding: 6px;
+    padding: 20px 12px;
   }
 
-  .hero-wrapper {
-    border-radius: 24px;
+  .hero-card {
+    border-radius: 30px;
   }
 
   .hero-left {
@@ -369,70 +351,39 @@ letter-spacing: 0%;
   }
 
   .hero-content h1 {
-    font-size: 42px;
-    line-height: 1;
-    letter-spacing: -2px;
-  }
-
-  .hero-content p {
-    font-size: 15px;
-    line-height: 30px;
-  }
-
-  .hero-cta {
-    flex-wrap: wrap;
-    gap: 16px;
-  }
-
-  .hero-right {
-    height: 340px;
-  }
-
-  .dots-circle {
-    width: 170px;
-    height: 170px;
-
-    top: 30px;
-    right: 36px;
-
-    background-size: 12px 12px;
-  }
-
-  .bottom-curve {
-    width: 150px;
-    height: 82px;
-  }
-
-  .slider-btns button {
-    width: 54px;
-    height: 54px;
-  }
-}
-
-@media screen and (max-width: 480px) {
-
-  .hero-content h1 {
     font-size: 34px;
   }
 
   .hero-content p {
     font-size: 14px;
-    line-height: 28px;
+    line-height: 1.8;
   }
 
-  .hero-right {
+  .hero-right img {
+    max-width: 100%;
+  }
+
+  .dot-circle {
+    width: 260px;
     height: 260px;
+
+    top: 20px;
+
+    background-size: 14px 14px;
   }
 
-  .dots-circle {
+  .slider-controls {
+    left: 10px;
+    bottom: 12px;
+  }
+
+  .slider-controls::before {
     width: 120px;
-    height: 120px;
+    height: 78px;
   }
 
-  .slider-btns button {
-    width: 46px;
-    height: 46px;
+  .slider-controls button {
+    width: 52px;
+    height: 52px;
   }
 }
-
-
