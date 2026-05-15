@@ -1,13 +1,67 @@
 // WaysImpactSection.jsx
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
 import "./WaysImpactSection.css";
+import bosch from '../assets/placements/pl8.png';
+import tata from '../assets/placements/pl13.png';
+import icici from '../assets/placements/pl7.png';
+import tvs from '../assets/placements/pl3.png';
 
 import {
-  FaHandsHelping,
+  FaHandHoldingHeart,
   FaUserPlus,
   FaCheckCircle,
 } from "react-icons/fa";
+
+/* =========================================
+   SCROLL REVEAL COMPONENT
+========================================= */
+
+const Reveal = ({ children }) => {
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+
+      ([entry]) => {
+
+        if (entry.isIntersecting) {
+
+          entry.target.classList.add("active-reveal");
+
+        }
+
+      },
+
+      {
+        threshold: 0.15,
+      }
+
+    );
+
+    if (ref.current) {
+
+      observer.observe(ref.current);
+
+    }
+
+    return () => observer.disconnect();
+
+  }, []);
+
+  return (
+
+    <div ref={ref} className="reveal-scroll">
+
+      {children}
+
+    </div>
+
+  );
+
+};
 
 const WaysImpactSection = () => {
 
@@ -21,18 +75,22 @@ const WaysImpactSection = () => {
             HEADER
         ======================================= */}
 
-        <div className="ways-impact-header">
+        <Reveal>
 
-          <h2>
-            Ways to Make an Impact
-          </h2>
+          <div className="ways-impact-header">
 
-          <p>
-            We provide multiple avenues for individuals and organizations
-            to contribute to our mission of humanized professionalism.
-          </p>
+            <h2>
+              Ways to Make an Impact
+            </h2>
 
-        </div>
+            <p>
+              We provide multiple avenues for individuals and organizations
+              to contribute to our mission of humanized professionalism.
+            </p>
+
+          </div>
+
+        </Reveal>
 
         {/* ======================================
             TOP CARDS
@@ -42,54 +100,62 @@ const WaysImpactSection = () => {
 
           {/* LEFT CARD */}
 
-          <div className="ways-impact-card">
+          <Reveal>
 
-            <div className="ways-impact-icon-wrap">
+            <div className="ways-impact-card">
 
-              <FaHandsHelping className="ways-impact-icon" />
+              <div className="ways-impact-icon-wrap">
+
+                <FaHandHoldingHeart className="ways-impact-icon" />
+
+              </div>
+
+              <h3>
+                Empower Through Donation
+              </h3>
+
+              <p>
+                Every dollar fueled into Globetech is tracked with 100%
+                transparency. Your donation funds healthcare, education,
+                and sustainable infrastructure.
+              </p>
+
+              <a href="/">
+                Current Initiative: Clean Water 2024
+              </a>
 
             </div>
 
-            <h3>
-              Empower Through Donation
-            </h3>
-
-            <p>
-              Every dollar fueled into Globetech is tracked with 100%
-              transparency. Your donation funds healthcare, education,
-              and sustainable infrastructure.
-            </p>
-
-            <a href="/">
-              Current Initiative: Clean Water 2024
-            </a>
-
-          </div>
+          </Reveal>
 
           {/* RIGHT CARD */}
 
-          <div className="ways-impact-card ways-impact-blue-card">
+          <Reveal>
 
-            <div className="ways-impact-icon-wrap ways-impact-white-wrap">
+            <div className="ways-impact-card ways-impact-blue-card">
 
-              <FaUserPlus className="ways-impact-icon ways-impact-white-icon" />
+              <div className="ways-impact-icon-wrap">
+
+                <FaUserPlus className="ways-impact-icon ways-impact-white-icon" />
+
+              </div>
+
+              <h3>
+                Be the Hands and Feet
+              </h3>
+
+              <p>
+                Join our field teams or contribute remotely with your
+                professional skills.
+              </p>
+
+              <a href="/">
+                Apply to Volunteer →
+              </a>
 
             </div>
 
-            <h3>
-              Be the Hands and Feet
-            </h3>
-
-            <p>
-              Join our field teams or contribute remotely with your
-              professional skills.
-            </p>
-
-            <a href="/">
-              Apply to Volunteer →
-            </a>
-
-          </div>
+          </Reveal>
 
         </div>
 
@@ -101,109 +167,121 @@ const WaysImpactSection = () => {
 
           {/* LEFT */}
 
-          <div className="ways-impact-corporate-left">
+          <Reveal>
 
-            <h4>
-              Corporate Partnerships
-            </h4>
+            <div className="ways-impact-corporate-left">
 
-            <p>
-              Align your brand with global impact. We partner with
-              forward-thinking organizations to solve the world’s
-              most pressing challenges through CSR initiatives.
-            </p>
+              <h4>
+                Corporate Partnerships
+              </h4>
 
-            <div className="ways-impact-list">
+              <p>
+                Align your brand with global impact. We partner with
+                forward-thinking organizations to solve the world’s
+                most pressing challenges through CSR initiatives.
+              </p>
 
-              <div className="ways-impact-list-item">
+              <div className="ways-impact-list">
 
-                <FaCheckCircle className="ways-impact-check" />
+                <div className="ways-impact-list-item">
 
-                <span>
-                  Branded Impact Reports
-                </span>
+                  <FaCheckCircle className="ways-impact-check" />
+
+                  <span>
+                    Branded Impact Reports
+                  </span>
+
+                </div>
+
+                <div className="ways-impact-list-item">
+
+                  <FaCheckCircle className="ways-impact-check" />
+
+                  <span>
+                    Employee Engagement
+                  </span>
+
+                </div>
+
+                <div className="ways-impact-list-item">
+
+                  <FaCheckCircle className="ways-impact-check" />
+
+                  <span>
+                    Tax-Deductible Contributions
+                  </span>
+
+                </div>
+
+                <div className="ways-impact-list-item">
+
+                  <FaCheckCircle className="ways-impact-check" />
+
+                  <span>
+                    Joint Public Relations
+                  </span>
+
+                </div>
 
               </div>
 
-              <div className="ways-impact-list-item">
-
-                <FaCheckCircle className="ways-impact-check" />
-
-                <span>
-                  Employee Engagement
-                </span>
-
-              </div>
-
-              <div className="ways-impact-list-item">
-
-                <FaCheckCircle className="ways-impact-check" />
-
-                <span>
-                  Tax-Deductible Contributions
-                </span>
-
-              </div>
-
-              <div className="ways-impact-list-item">
-
-                <FaCheckCircle className="ways-impact-check" />
-
-                <span>
-                  Joint Public Relations
-                </span>
-
-              </div>
+              <button>
+                Become a Partner
+              </button>
 
             </div>
 
-            <button>
-              Become a Partner
-            </button>
-
-          </div>
+          </Reveal>
 
           {/* RIGHT */}
 
-          <div className="ways-impact-logo-grid">
+          <Reveal>
 
-            <div className="ways-impact-logo-card">
+            <div className="ways-impact-logo-grid">
 
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/6/6f/Logo_of_Bosch.svg"
-                alt="Bosch"
-              />
+              <div className="ways-impact-logo-card">
+
+  <img
+    src={bosch}
+    alt="Bosch"
+  />
+
+</div>
+
+<div className="ways-impact-logo-card">
+
+  <img
+    src={tata}
+    alt="Tata"
+  />
+
+</div>
+
+<div className="ways-impact-logo-card">
+
+  <img
+    src={icici}
+    alt="ICICI"
+  />
+
+</div>
+
+<div className="ways-impact-logo-card">
+
+  <img
+    src={tvs}
+    alt="TVS"
+  />
+
+</div>
+
+           
+
+          
 
             </div>
 
-            <div className="ways-impact-logo-card">
-
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/8/8e/Tata_logo.svg"
-                alt="Tata"
-              />
-
-            </div>
-
-            <div className="ways-impact-logo-card">
-
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg"
-                alt="ICICI"
-              />
-
-            </div>
-
-            <div className="ways-impact-logo-card">
-
-              <img
-                src="https://upload.wikimedia.org/wikipedia/commons/f/f5/TVS_Motor_Company_logo.svg"
-                alt="TVS"
-              />
-
-            </div>
-
-          </div>
+          </Reveal>
 
         </div>
 
@@ -212,6 +290,7 @@ const WaysImpactSection = () => {
     </section>
 
   );
+
 };
 
 export default WaysImpactSection;

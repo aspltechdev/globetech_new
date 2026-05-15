@@ -1,476 +1,235 @@
-/* =========================================
-   ABOUT SECTION - PIXEL PERFECT
-========================================= */
+/* AboutSection.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
-.auroAboutSection {
+.aboutSection {
   width: 100%;
-
-  background: #fff;
-
-  padding: 62px 0 68px;
-
+  background: #f4f4f4;
+  padding: 100px 20px;
   overflow: hidden;
-
-  font-family: "Poppins", sans-serif;
 }
 
-.auroAboutContainer {
-  width: 100%;
-  max-width: 1240px;
-
+.aboutContainer {
+  max-width: 1380px;
   margin: auto;
-
-  padding: 0 42px;
 }
 
-.auroAboutWrapper {
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-
-  gap: 40px;
-}
-
-/* =========================================
-   LEFT SIDE
-========================================= */
-
-.auroAboutLeft {
-  width: 49%;
-
-  padding-top: 6px;
-}
-
-/* TAG */
-
-.auroAboutTag {
+.aboutWrapper {
   display: flex;
   align-items: center;
-
-  gap: 10px;
-
-  margin-bottom: 12px;
+  justify-content: space-between;
+  gap: 70px;
 }
 
-.auroAboutTag p {
-  color: #f26a2d;
+/* =========================
+   LEFT
+========================= */
 
-  font-size: 13px;
-  font-weight: 500;
+.aboutLeft {
+  width: 46%;
 
-  line-height: 1;
+  opacity: 0;
+  transform: translateX(-80px);
+
+  transition: all 1s ease;
 }
 
-.auroAboutTag span {
-  width: 50px;
-  height: 1.5px;
-
-  background: #efb293;
-
-  display: block;
+.showLeft {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* TITLE */
+.aboutLeft h2 {
+  font-size: 68px;
+  line-height: 1.1;
+  font-weight: 700;
 
-.auroAboutLeft h2 {
-  color: #171717;
+  color: #0a66d4;
 
-  font-size: 24px;
-  font-weight: 600;
-
-  line-height: 1;
-
-  margin-bottom: 22px;
+  margin-bottom: 28px;
 }
 
-/* DESCRIPTION */
+.aboutLeft p {
+  font-size: 21px;
+  line-height: 1.9;
 
-.auroAboutDescription {
-  width: 100%;
-  max-width: 560px;
+  color: #444;
 
-  color: #2b2b2b;
+  max-width: 650px;
 
-  font-size: 15px;
-  font-weight: 400;
-
-  line-height: 2.05;
-
-  letter-spacing: 0.1px;
-
-  margin-bottom: 34px;
+  margin-bottom: 40px;
 }
 
-/* BUTTON */
+/* =========================
+   BUTTON
+========================= */
 
-.auroKnowBtn {
-  width: 122px;
-  height: 40px;
+.aboutBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
 
-  border: none;
-  outline: none;
-
-  border-radius: 7px;
-
-  background: #0d6efd;
-
+  background: #0a66d4;
   color: white;
 
-  font-size: 12px;
+  border: none;
+  border-radius: 10px;
+
+  padding: 15px 28px;
+
+  font-size: 15px;
   font-weight: 600;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  gap: 8px;
 
   cursor: pointer;
 
-  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.2);
-
   transition: 0.3s ease;
+
+  box-shadow: 0 10px 25px rgba(10, 102, 212, 0.2);
 }
 
-.auroKnowBtn:hover {
-  background: #005ee2;
+.aboutBtn:hover {
+  transform: translateY(-3px);
 }
 
-/* =========================================
-   RIGHT SIDE
-========================================= */
+.aboutBtnIcon {
+  width: 28px;
+  height: 28px;
 
-.auroAboutRight {
-  width: 51%;
+  border-radius: 50%;
 
-  display: flex;
-  justify-content: flex-end;
-}
+  background: white;
+  color: #0a66d4;
 
-.auroAboutImages {
-  width: 560px;
-  height: 360px;
-
-  position: relative;
-}
-
-/* MAIN IMAGE */
-
-.auroAboutLargeImg {
-  width: 482px;
-  height: 348px;
-
-  object-fit: cover;
-
-  border-radius: 18px;
-
-  position: absolute;
-
-  top: 0;
-  right: 0;
-
-  z-index: 1;
-}
-
-/* SMALL IMAGE */
-
-.auroAboutSmallImg {
-  width: 281px;
-  height: 267px;
-
-  object-fit: cover;
-
-  border-radius: 18px;
-
-  position: absolute;
-
-  left: 15px;
-  top: 174px;
-
-  z-index: 3;
-  border: 10px solid #fff;
-
-  /* box-shadow: 0 10px 22px rgba(0, 0, 0, 0.12); */
-}
-
-/* IMPACT BOX */
-
-/* .auroImpactBox {
-  width: 165px;
-  height: 95px;
-
-  background: #f26a2d;
-
-  border-radius: 14px;
-
-  position: absolute;
-
-  left: 180px;
-  bottom: -90px;
-
-  z-index: 5;
-
-  padding: 14px 16px;
-
-  box-shadow: 0 10px 22px rgba(0, 0, 0, 0.18);
-}
-
-.auroImpactBox h3 {
-  color: white;
-
-  font-size: 46px;
-  font-weight: 700;
-
-  line-height: 1;
-}
-
-.auroImpactBox h3 span {
-  font-size: 20px;
-  font-weight: 500;
-  line-height: 160%;
-}
-
-.auroImpactBox p {
-  margin-top: 10px;
-
-  color: white;
-
-  font-size: 14px;
-  font-weight: 500;
-
-  line-height: 1.4;
-} */
-
-
-
-
-/* IMPACT BOX */
-
-.auroImpactBox {
-  width: 170px;
-  height: 98px;
-
-  background: #f26a2d;
-
-  border-radius: 0px;
-
-  padding: 14px 16px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-   position: absolute;
-
-  left: 180px;
-  bottom: -90px;
-
-  z-index: 5;
-  border-radius: 16px;
-}
-
-/* TOP ROW */
-
-.auroImpactBox h3 {
   display: flex;
   align-items: center;
-
-  gap: 8px;
-
-  color: #ffffff;
-
-  font-size: 38px;
-  font-weight: 600;
-
-  line-height: 1;
-
-  letter-spacing: -1px;
-
-  margin: 0;
+  justify-content: center;
 }
 
-/* LAKH */
+/* =========================
+   RIGHT
+========================= */
 
-.auroImpactBox h3 span {
-  font-size: 16px;
-  font-weight: 500;
+.aboutRight {
+  width: 54%;
 
-  letter-spacing: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  opacity: 0;
+  transform: translateX(80px);
+
+  transition: all 1s ease;
 }
 
-/* TEXT */
-
-.auroImpactBox p {
-  margin-top: 10px;
-
-  color: #ffffff;
-
-  font-size: 17px;
-  font-weight: 500;
-
-  line-height: 1.2;
-
-  margin-bottom: 0;
-}
-/* YELLOW ARROW */
-
-.auroYellowArrow {
-  width: 112px;
-
-  position: absolute;
-
-  right: 120px;
-  bottom: -50px;
-
-  z-index: 2;
+.showRight {
+  opacity: 1;
+  transform: translateX(0);
 }
 
-/* =========================================
-   TABLET
-========================================= */
+.aboutImage {
+  width: 100%;
+  max-width: 700px;
+
+  object-fit: contain;
+  display: block;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media (max-width: 1400px) {
+
+  .aboutLeft h2 {
+    font-size: 56px;
+  }
+
+  .aboutLeft p {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 1200px) {
+
+  .aboutWrapper {
+    gap: 50px;
+  }
+
+  .aboutLeft h2 {
+    font-size: 48px;
+  }
+
+  .aboutLeft p {
+    font-size: 17px;
+    line-height: 1.8;
+  }
+}
 
 @media (max-width: 992px) {
 
-  .auroAboutWrapper {
+  .aboutWrapper {
     flex-direction: column;
-
-    gap: 55px;
+    text-align: center;
   }
 
-  .auroAboutLeft,
-  .auroAboutRight {
+  .aboutLeft,
+  .aboutRight {
     width: 100%;
   }
 
-  .auroAboutDescription {
-    max-width: 100%;
+  .aboutLeft p {
+    margin-inline: auto;
   }
 
-  .auroAboutRight {
-    justify-content: center;
+  .aboutRight {
+    margin-top: 20px;
+  }
+
+  .aboutImage {
+    max-width: 620px;
   }
 }
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media (max-width: 768px) {
 
-  .auroAboutSection {
-    padding: 55px 0;
+  .aboutSection {
+    padding: 70px 18px;
   }
 
-  .auroAboutContainer {
-    padding: 0 20px;
+  .aboutLeft h2 {
+    font-size: 40px;
   }
 
-  .auroAboutLeft h2 {
-    font-size: 28px;
+  .aboutLeft p {
+    font-size: 15px;
+    line-height: 1.8;
   }
 
-  .auroAboutDescription {
-    font-size: 14px;
-
-    line-height: 1.9;
+  .aboutBtn {
+    padding: 14px 24px;
   }
 
-  .auroAboutImages {
-    width: 100%;
-    height: 310px;
-  }
-
-  .auroAboutLargeImg {
-    width: 100%;
-    height: 180px;
-  }
-
-  .auroAboutSmallImg {
-    width: 160px;
-    height: 125px;
-
-    left: 0;
-    top: 110px;
-  }
-
-  .auroImpactBox {
-    width: 140px;
-    height: 82px;
-
-    left: 120px;
-    bottom: 5px;
-
-    padding: 12px;
-  }
-
-  .auroImpactBox h3 {
-    font-size: 20px;
-  }
-
-  .auroImpactBox p {
-    margin-top: 6px;
-
-    font-size: 12px;
-  }
-
-  .auroYellowArrow {
-    width: 82px;
-
-    right: 0;
-    bottom: 0;
+  .aboutImage {
+    max-width: 100%;
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
 @media (max-width: 480px) {
 
-  .auroAboutLeft h2 {
-    font-size: 24px;
+  .aboutSection {
+    padding: 60px 15px;
   }
 
-  .auroAboutDescription {
-    font-size: 13px;
+  .aboutLeft h2 {
+    font-size: 34px;
   }
 
-  .auroAboutImages {
-    height: 270px;
+  .aboutLeft p {
+    font-size: 14px;
+    line-height: 1.8;
   }
 
-  .auroAboutLargeImg {
-    height: 160px;
-  }
-
-  .auroAboutSmallImg {
-    width: 135px;
-    height: 110px;
-  }
-
-  .auroImpactBox {
-    width: 126px;
-    height: 72px;
-
-    left: 95px;
-  }
-
-  .auroImpactBox h3 {
-    font-size: 18px;
-  }
-
-  .auroImpactBox p {
-    font-size: 11px;
-  }
-
-  .auroYellowArrow {
-    width: 70px;
+  .aboutBtn {
+    width: 100%;
+    justify-content: center;
   }
 }

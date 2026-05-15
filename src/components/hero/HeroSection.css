@@ -1,389 +1,426 @@
-/* =========================================
-   HERO SECTION
-========================================= */
+/* HeroSection.css */
 
-.hero {
+.heroSection {
   width: 100%;
-  padding: 40px 20px;
- 
-  background: #FFFFFF;
-
-
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  padding: 10px 8px 20px;
+  background: #ffffff;
+  overflow: hidden;
 }
 
-/* =========================================
-   HERO CARD
-========================================= */
-
-.hero-card {
+.heroContainer {
   width: 100%;
-  max-width: 1247px;
-  min-height: 530px;
+  max-width: 1450px;
+  margin: auto;
+}
 
-  position: relative;
-  overflow: hidden;
+/* =========================
+   CARD
+========================= */
+
+.heroCard {
+  width: 100%;
+
+  background: #0f63c9;
+
+  border-radius: 62px;
 
   display: flex;
   align-items: center;
   justify-content: space-between;
 
-  border-radius:  40px 0 0px 0px;
+  overflow: hidden;
 
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+  min-height: 470px;
 
-  transition: all 0.6s ease;
-}
-
-/* =========================================
-   LEFT SIDE
-========================================= */
-
-.hero-left {
-  width: 55%;
-  height: 100%;
+  padding-left: 70px;
 
   position: relative;
-  z-index: 5;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  padding: 55px 50px 120px;
 }
 
-/* =========================================
-   CONTENT
-========================================= */
+/* =========================
+   LEFT
+========================= */
 
-.hero-content h1 {
-  font-size: 54px;
-  line-height: 1.1;
+.heroLeft {
+  width: 50%;
+  z-index: 5;
+}
 
-  color: #fff;
+.heroContent h1 {
+  font-size: 59px;
+  line-height: 1.05;
   font-weight: 600;
 
-  margin-bottom: 28px;
+  color: white;
 
-  white-space: pre-line;
+  margin-bottom: 28px;
 }
 
-.hero-content p {
-  max-width: 620px;
-
-  font-size: 15px;
+.heroContent p {
+  font-size: 18px;
   line-height: 1.9;
 
-  color: rgba(255,255,255,0.92);
+  color: rgba(255,255,255,0.9);
 
-  margin-bottom: 38px;
+  max-width: 620px;
+
+  margin-bottom: 34px;
+
+
+
+
+
+font-weight: 400;
+font-style: Regular;
+
+
+line-height: 160%;
+
+text-align: justify;
+
 }
 
-/* =========================================
-   DONATE BUTTON
-========================================= */
+/* =========================
+   BUTTON
+========================= */
 
-.hero-donate-btn {
-  width: fit-content;
-
-  display: flex;
+.heroBtn {
+  display: inline-flex;
   align-items: center;
-  gap: 14px;
+  gap: 12px;
+
+  background: #ffd500;
+  color: black;
 
   border: none;
-  outline: none;
+  border-radius: 10px;
 
-  background: #fff;
+  padding: 13px 18px 13px 24px;
 
-  padding: 5px 6px 5px 18px;
-
-  border-radius: 100px;
+  font-size: 14px;
+  font-weight: 700;
 
   cursor: pointer;
 
-  font-size: 14px;
-  font-weight: 600;
-
-  transition: all 0.3s ease;
+  transition: 0.3s ease;
 }
 
-.hero-donate-btn:hover {
+.heroBtn:hover {
   transform: translateY(-2px);
 }
 
-.icon-box {
-  width: 36px;
-  height: 36px;
+.heroBtnIcon {
+  width: 28px;
+  height: 28px;
 
   border-radius: 50%;
 
-  background: #1f2937;
-  color: #fff;
+  background: #273444;
+  color: white;
 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-/* =========================================
-   RIGHT SIDE
-========================================= */
+/* =========================
+   RIGHT
+========================= */
 
-.hero-right {
-  width: 45%;
-  height: 100%;
+.heroRight {
+  width: 50%;
 
   position: relative;
 
   display: flex;
   align-items: flex-end;
-  justify-content: center;
+  justify-content: flex-end;
+
+  height: 100%;
 }
 
-/* =========================================
-   HERO IMAGE
-========================================= */
+/* IMAGE */
 
-.hero-right img {
+.heroImage {
   width: 100%;
-  max-width: 610px;
+  max-width: 690px;
 
   object-fit: contain;
 
   position: relative;
-  z-index: 2;
+  z-index: 3;
 
-  animation: fadeZoom 0.7s ease;
+  margin-top: 150px;
+  /* left: 30px; */
 }
 
-/* =========================================
-   DOT CIRCLE
-========================================= */
+/* =========================
+   DOT PATTERN
+========================= */
 
-.dot-circle {
+.heroDotPattern {
   position: absolute;
 
-  width: 420px;
-  height: 420px;
+  width: 440px;
+  height: 450px;
 
   border-radius: 50%;
-
-  top: 12px;
-  right: 80px;
-
-  opacity: 0.95;
-
-  z-index: 1;
 
   background-image: radial-gradient(
-    rgba(255,255,255,0.95) 2px,
+    rgba(255,255,255,0.28) 1px,
     transparent 2px
   );
+transform: rotate(-180deg);
 
-  background-size: 18px 18px;
+opacity: 1;
 
-  mask-image: radial-gradient(
-    circle,
-    rgba(0,0,0,1) 45%,
-    transparent 75%
-  );
+  background-size: 16px 16px;
 
-  -webkit-mask-image: radial-gradient(
-    circle,
-    rgba(0,0,0,1) 45%,
-    transparent 75%
-  );
+  top: 20px;
+  right: 70px;
+
+  z-index: 2;
+  
 }
 
-/* =========================================
-   SLIDER CONTROLS
-========================================= */
+/* =========================
+   DOTS
+========================= */
 
-.slider-controls {
-  position: absolute;
-
-  left: 10px;
-  bottom: 18px;
-
+.heroDots {
   display: flex;
+  justify-content: center;
   align-items: center;
-  gap: 14px;
 
-  z-index: 10;
+  gap: 18px;
+
+  margin-top: 10px;
 }
 
-/* WHITE CURVE */
-
-.slider-controls::before {
-  content: "";
-
-  position: absolute;
-
-  width: 140px;
-  height: 88px;
-
-  left: -12px;
-  bottom: -18px;
-
-
-  background: #FFFFFF;
-
-
-  border-top-right-radius: 55px;
-
-  z-index: -1;
-}
-
-/* BUTTON */
-
-.slider-controls button {
-  width: 58px;
-  height: 58px;
+.heroDot {
+  width: 8px;
+  height: 8px;
 
   border-radius: 50%;
-  border: none;
 
-  background: #1677ff;
-  color: #fff;
+  background: #d4d4d4;
 
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  transition: 0.3s ease;
 
   cursor: pointer;
-
-  transition: all 0.3s ease;
-
-  box-shadow: 0 10px 20px rgba(0,0,0,0.12);
 }
 
-.slider-controls button:hover {
-  transform: translateY(-2px);
+.heroDot.active {
+  background: #c5c5c5;
 }
 
-/* ICON */
-
-.slider-controls button svg {
-  width: 24px;
-  height: 24px;
-
-  stroke-width: 2.2;
-}
-
-/* =========================================
-   ANIMATION
-========================================= */
-
-@keyframes fadeZoom {
-  from {
-    opacity: 0;
-    transform: scale(1.04);
-  }
-
-  to {
-    opacity: 1;
-    transform: scale(1);
-  }
-}
-
-/* =========================================
+/* =========================
    RESPONSIVE
-========================================= */
+========================= */
 
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
 
-  .hero-card {
+  .heroContent h1 {
+    font-size: 54px;
+  }
+
+  .heroContent p {
+    font-size: 15px;
+  }
+
+  .heroCard {
+    padding-left: 50px;
+  }
+}
+
+@media (max-width: 1100px) {
+
+  .heroCard {
+    min-height: 420px;
+  }
+
+  .heroContent h1 {
+    font-size: 46px;
+  }
+
+  .heroDotPattern {
+    width: 250px;
+    height: 250px;
+    right: 70px;
+  }
+}
+
+@media (max-width: 992px) {
+
+  .heroCard {
     flex-direction: column;
+    text-align: center;
+
+    padding: 50px 25px 0;
+
     min-height: auto;
   }
 
-  .hero-left,
-  .hero-right {
+  .heroLeft,
+  .heroRight {
     width: 100%;
   }
 
-  .hero-left {
-    padding: 60px 35px 120px;
+  .heroContent p {
+    margin-inline: auto;
   }
 
-  .hero-content h1 {
-    font-size: 42px;
+  .heroBtn {
+    margin: auto;
   }
 
-  .hero-content p {
-    max-width: 100%;
-  }
-
-  .hero-right {
+  .heroRight {
     justify-content: center;
   }
 
-  .hero-right img {
-    max-width: 520px;
+  .heroImage {
+    max-width: 620px;
   }
 
-  .dot-circle {
-    width: 340px;
-    height: 340px;
-
+  .heroDotPattern {
     right: 50%;
     transform: translateX(50%);
+    top: 0;
   }
 }
 
 @media (max-width: 768px) {
 
-  .hero {
-    padding: 20px 12px;
+  .heroSection {
+    padding: 10px 10px 20px;
   }
 
-  .hero-card {
-    border-radius: 30px;
+  .heroCard {
+    border-radius: 26px;
+    padding: 40px 18px 0;
   }
 
-  .hero-left {
-    padding: 40px 24px 120px;
-  }
-
-  .hero-content h1 {
+  .heroContent h1 {
     font-size: 34px;
   }
 
-  .hero-content p {
+  .heroContent p {
     font-size: 14px;
     line-height: 1.8;
   }
 
-  .hero-right img {
-    max-width: 100%;
+  .heroBtn {
+    font-size: 13px;
+    padding: 12px 18px;
   }
 
-  .dot-circle {
-    width: 260px;
-    height: 260px;
-
-    top: 20px;
-
-    background-size: 14px 14px;
+  .heroBtnIcon {
+    width: 24px;
+    height: 24px;
   }
 
-  .slider-controls {
-    left: 10px;
-    bottom: 12px;
+  .heroDotPattern {
+    width: 190px;
+    height: 190px;
+    background-size: 13px 13px;
+  }
+}
+
+@media (max-width: 480px) {
+
+  .heroCard {
+    padding: 35px 15px 0;
+    border-radius: 20px;
   }
 
-  .slider-controls::before {
-    width: 120px;
-    height: 78px;
+  .heroContent h1 {
+    font-size: 28px;
   }
 
-  .slider-controls button {
-    width: 52px;
-    height: 52px;
+  .heroContent p {
+    font-size: 13px;
+  }
+
+  .heroImage {
+    margin-top: 10px;
+  }
+
+  .heroDotPattern {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+
+
+
+
+.heroVector {
+  position: absolute;
+
+  width: 440px;
+  height: 450px;
+
+  object-fit: contain;
+
+  transform: rotate(-180deg);
+
+  opacity: 1;
+
+  top: 20px;
+  right: 70px;
+
+  z-index: 2;
+
+  pointer-events: none;
+}
+
+/* =========================================
+   LARGE DEVICES
+========================================= */
+
+@media screen and (max-width: 1200px) {
+  .heroVector {
+    width: 360px;
+    height: 370px;
+
+    right: 40px;
+    top: 40px;
+  }
+}
+
+/* =========================================
+   TABLETS
+========================================= */
+
+@media screen and (max-width: 992px) {
+  .heroVector {
+   display: none;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media screen and (max-width: 768px) {
+  .heroVector {
+   display: none;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media screen and (max-width: 480px) {
+  .heroVector {
+    width: 170px;
+    height: 170px;
+
+    right: -30px;
+    top: 120px;
+
+    opacity: 0.35;
   }
 }

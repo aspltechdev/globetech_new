@@ -9,6 +9,7 @@ import React, {
 import { CheckCircle2 } from "lucide-react";
 
 import indiaMap from "../../assets/india-map.png";
+import bgImage from "../../assets/aboutimg.png";
 
 import "./ReachSection.css";
 
@@ -43,301 +44,235 @@ const stats = [
 ];
 
 /* =========================================
-   COUNTER COMPONENT
+   COUNT UP COMPONENT
 ========================================= */
 
-const Counter = ({ end, suffix }) => {
-
+const CountUp = ({
+  end,
+  duration = 2000,
+  suffix = "",
+}) => {
   const [count, setCount] = useState(0);
 
-  const [startCount, setStartCount] = useState(false);
-
-  const counterRef = useRef(null);
-
-  /* INTERSECTION OBSERVER */
-
   useEffect(() => {
-
-    const observer = new IntersectionObserver(
-
-      ([entry]) => {
-
-        if (entry.isIntersecting) {
-
-          setStartCount(true);
-
-          observer.disconnect();
-
-        }
-
-      },
-
-      {
-        threshold: 0.4,
-      }
-
-    );
-
-    if (counterRef.current) {
-
-      observer.observe(counterRef.current);
-
-    }
-
-    return () => observer.disconnect();
-
-  }, []);
-
-  /* COUNTING */
-
-  useEffect(() => {
-
-    if (!startCount) return;
-
     let start = 0;
 
-    const duration = 2000;
-
-    const increment = end / (duration / 16);
+    const increment =
+      end / (duration / 16);
 
     const timer = setInterval(() => {
-
       start += increment;
 
       if (start >= end) {
-
         setCount(end);
-
         clearInterval(timer);
-
       } else {
-
         setCount(Math.floor(start));
-
       }
-
     }, 16);
 
     return () => clearInterval(timer);
-
-  }, [startCount, end]);
+  }, [end, duration]);
 
   return (
-
-    <h3 ref={counterRef}>
-
+    <>
       {count.toLocaleString()}
       {suffix}
-
-    </h3>
-
+    </>
   );
 };
 
-/* =========================================
-   MAIN COMPONENT
-========================================= */
-
 const ReachSection = () => {
-
   const sectionRef = useRef(null);
 
-  const [showContent, setShowContent] = useState(false);
+  const [showContent, setShowContent] =
+    useState(false);
 
-  /* SCROLL ANIMATION */
+  /* =========================================
+     INTERSECTION OBSERVER
+  ========================================= */
 
   useEffect(() => {
-
-    const observer = new IntersectionObserver(
-
-      ([entry]) => {
-
-        if (entry.isIntersecting) {
-
-          setShowContent(true);
-
+    const observer =
+      new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setShowContent(true);
+          }
+        },
+        {
+          threshold: 0.25,
         }
-
-      },
-
-      {
-        threshold: 0.2,
-      }
-
-    );
+      );
 
     if (sectionRef.current) {
-
       observer.observe(sectionRef.current);
-
     }
 
     return () => observer.disconnect();
-
   }, []);
 
   return (
-
     <section
-      className="auroReachSection"
+      className="reachSection"
       ref={sectionRef}
     >
+      {/* BG IMAGE */}
 
-      <div className="auroReachContainer">
+      <img
+        src={bgImage}
+        alt="Background"
+        className="reachBgImage"
+      />
 
+      {/* OVERLAY */}
+
+      <div className="reachOverlay"></div>
+
+      <div className="reachContainer">
         {/* =====================================
-            TOP SECTION
+            TOP AREA
         ===================================== */}
 
-        <div className="auroReachWrapper">
-
-          {/* LEFT */}
+        <div className="reachWrapper">
+          {/* LEFT CONTENT */}
 
           <div
-            className={`auroReachLeft ${
+            className={`reachLeft ${
               showContent
-                ? "show-reach-content"
+                ? "showLeft"
                 : ""
             }`}
           >
-
-            {/* TAG */}
-
-            <div className="auroReachTag">
-
-             
-
-              <p>
-                Nationwide Footprint
-              </p>
-               <span></span>
-
-            </div>
-
-            {/* TITLE */}
-
             <h2>
-
               Pan India Reach &
               <span>
                 Connectivity
               </span>
-
             </h2>
 
-            {/* DESCRIPTION */}
-
-            <p className="auroReachDescription">
-
+            <p className="reachDescription">
               Our presence spans across
               22 states, bringing
               industrial-grade education
               and infrastructure to the
               most remote corners of
               India. Every dot on our
-              map represents a center
-              of excellence.
-
+              map represents a center of
+              excellence.
             </p>
 
-            {/* POINTS */}
+            {/* FEATURES */}
 
-            <div className="auroReachPoints">
-
-              <div className="auroReachPoint">
-
-                <CheckCircle2 size={20} />
+            <div className="reachPoints">
+              <div className="reachPoint">
+                <CheckCircle2
+                  size={17}
+                />
 
                 <p>
                   On-Campus Training
                 </p>
-
               </div>
 
-              <div className="auroReachPoint">
-
-                <CheckCircle2 size={20} />
+              <div className="reachPoint">
+                <CheckCircle2
+                  size={17}
+                />
 
                 <p>
                   Corporate Upskilling
                 </p>
-
               </div>
 
-              <div className="auroReachPoint">
-
-                <CheckCircle2 size={20} />
+              <div className="reachPoint">
+                <CheckCircle2
+                  size={17}
+                />
 
                 <p>
                   Digital Learning via
                   G-SKOOL.Com
                 </p>
-
               </div>
-
             </div>
 
+            {/* BUTTON */}
+
+            <button className="reachBtn">
+              Reach us
+            </button>
           </div>
 
-          {/* RIGHT */}
+          {/* RIGHT MAP */}
 
           <div
-            className={`auroReachRight ${
+            className={`reachRight ${
               showContent
-                ? "show-map"
+                ? "showRight"
                 : ""
             }`}
           >
-
             <img
               src={indiaMap}
               alt="India Map"
-              className="auroIndiaMap"
+              className="indiaMap"
             />
-
           </div>
-
         </div>
 
         {/* =====================================
-            STATS
+            STATS TITLE
         ===================================== */}
 
-        <div className="auroStatsWrapper">
+        <h2
+          className={`statsTitle ${
+            showContent
+              ? "showStatsTitle"
+              : ""
+          }`}
+        >
+          Our Stats
+        </h2>
 
-          {stats.map((item, index) => (
+        {/* =====================================
+            STATS CARDS
+        ===================================== */}
 
-            <div
-              className={`auroStatCard ${
-                showContent
-                  ? "show-stat"
-                  : ""
-              }`}
-              key={index}
-              style={{
-                transitionDelay: `${index * 180}ms`,
-              }}
-            >
+        <div className="statsWrapper">
+          {stats.map(
+            (item, index) => (
+              <div
+                key={index}
+                className={`statCard ${
+                  showContent
+                    ? "showCard"
+                    : ""
+                }`}
+                style={{
+                  transitionDelay: `${index * 150}ms`,
+                }}
+              >
+                <h3>
+                  {showContent && (
+                    <CountUp
+                      end={item.number}
+                      suffix={
+                        item.suffix
+                      }
+                    />
+                  )}
+                </h3>
 
-              <Counter
-                end={item.number}
-                suffix={item.suffix}
-              />
-
-              <p>
-                {item.label}
-              </p>
-
-            </div>
-
-          ))}
-
+                <p>
+                  {item.label}
+                </p>
+              </div>
+            )
+          )}
         </div>
-
       </div>
-
     </section>
-
   );
 };
 

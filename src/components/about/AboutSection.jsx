@@ -1,76 +1,61 @@
-// import about1 from "../../assets/about-1.jpg";
-// import about2 from "../../assets/about-2.jpg";
+
+
+// import React from "react";
+// import { ArrowUpRight } from "lucide-react";
+
+// import aboutImage from "../../assets/aboutimg.png";
+
+// import "./AboutSection.css";
 
 // const AboutSection = () => {
 //   return (
-//     <section className="about-section">
+//     <section className="aboutSection">
 
-//       <div className="container">
+//       <div className="aboutContainer">
 
-//         <div className="row align-items-center g-5">
+//         <div className="aboutWrapper">
 
-//           {/* LEFT */}
+//           {/* LEFT CONTENT */}
 
-//           <div className="col-lg-6">
+//           <div className="aboutLeft">
 
-//             <div className="section-tag">
-//               <span></span>
-//               Who We Are
-//             </div>
-
-//             <h2>ABOUT US</h2>
+//             <h2>
+//               About Us
+//             </h2>
 
 //             <p>
 //               Globetech Social Impact Foundation is a socially driven NGO
-//               committed to empowering communities through education,
-//               skill development, healthcare awareness, and sustainable
-//               development initiatives across India.
+//               focused on empowering communities through education, skill
+//               development, healthcare awareness, and sustainable
+//               development initiatives across India. Our programs support
+//               youth empowerment, women and child welfare, career
+//               readiness, and community upliftment to create brighter
+//               futures and lasting social impact.
 //             </p>
 
-//             <p>
-//               Our programs focus on youth empowerment, women and child welfare,
-//               career readiness, infrastructure support, and community upliftment.
-//               By bridging the gap between education and employability,
-//               we help individuals build brighter futures through
-//               industry-oriented training.
-//             </p>
+//             <button className="aboutBtn">
 
-//             <a href="#" className="know-btn">
-//               Know More
-//               <i className="bi bi-arrow-right-circle-fill"></i>
-//             </a>
+//               <span>Know More</span>
 
-//           </div>
+//               <div className="aboutBtnIcon">
 
-//           {/* RIGHT */}
-
-//           <div className="col-lg-6">
-
-//             <div className="about-images">
-
-//               <img
-//                 src={about1}
-//                 className="img-large"
-//                 alt="About"
-//               />
-
-//               <img
-//                 src={about2}
-//                 className="img-small"
-//                 alt="About"
-//               />
-
-//               <div className="impact-box">
-
-//                 <h3>
-//                   50 <span>Lakh</span>
-//                 </h3>
-
-//                 <p>Lives Impacted</p>
+//                 <ArrowUpRight size={15} />
 
 //               </div>
 
-//             </div>
+//             </button>
+
+//           </div>
+
+//           {/* RIGHT IMAGE */}
+
+//           <div className="aboutRight">
+
+//             <img
+//               src={aboutImage}
+//               alt="About"
+//               className="aboutImage"
+//             />
 
 //           </div>
 
@@ -85,123 +70,119 @@
 // export default AboutSection;
 
 
-import React from "react";
+
+
+// AboutSection.jsx
+
+import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
 
-import about1 from "../../assets/about-1.jpg";
-import about2 from "../../assets/about-2.jpg";
-import yellowArrow from "../../assets/yellow-arrow.png";
+import aboutImage from "../../assets/aboutimg.png";
 
 import "./AboutSection.css";
 
 const AboutSection = () => {
+
+  const sectionRef = useRef(null);
+
+  const [showContent, setShowContent] = useState(false);
+
+  /* =========================
+     SCROLL POPUP ANIMATION
+  ========================= */
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+
+      ([entry]) => {
+
+        if (entry.isIntersecting) {
+          setShowContent(true);
+        }
+
+      },
+
+      {
+        threshold: 0.2,
+      }
+
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+
+  }, []);
+
   return (
 
-    <section className="auroAboutSection">
+    <section
+      className="aboutSection"
+      ref={sectionRef}
+    >
 
-      <div className="auroAboutContainer">
+      <div className="aboutContainer">
 
-        <div className="auroAboutWrapper">
+        <div className="aboutWrapper">
 
-          {/* LEFT SIDE */}
+          {/* =========================
+              LEFT CONTENT
+          ========================= */}
 
-          <div className="auroAboutLeft">
-
-            {/* TAG */}
-
-            <div className="auroAboutTag">
-
-            
-
-              <p>Who We Are</p>
-                <span></span>
-
-            </div>
-
-            {/* TITLE */}
+          <div
+            className={`aboutLeft ${
+              showContent ? "showLeft" : ""
+            }`}
+          >
 
             <h2>
-              ABOUT US
+              About Us
             </h2>
 
-            {/* DESCRIPTION */}
+            <p>
 
-            <p className="auroAboutDescription">
               Globetech Social Impact Foundation is a socially driven NGO
-              committed to empowering communities through education,
-              skill development, healthcare awareness, and sustainable
-              development initiatives across India. We work closely with
-              institutions, industry partners, and local communities to
-              create meaningful opportunities that improve livelihoods
-              and support long-term growth.
-            
+              focused on empowering communities through education, skill
+              development, healthcare awareness, and sustainable
+              development initiatives across India. Our programs support
+              youth empowerment, women and child welfare, career
+              readiness, and community upliftment to create brighter
+              futures and lasting social impact.
 
-         
-              Our programs focus on youth empowerment, women and child
-              welfare, career readiness, infrastructure support,
-              and community upliftment. By bridging the gap between
-              education and employability, we help individuals build
-              brighter futures through industry-oriented training
-              and impactful social initiatives.
             </p>
 
-            {/* BUTTON */}
+            <button className="aboutBtn">
 
-            <button className="auroKnowBtn">
+              <span>Know More</span>
 
-              Know More
+              <div className="aboutBtnIcon">
 
-              <ArrowUpRight size={15} />
+                <ArrowUpRight size={15} />
+
+              </div>
 
             </button>
 
           </div>
 
-          {/* RIGHT SIDE */}
+          {/* =========================
+              RIGHT IMAGE
+          ========================= */}
 
-          <div className="auroAboutRight">
+          <div
+            className={`aboutRight ${
+              showContent ? "showRight" : ""
+            }`}
+          >
 
-            <div className="auroAboutImages">
-
-              {/* MAIN IMAGE */}
-
-              <img
-                src={about1}
-                alt="About"
-                className="auroAboutLargeImg"
-              />
-
-              {/* SMALL IMAGE */}
-
-              <img
-                src={about2}
-                alt="Children"
-                className="auroAboutSmallImg"
-              />
-
-              {/* IMPACT BOX */}
-
-              <div className="auroImpactBox">
-
-                <h3>
-                  50 <span>Lakh</span>
-                </h3>
-
-                <p>
-                  Lives Impacted
-                </p>
-
-              </div>
-
-              {/* YELLOW ARROW */}
-
-              <img
-                src={yellowArrow}
-                alt="Yellow Arrow"
-                className="auroYellowArrow"
-              />
-
-            </div>
+            <img
+              src={aboutImage}
+              alt="About"
+              className="aboutImage"
+            />
 
           </div>
 
@@ -210,7 +191,6 @@ const AboutSection = () => {
       </div>
 
     </section>
-
   );
 };
 

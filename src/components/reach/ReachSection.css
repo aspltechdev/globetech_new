@@ -1,275 +1,178 @@
-/* =========================================
-   GOOGLE FONT
-========================================= */
+/* ReachSection.css */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
-
-/* =========================================
-   RESET
-========================================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.reachSection {
+  position: relative;
+  width: 100%;
+  overflow: hidden;
+  padding: 80px 0;
+  background: #f5c400;
 }
 
 /* =========================================
-   SECTION
+   BG IMAGE
 ========================================= */
 
-.auroReachSection {
+.reachBgImage {
+  position: absolute;
+  inset: 0;
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.12;
+  z-index: 1;
+}
 
-  background: #f3f3f3;
-
-  padding: 18px 0 30px;
-
-  overflow: hidden;
-
-  font-family: "Poppins", sans-serif;
+.reachOverlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 208, 0, 0.88);
+  z-index: 2;
 }
 
 /* =========================================
    CONTAINER
 ========================================= */
 
-.auroReachContainer {
-  width: 100%;
-  max-width: 1240px;
-
+.reachContainer {
+  position: relative;
+  z-index: 3;
+  width: 90%;
+  max-width: 1250px;
   margin: auto;
-
-  padding: 0 34px;
 }
 
 /* =========================================
-   YELLOW WRAPPER
+   WRAPPER
 ========================================= */
 
-.auroReachWrapper {
-  width: 100%;
-
-  min-height: 370px;
-
-  background: #f5cf00;
-
-  border-radius: 22px;
-
-  padding: 32px 36px;
-
+.reachWrapper {
   display: flex;
   align-items: center;
   justify-content: space-between;
-
-  position: relative;
-
-  overflow: hidden;
+  gap: 60px;
 }
 
 /* =========================================
-   LEFT SIDE
+   LEFT CONTENT
 ========================================= */
 
-.auroReachLeft {
-  width: 44%;
-
+.reachLeft {
+  flex: 1;
+  transform: translateY(60px);
   opacity: 0;
-
-  transform: translateX(-70px);
-
-  transition: 1s ease;
+  transition: all 1s ease;
 }
 
-/* SHOW */
-
-.auroReachLeft.show-reach-content {
+.showLeft {
+  transform: translateY(0);
   opacity: 1;
-
-  transform: translateX(0);
 }
 
-/* =========================================
-   TAG
-========================================= */
-
-.auroReachTag {
-  display: flex;
-  align-items: center;
-
-  gap: 12px;
-
-  margin-bottom: 14px;
-}
-
-.auroReachTag span {
-  width: 52px;
-  height: 1.5px;
-
-  background: rgba(0, 0, 0, 0.25);
-}
-
-.auroReachTag p {
-  color: #ef6b2f;
-
-  font-size: 13px;
-  font-weight: 500;
-}
-
-/* =========================================
-   TITLE
-========================================= */
-
-.auroReachLeft h2 {
-  color: #111111;
-
-  font-size: 40px;
-  font-weight: 600;
-
-  line-height: 1.18;
-
+.reachLeft h2 {
+  font-size: 52px;
+  line-height: 1.1;
+  font-weight: 800;
+  color: #111;
   margin-bottom: 24px;
 }
 
-.auroReachLeft h2 span {
+.reachLeft h2 span {
   display: block;
-
-  color: #0d63d7;
+  color: #005dff;
 }
 
-/* =========================================
-   DESCRIPTION
-========================================= */
-
-.auroReachDescription {
-  width: 100%;
-  max-width: 390px;
-
-  color: #262626;
-
-  font-size: 14px;
-  font-weight: 400;
-
-  line-height: 1.95;
-
-  margin-bottom: 28px;
+.reachDescription {
+  max-width: 520px;
+  font-size: 17px;
+  line-height: 1.8;
+  color: #222;
+  margin-bottom: 32px;
 }
 
 /* =========================================
    POINTS
 ========================================= */
 
-.auroReachPoints {
+.reachPoints {
   display: flex;
   flex-direction: column;
-
   gap: 18px;
+  margin-bottom: 35px;
 }
 
-/* SINGLE POINT */
-
-.auroReachPoint {
+.reachPoint {
   display: flex;
   align-items: center;
-
   gap: 12px;
-
-  opacity: 0;
-
-  transform: translateY(30px);
-
-  transition: 0.8s ease;
 }
 
-/* SHOW */
-
-.auroReachLeft.show-reach-content .auroReachPoint {
-  opacity: 1;
-
-  transform: translateY(0);
-}
-
-/* DELAYS */
-
-.auroReachPoint:nth-child(1) {
-  transition-delay: 0.2s;
-}
-
-.auroReachPoint:nth-child(2) {
-  transition-delay: 0.4s;
-}
-
-.auroReachPoint:nth-child(3) {
-  transition-delay: 0.6s;
-}
-
-/* ICON */
-
-.auroReachPoint svg {
-  color: #0d63d7;
-
+.reachPoint svg {
+  color: #0c8a2d;
   flex-shrink: 0;
 }
 
-/* TEXT */
-
-.auroReachPoint p {
-  color: #111111;
-
-  font-size: 14px;
+.reachPoint p {
+  font-size: 16px;
   font-weight: 500;
-  margin-bottom: 0;
+  color: #111;
 }
 
 /* =========================================
-   RIGHT SIDE
+   BUTTON
 ========================================= */
 
-.auroReachRight {
-  width: 50%;
+.reachBtn {
+  width: 180px;
+  height: 54px;
+  border: none;
+  border-radius: 10px;
+  background: #005dff;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s ease;
+  box-shadow: 0 8px 20px rgba(0, 93, 255, 0.25);
+}
 
+.reachBtn:hover {
+  transform: translateY(-3px);
+  background: #0045c7;
+}
+
+/* =========================================
+   RIGHT MAP
+========================================= */
+
+.reachRight {
+  flex: 1;
   display: flex;
-  align-items: center;
   justify-content: center;
-
+  transform: scale(0.8);
   opacity: 0;
-
-  transform: translateX(80px);
-
-  transition: 1s ease;
+  transition: all 1s ease;
 }
 
-/* SHOW */
-
-.auroReachRight.show-map {
+.showRight {
+  transform: scale(1);
   opacity: 1;
-
-  transform: translateX(0);
 }
 
-/* =========================================
-   MAP
-========================================= */
-
-.auroIndiaMap {
+.indiaMap {
   width: 100%;
-  max-width: 365px;
-
+  max-width: 500px;
   object-fit: contain;
 
   animation: floatMap 4s ease-in-out infinite;
 }
 
-/* FLOAT */
-
 @keyframes floatMap {
-
   0% {
     transform: translateY(0px);
   }
 
   50% {
-    transform: translateY(-14px);
+    transform: translateY(-10px);
   }
 
   100% {
@@ -278,266 +181,132 @@
 }
 
 /* =========================================
-   STATS WRAPPER
+   STATS TITLE
 ========================================= */
 
-.auroStatsWrapper {
-  width: 100%;
-
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-
-  gap: 18px;
-
-  margin-top: 28px;
-}
-
-/* =========================================
-   STAT CARD
-========================================= */
-
-.auroStatCard {
-  background: #efefef;
-
-  border-radius: 16px;
-
-  min-height: 122px;
-
-  padding: 24px 20px;
-
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-
+.statsTitle {
   text-align: center;
+  margin-top: 70px;
+  margin-bottom: 35px;
 
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.12);
+  font-size: 48px;
+  font-weight: 800;
+  color: #005dff;
 
   opacity: 0;
+  transform: translateY(40px);
 
-  transform: translateY(60px);
-
-  transition:
-    transform 0.9s ease,
-    opacity 0.9s ease,
-    box-shadow 0.4s ease;
+  transition: all 1s ease;
 }
 
-/* SHOW */
-
-.auroStatCard.show-stat {
+.showStatsTitle {
   opacity: 1;
-
   transform: translateY(0);
 }
 
-/* HOVER */
+/* =========================================
+   STATS
+========================================= */
 
-.auroStatCard:hover {
+.statsWrapper {
+  display: grid;
+  grid-template-columns: repeat(
+    4,
+    1fr
+  );
+  gap: 25px;
+}
+
+.statCard {
+  background: #fff;
+  border-radius: 22px;
+  padding: 35px 20px;
+
+  text-align: center;
+
+  box-shadow: 0 10px 30px
+    rgba(0, 0, 0, 0.12);
+
+  transform: translateY(60px)
+    scale(0.8);
+
+  opacity: 0;
+
+  transition: all 0.8s ease;
+}
+
+.showCard {
+  transform: translateY(0)
+    scale(1);
+
+  opacity: 1;
+}
+
+.statCard:hover {
   transform: translateY(-8px);
-
-  box-shadow: 0 16px 30px rgba(0, 0, 0, 0.16);
 }
 
-/* NUMBER */
-
-.auroStatCard h3 {
-  color: #0d63d7;
-
-  font-size: 52px;
-  font-weight: 700;
-
-  line-height: 1;
-
-  margin-bottom: 14px;
+.statCard h3 {
+  font-size: 46px;
+  font-weight: 800;
+  color: #005dff;
+  margin-bottom: 12px;
 }
 
-/* LABEL */
-
-.auroStatCard p {
-  color: #222222;
-
-  font-size: 15px;
+.statCard p {
+  font-size: 18px;
+  color: #333;
   font-weight: 500;
-
-
-  line-height: 1.5;
 }
 
 /* =========================================
-   LARGE LAPTOP
+   RESPONSIVE
 ========================================= */
 
-@media (max-width: 1100px) {
-
-  .auroReachLeft h2 {
-    font-size: 46px;
-  }
-
-  .auroStatCard h3 {
-    font-size: 44px;
-  }
-
-  .auroIndiaMap {
-    max-width: 320px;
-  }
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 992px) {
-
-  .auroReachWrapper {
+@media screen and (max-width: 1100px) {
+  .reachWrapper {
     flex-direction: column;
-
-    gap: 45px;
-
-    padding: 32px 28px;
+    text-align: center;
   }
 
-  .auroReachLeft,
-  .auroReachRight {
-    width: 100%;
+  .reachDescription {
+    margin-inline: auto;
   }
 
-  .auroReachDescription {
-    max-width: 100%;
+  .reachPoints {
+    align-items: center;
   }
 
-  .auroReachRight {
-    justify-content: center;
+  .statsWrapper {
+    grid-template-columns: repeat(
+      2,
+      1fr
+    );
   }
 
-  .auroStatsWrapper {
-    grid-template-columns: repeat(2, 1fr);
+  .reachBtn {
+    margin: auto;
   }
 }
 
-/* =========================================
-   MOBILE
-========================================= */
-
-@media (max-width: 768px) {
-
-  .auroReachContainer {
-    padding: 0 18px;
-  }
-
-  .auroReachWrapper {
-    border-radius: 18px;
-
-    padding: 28px 20px;
-  }
-
-  .auroReachLeft h2 {
-    font-size: 36px;
-  }
-
-  .auroReachDescription {
-    font-size: 13px;
-
-    line-height: 1.85;
-  }
-
-  .auroReachPoint {
-    align-items: flex-start;
-  }
-
-  .auroReachPoint p {
-    font-size: 13px;
-
-    line-height: 1.7;
-  }
-
-  .auroIndiaMap {
-    max-width: 280px;
-  }
-
-  .auroStatCard {
-    min-height: 110px;
-  }
-
-  .auroStatCard h3 {
+@media screen and (max-width: 768px) {
+  .reachLeft h2 {
     font-size: 38px;
   }
 
-  .auroStatCard p {
-    font-size: 14px;
-  }
-}
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media (max-width: 480px) {
-
-  .auroReachSection {
-    padding: 18px 0 24px;
+  .statsTitle {
+    font-size: 38px;
   }
 
-  .auroReachContainer {
-    padding: 0 14px;
-  }
-
-  .auroReachWrapper {
-    padding: 24px 16px;
-
-    border-radius: 16px;
-  }
-
-  .auroReachTag {
-    gap: 10px;
-  }
-
-  .auroReachTag span {
-    width: 40px;
-  }
-
-  .auroReachTag p {
-    font-size: 12px;
-  }
-
-  .auroReachLeft h2 {
-    font-size: 28px;
-  }
-
-  .auroReachDescription {
-    font-size: 12px;
-
-    line-height: 1.8;
-  }
-
-  .auroReachPoint {
-    gap: 10px;
-  }
-
-  .auroReachPoint p {
-    font-size: 12px;
-  }
-
-  .auroIndiaMap {
-    max-width: 220px;
-  }
-
-  .auroStatsWrapper {
+  .statsWrapper {
     grid-template-columns: 1fr;
   }
 
-  .auroStatCard {
-    min-height: 105px;
-
-    padding: 22px 16px;
+  .statCard h3 {
+    font-size: 38px;
   }
 
-  .auroStatCard h3 {
-    font-size: 34px;
-  }
-
-  .auroStatCard p {
-    font-size: 13px;
+  .reachDescription {
+    font-size: 15px;
   }
 }

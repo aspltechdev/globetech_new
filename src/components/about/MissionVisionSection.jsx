@@ -1,82 +1,135 @@
+// MissionVisionSection.jsx
 
+import React, { useEffect, useRef, useState } from "react";
+import {
+  CheckCircle2,
+} from "lucide-react";
 
-
-
-import React from "react";
-import { CheckCircle2 } from "lucide-react";
-import dotCircleImg from "../../assets/reachvector.png";
+import bgImage from "../../assets/aboutmission.jpg";
 
 import "./MissionVisionSection.css";
 
 const MissionVisionSection = () => {
+
+  const sectionRef = useRef(null);
+
+  const [showContent, setShowContent] = useState(false);
+
+  /* =========================
+     SCROLL ANIMATION
+  ========================= */
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+
+      ([entry]) => {
+
+        if (entry.isIntersecting) {
+          setShowContent(true);
+        }
+
+      },
+
+      {
+        threshold: 0.2,
+      }
+
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => observer.disconnect();
+
+  }, []);
+
   return (
 
-    <section className="auroMissionSection">
+    <section
+      className="missionSection"
+      ref={sectionRef}
+    >
 
-      <div className="auroMissionContainer">
+      {/* BG IMAGE */}
 
-        <div className="auroMissionWrapper">
+      <div className="missionBgOverlay"></div>
 
-          {/* LEFT SIDE */}
+      <img
+        src={bgImage}
+        alt="Background"
+        className="missionBgImage"
+      />
 
-          <div className="auroMissionLeft">
+      <div className="missionContainer">
 
-            {/* DOT CIRCLE */}
+        <div className="missionWrapper">
 
-            {/* <div className="auroMissionDotCircle"></div> */}
-            {/* DOT CIRCLE IMAGE */}
+          {/* =========================
+              LEFT SIDE
+          ========================= */}
 
-<img
-  src={dotCircleImg}
-  alt="Dot Circle"
-  className="auroMissionDotCircle"
-/>
+          <div
+            className={`missionLeft ${
+              showContent ? "showLeft" : ""
+            }`}
+          >
 
-            {/* TOP CARD */}
+            {/* MISSION CARD */}
 
-            <div className="auroMissionCard auroMissionTopCard">
+            <div className="missionCard">
 
-              <div className="auroMissionCardTag">
+              <div className="missionTag">
                 Our Mission
               </div>
 
               <p>
+
                 Empowering underserved communities through education,
                 skill development, and technology-driven initiatives.
                 We create practical, scalable solutions that improve
                 livelihoods and enable individuals to build a better future.
+
               </p>
 
             </div>
 
-            {/* BOTTOM CARD */}
+            {/* VISION CARD */}
 
-            <div className="auroMissionCard auroMissionBottomCard">
+            <div className="missionCard">
 
-              <div className="auroMissionCardTag">
+              <div className="missionTag">
                 Our Vision
               </div>
 
               <p>
+
                 To build a future where everyone has access to opportunities,
-                resources, and the tools needed to thrive.
-                We aim to create inclusive, resilient communities
-                that drive lasting positive change.
+                resources, and the tools needed to thrive. We aim to create
+                inclusive, resilient communities that drive lasting positive change.
+
               </p>
 
             </div>
 
           </div>
 
-          {/* RIGHT SIDE */}
+          {/* =========================
+              RIGHT SIDE
+          ========================= */}
 
-          <div className="auroMissionRight">
+          <div
+            className={`missionRight ${
+              showContent ? "showRight" : ""
+            }`}
+          >
 
             <h2>
-              Closing the <span>Gap.</span>
+              Closing the Gap.
             </h2>
 
-            <p className="auroMissionDescription">
+            <p className="missionDescription">
 
               Access to opportunities is still out of reach for many
               communities. We exist to create inclusive pathways through
@@ -86,12 +139,14 @@ const MissionVisionSection = () => {
 
             {/* POINTS */}
 
-            <div className="auroMissionPoints">
+            <div className="missionPoints">
 
-              <div className="auroMissionPoint">
+              <div className="missionPoint">
 
-                <div className="auroMissionIcon">
+                <div className="missionIcon">
+
                   <CheckCircle2 size={16} />
+
                 </div>
 
                 <p>
@@ -100,10 +155,12 @@ const MissionVisionSection = () => {
 
               </div>
 
-              <div className="auroMissionPoint">
+              <div className="missionPoint">
 
-                <div className="auroMissionIcon">
+                <div className="missionIcon">
+
                   <CheckCircle2 size={16} />
+
                 </div>
 
                 <p>
@@ -112,10 +169,12 @@ const MissionVisionSection = () => {
 
               </div>
 
-              <div className="auroMissionPoint">
+              <div className="missionPoint">
 
-                <div className="auroMissionIcon">
+                <div className="missionIcon">
+
                   <CheckCircle2 size={16} />
+
                 </div>
 
                 <p>
@@ -126,6 +185,20 @@ const MissionVisionSection = () => {
 
             </div>
 
+            {/* BUTTONS */}
+
+            <div className="missionButtons">
+
+              <button>
+                Reach us
+              </button>
+
+              <button>
+                Recent Projects
+              </button>
+
+            </div>
+
           </div>
 
         </div>
@@ -133,7 +206,6 @@ const MissionVisionSection = () => {
       </div>
 
     </section>
-
   );
 };
 
