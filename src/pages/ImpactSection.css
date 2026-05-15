@@ -1,162 +1,117 @@
-/* =========================================
-   IMPACT SECTION
-========================================= */
+/* ImpactSection.css */
 
-.impact-main-section {
-  width: 100%;
-  background: #ffffff;
-  padding: 72px 0 90px;
-  overflow: hidden;
-  font-family: "Inter", sans-serif;
-}
-
-.impact-main-container {
-  width: 100%;
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 0 32px;
+* {
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
 }
 
-/* =========================================
-   TOP HEADER
-========================================= */
-
-.impact-header-area {
+.impact-section {
   width: 100%;
-  margin-bottom: 42px;
+  background: #f5f6f8;
+  padding: 80px 20px;
+  overflow: hidden;
 }
 
-.impact-main-title {
-  font-size: 48px;
-  line-height: 54px;
+.impact-container {
+  max-width: 1280px;
+  margin: auto;
+}
+
+/* HEADER */
+
+.impact-header {
+  margin-bottom: 50px;
+}
+
+.impact-header h2 {
+  font-size: 42px;
   font-weight: 700;
-  color: #111111;
-  margin-bottom: 18px;
-  letter-spacing: -1.5px;
+  color: #111827;
+  margin-bottom: 20px;
 }
 
-.impact-main-description {
-  width: 100%;
-  max-width: 1120px;
+.impact-header p {
+  max-width: 980px;
+  line-height: 1.9;
+  color: #6b7280;
   font-size: 15px;
-  line-height: 26px;
-  color: #4d4d4d;
-  font-weight: 400;
 }
 
-/* =========================================
-   STATS GRID
-========================================= */
+/* STATS */
 
 .impact-stats-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr);
-  gap: 22px;
-  margin-top: 42px;
-  margin-bottom: 82px;
+  gap: 24px;
+  margin-bottom: 70px;
 }
 
-.impact-single-stat-card {
-  background: #ffffff;
-  border-radius: 16px;
+.impact-stat-card {
+  background: white;
+  border-radius: 18px;
   padding: 34px 24px;
-  min-height: 138px;
-  box-shadow:
-    0px 2px 6px rgba(0, 0, 0, 0.04),
-    0px 10px 25px rgba(0, 0, 0, 0.05);
-  border: 1px solid #efefef;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-
-  transition: all 0.3s ease;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.05);
+  transition: 0.3s;
 }
 
-.impact-single-stat-card:hover {
-  transform: translateY(-4px);
+.impact-stat-card:hover {
+  transform: translateY(-5px);
 }
 
-.impact-single-stat-card h3 {
-  font-size: 46px;
-  line-height: 1;
+.impact-stat-card h3 {
+  font-size: 42px;
+  color: #0d6efd;
+  margin-bottom: 10px;
   font-weight: 700;
-  color: #0059ff;
-  margin-bottom: 18px;
-  letter-spacing: -2px;
 }
 
-.impact-single-stat-card p {
-  font-size: 17px;
-  color: #222222;
-  font-weight: 500;
-  line-height: 1.4;
+.impact-stat-card p {
+  color: #6b7280;
+  font-size: 15px;
 }
 
-/* =========================================
-   VOICES HEADER
-========================================= */
+/* VOICES */
 
 .impact-voices-header {
   display: flex;
-  align-items: center;
   justify-content: space-between;
-  margin-bottom: 28px;
+  align-items: center;
+  margin-bottom: 30px;
 }
 
 .impact-voices-header h2 {
-  font-size: 44px;
-  line-height: 1.1;
-  font-weight: 700;
-  color: #0059ff;
-  margin-bottom: 10px;
-  letter-spacing: -1.5px;
+  font-size: 34px;
+  color: #0d6efd;
+  margin-bottom: 8px;
 }
 
 .impact-voices-header p {
-  font-size: 15px;
-  color: #666666;
-  line-height: 24px;
+  color: #6b7280;
 }
 
 .impact-slider-buttons {
   display: flex;
-  align-items: center;
   gap: 12px;
 }
 
 .impact-slider-buttons button {
-  width: 44px;
-  height: 44px;
+  width: 42px;
+  height: 42px;
   border-radius: 50%;
-  border: 1px solid #d9d9d9;
-  background: #ffffff;
-  color: #0059ff;
-  font-size: 24px;
+  border: none;
+  background: white;
   cursor: pointer;
-  transition: all 0.25s ease;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.08);
 }
 
-.impact-slider-buttons button:hover {
-  background: #0059ff;
-  color: #ffffff;
-  border-color: #0059ff;
-}
-
-/* =========================================
-   IMAGE SLIDER
-========================================= */
+/* SLIDER */
 
 .impact-slider-wrapper {
-  width: 100%;
   overflow-x: auto;
   scrollbar-width: none;
-  margin-bottom: 90px;
+  margin-bottom: 70px;
 }
 
 .impact-slider-wrapper::-webkit-scrollbar {
@@ -170,13 +125,12 @@
 }
 
 .impact-image-card {
-  width: 420px;
-  height: 560px;
   position: relative;
-  border-radius: 28px;
+  width: 390px;
+  height: 500px;
+  border-radius: 24px;
   overflow: hidden;
   flex-shrink: 0;
-  background: #ddd;
 }
 
 .impact-image-card img {
@@ -185,101 +139,76 @@
   object-fit: cover;
 }
 
-.impact-image-overlay {
+.impact-overlay {
   position: absolute;
   inset: 0;
-
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0) 35%,
-      rgba(0, 0, 0, 0.82) 100%
-    );
-
-  padding: 34px;
-
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.2)
+  );
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
+  padding: 28px;
+  color: white;
 }
 
-.impact-image-overlay span {
+.impact-overlay span {
+  background: #f59e0b;
   width: fit-content;
-  background: #f39c12;
-  color: #ffffff;
-  padding: 8px 14px;
+  padding: 6px 12px;
   border-radius: 999px;
   font-size: 11px;
-  font-weight: 700;
-  letter-spacing: 1.2px;
-  margin-bottom: 18px;
+  margin-bottom: 14px;
 }
 
-.impact-image-overlay h3 {
-  font-size: 34px;
-  line-height: 1.2;
-  font-weight: 600;
-  color: #ffffff;
-  margin-bottom: 12px;
-  letter-spacing: -1px;
+.impact-overlay h3 {
+  font-size: 28px;
+  margin-bottom: 10px;
 }
 
-.impact-image-overlay p {
-  font-size: 15px;
-  line-height: 24px;
-  color: rgba(255, 255, 255, 0.9);
-  max-width: 320px;
+.impact-overlay p {
+  line-height: 1.7;
+  color: rgba(255,255,255,0.9);
 }
 
-/* =========================================
-   TESTIMONIAL SECTION
-========================================= */
+/* TESTIMONIAL */
 
 .impact-testimonial-layout {
   display: grid;
-  grid-template-columns: 0.9fr 1.1fr;
+  grid-template-columns: 350px 1fr;
   gap: 40px;
-  align-items: start;
 }
 
 .impact-testimonial-left {
   padding-top: 20px;
 }
 
-.impact-quote-icon {
-  width: 72px;
-  height: 72px;
-  background: #f2f6ff;
-  border-radius: 22px;
-
+.quote-icon {
+  width: 52px;
+  height: 52px;
+  background: white;
+  border-radius: 50%;
+  color: #0d6efd;
   display: flex;
   align-items: center;
   justify-content: center;
-
-  color: #0059ff;
-  font-size: 40px;
-  margin-bottom: 30px;
+  font-size: 26px;
+  margin-bottom: 20px;
 }
 
 .impact-testimonial-left h2 {
-  font-size: 54px;
-  line-height: 1.05;
-  font-weight: 700;
-  color: #0059ff;
-  margin-bottom: 24px;
-  letter-spacing: -2px;
+  font-size: 40px;
+  line-height: 1.2;
+  color: #0d6efd;
+  margin-bottom: 18px;
 }
 
 .impact-testimonial-left p {
-  font-size: 15px;
-  line-height: 28px;
-  color: #666666;
-  max-width: 380px;
+  color: #6b7280;
+  line-height: 1.8;
 }
-
-/* =========================================
-   TESTIMONIAL GRID
-========================================= */
 
 .impact-testimonial-grid {
   display: grid;
@@ -288,77 +217,56 @@
 }
 
 .impact-testimonial-card {
-  background: #fafafa;
-  border: 1px solid #ececec;
-  border-radius: 20px;
-  padding: 28px;
-  min-height: 220px;
-
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
+  background: white;
+  padding: 26px;
+  border-radius: 18px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
 }
 
 .impact-testimonial-card p {
-  font-size: 15px;
-  line-height: 27px;
-  color: #4a4a4a;
-  margin-bottom: 24px;
+  line-height: 1.8;
+  color: #4b5563;
+  margin-bottom: 22px;
 }
 
-.impact-user-info {
+.impact-user {
   display: flex;
   align-items: center;
   gap: 14px;
 }
 
-.impact-user-info img {
+.impact-user img {
   width: 52px;
   height: 52px;
   border-radius: 50%;
-  object-fit: cover;
 }
 
-.impact-user-info h4 {
+.impact-user h4 {
   font-size: 15px;
-  font-weight: 700;
-  color: #0059ff;
   margin-bottom: 4px;
 }
 
-.impact-user-info span {
-  font-size: 12px;
-  text-transform: uppercase;
-  letter-spacing: 0.7px;
-  color: #888888;
+.impact-user span {
+  font-size: 13px;
+  color: #6b7280;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* REVEAL ANIMATION */
 
-@media screen and (max-width: 1200px) {
-
-  .impact-single-stat-card h3 {
-    font-size: 38px;
-  }
-
-  .impact-image-card {
-    width: 360px;
-    height: 500px;
-  }
-
-  .impact-testimonial-left h2 {
-    font-size: 46px;
-  }
+.reveal {
+  opacity: 0;
+  transform: translateY(60px);
+  transition: all 1s ease;
 }
 
-@media screen and (max-width: 992px) {
+.reveal.active {
+  opacity: 1;
+  transform: translateY(0);
+}
 
-  .impact-main-title {
-    font-size: 40px;
-    line-height: 48px;
-  }
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
 
   .impact-stats-grid {
     grid-template-columns: repeat(2, 1fr);
@@ -368,293 +276,56 @@
     grid-template-columns: 1fr;
   }
 
-  .impact-testimonial-left p {
-    max-width: 100%;
-  }
-
-  .impact-image-card {
-    width: 320px;
-    height: 460px;
-  }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
-  .impact-main-section {
-    padding: 60px 0;
-  }
-
-  .impact-main-container {
-    padding: 0 20px;
-  }
-
-  .impact-main-title {
-    font-size: 34px;
-    line-height: 42px;
-  }
-
-  .impact-main-description {
-    font-size: 14px;
-    line-height: 25px;
-  }
-
-  .impact-stats-grid {
-    grid-template-columns: 1fr;
-    gap: 18px;
-    margin-bottom: 70px;
-  }
-
-  .impact-single-stat-card {
-    min-height: 120px;
-    padding: 28px 22px;
-  }
-
-  .impact-single-stat-card h3 {
+  .impact-header h2 {
     font-size: 34px;
   }
 
   .impact-voices-header {
     flex-direction: column;
     align-items: flex-start;
-    gap: 22px;
-  }
-
-  .impact-voices-header h2 {
-    font-size: 34px;
+    gap: 20px;
   }
 
   .impact-image-card {
-    width: 290px;
+    width: 320px;
     height: 430px;
-    border-radius: 22px;
-  }
-
-  .impact-image-overlay {
-    padding: 24px;
-  }
-
-  .impact-image-overlay h3 {
-    font-size: 28px;
-  }
-
-  .impact-testimonial-left h2 {
-    font-size: 40px;
   }
 
   .impact-testimonial-grid {
     grid-template-columns: 1fr;
   }
 
-  .impact-testimonial-card {
-    min-height: auto;
-  }
 }
 
-@media screen and (max-width: 480px) {
+@media (max-width: 580px) {
 
-  .impact-main-title {
-    font-size: 30px;
-    line-height: 38px;
+  .impact-section {
+    padding: 60px 16px;
   }
 
-  .impact-voices-header h2 {
-    font-size: 30px;
+  .impact-stats-grid {
+    grid-template-columns: 1fr;
   }
 
-  .impact-testimonial-left h2 {
-    font-size: 34px;
+  .impact-header p {
+    font-size: 14px;
   }
 
   .impact-image-card {
-    width: 260px;
-    height: 390px;
+    width: 290px;
+    height: 400px;
   }
 
-  .impact-image-overlay h3 {
+  .impact-overlay h3 {
     font-size: 24px;
   }
-}
 
-
-/* =========================================
-   GLOBAL SMOOTH TRANSITIONS
-========================================= */
-
-.impact-single-stat-card,
-.impact-image-card,
-.impact-testimonial-card,
-.impact-slider-buttons button,
-.impact-user-info img {
-  transition: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
-}
-
-/* =========================================
-   STATS CARD HOVER
-========================================= */
-
-.impact-single-stat-card {
-  position: relative;
-  overflow: hidden;
-}
-
-.impact-single-stat-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(
-    135deg,
-    rgba(0, 89, 255, 0.06),
-    rgba(0, 89, 255, 0)
-  );
-  opacity: 0;
-  transition: opacity 0.4s ease;
-}
-
-.impact-single-stat-card:hover {
-  transform: translateY(-10px);
-  box-shadow:
-    0px 10px 30px rgba(0, 0, 0, 0.08),
-    0px 25px 60px rgba(0, 89, 255, 0.08);
-  border-color: rgba(0, 89, 255, 0.15);
-}
-
-.impact-single-stat-card:hover::before {
-  opacity: 1;
-}
-
-.impact-single-stat-card:hover h3 {
-  transform: scale(1.04);
-  color: #0047d6;
-}
-
-/* =========================================
-   IMAGE CARD HOVER
-========================================= */
-
-.impact-image-card {
-  cursor: pointer;
-}
-
-.impact-image-card img {
-  transition: transform 0.8s ease;
-}
-
-.impact-image-card:hover {
-  transform: translateY(-12px);
-  box-shadow:
-    0px 20px 40px rgba(0, 0, 0, 0.18);
-}
-
-.impact-image-card:hover img {
-  transform: scale(1.08);
-}
-
-.impact-image-overlay {
-  transition: all 0.5s ease;
-}
-
-.impact-image-card:hover .impact-image-overlay {
-  background:
-    linear-gradient(
-      180deg,
-      rgba(0, 0, 0, 0.05) 20%,
-      rgba(0, 0, 0, 0.92) 100%
-    );
-}
-
-.impact-image-overlay span {
-  transition: all 0.35s ease;
-}
-
-.impact-image-card:hover .impact-image-overlay span {
-  background: #0059ff;
-  transform: translateY(-3px);
-}
-
-.impact-image-overlay h3,
-.impact-image-overlay p {
-  transition: all 0.35s ease;
-}
-
-.impact-image-card:hover .impact-image-overlay h3 {
-  transform: translateY(-4px);
-}
-
-.impact-image-card:hover .impact-image-overlay p {
-  transform: translateY(-2px);
-  opacity: 1;
-}
-
-/* =========================================
-   TESTIMONIAL CARD HOVER
-========================================= */
-
-.impact-testimonial-card {
-  position: relative;
-  overflow: hidden;
-  cursor: pointer;
-}
-
-.impact-testimonial-card::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 5px;
-  height: 0%;
-  background: #0059ff;
-  transition: height 0.4s ease;
-}
-
-.impact-testimonial-card:hover::before {
-  height: 100%;
-}
-
-.impact-testimonial-card:hover {
-  transform: translateY(-8px);
-  background: #ffffff;
-  border-color: rgba(0, 89, 255, 0.12);
-
-  box-shadow:
-    0px 12px 30px rgba(0, 0, 0, 0.06),
-    0px 18px 50px rgba(0, 89, 255, 0.05);
-}
-
-.impact-testimonial-card:hover p {
-  color: #222222;
-}
-
-.impact-testimonial-card:hover h4 {
-  color: #0047d6;
-}
-
-.impact-testimonial-card:hover .impact-user-info img {
-  transform: scale(1.08);
-}
-
-/* =========================================
-   BUTTON HOVER
-========================================= */
-
-.impact-slider-buttons button:hover {
-  transform: translateY(-2px) scale(1.06);
-  box-shadow:
-    0px 8px 20px rgba(0, 89, 255, 0.18);
-}
-
-/* =========================================
-   MOBILE OPTIMIZATION
-========================================= */
-
-@media screen and (max-width: 768px) {
-
-  .impact-single-stat-card:hover,
-  .impact-image-card:hover,
-  .impact-testimonial-card:hover {
-    transform: translateY(-4px);
+  .impact-testimonial-left h2 {
+    font-size: 32px;
   }
 
-  .impact-image-card:hover img {
-    transform: scale(1.04);
-  }
 }
