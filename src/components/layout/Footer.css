@@ -1,261 +1,376 @@
-/* =========================================
-   GOOGLE FONT
-========================================= */
+/* Footer.css */
 
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
 
-/* =========================================
-   GLOBAL
-========================================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.globetech-footer-wrapper {
-  width: 100%;
-  background: #005fc7;
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
+.globetech-footer-wrapper{
+  width:100%;
+  background:#71A9EC;
+  padding:34px 0 16px;
+  overflow:hidden;
+  font-family:"Poppins",sans-serif;
 }
 
-.globetech-footer-container {
-  width: 100%;
-  max-width: 1440px;
-  margin: 0 auto;
-  padding: 30px 48px 22px;
+.globetech-footer-container{
+  width:100%;
+  max-width:1240px;
+  margin:auto;
+  padding:0 42px;
 }
 
 /* =========================================
-   TOP SECTION
+   TOP AREA
 ========================================= */
 
-.globetech-footer-top-area {
-  width: 100%;
-
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-
-  gap: 70px;
-
-  margin-bottom: 26px;
+.globetech-footer-top-area{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
 }
 
 /* =========================================
-   BRAND
+   LEFT SIDE
 ========================================= */
 
-.globetech-footer-brand-box {
-  width: 270px;
+.globetech-footer-brand-box{
+  width:308px;
 }
 
 /* LOGO */
 
-.globetech-footer-logo-image {
-  width: 150px;
-  object-fit: contain;
-  margin-bottom: 12px;
+.globetech-footer-logo-image{
+  width:179px;
+  display:block;
+  margin:0 auto 10px auto;
+  object-fit:contain;
 }
 
 /* TAGLINE */
 
-.globetech-footer-brand-tagline {
-  font-size: 13px;
-  line-height: 1.5;
-  font-weight: 400;
+.globetech-footer-brand-tagline{
+  width:308px;
 
-  color: rgba(255, 255, 255, 0.9);
+  color:#111111;
 
-  max-width: 230px;
-}
+  font-size:15px;
+  font-weight:400;
 
-/* =========================================
-   LINKS SECTION
-========================================= */
+  line-height:1.35;
 
-.globetech-footer-links-section {
-  flex: 1;
+  text-align:left;
 
-  display: flex;
-  justify-content: flex-end;
-
-  gap: 72px;
-  padding: 30px;
-}
-
-/* COLUMN TITLE */
-
-.globetech-footer-link-column h4 {
-  font-size: 15px;
-  line-height: 1.2;
-  font-weight: 600;
-
-  color: #ffffff;
-
-  margin-bottom: 14px;
-}
-
-/* LIST */
-
-.globetech-footer-link-column ul {
-  list-style: none;
-  padding: 0;
-}
-
-.globetech-footer-link-column ul li {
-  margin-bottom: 8px;
-}
-
-/* LINKS */
-
-.globetech-footer-link-column ul li a {
-  text-decoration: none;
-
-  font-size: 13px;
-  line-height: 1.6;
-  font-weight: 400;
-
-  color: rgba(255, 255, 255, 0.88);
-
-  transition: 0.3s ease;
-}
-
-.globetech-footer-link-column ul li a:hover {
-  color: #ffffff;
-}
-
-/* =========================================
-   CONTACT LIST
-========================================= */
-
-.globetech-footer-contact-list li {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-
-/* ICON */
-
-.globetech-footer-contact-icon {
-  color: #ffffff;
-  font-size: 12px;
-  min-width: 12px;
-}
-
-/* =========================================
-   SOCIAL ICONS
-========================================= */
-
-.globetech-footer-social-icons {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-
-  margin-top: 14px;
-}
-
-.globetech-footer-social-icons a {
-  color: #ffffff;
-  font-size: 16px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  text-decoration: none;
-
-  transition: 0.3s ease;
-}
-
-.globetech-footer-social-icons a:hover {
-  transform: translateY(-2px);
+  margin-bottom:14px;
 }
 
 /* =========================================
    MAP
 ========================================= */
 
-.globetech-footer-map-wrapper {
-  width: 100%;
-  height: 250px;
+.globetech-footer-map-wrapper{
+  width:310px;
+  height:245px;
 
-  overflow: hidden;
+  border-radius:18px;
+  overflow:hidden;
 
-  margin-bottom: 18px;
+  box-shadow:
+    0 4px 12px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(255,255,255,0.08);
 }
 
-.globetech-footer-map-wrapper iframe {
-  width: 100%;
-  height: 100%;
-  border: none;
+.globetech-footer-map-wrapper iframe{
+  width:100%;
+  height:100%;
+  border:none;
+}
+
+/* =========================================
+   LINKS SECTION
+========================================= */
+
+.globetech-footer-links-section{
+  display:flex;
+  gap:130px;
+
+  padding:120px;
+}
+
+/* COLUMN */
+
+.globetech-footer-link-column{
+  min-width:180px;
+}
+
+/* TITLE */
+
+.globetech-footer-link-column h4{
+  color:#111111;
+
+  font-size:17px;
+  font-weight:600;
+
+  margin-bottom:12px;
+}
+
+/* EXTRA SPACING */
+
+.footer-space-top{
+  margin-top:18px;
+}
+
+/* LIST */
+
+.globetech-footer-link-column ul{
+  list-style:none;
+  padding: 0;
+}
+
+/* ITEM */
+
+.globetech-footer-link-column ul li{
+  margin-bottom:10px;
+}
+
+/* LINKS */
+
+.globetech-footer-link-column ul li a{
+  color:#1d1d1d;
+
+  text-decoration:none;
+
+  font-size:15px;
+  font-weight:400;
+
+  line-height:1.4;
+
+  transition:0.3s ease;
+}
+
+.globetech-footer-link-column ul li a:hover{
+  color:white;
+}
+
+/* =========================================
+   CONTACT
+========================================= */
+
+.globetech-footer-contact-list{
+  margin-top:18px;
+}
+
+.globetech-footer-contact-item{
+  display:flex;
+  align-items:center;
+  gap:12px;
+
+  margin-bottom:16px;
+}
+
+/* ICON */
+
+.globetech-footer-contact-icon{
+  color:#111111;
+  font-size:15px;
+  min-width:15px;
+}
+
+/* CONTACT LINK */
+
+.globetech-footer-contact-item a{
+  color:#1d1d1d;
+
+  text-decoration:none;
+
+  font-size:15px;
+  font-weight:400;
+}
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.globetech-footer-social-icons{
+  display:flex;
+  align-items:center;
+  gap:16px;
+
+  margin-top:8px;
+}
+
+/* ICON */
+
+.globetech-footer-social-icons a{
+  color:#111111;
+
+  font-size:21px;
+
+  transition:0.35s ease;
+}
+
+.globetech-footer-social-icons a:hover{
+  color:white;
+  transform:translateY(-3px);
 }
 
 /* =========================================
    COPYRIGHT
 ========================================= */
 
-.globetech-footer-bottom-area {
-  text-align: center;
+.globetech-footer-bottom-area{
+  width:100%;
+  text-align:center;
+
+  margin-top:10px;
 }
 
-.globetech-footer-bottom-area p {
-  font-size: 12px;
-  line-height: 1.5;
-  font-weight: 400;
+.globetech-footer-bottom-area p{
+  color:#111111;
 
-  color: rgba(255, 255, 255, 0.72);
+  font-size:14px;
+  font-weight:400;
 }
 
 /* =========================================
-   RESPONSIVE
+   LARGE TABLET
 ========================================= */
 
-@media (max-width: 992px) {
+@media(max-width:1100px){
 
-  .globetech-footer-top-area {
-    flex-direction: column;
-    gap: 40px;
-  }
-
-  .globetech-footer-links-section {
-    width: 100%;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 40px;
+  .globetech-footer-links-section{
+    gap:70px;
   }
 }
 
-@media (max-width: 768px) {
+/* =========================================
+   TABLET
+========================================= */
 
-  .globetech-footer-container {
-    padding: 28px 18px 20px;
+@media(max-width:992px){
+
+  .globetech-footer-top-area{
+    flex-direction:column;
+    gap:50px;
   }
 
-  .globetech-footer-links-section {
-    flex-direction: column;
-    gap: 28px;
+  .globetech-footer-links-section{
+    width:100%;
+    justify-content:space-between;
   }
 
-  .globetech-footer-logo-image {
-    width: 120px;
+  .globetech-footer-brand-box{
+    width:100%;
   }
 
-  .globetech-footer-brand-tagline {
-    font-size: 12px;
+  .globetech-footer-brand-tagline{
+    width:100%;
+    max-width:320px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .globetech-footer-wrapper{
+    padding:32px 0 18px;
   }
 
-  .globetech-footer-link-column h4 {
-    font-size: 14px;
+  .globetech-footer-container{
+    padding:0 18px;
   }
 
-  .globetech-footer-link-column ul li a {
-    font-size: 12px;
+  .globetech-footer-links-section{
+    flex-direction:column;
+    gap:38px;
   }
 
-  .globetech-footer-map-wrapper {
-    height: 190px;
+  .globetech-footer-logo-image{
+    width:118px;
+  }
+
+  .globetech-footer-brand-tagline{
+    font-size:14px;
+  }
+
+  .globetech-footer-link-column h4{
+    font-size:16px;
+  }
+
+  .globetech-footer-link-column ul li a{
+    font-size:14px;
+  }
+
+  .globetech-footer-contact-item a{
+    font-size:14px;
+  }
+
+  .globetech-footer-social-icons a{
+    font-size:19px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .globetech-footer-container{
+    padding:0 14px;
+  }
+
+  .globetech-footer-logo-image{
+    width:105px;
+  }
+
+  .globetech-footer-brand-tagline{
+    font-size:13px;
+    line-height:1.6;
+  }
+
+  .globetech-footer-map-wrapper{
+    width:100%;
+    max-width:240px;
+    height:180px;
+  }
+
+  .globetech-footer-link-column h4{
+    font-size:15px;
+  }
+
+  .globetech-footer-link-column ul li a{
+    font-size:13px;
+  }
+
+  .globetech-footer-contact-item{
+    gap:10px;
+  }
+
+  .globetech-footer-contact-item a{
+    font-size:13px;
+  }
+
+  .globetech-footer-social-icons{
+    gap:14px;
+  }
+
+  .globetech-footer-social-icons a{
+    font-size:18px;
+  }
+
+  .globetech-footer-bottom-area{
+    margin-top:18px;
+  }
+
+  .globetech-footer-bottom-area p{
+    font-size:12px;
+    line-height:1.7;
   }
 }

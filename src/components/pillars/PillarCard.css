@@ -1,5 +1,11 @@
 /* =========================================
-   GLOBAL
+   GOOGLE FONT
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+/* =========================================
+   RESET
 ========================================= */
 
 * {
@@ -8,32 +14,43 @@
   box-sizing: border-box;
 }
 
+/* =========================================
+   SECTION
+========================================= */
+
 .pillars-section {
   width: 100%;
-  background: #ffffff;
-  position: relative;
+
+  background: #f3f3f3;
+
+  padding: 26px 0 60px;
+
   overflow: hidden;
-  padding: 80px 0 110px;
-  font-family: "Inter", sans-serif;
+
+  font-family: "Poppins", sans-serif;
+
+  position: relative;
 }
 
 /* =========================================
-   TOP BLUE BACKGROUND
+   BLUE CURVE BACKGROUND
 ========================================= */
 
 .pillars-section::before {
   content: "";
 
   position: absolute;
+
   top: 0;
   left: 0;
 
   width: 100%;
-  height: 360px;
+  height: 278px;
 
-  background: #4d8fdb;
+  background: #4f8ed7;
 
-  clip-path: ellipse(120% 100% at 50% 0%);
+  border-bottom-left-radius: 55% 90px;
+  border-bottom-right-radius: 55% 90px;
 
   z-index: 0;
 }
@@ -43,11 +60,12 @@
 ========================================= */
 
 .pillars-section .container-fluid {
+  max-width: 1240px;
+
   position: relative;
   z-index: 2;
-  max-width: 1450px;
-  padding-left: 55px !important;
-  padding-right: 55px !important;
+
+  padding: 0 34px;
 }
 
 /* =========================================
@@ -55,42 +73,45 @@
 ========================================= */
 
 .pillars-heading {
-  margin-bottom: 55px;
+  margin-bottom: 34px;
+
+  padding-left: 18px;
 }
+
+/* TAG */
+
+.pillar-tag {
+  display: flex;
+  align-items: center;
+
+  gap: 12px;
+
+  margin-bottom: 12px;
+}
+
+.pillar-tag span {
+  color: #1f1f1f;
+
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.pillar-line {
+  width: 52px;
+  height: 1.5px;
+
+  background: rgba(0, 0, 0, 0.4);
+}
+
+/* TITLE */
 
 .pillars-heading h2 {
   color: white;
-  font-size: 44px;
-  font-weight: 700;
-  letter-spacing: -1px;
-  margin: 0;
-  position: relative;
-  display: inline-block;
-}
 
-.pillars-heading h2::before {
-  content: "Who We Are";
+  font-size: 24px;
+  font-weight: 600;
 
-  position: absolute;
-  top: -26px;
-  left: 0;
-
-  font-size: 15px;
-  font-weight: 500;
-  color: #111111;
-}
-
-.pillars-heading h2::after {
-  content: "";
-
-  position: absolute;
-  top: -15px;
-  left: 110px;
-
-  width: 70px;
-  height: 1.5px;
-
-  background: #111111;
+  line-height: 1;
 }
 
 /* =========================================
@@ -98,26 +119,40 @@
 ========================================= */
 
 .pillar-card {
-  width: 100%;
-  max-width: 360px;
+  width: 280px;
 
-  background: #ffffff;
+  background: #efefef;
 
-  border-radius: 28px;
+  border-radius: 20px;
 
   overflow: hidden;
 
-  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.12);
 
-  margin: 0 auto;
+  opacity: 0;
 
-  transition: 0.35s ease;
+  transform: translateY(80px) scale(0.94);
 
-  position: relative;
+  transition:
+    transform 0.8s ease,
+    opacity 0.8s ease,
+    box-shadow 0.4s ease;
 }
 
+/* SHOW */
+
+.pillar-card.show-card {
+  opacity: 1;
+
+  transform: translateY(0) scale(1);
+}
+
+/* HOVER */
+
 .pillar-card:hover {
-  transform: translateY(-6px);
+  transform: translateY(-12px);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.18);
 }
 
 /* =========================================
@@ -126,38 +161,69 @@
 
 .pillar-image-wrapper {
   width: 100%;
-  height: 250px;
+  height: 165px;
+
   position: relative;
+
   overflow: hidden;
 }
 
 .pillar-image {
   width: 100%;
   height: 100%;
+
   object-fit: cover;
+
   display: block;
+
+  transition: transform 0.6s ease;
 }
 
-/* TOP RIGHT ICON */
+/* IMAGE HOVER */
+
+.pillar-card:hover .pillar-image {
+  transform: scale(1.08);
+}
+
+/* =========================================
+   TOP RIGHT ARROW
+========================================= */
 
 .pillar-arrow {
   position: absolute;
-  top: 14px;
-  right: 14px;
 
-  width: 42px;
-  height: 42px;
+  top: 12px;
+  right: 12px;
+
+  width: 36px;
+  height: 36px;
 
   border-radius: 50%;
 
-  background: #0d6efd;
-  color: white;
+  background: rgba(255, 255, 255, 0.92);
 
   display: flex;
   align-items: center;
   justify-content: center;
 
-  box-shadow: 0 8px 18px rgba(13, 110, 253, 0.35);
+  color: #0d6efd;
+
+  backdrop-filter: blur(6px);
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease;
+}
+
+/* ARROW HOVER */
+
+.pillar-card:hover .pillar-arrow {
+  transform: rotate(45deg);
+
+  background: #0d6efd;
+
+  color: white;
 }
 
 /* =========================================
@@ -165,148 +231,120 @@
 ========================================= */
 
 .pillar-content {
-  padding: 28px 28px 32px;
+  padding: 16px 18px 18px;
 }
 
 .pillar-content h3 {
-  font-size: 31px;
-  line-height: 1.2;
+  color: #1c1c1c;
+
+  font-size: 24px;
   font-weight: 700;
-  color: #111111;
 
-  margin-bottom: 18px;
+  line-height: 1.2;
 
-  letter-spacing: -0.5px;
+  margin-bottom: 14px;
 }
 
 .pillar-content p {
-  font-size: 18px;
-  line-height: 1.9;
-  color: #6a6a6a;
+  color: #6d6d6d;
+
+  font-size: 14px;
   font-weight: 400;
+
+  line-height: 1.8;
 }
 
 /* =========================================
-   GRID SPACING
+   BUTTON
 ========================================= */
 
-.pillars-section .row {
-  row-gap: 42px;
+.pillar-btn {
+  width: 100%;
+
+  height: 42px;
+
+  border: none;
+  outline: none;
+
+  border-radius: 999px;
+
+  background: #0d6efd;
+
+  color: white;
+
+  font-size: 14px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  margin-top: 18px;
+
+  transition: 0.3s ease;
+}
+
+.pillar-btn:hover {
+  background: #0057d8;
 }
 
 /* =========================================
-   RESPONSIVE
+   LARGE LAPTOP
 ========================================= */
 
-@media (max-width: 1400px) {
+@media (max-width: 1200px) {
+
+  .pillars-section .container-fluid {
+    padding: 0 24px;
+  }
+
+  .pillar-card {
+    width: 100%;
+    max-width: 300px;
+  }
+
+  .pillar-content h3 {
+    font-size: 22px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media (max-width: 992px) {
+
+  .pillars-section::before {
+    height: 250px;
+
+    border-bottom-left-radius: 40% 70px;
+    border-bottom-right-radius: 40% 70px;
+  }
+
+  .pillars-heading {
+    text-align: center;
+
+    padding-left: 0;
+
+    margin-bottom: 30px;
+  }
+
+  .pillar-tag {
+    justify-content: center;
+  }
+
+  .pillars-heading h2 {
+    font-size: 28px;
+  }
 
   .pillar-card {
     max-width: 330px;
   }
 
-  .pillar-content h3 {
-    font-size: 27px;
-  }
-
-  .pillar-content p {
-    font-size: 16px;
-  }
-}
-
-@media (max-width: 1100px) {
-
-  .pillars-section {
-    padding: 70px 0 90px;
-  }
-
-  .pillars-section::before {
-    height: 300px;
-  }
-
-  .pillars-heading h2 {
-    font-size: 38px;
-  }
-
-  .pillar-card {
-    max-width: 100%;
-  }
-}
-
-@media (max-width: 768px) {
-
-  .pillars-section {
-    padding: 55px 0 70px;
-  }
-
-  .pillars-section::before {
-    height: 250px;
-    clip-path: ellipse(160% 100% at 50% 0%);
-  }
-
-  .pillars-section .container-fluid {
-    padding-left: 20px !important;
-    padding-right: 20px !important;
-  }
-
-  .pillars-heading {
-    margin-bottom: 40px;
-  }
-
-  .pillars-heading h2 {
-    font-size: 30px;
-  }
-
-  .pillars-heading h2::before {
-    font-size: 13px;
-    top: -22px;
-  }
-
-  .pillars-heading h2::after {
-    width: 50px;
-    left: 90px;
-    top: -13px;
-  }
-
   .pillar-image-wrapper {
-    height: 220px;
-  }
-
-  .pillar-arrow {
-    width: 38px;
-    height: 38px;
+    height: 190px;
   }
 
   .pillar-content {
-    padding: 22px 22px 28px;
-  }
-
-  .pillar-content h3 {
-    font-size: 24px;
-    margin-bottom: 14px;
-  }
-
-  .pillar-content p {
-    font-size: 15px;
-    line-height: 1.8;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .pillars-section {
-    padding: 45px 0 60px;
-  }
-
-  .pillars-section::before {
-    height: 220px;
-  }
-
-  .pillars-heading h2 {
-    font-size: 26px;
-  }
-
-  .pillar-image-wrapper {
-    height: 200px;
+    padding: 18px;
   }
 
   .pillar-content h3 {
@@ -314,6 +352,156 @@
   }
 
   .pillar-content p {
-    font-size: 14px;
+    font-size: 13px;
+
+    line-height: 1.7;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media (max-width: 768px) {
+
+  .pillars-section {
+    padding: 24px 0 50px;
+  }
+
+  .pillars-section::before {
+    height: 210px;
+
+    border-bottom-left-radius: 35% 55px;
+    border-bottom-right-radius: 35% 55px;
+  }
+
+  .pillars-section .container-fluid {
+    padding: 0 18px;
+  }
+
+  .pillars-heading {
+    margin-bottom: 26px;
+  }
+
+  .pillar-tag span {
+    font-size: 12px;
+  }
+
+  .pillar-line {
+    width: 42px;
+  }
+
+  .pillars-heading h2 {
+    font-size: 24px;
+  }
+
+  .pillar-card {
+    max-width: 100%;
+
+    border-radius: 18px;
+  }
+
+  .pillar-image-wrapper {
+    height: 210px;
+  }
+
+  .pillar-content {
+    padding: 16px;
+  }
+
+  .pillar-content h3 {
+    font-size: 20px;
+
+    margin-bottom: 12px;
+  }
+
+  .pillar-content p {
+    font-size: 13px;
+
+    line-height: 1.75;
+  }
+
+  .pillar-btn {
+    height: 40px;
+
+    font-size: 13px;
+  }
+
+  .pillar-arrow {
+    width: 34px;
+    height: 34px;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media (max-width: 480px) {
+
+  .pillars-section {
+    padding: 22px 0 40px;
+  }
+
+  .pillars-section .container-fluid {
+    padding: 0 14px;
+  }
+
+  .pillars-section::before {
+    height: 180px;
+
+    border-bottom-left-radius: 30% 45px;
+    border-bottom-right-radius: 30% 45px;
+  }
+
+  .pillar-tag {
+    gap: 8px;
+  }
+
+  .pillar-tag span {
+    font-size: 11px;
+  }
+
+  .pillar-line {
+    width: 34px;
+  }
+
+  .pillars-heading h2 {
+    font-size: 21px;
+  }
+
+  .pillar-card {
+    border-radius: 16px;
+  }
+
+  .pillar-image-wrapper {
+    height: 190px;
+  }
+
+  .pillar-content {
+    padding: 14px;
+  }
+
+  .pillar-content h3 {
+    font-size: 18px;
+  }
+
+  .pillar-content p {
+    font-size: 12px;
+
+    line-height: 1.7;
+  }
+
+  .pillar-btn {
+    height: 38px;
+
+    font-size: 12px;
+
+    margin-top: 16px;
+  }
+
+  .pillar-arrow {
+    width: 32px;
+    height: 32px;
   }
 }

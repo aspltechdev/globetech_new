@@ -1,4 +1,10 @@
-import React from "react";
+// GallerySection.jsx
+
+import React, {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
 
 import impact1 from "../../assets/impact/impact-1.png";
 import impact2 from "../../assets/impact/impact-2.png";
@@ -6,9 +12,6 @@ import impact3 from "../../assets/impact/impact-3.png";
 import impact4 from "../../assets/impact/impact-4.png";
 import impact5 from "../../assets/impact/impact-5.png";
 import impact6 from "../../assets/impact/impact-6.png";
-import impact7 from "../../assets/impact/impact-7.png";
-import impact8 from "../../assets/impact/impact-8.png";
-import impact9 from "../../assets/impact/impact-9.png";
 
 import "./GallerySection.css";
 
@@ -17,28 +20,91 @@ import "./GallerySection.css";
 ========================================= */
 
 const galleryImages = [
-  impact1,
-  impact2,
-  impact3,
-  impact4,
-  impact5,
-  impact6,
-  impact7,
-  impact8,
-  impact9,
+
+  {
+    image: impact1,
+    title: "Inauguration Ceremony",
+  },
+
+  {
+    image: impact2,
+    title: "Workshop Session",
+  },
+
+  {
+    image: impact3,
+    title: "Skill Development Program",
+  },
+
+  {
+    image: impact4,
+    title: "Community Initiative",
+  },
+
+  {
+    image: impact5,
+    title: "Training Event",
+  },
+
+  {
+    image: impact6,
+    title: "Industry Interaction",
+  },
+
 ];
 
 const GallerySection = () => {
 
+  const sectionRef = useRef(null);
+
+  const [showGallery, setShowGallery] = useState(false);
+
+  /* =========================================
+     SCROLL ANIMATION
+  ========================================= */
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+
+      ([entry]) => {
+
+        if (entry.isIntersecting) {
+
+          setShowGallery(true);
+
+        }
+
+      },
+
+      {
+        threshold: 0.15,
+      }
+
+    );
+
+    if (sectionRef.current) {
+
+      observer.observe(sectionRef.current);
+
+    }
+
+    return () => observer.disconnect();
+
+  }, []);
+
   return (
 
-    <section className="auroGallerySection">
+    <section
+      className="auroGallerySection"
+      ref={sectionRef}
+    >
 
       <div className="auroGalleryContainer">
 
         {/* =====================================
             HEADING
-        ====================================== */}
+        ===================================== */}
 
         <div className="auroGalleryHeading">
 
@@ -50,27 +116,64 @@ const GallerySection = () => {
 
         {/* =====================================
             GRID
-        ====================================== */}
+        ===================================== */}
 
         <div className="auroGalleryGrid">
 
-          {galleryImages.map((image, index) => (
+          {galleryImages.map((item, index) => (
 
             <div
-              className="auroGalleryCard"
+              className={`auroGalleryCard ${
+                showGallery
+                  ? "showGalleryCard"
+                  : ""
+              }`}
               key={index}
+              style={{
+                transitionDelay: `${index * 120}ms`,
+              }}
             >
 
+              {/* IMAGE */}
+
               <img
-                src={image}
-                alt={`Gallery ${index + 1}`}
+                src={item.image}
+                alt={item.title}
               />
+
+              {/* OVERLAY */}
+
+              <div className="auroGalleryOverlay"></div>
+
+              {/* TITLE */}
+
+              <div className="auroGalleryContent">
+
+                <p>
+                  {item.title}
+                </p>
+
+              </div>
 
             </div>
 
           ))}
 
         </div>
+
+        {/* =====================================
+            BUTTON
+        ===================================== */}
+
+        {/* <div className="auroGalleryBtnWrapper">
+
+          <button className="auroGalleryBtn">
+
+            View More
+
+          </button>
+
+        </div> */}
 
       </div>
 

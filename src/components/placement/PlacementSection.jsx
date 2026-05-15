@@ -1,273 +1,102 @@
-// const PlacementSection = () => {
-//   return (
-//     <section className="placement-section">
-
-//       <div className="container-fluid px-lg-5">
-
-//         <div className="placement-heading">
-
-//           <div className="section-tag orange">
-//             <span></span>
-//             Our Placement Legacy
-//           </div>
-
-//           <h2>
-//             Where Our Students Work
-//           </h2>
-
-//         </div>
-
-//         <div className="logo-slider">
-
-//           <div className="logo-track">
-
-//             <div className="logo-card">
-//               <h3>IBM</h3>
-//             </div>
-
-//             <div className="logo-card">
-//               <h3>TCS</h3>
-//             </div>
-
-//             <div className="logo-card">
-//               <h3>Infosys</h3>
-//             </div>
-
-//           </div>
-
-//         </div>
-
-//       </div>
-
-//     </section>
-//   );
-// };
-
-// export default PlacementSection;
-
 // PlacementSection.jsx
 
-// import "./PlacementSection.css";
-
-// const topCompanies = [
-//   "IBM",
-//   "HDFC BANK",
-//   "TVS",
-//   "Walmart",
-//   "Tech Mahindra",
-//   "TCS",
-//   "TATA",
-//   "ICICI Bank",
-//   "BOSCH",
-//   "TOYOTA",
-//   "Infosys",
-// ];
-
-// const bottomCompanies = [
-//   "UNICEF",
-//   "NASSCOM",
-//   "Gram Vikas",
-//   "ANUDIP",
-//   "AISECT India",
-//   "HGS",
-//   "Capgemini",
-//   "Cognizant",
-//   "Wipro",
-// ];
-
-// const PlacementSection = () => {
-//   return (
-//     <section className="placement-section">
-//       <div className="container-fluid px-lg-5">
-//         {/* Heading */}
-//         <div className="placement-heading">
-//           <div className="section-tag orange">
-//             <span></span>
-//             Our Placement Legacy
-//           </div>
-
-//           <h2>Where Our Students Work</h2>
-//         </div>
-
-//         {/* TOP SLIDER */}
-//         <div className="placement-slider-wrapper">
-//           <div className="placement-slider placement-slider-right">
-//             {[...topCompanies, ...topCompanies].map((company, index) => (
-//               <div className="placement-logo-card" key={index}>
-//                 <h3>{company}</h3>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-
-//         {/* SECOND ROW */}
-//         <div className="placement-slider-wrapper second-row">
-//           <div className="placement-slider placement-slider-left">
-//             {[...bottomCompanies, ...bottomCompanies].map(
-//               (company, index) => (
-//                 <div className="placement-logo-card small-card" key={index}>
-//                   <h3>{company}</h3>
-//                 </div>
-//               )
-//             )}
-//           </div>
-//         </div>
-
-//         {/* TECH ADVANTAGE SECTION */}
-//         <div className="tech-advantage-wrapper">
-//           {/* LEFT CONTENT */}
-//           <div className="tech-advantage-card">
-//             <h3>Strategic Technical Advantage</h3>
-
-//             <div className="advantage-item">
-//               <h4>Expertise</h4>
-//               <p>
-//                 Access to a specialist team of design engineers and project
-//                 implementation specialists.
-//               </p>
-//             </div>
-
-//             <div className="advantage-item">
-//               <h4>Accreditations</h4>
-//               <p>ISO 9001: 2015 Certified Company</p>
-//             </div>
-
-//             <div className="advantage-item">
-//               <h4>CSR Collaboration</h4>
-//               <p>
-//                 Trusted Partner for UNICEF, NASSCOM, HGS, GRAMVIKAS, ANUDIP,
-//                 AISECT, IIT MANDI
-//               </p>
-//             </div>
-//           </div>
-
-//           {/* RIGHT SIDE LOGOS */}
-//           <div className="tech-grid">
-//             {bottomCompanies.map((item, index) => (
-//               <div className="tech-grid-card" key={index}>
-//                 <span>{item}</span>
-//               </div>
-//             ))}
-//           </div>
-//         </div>
-//       </div>
-//     </section>
-//   );
-// };
-
-// export default PlacementSection;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 import React from "react";
+
 import "./PlacementSection.css";
 
 /* =========================================
-   TOP ROW LOGOS
+   IMPORT LOGOS
+========================================= */
+
+import pl1 from "../../assets/placements/pl1.png";
+import pl2 from "../../assets/placements/pl2.png";
+import pl3 from "../../assets/placements/pl3.png";
+import pl4 from "../../assets/placements/pl4.png";
+import pl5 from "../../assets/placements/pl5.png";
+import pl6 from "../../assets/placements/pl6.png";
+import pl7 from "../../assets/placements/pl7.png";
+import pl8 from "../../assets/placements/pl8.png";
+import pl9 from "../../assets/placements/pl9.png";
+
+/* =========================================
+   TOP COMPANY LOGOS
 ========================================= */
 
 const topCompanies = [
+
   {
-    name: "IBM",
-    logo: "https://logo.clearbit.com/ibm.com",
+    name: "Company 1",
+    logo: pl1,
   },
 
   {
-    name: "HDFC",
-    logo: "https://logo.clearbit.com/hdfcbank.com",
+    name: "Company 2",
+    logo: pl2,
   },
 
   {
-    name: "TVS",
-    logo: "https://logo.clearbit.com/tvsmotor.com",
+    name: "Company 3",
+    logo: pl3,
   },
 
   {
-    name: "Walmart",
-    logo: "https://logo.clearbit.com/walmart.com",
+    name: "Company 4",
+    logo: pl4,
   },
 
   {
-    name: "Tech Mahindra",
-    logo: "https://logo.clearbit.com/techmahindra.com",
+    name: "Company 5",
+    logo: pl5,
   },
 
   {
-    name: "TCS",
-    logo: "https://logo.clearbit.com/tcs.com",
+    name: "Company 6",
+    logo: pl6,
   },
 
-  {
-    name: "TATA",
-    logo: "https://logo.clearbit.com/tata.com",
-  },
-
-  {
-    name: "ICICI",
-    logo: "https://logo.clearbit.com/icicibank.com",
-  },
-
-  {
-    name: "Bosch",
-    logo: "https://logo.clearbit.com/bosch.com",
-  },
-
-  {
-    name: "Toyota",
-    logo: "https://logo.clearbit.com/toyota.com",
-  },
-
-  {
-    name: "Infosys",
-    logo: "https://logo.clearbit.com/infosys.com",
-  },
 ];
 
-
+/* =========================================
+   CSR / PARTNER LOGOS
+========================================= */
 
 const csrCompanies = [
+
   {
-    name: "UNICEF",
-    logo: "https://logo.clearbit.com/unicef.org",
+    name: "Partner 1",
+    logo: pl7,
   },
 
   {
-    name: "NASSCOM",
-    logo: "https://logo.clearbit.com/nasscom.in",
+    name: "Partner 2",
+    logo: pl8,
   },
 
   {
-    name: "Gram Vikas",
-    logo: "https://logo.clearbit.com/gramvikas.org",
+    name: "Partner 3",
+    logo: pl9,
   },
 
   {
-    name: "ANUDIP",
-    logo: "https://logo.clearbit.com/anudip.org",
+    name: "Partner 4",
+    logo: pl7,
   },
 
   {
-    name: "AISECT",
-    logo: "https://logo.clearbit.com/aisect.org",
+    name: "Partner 5",
+    logo: pl8,
   },
 
   {
-    name: "IIT Mandi",
-    logo: "https://logo.clearbit.com/iitmandi.ac.in",
+    name: "Partner 6",
+    logo: pl9,
   },
+
 ];
+
+/* =========================================
+   COMPONENT
+========================================= */
 
 const PlacementSection = () => {
 
@@ -279,17 +108,17 @@ const PlacementSection = () => {
 
         {/* =====================================
             HEADING
-        ====================================== */}
+        ===================================== */}
 
         <div className="auroPlacementHeading">
 
           <div className="auroPlacementTag">
 
-            <span></span>
-
             <p>
               Our Placement Legacy
             </p>
+
+            <span></span>
 
           </div>
 
@@ -300,8 +129,8 @@ const PlacementSection = () => {
         </div>
 
         {/* =====================================
-            FIRST ROW SLIDER
-        ====================================== */}
+            TOP SLIDER
+        ===================================== */}
 
         <div className="auroSliderWrapper">
 
@@ -328,17 +157,17 @@ const PlacementSection = () => {
         </div>
 
         {/* =====================================
-            SECOND ROW SLIDER
-        ====================================== */}
+            SECOND SLIDER
+        ===================================== */}
 
         <div className="auroSliderWrapper secondRow">
 
           <div className="auroSliderTrack auroSlideLeft">
 
-            {[...csrCompanies, ...csrCompanies].map((item, index) => (
+            {[...topCompanies, ...topCompanies].map((item, index) => (
 
               <div
-                className="auroPlacementLogoCard smallCard"
+                className="auroPlacementLogoCard"
                 key={index}
               >
 
@@ -356,100 +185,94 @@ const PlacementSection = () => {
         </div>
 
         {/* =====================================
-    STRATEGIC TECHNICAL ADVANTAGE
-===================================== */}
+            STRATEGIC SECTION
+        ===================================== */}
 
-<div className="auroStrategicSection">
+        <div className="auroStrategicSection">
 
-  {/* SECTION TITLE */}
+          <h3 className="auroStrategicTitle">
 
-  <h3 className="auroStrategicTitle">
+            Strategic Technical Advantage
 
-    Strategic Technical Advantage
+          </h3>
 
-  </h3>
+          <div className="auroTechWrapper">
 
-  {/* CONTENT WRAPPER */}
+            {/* LEFT BOX */}
 
-  <div className="auroTechWrapper">
+            <div className="auroTechContent">
 
-    {/* LEFT CONTENT CARD */}
+              <div className="auroTechItem">
 
-    <div className="auroTechContent">
+                <h4>
+                  Expertise
+                </h4>
 
-      {/* ITEM */}
+                <p>
+                  Access to a specialist team
+                  of design engineers and
+                  project implementation
+                  specialists.
+                </p>
 
-      <div className="auroTechItem">
+              </div>
 
-        <h4>
-          Expertise
-        </h4>
+              <div className="auroTechItem">
 
-        <p>
-          Access to a specialist team of design
-          engineers and project implementation
-          specialists.
-        </p>
+                <h4>
+                  Accreditations
+                </h4>
 
-      </div>
+                <p>
+                  ISO 9001 : 2015
+                  Certified Company
+                </p>
 
-      {/* ITEM */}
+              </div>
 
-      <div className="auroTechItem">
+              <div className="auroTechItem">
 
-        <h4>
-          Accreditations
-        </h4>
+                <h4>
+                  CSR Collaboration
+                </h4>
 
-        <p>
-          ISO 9001 : 2015 Certified Company
-        </p>
+                <p>
+                  Trusted Partner for
+                  UNICEF, NASSCOM,
+                  HGS, GRAMVIKAS,
+                  ANUDIP, AISECT,
+                  IIT MANDI
+                </p>
 
-      </div>
+              </div>
 
-      {/* ITEM */}
+            </div>
 
-      <div className="auroTechItem">
+            {/* RIGHT GRID */}
 
-        <h4>
-          CSR Collaboration
-        </h4>
+            <div className="auroTechGrid">
 
-        <p>
-          Trusted Partner for UNICEF,
-          NASSCOM, HGS, GRAMVIKAS,
-          ANUDIP, AISECT, IIT MANDI
-        </p>
+              {csrCompanies.map((item, index) => (
 
-      </div>
+                <div
+                  className="auroTechGridCard"
+                  key={index}
+                >
 
-    </div>
+                  <img
+                    src={item.logo}
+                    alt={item.name}
+                  />
 
-    {/* RIGHT GRID */}
+                </div>
 
-    <div className="auroTechGrid">
+              ))}
 
-      {csrCompanies.map((item, index) => (
+            </div>
 
-        <div
-          className="auroTechGridCard"
-          key={index}
-        >
-
-          <img
-            src={item.logo}
-            alt={item.name}
-          />
+          </div>
 
         </div>
-
-      ))}
-
-    </div>
-
-  </div>
-
-</div>
 
       </div>
 
@@ -457,5 +280,4 @@ const PlacementSection = () => {
 
   );
 };
-
 export default PlacementSection;

@@ -3,9 +3,7 @@ import { Star } from "lucide-react";
 
 import "./TestimonialSection.css";
 
-/* =========================================
-   TOP TESTIMONIALS
-========================================= */
+
 
 const testimonialsTop = [
   {
@@ -87,7 +85,7 @@ const TestimonialCard = ({ item, border }) => {
 
           <Star
             key={star}
-            size={16}
+            size={24}
             fill="#FFC700"
             color="#FFC700"
           />

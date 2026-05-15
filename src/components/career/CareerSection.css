@@ -1,22 +1,40 @@
+/* CareerSection.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
+/* =========================================
+   SECTION
+========================================= */
+
 .auroCareerSection {
   width: 100%;
-  background: #ffffff;
-  padding: 40px 0 90px;
+
+  background: #f3f3f3;
+
+  padding: 14px 0 32px;
+
   overflow: hidden;
-  font-family: "Inter", sans-serif;
+
+  font-family: "Poppins", sans-serif;
 }
+
+/* =========================================
+   CONTAINER
+========================================= */
 
 .auroCareerContainer {
   width: 100%;
-  max-width: 1476px;
-  margin: 0 auto;
-  padding: 0 58px;
+  max-width: 1240px;
+
+  margin: auto;
+
+  padding: 0 34px;
 }
 
 /* =========================================
@@ -24,7 +42,7 @@
 ========================================= */
 
 .auroCareerHeading {
-  margin-bottom: 48px;
+  margin-bottom: 34px;
 }
 
 /* TAG */
@@ -32,39 +50,35 @@
 .auroCareerTag {
   display: flex;
   align-items: center;
-  gap: 14px;
 
-  margin-bottom: 18px;
-}
+  gap: 12px;
 
-.auroCareerTag span {
-  width: 54px;
-  height: 1.5px;
-
-  background: #f47c34;
-
-  display: block;
+  margin-bottom: 10px;
 }
 
 .auroCareerTag p {
-  font-size: 15px;
-  font-weight: 600;
+  color: #ef6b2f;
 
-  color: #f47c34;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.auroCareerTag span {
+  width: 52px;
+  height: 1.5px;
+
+  background: rgba(0, 0, 0, 0.25);
 }
 
 /* TITLE */
 
 .auroCareerHeading h2 {
-  font-size: 52px;
-  line-height: 1.15;
-  font-weight: 700;
+  color: #141414;
 
-  color: #111111;
+  font-size: 24px;
+  font-weight: 600;
 
-  letter-spacing: -1.4px;
-
-  max-width: 900px;
+  line-height: 1.2;
 }
 
 /* =========================================
@@ -72,12 +86,10 @@
 ========================================= */
 
 .auroCareerGrid {
-  width: 100%;
-
   display: grid;
   grid-template-columns: repeat(2, 1fr);
 
-  gap: 34px;
+  gap: 30px;
 }
 
 /* =========================================
@@ -87,22 +99,30 @@
 .auroCareerCard {
   position: relative;
 
-  width: 100%;
-  height: 300px;
+  height: 250px;
 
-  border-radius: 28px;
+  border-radius: 22px;
 
   overflow: hidden;
 
   cursor: pointer;
 
-  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.1);
+  opacity: 0;
 
-  transition: 0.4s ease;
+  transform: translateY(70px) scale(0.95);
+
+  transition:
+    transform 0.9s ease,
+    opacity 0.9s ease,
+    box-shadow 0.4s ease;
 }
 
-.auroCareerCard:hover {
-  transform: translateY(-6px);
+/* SHOW */
+
+.auroCareerCard.show-career-card {
+  opacity: 1;
+
+  transform: translateY(0) scale(1);
 }
 
 /* IMAGE */
@@ -113,179 +133,192 @@
 
   object-fit: cover;
 
-  transition: 0.5s ease;
+  transition: transform 0.8s ease;
 }
 
-.auroCareerCard:hover img {
-  transform: scale(1.05);
-}
-
-/* =========================================
-   OVERLAY
-========================================= */
+/* OVERLAY */
 
 .auroCareerOverlay {
   position: absolute;
+
   inset: 0;
 
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.78) 0%,
-    rgba(0, 0, 0, 0.35) 45%,
-    rgba(0, 0, 0, 0.1) 100%
+    rgba(0, 0, 0, 0.72),
+    rgba(0, 0, 0, 0.12)
   );
-
-  z-index: 1;
 }
 
-/* =========================================
-   CONTENT
-========================================= */
+/* CONTENT */
 
 .auroCareerContent {
   position: absolute;
 
-  left: 34px;
-  bottom: 30px;
+  left: 22px;
+  bottom: 20px;
 
   z-index: 2;
 
-  max-width: 82%;
+  width: 82%;
 }
 
 .auroCareerContent h3 {
-  font-size: 34px;
-  line-height: 1.1;
-  font-weight: 700;
+  color: white;
 
-  color: #ffffff;
+  font-size: 20px;
+  font-weight: 600;
 
-  margin-bottom: 14px;
-
-  letter-spacing: -0.8px;
+  margin-bottom: 8px;
 }
 
 .auroCareerContent p {
-  font-size: 18px;
-  line-height: 1.75;
+  color: rgba(255, 255, 255, 0.92);
+
+  font-size: 16px;
   font-weight: 400;
 
-  color: rgba(255, 255, 255, 0.92);
+  line-height: 1.6;
+}
+
+/* =========================================
+   HOVER
+========================================= */
+
+.auroCareerCard:hover {
+  transform: translateY(-10px);
+
+  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+}
+
+.auroCareerCard:hover img {
+  transform: scale(1.08);
+}
+
+.auroCareerCard:hover .auroCareerOverlay {
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.82),
+    rgba(0, 0, 0, 0.18)
+  );
 }
 
 /* =========================================
    RESPONSIVE
 ========================================= */
 
-@media (max-width: 1400px) {
+@media (max-width: 1100px) {
 
   .auroCareerHeading h2 {
-    font-size: 46px;
-  }
-
-  .auroCareerCard {
-    height: 270px;
-  }
-
-  .auroCareerContent h3 {
     font-size: 30px;
-  }
-
-  .auroCareerContent p {
-    font-size: 16px;
   }
 }
 
-@media (max-width: 1100px) {
+/* TABLET */
+
+@media (max-width: 992px) {
 
   .auroCareerGrid {
     gap: 24px;
   }
 
   .auroCareerCard {
-    height: 240px;
-  }
-
-  .auroCareerHeading h2 {
-    font-size: 40px;
+    height: 200px;
   }
 }
 
-@media (max-width: 768px) {
+/* MOBILE */
 
-  .auroCareerSection {
-    padding: 20px 0 60px;
-  }
+@media (max-width: 768px) {
 
   .auroCareerContainer {
     padding: 0 18px;
   }
 
   .auroCareerHeading {
-    margin-bottom: 34px;
-  }
-
-  .auroCareerTag {
-    margin-bottom: 14px;
-  }
-
-  .auroCareerTag p {
-    font-size: 13px;
-  }
-
-  .auroCareerTag span {
-    width: 42px;
+    margin-bottom: 28px;
   }
 
   .auroCareerHeading h2 {
-    font-size: 32px;
-    line-height: 1.2;
-    letter-spacing: -1px;
+    font-size: 26px;
   }
 
   .auroCareerGrid {
     grid-template-columns: 1fr;
-    gap: 20px;
+
+    gap: 22px;
   }
 
   .auroCareerCard {
-    height: 230px;
-    border-radius: 22px;
-  }
+    height: 220px;
 
-  .auroCareerContent {
-    left: 22px;
-    bottom: 22px;
-    max-width: 88%;
-  }
-
-  .auroCareerContent h3 {
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-
-  .auroCareerContent p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-}
-
-@media (max-width: 480px) {
-
-  .auroCareerHeading h2 {
-    font-size: 28px;
-  }
-
-  .auroCareerCard {
-    height: 210px;
     border-radius: 18px;
   }
 
+  .auroCareerContent {
+    left: 18px;
+    bottom: 18px;
+  }
+
   .auroCareerContent h3 {
-    font-size: 21px;
+    font-size: 15px;
   }
 
   .auroCareerContent p {
-    font-size: 13px;
+    font-size: 12px;
+
+    line-height: 1.6;
+  }
+}
+
+/* SMALL MOBILE */
+
+@media (max-width: 480px) {
+
+  .auroCareerSection {
+    padding: 12px 0 24px;
+  }
+
+  .auroCareerContainer {
+    padding: 0 14px;
+  }
+
+  .auroCareerTag {
+    gap: 10px;
+  }
+
+  .auroCareerTag p {
+    font-size: 12px;
+  }
+
+  .auroCareerTag span {
+    width: 40px;
+  }
+
+  .auroCareerHeading h2 {
+    font-size: 22px;
+  }
+
+  .auroCareerCard {
+    height: 200px;
+
+    border-radius: 16px;
+  }
+
+  .auroCareerContent {
+    left: 16px;
+    bottom: 16px;
+
+    width: 86%;
+  }
+
+  .auroCareerContent h3 {
+    font-size: 14px;
+  }
+
+  .auroCareerContent p {
+    font-size: 11px;
+
+    line-height: 1.6;
   }
 }

@@ -1,425 +1,552 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* SuccessStorySection.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.auroSuccessSection {
-  width: 100%;
-  background: #ffffff;
-  padding: 34px 0 80px;
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
+.auroSuccessSection{
+  width:100%;
+  background:#f3f3f3;
+  padding:14px 0 40px;
+  overflow:hidden;
+  font-family:"Poppins",sans-serif;
 }
 
-.auroSuccessContainer {
-  width: 100%;
-  max-width: 1470px;
-  margin: 0 auto;
-  padding: 0 66px;
+.auroSuccessContainer{
+  width:100%;
+  max-width:1240px;
+  margin:auto;
+  padding:0 34px;
 }
 
 /* =========================================
    HEADING
 ========================================= */
 
-.auroSuccessHeading {
-  margin-bottom: 52px;
+.auroSuccessHeading{
+  margin-bottom:34px;
 }
 
-/* TAG */
-
-.auroSuccessTag {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-  margin-bottom: 18px;
+.auroSuccessTag{
+  display:flex;
+  align-items:center;
+  gap:12px;
+  margin-bottom:10px;
 }
 
-.auroSuccessTag span {
-  width: 86px;
-  height: 1.5px;
-  background: #f47c34;
-  display: block;
+.auroSuccessTag p{
+  color:#ef8c69;
+  font-size:16px;
+  font-weight:400;
 }
 
-.auroSuccessTag p {
-  color: #f47c34;
-  font-size: 14px;
-  font-weight: 500;
-  letter-spacing: 0.2px;
+.auroSuccessTag span{
+  width:48px;
+  height:1.4px;
+  background:rgba(0,0,0,0.2);
 }
 
-/* TITLE */
-
-.auroSuccessHeading h2 {
- 
-  line-height: 1.3;
-
-  color: #111111;
-  max-width: 860px;
-  letter-spacing: -0.5px;
-
-
-  font-family: Poppins;
-font-weight: 600;
-font-style: SemiBold;
-font-size: 24px;
-leading-trim: NONE;
-line-height: 140%;
-letter-spacing: 0%;
-
+.auroSuccessHeading h2{
+  color:#181818;
+  font-size:24px;
+  font-weight:600;
+  line-height:1.5;
+  /* max-width:640px; */
 }
 
 /* =========================================
-   WRAPPER
+   SLIDER WRAPPER
 ========================================= */
 
-.auroSuccessWrapper {
-  width: 100%;
-  display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
-  gap: 70px;
+.auroSuccessWrapper{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+}
+
+.auroSuccessSlider{
+  display:flex;
+  transition:transform 0.9s ease-in-out;
+}
+
+.auroSuccessSlide{
+  width:100%;
+  min-width:100%;
+
+  display:flex;
+  justify-content:space-between;
+  gap:28px;
 }
 
 /* =========================================
-   LEFT SIDE
+   LEFT
 ========================================= */
 
-.auroSuccessLeft {
-  width: 46%;
+.auroSuccessLeft{
+  width:48%;
+
+  opacity:0;
+  transform:translateX(-70px);
+
+  transition:1s ease;
 }
 
-/* NAME */
+.auroSuccessLeft.show-success-left{
+  opacity:1;
+  transform:translateX(0);
+}
 
-.auroSuccessLeft h3 {
+/* TOP */
 
-  line-height: 1.05;
+.auroSuccessTitleRow{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
 
-  color: #111111;
-  letter-spacing: -1.5px;
-  margin-bottom: 8px;
+  margin-bottom:16px;
+}
 
+.auroSuccessTitleRow h3{
+  color:#111;
 
-  font-family: Poppins;
-font-weight: 500;
-font-style: Medium;
-font-size: 40px;
-leading-trim: NONE;
-line-height: 140%;
-letter-spacing: 0%;
+  font-size:40px;
+  font-weight:500;
+
+  margin-bottom:4px;
+}
+
+.auroSuccessTitleRow h4{
+  color:#0d63d7;
+
+  font-size:24px;
+  font-weight:400;
+}
+
+/* NAV */
+
+.auroSuccessNav{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  position: absolute;
+  right:-600px;
+
+z-index: 10px;
 
 }
 
-/* ROLE */
+.auroSuccessNav button{
+  width:38px;
+  height:38px;
 
-.auroSuccessLeft h4 {
-  font-size: 22px;
-  line-height: 1.4;
-  font-weight: 500;
-  color: #0d6efd;
-  margin-bottom: 28px;
+  border-radius:50%;
+
+  border:1px solid #bcc2cd;
+
+  background:#f8f8f8;
+
+  color:#0d63d7;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  cursor:pointer;
+
+  transition:0.35s ease;
+}
+
+.auroSuccessNav button:hover{
+  background:#0d63d7;
+  color:white;
+
+  transform:translateY(-3px);
 }
 
 /* =========================================
    IMAGE CARD
 ========================================= */
 
-.auroSuccessImageCard {
-  position: relative;
+.auroSuccessImageCard{
+  width:574px;
+  height:679px;
 
-  width: 100%;
-  max-width: 610px;
-  height: 760px;
+  position:relative;
 
-  border-radius: 28px;
+  overflow:hidden;
 
-  overflow: hidden;
+  border-radius:22px;
 
-  background: #7d7d7d;
+  cursor:pointer;
+
+  transition:0.45s ease;
 }
 
-/* IMAGE */
+.auroSuccessImageCard:hover{
+  transform:translateY(-10px);
 
-.auroSuccessImageCard img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  display: block;
+  box-shadow:0 18px 35px rgba(0,0,0,0.16);
+}
+
+.auroSuccessImageCard img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:0.8s ease;
+}
+
+.auroSuccessImageCard:hover img{
+  transform:scale(1.08);
 }
 
 /* OVERLAY */
 
-.auroSuccessOverlay {
-  position: absolute;
-  inset: 0;
+.auroSuccessOverlay{
+  position:absolute;
+  inset:0;
 
-  background: linear-gradient(
+  background:linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.7) 0%,
-    rgba(0, 0, 0, 0.15) 40%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(0,0,0,0.78),
+    rgba(0,0,0,0.12)
   );
-
-  z-index: 1;
 }
 
 /* QUOTE */
 
-.auroSuccessQuote {
-  position: absolute;
+.auroSuccessQuote{
+  position:absolute;
 
-  left: 26px;
-  right: 26px;
-  bottom: 24px;
+  left:18px;
+  bottom:18px;
 
-  z-index: 2;
+  width:82%;
 
-  color: rgba(255, 255, 255, 0.92);
+  color:white;
 
-  font-size: 19px;
-  line-height: 1.7;
-  font-weight: 400;
+  font-size:24px;
+  font-weight:400;
 
-  letter-spacing: -0.2px;
+  line-height:1.7;
+
+  z-index:2;
 }
 
 /* =========================================
-   RIGHT SIDE
+   RIGHT
 ========================================= */
 
-.auroSuccessRight {
-  width: 43%;
+.auroSuccessRight{
+  width:48%;
 
-  display: flex;
-  flex-direction: column;
-  gap: 22px;
+  display:flex;
+  flex-direction:column;
 
-  padding-top: 180px;
+  justify-content:center;
+
+  gap:18px;
+
+  opacity:0;
+  transform:translateX(70px);
+
+  transition:1s ease;
+}
+
+.auroSuccessRight.show-success-right{
+  opacity:1;
+  transform:translateX(0);
 }
 
 /* =========================================
-   TIMELINE CARD
+   CARD
 ========================================= */
 
-.auroTimelineCard {
-  position: relative;
+.auroTimelineCard{
+  background:#f8f8f8;
 
-  width: 100%;
-  min-height: 177px;
+  border-radius:16px;
 
-  background: #ffffff;
+  padding:22px 22px 20px;
 
-  border-radius: 22px;
+  position:relative;
 
-  padding: 24px 28px;
+  box-shadow:
+    0 5px 12px rgba(0,0,0,0.08),
+    inset 0 0 0 1px rgba(0,0,0,0.03);
 
-  box-shadow: 0 10px 24px rgba(0, 0, 0, 0.08);
-
-  overflow: hidden;
+  transition:0.35s ease;
 }
 
-/* LEFT BORDER */
+.auroTimelineCard:hover{
+  transform:translateY(-6px);
 
-.auroTimelineCard::before {
-  content: "";
-
-  position: absolute;
-  left: 0;
-  top: 0;
-
-  width: 6px;
-  height: 100%;
+  box-shadow:
+    0 16px 28px rgba(0,0,0,0.12),
+    inset 0 0 0 1px rgba(0,0,0,0.02);
 }
 
-/* BORDER COLORS */
+/* BORDER */
 
-.redBorder::before {
-  background: #ff2d2d;
+.redBorder::before,
+.yellowBorder::before,
+.greenBorder::before{
+  content:"";
+
+  position:absolute;
+
+  left:0;
+  top:0;
+
+  width:5px;
+  height:100%;
+
+  border-radius:16px 0 0 16px;
 }
 
-.yellowBorder::before {
-  background: #ffd500;
+.redBorder::before{
+  background:#ff3030;
 }
 
-.greenBorder::before {
-  background: #65ff00;
+.yellowBorder::before{
+  background:#f3dc00;
 }
 
-/* TITLES */
-
-.auroTimelineCard h3 {
-  font-size: 20px;
-  line-height: 1.3;
-  font-weight: 700;
-
-  margin-bottom: 14px;
+.greenBorder::before{
+  background:#58ff17;
 }
 
-/* TITLE COLORS */
+/* TITLE */
 
-.redBorder h3 {
-  color: #ff2d2d;
+.auroTimelineCard h3{
+  font-size:16px;
+  font-weight:400;
+
+  margin-bottom:12px;
 }
 
-.yellowBorder h3 {
-  color: #ffd500;
+.redBorder h3{
+  color:#ff3030;
 }
 
-.greenBorder h3 {
-  color: #65ff00;
+.yellowBorder h3{
+  color:#d9c300;
 }
 
-/* DESCRIPTION */
+.greenBorder h3{
+  color:#49e100;
+}
 
-.auroTimelineCard p {
-  font-size: 16px;
-  line-height: 1.6;
-  font-weight: 400;
+/* TEXT */
 
-  color: #3d3d3d;
+.auroTimelineCard p{
+  color:#444;
 
-  max-width: 95%;
+  font-size:13px;
+  font-weight:400;
+
+  line-height:1.75;
 }
 
 /* =========================================
-   RESPONSIVE
+   TABLET
 ========================================= */
 
-@media (max-width: 1200px) {
+@media(max-width:992px){
 
-  .auroSuccessWrapper {
-    gap: 40px;
-  }
-
-  .auroSuccessLeft h3 {
-    font-size: 50px;
-  }
-
-  .auroSuccessImageCard {
-    height: 650px;
-  }
-}
-
-@media (max-width: 992px) {
-
-  .auroSuccessWrapper {
-    flex-direction: column;
+  .auroSuccessSlide{
+    flex-direction:column;
   }
 
   .auroSuccessLeft,
-  .auroSuccessRight {
-    width: 100%;
+  .auroSuccessRight{
+    width:100%;
   }
 
-  .auroSuccessRight {
-    padding-top: 0;
-  }
-
-  .auroSuccessImageCard {
-    max-width: 100%;
+  .auroSuccessImageCard{
+    height:420px;
   }
 }
 
-@media (max-width: 768px) {
+/* =========================================
+   MOBILE
+========================================= */
 
-  .auroSuccessSection {
-    padding: 20px 0 60px;
+@media(max-width:768px){
+
+  .auroSuccessContainer{
+    padding:0 18px;
   }
 
-  .auroSuccessContainer {
-    padding: 0 18px;
+  .auroSuccessHeading{
+    margin-bottom:28px;
   }
 
-  .auroSuccessHeading {
-    margin-bottom: 32px;
+  .auroSuccessHeading h2{
+    font-size:24px;
   }
 
-  .auroSuccessTag {
-    margin-bottom: 12px;
+  .auroSuccessTitleRow h3{
+    font-size:24px;
   }
 
-  .auroSuccessTag span {
-    width: 54px;
+  .auroSuccessImageCard{
+    height:340px;
+
+    border-radius:18px;
   }
 
-  .auroSuccessTag p {
-    font-size: 12px;
-  }
-
-  .auroSuccessHeading h2 {
-    font-size: 22px;
-    line-height: 1.5;
-  }
-
-  .auroSuccessLeft h3 {
-    font-size: 42px;
-  }
-
-  .auroSuccessLeft h4 {
-    font-size: 18px;
-    margin-bottom: 20px;
-  }
-
-  .auroSuccessImageCard {
-    height: 480px;
-    border-radius: 20px;
-  }
-
-  .auroSuccessQuote {
-    left: 18px;
-    right: 18px;
-    bottom: 18px;
-
-    font-size: 15px;
-    line-height: 1.6;
-  }
-
-  .auroSuccessRight {
-    gap: 18px;
-  }
-
-  .auroTimelineCard {
-    min-height: auto;
-    padding: 20px;
-    border-radius: 18px;
-  }
-
-  .auroTimelineCard h3 {
-    font-size: 18px;
-    margin-bottom: 10px;
-  }
-
-  .auroTimelineCard p {
-    font-size: 14px;
-    line-height: 1.65;
+  .auroTimelineCard{
+    padding:20px 18px;
   }
 }
 
-@media (max-width: 480px) {
+/* =========================================
+   SMALL MOBILE
+========================================= */
 
-  .auroSuccessLeft h3 {
-    font-size: 34px;
+@media(max-width:480px){
+
+  .auroSuccessContainer{
+    padding:0 14px;
   }
 
-  .auroSuccessLeft h4 {
-    font-size: 16px;
+  .auroSuccessHeading h2{
+    font-size:20px;
   }
 
-  .auroSuccessImageCard {
-    height: 420px;
+  .auroSuccessTitleRow{
+    flex-direction:column;
+    gap:14px;
   }
 
-  .auroSuccessQuote {
-    font-size: 14px;
+  .auroSuccessNav{
+    align-self:flex-start;
   }
 
-  .auroTimelineCard h3 {
-    font-size: 17px;
+  .auroSuccessImageCard{
+    height:280px;
   }
 
-  .auroTimelineCard p {
-    font-size: 13px;
+  .auroSuccessQuote{
+    width:88%;
+
+    font-size:13px;
+
+    line-height:1.7;
+  }
+
+  .auroTimelineCard h3{
+    font-size:15px;
+  }
+
+  .auroTimelineCard p{
+    font-size:12px;
+
+    line-height:1.7;
+  }
+}
+
+
+
+
+
+
+/* =========================================
+   BUTTON WRAPPER
+========================================= */
+
+.auroSuccessBtnWrapper{
+  width:100%;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  margin-top:58px;
+}
+/* =========================================
+   VIEW MORE BUTTON
+========================================= */
+
+.auroViewMoreBtn{
+  width:145px;
+  height:52px;
+
+  border:none;
+  outline:none;
+position: absolute;
+/* top: 10px; */
+
+  border-radius:40px;
+
+  background:#0d63d7;
+
+  color:#ffffff;
+
+  font-family:"Poppins",sans-serif;
+  font-size:20px;
+  font-weight:500;
+
+  cursor:pointer;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:
+    transform 0.35s ease,
+    background 0.35s ease,
+    box-shadow 0.35s ease;
+}
+
+/* HOVER */
+
+.auroViewMoreBtn:hover{
+  background:#0954ba;
+
+  transform:translateY(-4px);
+
+  box-shadow:0 10px 22px rgba(13, 99, 215, 0.28);
+}
+
+/* ACTIVE */
+
+.auroViewMoreBtn:active{
+  transform:scale(0.97);
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:768px){
+
+  .auroViewMoreBtn{
+    width:132px;
+    height:48px;
+
+    font-size:18px;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .auroViewMoreBtn{
+    width:118px;
+    height:44px;
+
+    font-size:16px;
+
+    border-radius:34px;
   }
 }
