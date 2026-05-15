@@ -1,0 +1,269 @@
+/* CorePillars.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.auroCorePillarsSection{
+  width:100%;
+
+  background:#fff;
+
+  padding:24px 0 40px;
+
+  font-family:"Poppins",sans-serif;
+}
+
+/* =========================================
+   CONTAINER
+========================================= */
+
+.auroCorePillarsContainer{
+  width:100%;
+  max-width:1240px;
+
+  margin:auto;
+
+  padding:0 34px;
+}
+
+/* =========================================
+   TITLE
+========================================= */
+
+.auroCorePillarsTitle{
+  text-align:center;
+
+  color:#1b1b1b;
+
+  font-size:40px;
+  font-weight:700;
+
+  margin-bottom:30px;
+}
+
+/* =========================================
+   WRAPPER
+========================================= */
+
+.auroCorePillarsWrapper{
+  width:100%;
+
+  /* border:3px dashed #2aa8ff; */
+
+  padding:10px 12px;
+display: flex;
+flex-direction: column;
+gap: 24px;
+}
+
+/* =========================================
+   CARD
+========================================= */
+
+.auroCorePillarCard{
+  display:flex;
+  align-items:flex-start;
+
+  gap:26px;
+  background: #F1F1F1;
+  border-radius: 16px
+;
+
+  padding:22px 14px;
+
+  /* border-bottom:3px dashed #2aa8ff; */
+}
+
+.auroCorePillarCard:last-child{
+  border-bottom:none;
+}
+
+/* =========================================
+   IMAGE
+========================================= */
+
+.auroCorePillarImage{
+  width:240px;
+  height:150px;
+
+  border-radius:18px;
+
+  overflow:hidden;
+
+  flex-shrink:0;
+}
+
+.auroCorePillarImage img{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+}
+
+/* =========================================
+   CONTENT
+========================================= */
+
+.auroCorePillarContent{
+  flex:1;
+
+  padding-top:8px;
+}
+
+/* TITLE */
+
+.auroCorePillarContent h3{
+  color:#222222;
+
+  font-size:28px;
+  font-weight:700;
+
+  line-height:1.45;
+
+  margin-bottom:14px;
+}
+
+/* TEXT */
+
+.auroCorePillarContent p{
+  color:#565656;
+
+  font-size:14px;
+  font-weight:400;
+
+  line-height:2;
+}
+
+/* =========================================
+   LARGE TABLET
+========================================= */
+
+@media(max-width:1100px){
+
+  .auroCorePillarContent h3{
+    font-size:24px;
+  }
+}
+
+/* =========================================
+   TABLET
+========================================= */
+
+@media(max-width:992px){
+
+  .auroCorePillarCard{
+    flex-direction:column;
+  }
+
+  .auroCorePillarImage{
+    width:100%;
+    height:260px;
+  }
+
+  .auroCorePillarContent{
+    padding-top:0;
+  }
+}
+
+/* =========================================
+   MOBILE
+========================================= */
+
+@media(max-width:768px){
+
+  .auroCorePillarsContainer{
+    padding:0 18px;
+  }
+
+  .auroCorePillarsTitle{
+    font-size:30px;
+
+    margin-bottom:24px;
+  }
+
+  .auroCorePillarsWrapper{
+    padding:8px;
+  }
+
+  .auroCorePillarCard{
+    gap:20px;
+
+    padding:18px 10px;
+  }
+
+  .auroCorePillarImage{
+    height:220px;
+
+    border-radius:16px;
+  }
+
+  .auroCorePillarContent h3{
+    font-size:22px;
+
+    margin-bottom:12px;
+  }
+
+  .auroCorePillarContent p{
+    font-size:13px;
+
+    line-height:1.9;
+  }
+}
+
+/* =========================================
+   SMALL MOBILE
+========================================= */
+
+@media(max-width:480px){
+
+  .auroCorePillarsSection{
+    padding:20px 0 30px;
+  }
+
+  .auroCorePillarsContainer{
+    padding:0 14px;
+  }
+
+  .auroCorePillarsTitle{
+    font-size:26px;
+  }
+
+  .auroCorePillarsWrapper{
+    border-width:2px;
+  }
+
+  .auroCorePillarCard{
+    padding:16px 0;
+
+    gap:16px;
+
+    border-bottom-width:2px;
+  }
+
+  .auroCorePillarImage{
+    height:180px;
+
+    border-radius:14px;
+  }
+
+  .auroCorePillarContent h3{
+    font-size:18px;
+
+    line-height:1.6;
+  }
+
+  .auroCorePillarContent p{
+    font-size:12px;
+
+    line-height:1.8;
+  }
+}
