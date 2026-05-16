@@ -1,6 +1,6 @@
-/* Topbar.css */
+/* Topbar.css - Desktop Only Version */
 
-/* Main Topbar Container */
+/* Main Topbar Container - Desktop Only */
 .globetech-topbar-main {
   background: linear-gradient(135deg, #1a1a2e 0%, #16213e 100%);
   color: #ffffff;
@@ -89,218 +89,35 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Responsive Design */
+/* ============================================ */
+/* SHOW ONLY ON DESKTOP (ABOVE 1024px) */
+/* ============================================ */
 
-/* Tablet View (768px - 1024px) */
-@media screen and (max-width: 1024px) {
-  .globetech-topbar-container {
-    padding: 0.625rem 1.5rem;
-    gap: 0.875rem;
-  }
+/* Default: Hide on all devices */
+.globetech-topbar-main {
+  display: none;
+}
 
-  .globetech-topbar-socials {
-    gap: 0.75rem;
-  }
-
-  .globetech-topbar-socials a {
-    width: 30px;
-    height: 30px;
-    font-size: 0.8125rem;
-  }
-
-  .globetech-topbar-right {
-    gap: 1rem;
-  }
-
-  .globetech-topbar-item {
-    gap: 0.5rem;
-    font-size: 0.8125rem;
-  }
-
-  .globetech-topbar-item svg {
-    font-size: 0.8125rem;
-  }
-
-  .globetech-topbar-divider {
-    height: 18px;
+/* Show only on screens ABOVE 1024px (Desktop) */
+@media screen and (min-width: 1025px) {
+  .globetech-topbar-main {
+    display: block;
   }
 }
 
-/* Mobile View (up to 768px) */
-@media screen and (max-width: 768px) {
-  .globetech-topbar-main {
-    position: relative;
-  }
-
+/* For large desktops (optional adjustment) */
+@media screen and (min-width: 1440px) {
   .globetech-topbar-container {
-    padding: 0.75rem 1rem;
-    flex-direction: column;
-    gap: 0.875rem;
+    padding: 0.875rem 2rem;
   }
-
-  /* Social Icons - Centered on Mobile */
-  .globetech-topbar-socials {
-    justify-content: center;
-    gap: 1rem;
-    width: 100%;
-    padding-bottom: 0.5rem;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  }
-
+  
   .globetech-topbar-socials a {
-    width: 35px;
-    height: 35px;
+    width: 34px;
+    height: 34px;
     font-size: 0.9375rem;
   }
-
-  /* Right Info - Stacked on Mobile */
-  .globetech-topbar-right {
-    flex-direction: column;
-    align-items: stretch;
-    gap: 0.625rem;
-    width: 100%;
-  }
-
+  
   .globetech-topbar-item {
-    justify-content: center;
-    padding: 0.5rem;
-    background: rgba(255, 255, 255, 0.05);
-    border-radius: 8px;
-    font-size: 0.875rem;
+    font-size: 0.9375rem;
   }
-
-  .globetech-topbar-item svg {
-    font-size: 1rem;
-  }
-
-  /* Hide dividers on mobile */
-  .globetech-topbar-divider {
-    display: none;
-  }
-}
-
-/* Small Mobile Devices (up to 480px) */
-@media screen and (max-width: 480px) {
-  .globetech-topbar-container {
-    padding: 0.625rem 0.875rem;
-  }
-
-  .globetech-topbar-socials {
-    gap: 0.75rem;
-  }
-
-  .globetech-topbar-socials a {
-    width: 32px;
-    height: 32px;
-    font-size: 0.875rem;
-  }
-
-  .globetech-topbar-item {
-    font-size: 0.8125rem;
-    padding: 0.375rem;
-  }
-
-  .globetech-topbar-item svg {
-    font-size: 0.875rem;
-  }
-}
-
-/* Very Small Devices (up to 380px) */
-@media screen and (max-width: 380px) {
-  .globetech-topbar-item {
-    font-size: 0.75rem;
-    gap: 0.5rem;
-  }
-
-  .globetech-topbar-item svg {
-    font-size: 0.8125rem;
-  }
-
-  .globetech-topbar-socials a {
-    width: 28px;
-    height: 28px;
-    font-size: 0.8125rem;
-  }
-}
-
-/* Animation for hover effects */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(49, 133, 230, 0.4);
-  }
-  70% {
-    box-shadow: 0 0 0 6px rgba(49, 133, 230, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(49, 133, 230, 0);
-  }
-}
-
-.globetech-topbar-socials a:active {
-  transform: scale(0.95);
-}
-
-/* Optional: Add a subtle gradient overlay on hover for items */
-.globetech-topbar-item:hover {
-  background: rgba(49, 133, 230, 0.1);
-}
-
-/* Accessibility Focus Styles */
-.globetech-topbar-socials a:focus-visible,
-.globetech-topbar-item:focus-visible {
-  outline: 2px solid #3185e6;
-  outline-offset: 2px;
-  border-radius: 4px;
-}
-
-/* Optional: Add a scroll indicator for mobile if content overflows */
-@media screen and (max-width: 768px) {
-  .globetech-topbar-right {
-    max-height: 200px;
-    overflow-y: auto;
-  }
-
-  /* Custom scrollbar for mobile menu */
-  .globetech-topbar-right::-webkit-scrollbar {
-    width: 3px;
-  }
-
-  .globetech-topbar-right::-webkit-scrollbar-track {
-    background: rgba(255, 255, 255, 0.1);
-  }
-
-  .globetech-topbar-right::-webkit-scrollbar-thumb {
-    background: #3185e6;
-    border-radius: 3px;
-  }
-}
-
-/* Print styles */
-@media print {
-  .globetech-topbar-main {
-    display: none;
-  }
-}
-
-/* Optional: Add a subtle animation when page loads */
-@keyframes slideDown {
-  from {
-    transform: translateY(-100%);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
-}
-
-.globetech-topbar-main {
-  animation: slideDown 0.5s ease;
-}
-
-/* Optional: Sticky topbar */
-.globetech-topbar-main.sticky {
-  position: sticky;
-  top: 0;
-  z-index: 1030;
 }

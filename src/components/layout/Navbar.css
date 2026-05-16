@@ -1,6 +1,9 @@
 /* Navbar.css */
 
-/* Reset and Base Styles */
+/* ============================================ */
+/* BASE STYLES */
+/* ============================================ */
+
 * {
   margin: 0;
   padding: 0;
@@ -29,7 +32,10 @@
   gap: 2rem;
 }
 
-/* Logo Area */
+/* ============================================ */
+/* LOGO STYLES */
+/* ============================================ */
+
 .globetech-navbar-logo-area {
   flex-shrink: 0;
   display: flex;
@@ -47,7 +53,10 @@
   object-fit: contain;
 }
 
-/* Desktop Navigation Menu */
+/* ============================================ */
+/* DESKTOP NAVIGATION STYLES */
+/* ============================================ */
+
 .globetech-navbar-menu {
   display: flex;
   align-items: center;
@@ -56,7 +65,6 @@
   justify-content: center;
 }
 
-/* Desktop Navigation Links */
 .globetech-navbar-link {
   padding: 0.625rem 1rem;
   font-size: 0.9375rem;
@@ -78,13 +86,13 @@
   transform: translateX(-50%);
   width: 0;
   height: 2px;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #3185e6;
   transition: width 0.3s ease;
 }
 
 .globetech-navbar-link:hover {
-  color: #667eea;
-  background: rgba(102, 126, 234, 0.08);
+  color: #3185e6;
+  background: rgba(49, 133, 230, 0.08);
 }
 
 .globetech-navbar-link:hover::before {
@@ -93,29 +101,33 @@
 
 /* Active Link - Desktop */
 .active-nav-link {
-  color: #667eea;
-  background: rgba(102, 126, 234, 0.12);
+  color: #3185e6;
+  background: rgba(49, 133, 230, 0.12);
   font-weight: 600;
 }
 
 .active-nav-link::before {
   width: 80%;
+  background: #3185e6;
 }
 
-/* Donate Button - Desktop */
+/* ============================================ */
+/* DONATE BUTTON STYLES */
+/* ============================================ */
+
 .globetech-navbar-donate-btn {
   display: inline-flex;
   align-items: center;
   gap: 0.75rem;
   padding: 0.75rem 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #3185e6;
   color: white;
   text-decoration: none;
   font-weight: 600;
   font-size: 0.9375rem;
   border-radius: 50px;
   transition: all 0.3s ease;
-  box-shadow: 0 4px 12px rgba(102, 126, 234, 0.25);
+  box-shadow: 0 4px 12px rgba(49, 133, 230, 0.25);
   letter-spacing: 0.01em;
   white-space: nowrap;
   flex-shrink: 0;
@@ -123,8 +135,8 @@
 
 .globetech-navbar-donate-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
-  background: linear-gradient(135deg, #5a67d8 0%, #6b46a0 100%);
+  box-shadow: 0 6px 20px rgba(49, 133, 230, 0.35);
+  background: #2670c9;
 }
 
 .globetech-navbar-donate-btn:active {
@@ -140,6 +152,10 @@
 .globetech-navbar-donate-btn:hover .globetech-navbar-btn-icon {
   transform: translateX(4px);
 }
+
+/* ============================================ */
+/* MOBILE MENU STYLES */
+/* ============================================ */
 
 /* Hamburger Icon */
 .globetech-mobile-toggle {
@@ -183,7 +199,7 @@
 }
 
 .globetech-mobile-toggle:hover {
-  background: rgba(102, 126, 234, 0.1);
+  background: rgba(49, 133, 230, 0.1);
 }
 
 /* Mobile Menu Overlay */
@@ -202,19 +218,15 @@
 .globetech-mobile-menu {
   position: fixed;
   top: 0;
-  right: -100%;
+  right: 0;
   width: 80%;
   max-width: 400px;
   height: 100vh;
   background: white;
   z-index: 999;
-  transition: right 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: -5px 0 20px rgba(0, 0, 0, 0.1);
   overflow-y: auto;
-}
-
-.globetech-mobile-menu.open {
-  right: 0;
+  animation: slideIn 0.3s ease;
 }
 
 .globetech-mobile-menu-container {
@@ -237,17 +249,17 @@
 }
 
 .globetech-mobile-link:hover {
-  background: rgba(102, 126, 234, 0.08);
-  color: #667eea;
+  background: rgba(49, 133, 230, 0.08);
+  color: #3185e6;
   transform: translateX(4px);
 }
 
 /* Active Mobile Link */
 .active-mobile-link {
-  background: linear-gradient(135deg, rgba(102, 126, 234, 0.12) 0%, rgba(118, 75, 162, 0.12) 100%);
-  color: #667eea;
+  background: rgba(49, 133, 230, 0.12);
+  color: #3185e6;
   font-weight: 600;
-  border-left: 3px solid #667eea;
+  border-left: 3px solid #3185e6;
 }
 
 /* Mobile Donate Button */
@@ -257,7 +269,7 @@
   justify-content: center;
   gap: 0.75rem;
   padding: 1rem 1.5rem;
-  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  background: #3185e6;
   color: white;
   text-decoration: none;
   font-weight: 600;
@@ -270,7 +282,8 @@
 
 .globetech-mobile-donate-btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.35);
+  box-shadow: 0 6px 20px rgba(49, 133, 230, 0.35);
+  background: #2670c9;
 }
 
 .globetech-mobile-btn-icon {
@@ -283,7 +296,10 @@
   transform: translateX(4px);
 }
 
-/* Animations */
+/* ============================================ */
+/* ANIMATIONS */
+/* ============================================ */
+
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -302,11 +318,10 @@
   }
 }
 
-.globetech-mobile-menu.open {
-  animation: slideIn 0.3s ease;
-}
+/* ============================================ */
+/* RESPONSIVE DESIGN - TABLET (768px - 1024px) */
+/* ============================================ */
 
-/* Tablet Responsive */
 @media screen and (max-width: 1024px) {
   .globetech-navbar-container {
     padding: 0.75rem 1.5rem;
@@ -328,13 +343,16 @@
   }
 }
 
-/* Mobile Responsive */
+/* ============================================ */
+/* RESPONSIVE DESIGN - MOBILE (BELOW 768px) */
+/* ============================================ */
+
 @media screen and (max-width: 768px) {
   .globetech-navbar-container {
     padding: 0.75rem 1rem;
   }
 
-  /* Hide desktop elements */
+  /* Hide desktop navigation and donate button */
   .globetech-navbar-menu {
     display: none;
   }
@@ -343,7 +361,7 @@
     display: none;
   }
 
-  /* Show mobile toggle */
+  /* Show mobile toggle button */
   .globetech-mobile-toggle {
     display: flex;
     align-items: center;
@@ -355,7 +373,10 @@
   }
 }
 
-/* Small Mobile Devices */
+/* ============================================ */
+/* RESPONSIVE DESIGN - SMALL MOBILE (BELOW 480px) */
+/* ============================================ */
+
 @media screen and (max-width: 480px) {
   .globetech-navbar-container {
     padding: 0.625rem 0.875rem;
@@ -378,20 +399,52 @@
     padding: 0.875rem 1.25rem;
     font-size: 0.9375rem;
   }
+
+  .hamburger-icon {
+    width: 20px;
+    height: 17px;
+  }
+
+  .globetech-mobile-toggle.active .hamburger-icon span:nth-child(1) {
+    transform: translateY(7.5px) rotate(45deg);
+  }
+
+  .globetech-mobile-toggle.active .hamburger-icon span:nth-child(3) {
+    transform: translateY(-7.5px) rotate(-45deg);
+  }
 }
 
-/* Accessibility */
+/* ============================================ */
+/* VERY SMALL DEVICES (BELOW 380px) */
+/* ============================================ */
+
+@media screen and (max-width: 380px) {
+  .globetech-mobile-menu-container {
+    padding: 65px 1rem 1.5rem;
+  }
+
+  .globetech-mobile-link {
+    padding: 0.75rem 0.875rem;
+    font-size: 0.9375rem;
+  }
+
+  .globetech-mobile-donate-btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.875rem;
+  }
+}
+
+/* ============================================ */
+/* ACCESSIBILITY & UTILITY STYLES */
+/* ============================================ */
+
+/* Focus styles for accessibility */
 .globetech-navbar-link:focus-visible,
 .globetech-mobile-toggle:focus-visible,
 .globetech-navbar-donate-btn:focus-visible,
 .globetech-mobile-link:focus-visible,
 .globetech-mobile-donate-btn:focus-visible {
-  outline: 2px solid #667eea;
+  outline: 2px solid #3185e6;
   outline-offset: 2px;
   border-radius: 4px;
-}
-
-/* Prevent body scroll when mobile menu is open */
-body.menu-open {
-  overflow: hidden;
 }

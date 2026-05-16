@@ -1,6 +1,4 @@
-// Topbar.jsx
-
-import React, { useEffect, useState } from "react";
+import React from "react";
 import "./Topbar.css";
 
 import {
@@ -15,42 +13,24 @@ import {
 } from "react-icons/fa";
 
 const Topbar = () => {
-  const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 1024);
-
-  useEffect(() => {
-    const handleResize = () => {
-      setIsDesktop(window.innerWidth >= 765);
-    };
-
-    window.addEventListener('resize', handleResize);
-    
-    // Cleanup listener on component unmount
-    return () => window.removeEventListener('resize', handleResize);
-  }, []);
-
-  // Don't render on tablet and mobile
-  if (!isDesktop) {
-    return null;
-  }
-
   return (
     <section className="globetech-topbar-main">
       <div className="globetech-topbar-container">
         {/* LEFT SOCIAL */}
         <div className="globetech-topbar-socials">
-          <a href="/" aria-label="Facebook">
+          <a href="/">
             <FaFacebookF />
           </a>
-          <a href="/" aria-label="Twitter">
+          <a href="/">
             <FaTwitter />
           </a>
-          <a href="/" aria-label="Instagram">
+          <a href="/">
             <FaInstagram />
           </a>
-          <a href="/" aria-label="YouTube">
+          <a href="/">
             <FaYoutube />
           </a>
-          <a href="/" aria-label="LinkedIn">
+          <a href="/">
             <FaLinkedinIn />
           </a>
         </div>
