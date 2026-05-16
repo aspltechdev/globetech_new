@@ -1,225 +1,262 @@
-// SkillDevelopmentCourses.jsx
+// CareerProjectsSection.jsx
 
-import React from "react";
+import React, { useEffect, useRef } from "react";
+
+import {
+  ArrowRight,
+  Sparkles,
+  Briefcase,
+  Globe2,
+  GraduationCap,
+} from "lucide-react";
+
 import "./SkillDevelopmentCourses.css";
 
-const leftCourses = [
+/* =========================
+   PROJECTS DATA
+========================= */
+
+const projects = [
   {
-    no: "01",
-    title: "Civil CAD",
-    desc: "Structure design and urban planning tools",
+    title: "Industry Internship Program",
+    category: "Career Development",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop",
   },
+
   {
-    no: "02",
-    title: "Mechanical CAD",
-    desc: "Precision engineering and industrial modeling",
+    title: "AI & Data Science Lab",
+    category: "Technology",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop",
   },
+
   {
-    no: "03",
-    title: "Embedded System Design",
-    desc: "Microcontroller programming and IoT systems",
+    title: "Global Leadership Bootcamp",
+    category: "Leadership",
+    image:
+      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1400&auto=format&fit=crop",
   },
+
   {
-    no: "04",
-    title: "Graphic Designing",
-    desc: "Visual communication and brand identity",
+    title: "Software Engineering Academy",
+    category: "Engineering",
+    image:
+      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop",
   },
+
   {
-    no: "05",
-    title: "SAP & Tally Training",
-    desc: "ERP solutions and financial management",
+    title: "Women Career Empowerment",
+    category: "Social Impact",
+    image:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop",
   },
+
   {
-    no: "06",
-    title: "Lean Six Sigma Courses",
-    desc: "Process improvement and efficiency experts",
-  },
-  {
-    no: "07",
-    title: "Online Degree Courses",
-    desc: "Flexible global accreditation programs",
+    title: "International Language Program",
+    category: "Global Learning",
+    image:
+      "https://images.unsplash.com/photo-1522202222206-b750f2f1f0a3?q=80&w=1400&auto=format&fit=crop",
   },
 ];
 
-const rightCourses = [
-  {
-    no: "08",
-    title: "Programming Languages",
-    desc: "Foundational Mastery in C, C++, Java, Python",
-  },
-  {
-    no: "09",
-    title: "Data Analytics & Data Science",
-    desc: "Extracting insights from complex datasets",
-  },
-  {
-    no: "10",
-    title: "Full Stack Development",
-    desc: "Comprehensive web application engineering",
-  },
-  {
-    no: "11",
-    title: "Software Testing",
-    desc: "Quality assurance and bug lifecycle management",
-  },
-  {
-    no: "12",
-    title: "Foreign Languages",
-    desc: "Global communication and cultural competence",
-  },
-  {
-    no: "13",
-    title: "Artificial Intelligence",
-    desc: "Machine learning and neural network training",
-  },
-  {
-    no: "14",
-    title: "Cloud Computing",
-    desc: "AWS, Azure and scalable infra management",
-  },
-];
+/* =========================
+   REVEAL
+========================= */
 
-const SkillDevelopmentCourses = () => {
+const Reveal = ({ children }) => {
+
+  const ref = useRef(null);
+
+  useEffect(() => {
+
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+
+        if (entry.isIntersecting) {
+          ref.current.classList.add("show");
+        }
+
+      },
+      {
+        threshold:0.15,
+      }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+
+  }, []);
+
   return (
-    <section className="skill-development-main-section">
+    <div
+      ref={ref}
+      className="fade-up"
+    >
+      {children}
+    </div>
+  );
+};
 
-      <div className="skill-development-container">
+export default function SkillDevelopmentCourses() {
 
-        {/* TOP AREA */}
-        <div className="skill-development-top-layout">
+  return (
+    <section className="career-projects-section">
 
-          {/* LEFT CONTENT */}
-          <div className="skill-development-left-content">
+      {/* GLOW */}
 
-            <span className="skill-development-badge">
-              Professional Excellence
-            </span>
+      <div className="projects-glow glow1"></div>
+      <div className="projects-glow glow2"></div>
 
-            <h2>
-              Skill Development
-              <br />
-              Courses
-            </h2>
+      <div className="career-projects-container">
 
-            <p>
-              Empowering the next generation of global leaders through
-              specialized technical training and professional certification
-              programs designed for immediate career impact.
-            </p>
+        {/* HERO */}
 
-          </div>
+        <Reveal>
 
-          {/* RIGHT CARD */}
-          <div className="skill-development-student-card">
+          <div className="projects-hero">
 
-            <div className="skill-development-image-wrapper">
+            {/* LEFT */}
+
+            <div className="projects-left">
+
+              <div className="projects-badge">
+
+                <Sparkles size={15} />
+
+                Career Excellence
+
+              </div>
+
+              <h1>
+                Building Future Careers
+                Through Real Projects
+              </h1>
+
+              <p>
+                Our career-focused initiatives combine
+                practical learning, mentorship, industry
+                exposure, and innovation-driven experiences
+                preparing youth for the future workforce.
+              </p>
+
+              <div className="projects-buttons">
+
+                <button className="primary-btn">
+
+                  Explore Programs
+
+                  <ArrowRight size={18} />
+
+                </button>
+
+                <button className="secondary-btn">
+
+                  View Success Stories
+
+                </button>
+
+              </div>
+
+            </div>
+
+            {/* RIGHT */}
+
+            <div className="projects-right">
 
               <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop"
-                alt="Students"
+                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
+                alt=""
               />
 
-            </div>
+              {/* FLOAT CARD */}
 
-            <div className="skill-development-student-footer">
+              <div className="floating-project-card">
 
-              <div className="student-green-icon">
-                ↗
-              </div>
+               
 
-              <h3>
-                Join 5,000+ Students
-              </h3>
+                <div>
 
-            </div>
-
-          </div>
-
-        </div>
-
-        {/* COURSE GRID */}
-        <div className="skill-development-course-grid">
-
-          {/* LEFT */}
-          <div className="skill-development-course-column">
-
-            {leftCourses.map((course, index) => (
-              <div
-                className="skill-development-course-card"
-                key={index}
-              >
-
-                <span className="course-number">
-                  {course.no}
-                </span>
-
-                <div className="course-content">
-
-                  <h4>
-                    {course.title}
-                  </h4>
+                  <h3>
+                    5000+
+                  </h3>
 
                   <p>
-                    {course.desc}
+                    Students Career Ready
                   </p>
 
                 </div>
 
-                <div className="course-icon">
-                  ✦
-                </div>
-
               </div>
-            ))}
+
+            </div>
 
           </div>
 
-          {/* RIGHT */}
-          <div className="skill-development-course-column">
+        </Reveal>
 
-            {rightCourses.map((course, index) => (
-              <div
-                className="skill-development-course-card"
-                key={index}
-              >
+       
 
-                <span className="course-number">
-                  {course.no}
-                </span>
 
-                <div className="course-content">
+        {/* PROJECT GRID */}
 
-                  <h4>
-                    {course.title}
-                  </h4>
+        <div className="projects-grid">
+
+          {projects.map((project, index) => (
+
+            <Reveal key={index}>
+
+              <div className="project-card">
+
+                {/* IMAGE */}
+
+                <div className="project-image">
+
+                  <img
+                    src={project.image}
+                    alt={project.title}
+                  />
+
+                  <div className="project-overlay"></div>
+
+                  <span className="project-category">
+
+                    {project.category}
+
+                  </span>
+
+                </div>
+
+                {/* CONTENT */}
+
+                <div className="project-content">
+
+                  <h3>
+                    {project.title}
+                  </h3>
 
                   <p>
-                    {course.desc}
+                    Real-world learning experiences helping
+                    students gain practical exposure and
+                    professional confidence.
                   </p>
 
-                </div>
+                  <button>
 
-                <div className="course-icon">
-                  ✦
+                    Explore Project
+
+                    <ArrowRight size={16} />
+
+                  </button>
+
                 </div>
 
               </div>
-            ))}
 
-          </div>
+            </Reveal>
 
-        </div>
-
-        {/* BUTTON */}
-        <div className="skill-development-button-area">
-
-          <button>
-            Explore Full Curriculum
-          </button>
-
-          <p>
-            Certifications recognized by 200+ industry partners
-          </p>
+          ))}
 
         </div>
 
@@ -227,6 +264,4 @@ const SkillDevelopmentCourses = () => {
 
     </section>
   );
-};
-
-export default SkillDevelopmentCourses;
+}
