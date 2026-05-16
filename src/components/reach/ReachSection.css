@@ -1,312 +1,737 @@
-/* ReachSection.css */
+/* =========================================================
+   PREMIUM NGO REACH SECTION
+========================================================= */
 
-.reachSection {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 80px 0;
-  background: #f5c400;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* =========================================
-   BG IMAGE
-========================================= */
+/* =========================================================
+   SECTION
+========================================================= */
 
-.reachBgImage {
-  position: absolute;
-  inset: 0;
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  opacity: 0.12;
-  z-index: 1;
+.reachSection{
+  width:100%;
+
+  position:relative;
+  overflow:hidden;
+
+  padding:40px;
+
+  background:#04192f;
+
+  font-family:"Inter",sans-serif;
+  border-radius: 60px;
 }
 
-.reachOverlay {
-  position: absolute;
-  inset: 0;
-  background: rgba(255, 208, 0, 0.88);
-  z-index: 2;
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.reachBgImage{
+  position:absolute;
+  inset:0;
+
+  width:100%;
+  height:800px;
+
+  object-fit:cover;
+
+  z-index:1;
 }
 
-/* =========================================
+.reachOverlay{
+  position:absolute;
+  inset:0;
+
+  /* background:
+    linear-gradient(
+      135deg,
+      rgba(243, 134, 11, 0.753),
+      rgba(245, 250, 251, 0.856),
+      rgba(75, 117, 255, 0.95)
+    ); */
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(255, 179, 0, 0.973),
+      rgb(255, 199, 16),
+      rgba(255, 192, 1, 0.95)
+    );
+
+
+
+  z-index:2;
+}
+
+/* =========================================================
    CONTAINER
-========================================= */
+========================================================= */
 
-.reachContainer {
-  position: relative;
-  z-index: 3;
-  width: 90%;
-  max-width: 1250px;
-  margin: auto;
+.reachContainer{
+  width:100%;
+  max-width:1350px;
+
+  margin:auto;
+  padding:0 60px;
+
+  position:relative;
+  z-index:5;
 }
 
-/* =========================================
+/* =========================================================
    WRAPPER
-========================================= */
+========================================================= */
 
-.reachWrapper {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  gap: 60px;
+.reachWrapper{
+  display:grid;
+  grid-template-columns:1.05fr .95fr;
+
+  align-items:center;
+  gap:70px;
+
+  margin-bottom:110px;
 }
 
-/* =========================================
+/* =========================================================
    LEFT CONTENT
-========================================= */
+========================================================= */
 
-.reachLeft {
-  flex: 1;
-  transform: translateY(60px);
-  opacity: 0;
-  transition: all 1s ease;
+.reachLeft{
+  opacity:0;
+
+  transform:
+    translateY(90px)
+    scale(.94);
+
+  filter:blur(10px);
+   /* background:
+    rgba(72, 71, 71, 0.08); */
+    padding: 14px;
+    border-radius: 12px;
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
 }
 
-.showLeft {
-  transform: translateY(0);
-  opacity: 1;
-}
+.showReachLeft{
+  opacity:1;
 
-.reachLeft h2 {
-  font-size: 52px;
-  line-height: 1.1;
-  font-weight: 800;
-  color: #111;
-  margin-bottom: 24px;
-}
-
-.reachLeft h2 span {
-  display: block;
-  color: #005dff;
-}
-
-.reachDescription {
-  max-width: 520px;
-  font-size: 17px;
-  line-height: 1.8;
-  color: #222;
-  margin-bottom: 32px;
-}
-
-/* =========================================
-   POINTS
-========================================= */
-
-.reachPoints {
-  display: flex;
-  flex-direction: column;
-  gap: 18px;
-  margin-bottom: 35px;
-}
-
-.reachPoint {
-  display: flex;
-  align-items: center;
-  gap: 12px;
-}
-
-.reachPoint svg {
-  color: #0c8a2d;
-  flex-shrink: 0;
-}
-
-.reachPoint p {
-  font-size: 16px;
-  font-weight: 500;
-  color: #111;
-}
-
-/* =========================================
-   BUTTON
-========================================= */
-
-.reachBtn {
-  width: 180px;
-  height: 54px;
-  border: none;
-  border-radius: 10px;
-  background: #005dff;
-  color: white;
-  font-size: 16px;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s ease;
-  box-shadow: 0 8px 20px rgba(0, 93, 255, 0.25);
-}
-
-.reachBtn:hover {
-  transform: translateY(-3px);
-  background: #0045c7;
-}
-
-/* =========================================
-   RIGHT MAP
-========================================= */
-
-.reachRight {
-  flex: 1;
-  display: flex;
-  justify-content: center;
-  transform: scale(0.8);
-  opacity: 0;
-  transition: all 1s ease;
-}
-
-.showRight {
-  transform: scale(1);
-  opacity: 1;
-}
-
-.indiaMap {
-  width: 100%;
-  max-width: 500px;
-  object-fit: contain;
-
-  animation: floatMap 4s ease-in-out infinite;
-}
-
-@keyframes floatMap {
-  0% {
-    transform: translateY(0px);
-  }
-
-  50% {
-    transform: translateY(-10px);
-  }
-
-  100% {
-    transform: translateY(0px);
-  }
-}
-
-/* =========================================
-   STATS TITLE
-========================================= */
-
-.statsTitle {
-  text-align: center;
-  margin-top: 70px;
-  margin-bottom: 35px;
-
-  font-size: 48px;
-  font-weight: 800;
-  color: #005dff;
-
-  opacity: 0;
-  transform: translateY(40px);
-
-  transition: all 1s ease;
-}
-
-.showStatsTitle {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =========================================
-   STATS
-========================================= */
-
-.statsWrapper {
-  display: grid;
-  grid-template-columns: repeat(
-    4,
-    1fr
-  );
-  gap: 25px;
-}
-
-.statCard {
-  background: #fff;
-  border-radius: 22px;
-  padding: 35px 20px;
-
-  text-align: center;
-
-  box-shadow: 0 10px 30px
-    rgba(0, 0, 0, 0.12);
-
-  transform: translateY(60px)
-    scale(0.8);
-
-  opacity: 0;
-
-  transition: all 0.8s ease;
-}
-
-.showCard {
-  transform: translateY(0)
+  transform:
+    translateY(0)
     scale(1);
 
-  opacity: 1;
+  filter:blur(0);
 }
 
-.statCard:hover {
-  transform: translateY(-8px);
+/* BADGE */
+
+.reachBadge{
+  width:fit-content;
+
+  padding:10px 18px;
+
+  border-radius:100px;
+
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  backdrop-filter:blur(12px);
+
+  color:#fff;
+
+  font-size:13px;
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  margin-bottom:24px;
 }
 
-.statCard h3 {
-  font-size: 46px;
-  font-weight: 800;
-  color: #005dff;
-  margin-bottom: 12px;
+/* TITLE */
+
+.reachLeft h2{
+  /* color:#fff; */
+  color: rgba(0, 98, 206, 1);
+
+
+  font-size:49px;
+  line-height:1.02;
+
+  font-weight:700;
+
+  letter-spacing:0px;
+
+  margin-bottom:24px;
 }
 
-.statCard p {
-  font-size: 18px;
-  color: #333;
-  font-weight: 500;
+/* DESCRIPTION */
+
+.reachDescription{
+  color:
+    rgba(28, 27, 27, 0.916);
+
+  font-size:17px;
+  line-height:1.9;
+
+  max-width:620px;
+
+  margin-bottom:40px;
 }
 
-/* =========================================
-   RESPONSIVE
-========================================= */
+/* =========================================================
+   POINTS
+========================================================= */
 
-@media screen and (max-width: 1100px) {
-  .reachWrapper {
-    flex-direction: column;
-    text-align: center;
-  }
+.reachPoints{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
 
-  .reachDescription {
-    margin-inline: auto;
-  }
+  margin-bottom:40px;
+}
 
-  .reachPoints {
-    align-items: center;
-  }
+.reachPoint{
+  display:flex;
+  align-items:flex-start;
+  gap:16px;
+}
 
-  .statsWrapper {
-    grid-template-columns: repeat(
-      2,
-      1fr
+.reachIcon{
+  width:38px;
+  height:38px;
+
+  border-radius:50%;
+
+  background:
+    rgb(254, 253, 253);
+
+  border:
+    1px solid rgba(255,255,255,.12);
+
+  color:#8ec5ff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+}
+
+.reachPoint p{
+  color:
+    rgba(39, 38, 38, 0.84);
+
+  font-size:15px;
+  line-height:1.8;
+}
+
+/* =========================================================
+   BUTTONS
+========================================================= */
+
+.reachButtons{
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+  flex-wrap:wrap;
+}
+
+/* PRIMARY */
+
+.primaryReachBtn{
+  height:58px;
+
+  padding:0 10px 0 24px;
+
+  border:none;
+  cursor:pointer;
+
+  border-radius:100px;
+
+  background:#fff;
+
+  color:#157bf8;
+
+  font-size:15px;
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+  transition:.4s ease;
+}
+
+.primaryReachBtn:hover{
+  transform:
+    translateY(-4px);
+}
+
+.primaryReachBtn span{
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #005fd1,
+      #0078ff
     );
+
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* SECONDARY */
+
+.secondaryReachBtn{
+  height:58px;
+
+  padding:0 24px;
+
+  border-radius:100px;
+
+  border:
+    1px solid rgba(255,255,255,.14);
+
+  background:
+    rgba(248, 108, 28, 0.893);
+
+  backdrop-filter:blur(12px);
+
+  color:#fff;
+
+  font-size:15px;
+  font-weight:600;
+
+  cursor:pointer;
+
+  transition:.4s ease;
+}
+
+.secondaryReachBtn:hover{
+  background:
+    rgba(255,255,255,.14);
+}
+
+/* =========================================================
+   MAP
+========================================================= */
+
+.reachRight{
+  position:relative;
+
+  opacity:0;
+
+  transform:
+    translateY(90px)
+    scale(.94);
+
+  filter:blur(10px);
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
+
+  transition-delay:.2s;
+}
+
+.showReachRight{
+  opacity:1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  filter:blur(0);
+}
+
+/* GLOW */
+
+.mapGlow{
+  position:absolute;
+
+  width:320px;
+  height:320px;
+
+  border-radius:50%;
+
+  background:
+    rgba(0,183,255,.18);
+
+  filter:blur(90px);
+
+  top:50%;
+  left:50%;
+
+  transform:
+    translate(-50%,-50%);
+}
+
+/* MAP */
+
+.indiaMap{
+  width:100%;
+  max-width:520px;
+
+  display:block;
+  margin:auto;
+
+  position:relative;
+  z-index:5;
+
+  animation:
+    floatMap 5s ease-in-out infinite;
+}
+
+/* =========================================================
+   STATS HEADING
+========================================================= */
+
+.statsHeading{
+  text-align:center;
+
+  margin-bottom:50px;
+
+  opacity:0;
+
+  transform:
+    translateY(60px);
+  
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
+}
+
+.showStatsHeading{
+  opacity:1;
+
+  transform:
+    translateY(0);
+}
+
+.statsHeading h2{
+  /* color: #4d9bfa; */
+  color: rgba(0, 98, 206, 1);
+
+
+  font-size:49px;
+  font-weight:700;
+
+  margin-bottom:16px;
+}
+
+.statsHeading p{
+  color:
+    rgba(43, 43, 43, 0.689);
+
+  font-size:16px;
+}
+
+/* =========================================================
+   STATS GRID
+========================================================= */
+
+.statsWrapper{
+  display:grid;
+  grid-template-columns:
+    repeat(4,1fr);
+
+  gap:24px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.statCard{
+  position:relative;
+
+  overflow:hidden;
+
+  padding:38px 28px;
+
+  border-radius:30px;
+
+  background:
+    rgba(255, 255, 255, 0.929);
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  backdrop-filter:blur(18px);
+
+  text-align:center;
+
+  opacity:0;
+
+  transform:
+    translateY(100px)
+    scale(.9);
+
+  filter:blur(10px);
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
+}
+
+/* SHOW */
+
+.showStatCard{
+  opacity:1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  filter:blur(0);
+}
+
+/* HOVER */
+
+.statCard:hover{
+  transform:
+    translateY(-12px)
+    scale(1.02);
+}
+
+/* GLOW */
+
+.statGlow{
+  position:absolute;
+
+  width:160px;
+  height:160px;
+
+  border-radius:50%;
+
+  background:
+    rgba(0,183,255,.14);
+
+  filter:blur(70px);
+
+  top:-60px;
+  right:-60px;
+
+  opacity:0;
+
+  transition:.4s ease;
+}
+
+.statCard:hover .statGlow{
+  opacity:1;
+}
+
+/* NUMBER */
+
+.statCard h3{
+  /* color:#393939e8; */
+  color: rgba(0, 98, 206, 1);
+
+
+  font-size:46px;
+  font-weight:800;
+
+  margin-bottom:12px;
+
+  position:relative;
+  z-index:5;
+}
+
+/* LABEL */
+
+.statCard p{
+  color:
+    rgba(19, 19, 19, 0.84);
+
+  font-size:15px;
+
+  position:relative;
+  z-index:5;
+}
+
+/* =========================================================
+   FLOAT ANIMATION
+========================================================= */
+
+@keyframes floatMap{
+
+  0%{
+    transform:
+      translateY(0);
   }
 
-  .reachBtn {
-    margin: auto;
+  50%{
+    transform:
+      translateY(-18px);
+  }
+
+  100%{
+    transform:
+      translateY(0);
   }
 }
 
-@media screen and (max-width: 768px) {
-  .reachLeft h2 {
-    font-size: 38px;
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+  .reachLeft h2{
+    font-size:56px;
   }
 
-  .statsTitle {
-    font-size: 38px;
+  .statsHeading h2{
+    font-size:46px;
+  }
+}
+
+@media(max-width:992px){
+
+  .reachSection{
+    padding:90px 0;
   }
 
-  .statsWrapper {
-    grid-template-columns: 1fr;
+  .reachContainer{
+    padding:0 30px;
   }
 
-  .statCard h3 {
-    font-size: 38px;
+  .reachWrapper{
+    grid-template-columns:1fr;
+
+    gap:50px;
   }
 
-  .reachDescription {
-    font-size: 15px;
+  .reachLeft{
+    text-align:center;
+  }
+
+  .reachBadge{
+    margin-inline:auto;
+  }
+
+  .reachDescription{
+    margin-inline:auto;
+  }
+
+  .reachButtons{
+    justify-content:center;
+  }
+
+  .statsWrapper{
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+
+  .reachSection{
+    padding:80px 0;
+  }
+
+  .reachContainer{
+    padding:0 22px;
+  }
+
+  .reachLeft h2{
+    font-size:40px;
+
+    line-height:1.1;
+  }
+
+  .reachDescription{
+    font-size:15px;
+  }
+
+  .statsHeading h2{
+    font-size:36px;
+  }
+
+  .statsWrapper{
+    grid-template-columns:1fr;
+
+    gap:20px;
+  }
+
+  .reachButtons{
+    flex-direction:column;
+  }
+
+  .reachButtons button{
+    width:100%;
+  }
+
+  .statCard{
+    padding:32px 24px;
+  }
+
+  .statCard h3{
+    font-size:42px;
+  }
+}
+
+@media(max-width:480px){
+
+  .reachContainer{
+    padding:0 18px;
+  }
+
+  .reachLeft h2{
+    font-size:32px;
+  }
+
+  .reachDescription{
+    font-size:14px;
+  }
+
+  .reachPoint p{
+    font-size:13px;
+  }
+
+  .statsHeading h2{
+    font-size:30px;
+  }
+
+  .statsHeading p{
+    font-size:14px;
+  }
+
+  .statCard{
+    padding:28px 22px;
+
+    border-radius:24px;
+  }
+
+  .statCard h3{
+    font-size:36px;
+  }
+
+  .statCard p{
+    font-size:14px;
+  }
+
+  .primaryReachBtn,
+  .secondaryReachBtn{
+    height:52px;
+
+    font-size:14px;
   }
 }

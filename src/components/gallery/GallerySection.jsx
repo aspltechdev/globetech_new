@@ -6,6 +6,11 @@ import React, {
   useState,
 } from "react";
 
+import {
+  ArrowUpRight,
+  Sparkles,
+} from "lucide-react";
+
 import impact1 from "../../assets/impact/impact-1.png";
 import impact2 from "../../assets/impact/impact-2.png";
 import impact3 from "../../assets/impact/impact-3.png";
@@ -15,40 +20,70 @@ import impact6 from "../../assets/impact/impact-6.png";
 
 import "./GallerySection.css";
 
-/* =========================================
+/* =========================================================
    GALLERY DATA
-========================================= */
+========================================================= */
 
 const galleryImages = [
 
   {
     image: impact1,
-    title: "Inauguration Ceremony",
+
+    title:
+      "Inauguration Ceremony",
+
+    category:
+      "Community",
   },
 
   {
     image: impact2,
-    title: "Workshop Session",
+
+    title:
+      "Workshop Session",
+
+    category:
+      "Training",
   },
 
   {
     image: impact3,
-    title: "Skill Development Program",
+
+    title:
+      "Skill Development Program",
+
+    category:
+      "Education",
   },
 
   {
     image: impact4,
-    title: "Community Initiative",
+
+    title:
+      "Community Initiative",
+
+    category:
+      "Social Impact",
   },
 
   {
     image: impact5,
-    title: "Training Event",
+
+    title:
+      "Training Event",
+
+    category:
+      "Empowerment",
   },
 
   {
     image: impact6,
-    title: "Industry Interaction",
+
+    title:
+      "Industry Interaction",
+
+    category:
+      "Career Growth",
   },
 
 ];
@@ -57,123 +92,201 @@ const GallerySection = () => {
 
   const sectionRef = useRef(null);
 
-  const [showGallery, setShowGallery] = useState(false);
+  const [showGallery, setShowGallery] =
+    useState(false);
 
-  /* =========================================
-     SCROLL ANIMATION
-  ========================================= */
+  /* =========================================================
+     SCROLL REVEAL
+  ========================================================= */
 
   useEffect(() => {
 
-    const observer = new IntersectionObserver(
+    const observer =
+      new IntersectionObserver(
 
-      ([entry]) => {
+        ([entry]) => {
 
-        if (entry.isIntersecting) {
+          if (entry.isIntersecting) {
 
-          setShowGallery(true);
+            setShowGallery(true);
 
+          }
+
+        },
+
+        {
+          threshold: 0.12,
         }
 
-      },
-
-      {
-        threshold: 0.15,
-      }
-
-    );
+      );
 
     if (sectionRef.current) {
 
-      observer.observe(sectionRef.current);
+      observer.observe(
+        sectionRef.current
+      );
 
     }
 
-    return () => observer.disconnect();
+    return () =>
+      observer.disconnect();
 
   }, []);
 
   return (
 
     <section
-      className="auroGallerySection"
+      className="gallerySection"
       ref={sectionRef}
     >
 
-      <div className="auroGalleryContainer">
+      {/* =========================================================
+          GLOW
+      ========================================================= */}
 
-        {/* =====================================
+      <div className="galleryGlowOne"></div>
+
+      <div className="galleryGlowTwo"></div>
+
+      {/* =========================================================
+          CONTAINER
+      ========================================================= */}
+
+      <div className="galleryContainer">
+
+        {/* =========================================================
             HEADING
-        ===================================== */}
+        ========================================================= */}
 
-        <div className="auroGalleryHeading">
+        <div
+          className={
+            showGallery
+              ? "galleryHeading showGalleryHeading"
+              : "galleryHeading"
+          }
+        >
+
+        
 
           <h2>
-            Impact Gallery
+
+            Stories Of
+           
+
+            Change &
+           
+
+            Community Impact.
+
           </h2>
+
+          <p>
+
+            Every initiative, workshop,
+            training, and event creates
+            meaningful transformation in
+            the lives of students and
+            communities.
+
+          </p>
 
         </div>
 
-        {/* =====================================
-            GRID
-        ===================================== */}
+        {/* =========================================================
+            MASONRY GRID
+        ========================================================= */}
 
-        <div className="auroGalleryGrid">
+        <div className="galleryGrid">
 
-          {galleryImages.map((item, index) => (
+          {galleryImages.map(
+            (item, index) => (
 
-            <div
-              className={`auroGalleryCard ${
-                showGallery
-                  ? "showGalleryCard"
-                  : ""
-              }`}
-              key={index}
-              style={{
-                transitionDelay: `${index * 120}ms`,
-              }}
-            >
+              <div
+                className={
+                  showGallery
+                    ? "galleryCard showGalleryCard"
+                    : "galleryCard"
+                }
 
-              {/* IMAGE */}
+                key={index}
 
-              <img
-                src={item.image}
-                alt={item.title}
-              />
+                style={{
+                  transitionDelay:
+                    `${index * 120}ms`,
+                }}
+              >
 
-              {/* OVERLAY */}
+                {/* IMAGE */}
 
-              <div className="auroGalleryOverlay"></div>
+                <img
+                  src={item.image}
+                  alt={item.title}
+                />
 
-              {/* TITLE */}
+                {/* OVERLAY */}
 
-              <div className="auroGalleryContent">
+                <div className="galleryOverlay"></div>
 
-                <p>
-                  {item.title}
-                </p>
+                {/* CONTENT */}
+
+                <div className="galleryContent">
+
+                  <span>
+
+                    {item.category}
+
+                  </span>
+
+                  <h3>
+
+                    {item.title}
+
+                  </h3>
+
+                  <div className="galleryArrow">
+
+                    <ArrowUpRight
+                      size={18}
+                    />
+
+                  </div>
+
+                </div>
 
               </div>
 
-            </div>
-
-          ))}
+            )
+          )}
 
         </div>
 
-        {/* =====================================
+        {/* =========================================================
             BUTTON
-        ===================================== */}
+        ========================================================= */}
 
-        {/* <div className="auroGalleryBtnWrapper">
+        <div
+          className={
+            showGallery
+              ? "galleryBtnWrapper showGalleryBtn"
+              : "galleryBtnWrapper"
+          }
+        >
 
-          <button className="auroGalleryBtn">
+          <button className="galleryBtn">
 
-            View More
+            View More Gallery
+
+            <span>
+
+              <ArrowUpRight
+                size={18}
+              />
+
+            </span>
 
           </button>
 
-        </div> */}
+        </div>
 
       </div>
 

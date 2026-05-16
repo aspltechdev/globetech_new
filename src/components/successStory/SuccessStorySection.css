@@ -1,6 +1,8 @@
-/* SuccessStorySection.css */
+/* =========================================================
+   PREMIUM NGO SUCCESS STORY SECTION
+========================================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 *{
   margin:0;
@@ -8,545 +10,629 @@
   box-sizing:border-box;
 }
 
-.auroSuccessSection{
+/* =========================================================
+   SECTION
+========================================================= */
+
+.successSection{
   width:100%;
-  background:#f3f3f3;
-  padding:14px 0 40px;
-  overflow:hidden;
-  font-family:"Poppins",sans-serif;
-}
 
-.auroSuccessContainer{
-  width:100%;
-  max-width:1240px;
-  margin:auto;
-  padding:0 34px;
-}
-
-/* =========================================
-   HEADING
-========================================= */
-
-.auroSuccessHeading{
-  margin-bottom:34px;
-}
-
-.auroSuccessTag{
-  display:flex;
-  align-items:center;
-  gap:12px;
-  margin-bottom:10px;
-}
-
-.auroSuccessTag p{
-  color:#ef8c69;
-  font-size:16px;
-  font-weight:400;
-}
-
-.auroSuccessTag span{
-  width:48px;
-  height:1.4px;
-  background:rgba(0,0,0,0.2);
-}
-
-.auroSuccessHeading h2{
-  color:#181818;
-  font-size:24px;
-  font-weight:600;
-  line-height:1.5;
-  /* max-width:640px; */
-}
-
-/* =========================================
-   SLIDER WRAPPER
-========================================= */
-
-.auroSuccessWrapper{
-  width:100%;
-  overflow:hidden;
   position:relative;
+  overflow:hidden;
+
+  padding:120px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #fff 0%,
+      #fff 100%
+    );
+
+  font-family:"Inter",sans-serif;
 }
 
-.auroSuccessSlider{
-  display:flex;
-  transition:transform 0.9s ease-in-out;
-}
+/* =========================================================
+   GLOWS
+========================================================= */
 
-.auroSuccessSlide{
-  width:100%;
-  min-width:100%;
+.successGlowOne{
+  position:absolute;
 
-  display:flex;
-  justify-content:space-between;
-  gap:28px;
-}
-
-/* =========================================
-   LEFT
-========================================= */
-
-.auroSuccessLeft{
-  width:48%;
-
-  opacity:0;
-  transform:translateX(-70px);
-
-  transition:1s ease;
-}
-
-.auroSuccessLeft.show-success-left{
-  opacity:1;
-  transform:translateX(0);
-}
-
-/* TOP */
-
-.auroSuccessTitleRow{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
-
-  margin-bottom:16px;
-}
-
-.auroSuccessTitleRow h3{
-  color:#111;
-
-  font-size:40px;
-  font-weight:500;
-
-  margin-bottom:4px;
-}
-
-.auroSuccessTitleRow h4{
-  color:#0d63d7;
-
-  font-size:24px;
-  font-weight:400;
-}
-
-/* NAV */
-
-.auroSuccessNav{
-  display:flex;
-  align-items:center;
-  gap:10px;
-  position: absolute;
-  right:-600px;
-
-z-index: 10px;
-
-}
-
-.auroSuccessNav button{
-  width:38px;
-  height:38px;
+  width:500px;
+  height:500px;
 
   border-radius:50%;
 
-  border:1px solid #bcc2cd;
+  background:
+    rgba(0,183,255,.08);
 
-  background:#f8f8f8;
+  filter:blur(120px);
 
-  color:#0d63d7;
+  top:-180px;
+  left:-180px;
+}
+
+.successGlowTwo{
+  position:absolute;
+
+  width:420px;
+  height:420px;
+
+  border-radius:50%;
+
+  background:
+    rgba(0,95,209,.08);
+
+  filter:blur(120px);
+
+  bottom:-160px;
+  right:-160px;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.successContainer{
+  width:100%;
+  max-width:1350px;
+
+  margin:auto;
+  padding:0 60px;
+
+  position:relative;
+  z-index:5;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.successHeading{
+  max-width:760px;
+
+  margin:auto;
+  margin-bottom:70px;
+
+  text-align:center;
+
+  opacity:0;
+
+  transform:
+    translateY(80px);
+
+  filter:blur(10px);
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
+}
+
+.showSuccessHeading{
+  opacity:1;
+
+  transform:
+    translateY(0);
+
+  filter:blur(0);
+}
+
+/* TAG */
+
+.successTag{
+  width:fit-content;
+
+  padding:10px 18px;
+
+  border-radius:100px;
+
+  background:
+    rgba(0,95,209,.08);
+
+  border:
+    1px solid rgba(0,95,209,.1);
+
+  color:#005fd1;
 
   display:flex;
   align-items:center;
-  justify-content:center;
+  gap:8px;
 
-  cursor:pointer;
+  font-size:13px;
+  font-weight:700;
 
-  transition:0.35s ease;
+  margin:auto;
+  margin-bottom:24px;
 }
 
-.auroSuccessNav button:hover{
-  background:#0d63d7;
-  color:white;
+/* TITLE */
 
-  transform:translateY(-3px);
+.successHeading h2{
+  color:#388ff9;
+
+  font-size:56px;
+  line-height:1.02;
+
+  font-weight:700;
+
+  letter-spacing:-2px;
+
+  margin-bottom:24px;
 }
 
-/* =========================================
-   IMAGE CARD
-========================================= */
+/* DESCRIPTION */
 
-.auroSuccessImageCard{
-  width:574px;
-  height:679px;
+.successHeading p{
+  color:#667085;
 
+  font-size:17px;
+  line-height:1.9;
+
+  max-width:700px;
+
+  margin:auto;
+}
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.successSliderWrapper{
+  overflow:hidden;
+}
+
+.successSlider{
+  display:flex;
+
+  transition:
+    transform .9s cubic-bezier(.22,1,.36,1);
+}
+
+.successSlide{
+  min-width:100%;
+
+  display:grid;
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap:40px;
+
+  align-items:center;
+}
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.successLeft{
+  opacity:0;
+
+  transform:
+    translateX(-80px);
+
+  filter:blur(10px);
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
+}
+
+.showSuccessLeft{
+  opacity:1;
+
+  transform:
+    translateX(0);
+
+  filter:blur(0);
+}
+
+/* IMAGE CARD */
+
+.successImageCard{
   position:relative;
+
+  height:620px;
+
+  border-radius:40px;
 
   overflow:hidden;
 
-  border-radius:22px;
-
-  cursor:pointer;
-
-  transition:0.45s ease;
+  box-shadow:
+    0 30px 80px rgba(0,0,0,.12);
 }
 
-.auroSuccessImageCard:hover{
-  transform:translateY(-10px);
+/* IMAGE */
 
-  box-shadow:0 18px 35px rgba(0,0,0,0.16);
-}
-
-.auroSuccessImageCard img{
+.successImageCard img{
   width:100%;
   height:100%;
 
   object-fit:cover;
 
-  transition:0.8s ease;
+  transition:1s ease;
 }
 
-.auroSuccessImageCard:hover img{
+.successImageCard:hover img{
   transform:scale(1.08);
 }
 
 /* OVERLAY */
 
-.auroSuccessOverlay{
+.successOverlay{
   position:absolute;
   inset:0;
 
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.78),
-    rgba(0,0,0,0.12)
-  );
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.65)
+    );
 }
 
 /* QUOTE */
 
-.auroSuccessQuote{
+.successQuoteCard{
   position:absolute;
 
-  left:18px;
-  bottom:18px;
+  left:30px;
+  right:30px;
+  bottom:30px;
 
-  width:82%;
+  padding:28px;
 
-  color:white;
+  border-radius:28px;
 
-  font-size:24px;
-  font-weight:400;
+  background:
+    rgba(255,255,255,.12);
 
-  line-height:1.7;
+  backdrop-filter:blur(18px);
 
-  z-index:2;
+  border:
+    1px solid rgba(255,255,255,.14);
+
+  color:#fff;
+
+  z-index:5;
 }
 
-/* =========================================
+.successQuoteCard svg{
+  margin-bottom:14px;
+}
+
+.successQuoteCard p{
+  font-size:18px;
+  line-height:1.7;
+
+  font-weight:500;
+}
+
+/* PROFILE */
+
+.successProfile{
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  margin-top:24px;
+}
+
+.successProfile h3{
+  color:#071b34;
+
+  font-size:28px;
+  font-weight:700;
+
+  margin-bottom:6px;
+}
+
+.successProfile span{
+  color:#667085;
+
+  font-size:15px;
+}
+
+/* NAV */
+
+.successNav{
+  display:flex;
+  gap:14px;
+}
+
+.successNav button{
+  width:54px;
+  height:54px;
+
+  border:none;
+  cursor:pointer;
+
+  border-radius:50%;
+
+  background:#fff;
+
+  box-shadow:
+    0 10px 30px rgba(0,0,0,.08);
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  transition:.4s ease;
+}
+
+.successNav button:hover{
+  transform:
+    translateY(-5px);
+
+  background:#005fd1;
+
+  color:#fff;
+}
+
+/* =========================================================
    RIGHT
-========================================= */
+========================================================= */
 
-.auroSuccessRight{
-  width:48%;
-
+.successRight{
   display:flex;
   flex-direction:column;
 
-  justify-content:center;
-
-  gap:18px;
+  gap:24px;
 
   opacity:0;
-  transform:translateX(70px);
 
-  transition:1s ease;
+  transform:
+    translateX(80px);
+
+  filter:blur(10px);
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
+
+  transition-delay:.2s;
 }
 
-.auroSuccessRight.show-success-right{
+.showSuccessRight{
   opacity:1;
-  transform:translateX(0);
+
+  transform:
+    translateX(0);
+
+  filter:blur(0);
 }
 
-/* =========================================
-   CARD
-========================================= */
+/* =========================================================
+   STORY CARD
+========================================================= */
 
-.auroTimelineCard{
-  background:#f8f8f8;
+.storyCard{
+  padding:34px;
 
-  border-radius:16px;
+  border-radius:34px;
 
-  padding:22px 22px 20px;
-
-  position:relative;
+  background:#fff;
 
   box-shadow:
-    0 5px 12px rgba(0,0,0,0.08),
-    inset 0 0 0 1px rgba(0,0,0,0.03);
+    0 20px 60px rgba(0,0,0,.06);
 
-  transition:0.35s ease;
+  border:
+    1px solid rgba(0,0,0,.04);
+
+  transition:.45s ease;
 }
 
-.auroTimelineCard:hover{
-  transform:translateY(-6px);
-
-  box-shadow:
-    0 16px 28px rgba(0,0,0,0.12),
-    inset 0 0 0 1px rgba(0,0,0,0.02);
+.storyCard:hover{
+  transform:
+    translateY(-10px);
 }
 
-/* BORDER */
+/* LABEL */
 
-.redBorder::before,
-.yellowBorder::before,
-.greenBorder::before{
-  content:"";
+.storyCard span{
+  display:inline-flex;
 
-  position:absolute;
+  padding:8px 14px;
 
-  left:0;
-  top:0;
+  border-radius:100px;
 
-  width:5px;
-  height:100%;
+  font-size:11px;
+  font-weight:800;
 
-  border-radius:16px 0 0 16px;
-}
+  letter-spacing:1px;
 
-.redBorder::before{
-  background:#ff3030;
-}
-
-.yellowBorder::before{
-  background:#f3dc00;
-}
-
-.greenBorder::before{
-  background:#58ff17;
+  margin-bottom:18px;
 }
 
 /* TITLE */
 
-.auroTimelineCard h3{
-  font-size:16px;
-  font-weight:400;
+.storyCard h3{
+  color:#071b34;
 
-  margin-bottom:12px;
-}
+  font-size:24px;
+  font-weight:600;
 
-.redBorder h3{
-  color:#ff3030;
-}
-
-.yellowBorder h3{
-  color:#d9c300;
-}
-
-.greenBorder h3{
-  color:#49e100;
+  margin-bottom:14px;
 }
 
 /* TEXT */
 
-.auroTimelineCard p{
-  color:#444;
+.storyCard p{
+  color:#667085;
 
-  font-size:13px;
-  font-weight:400;
-
-  line-height:1.75;
+  font-size:15px;
+  line-height:1.9;
 }
 
-/* =========================================
-   TABLET
-========================================= */
+/* COLORS */
+
+.beforeCard span{
+  background:
+    rgba(255,84,84,.12);
+
+  color:#d63d3d;
+}
+
+.journeyCard span{
+  background:
+    rgba(255,184,0,.12);
+
+  color:#b98b00;
+}
+
+.todayCard span{
+  background:
+    rgba(0,190,110,.12);
+
+  color:#00a160;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media(max-width:1200px){
+
+  .successHeading h2{
+    font-size:54px;
+  }
+}
 
 @media(max-width:992px){
 
-  .auroSuccessSlide{
-    flex-direction:column;
+  .successSection{
+    padding:100px 0;
   }
 
-  .auroSuccessLeft,
-  .auroSuccessRight{
-    width:100%;
+  .successContainer{
+    padding:0 30px;
   }
 
-  .auroSuccessImageCard{
-    height:420px;
+  .successSlide{
+    grid-template-columns:1fr;
+
+    gap:50px;
+  }
+
+  .successImageCard{
+    height:520px;
   }
 }
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media(max-width:768px){
 
-  .auroSuccessContainer{
-    padding:0 18px;
+  .successSection{
+    padding:80px 0;
   }
 
-  .auroSuccessHeading{
-    margin-bottom:28px;
+  .successContainer{
+    padding:0 22px;
   }
 
-  .auroSuccessHeading h2{
-    font-size:24px;
+  .successHeading{
+    margin-bottom:50px;
   }
 
-  .auroSuccessTitleRow h3{
-    font-size:24px;
+  .successHeading h2{
+    font-size:40px;
+
+    line-height:1.1;
   }
 
-  .auroSuccessImageCard{
-    height:340px;
-
-    border-radius:18px;
-  }
-
-  .auroTimelineCard{
-    padding:20px 18px;
-  }
-}
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media(max-width:480px){
-
-  .auroSuccessContainer{
-    padding:0 14px;
-  }
-
-  .auroSuccessHeading h2{
-    font-size:20px;
-  }
-
-  .auroSuccessTitleRow{
-    flex-direction:column;
-    gap:14px;
-  }
-
-  .auroSuccessNav{
-    align-self:flex-start;
-  }
-
-  .auroSuccessImageCard{
-    height:280px;
-  }
-
-  .auroSuccessQuote{
-    width:88%;
-
-    font-size:13px;
-
-    line-height:1.7;
-  }
-
-  .auroTimelineCard h3{
+  .successHeading p{
     font-size:15px;
   }
 
-  .auroTimelineCard p{
-    font-size:12px;
+  .successImageCard{
+    height:420px;
 
-    line-height:1.7;
+    border-radius:30px;
+  }
+
+  .successQuoteCard{
+    left:20px;
+    right:20px;
+    bottom:20px;
+
+    padding:22px;
+  }
+
+  .successQuoteCard p{
+    font-size:15px;
+  }
+
+  .storyCard{
+    padding:28px;
+  }
+
+  .storyCard h3{
+    font-size:24px;
   }
 }
-
-
-
-
-
-
-/* =========================================
-   BUTTON WRAPPER
-========================================= */
-
-.auroSuccessBtnWrapper{
-  width:100%;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  margin-top:58px;
-}
-/* =========================================
-   VIEW MORE BUTTON
-========================================= */
-
-.auroViewMoreBtn{
-  width:145px;
-  height:52px;
-
-  border:none;
-  outline:none;
-position: absolute;
-/* top: 10px; */
-
-  border-radius:40px;
-
-  background:#0d63d7;
-
-  color:#ffffff;
-
-  font-family:"Poppins",sans-serif;
-  font-size:20px;
-  font-weight:500;
-
-  cursor:pointer;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-
-  transition:
-    transform 0.35s ease,
-    background 0.35s ease,
-    box-shadow 0.35s ease;
-}
-
-/* HOVER */
-
-.auroViewMoreBtn:hover{
-  background:#0954ba;
-
-  transform:translateY(-4px);
-
-  box-shadow:0 10px 22px rgba(13, 99, 215, 0.28);
-}
-
-/* ACTIVE */
-
-.auroViewMoreBtn:active{
-  transform:scale(0.97);
-}
-
-/* =========================================
-   TABLET
-========================================= */
-
-@media(max-width:768px){
-
-  .auroViewMoreBtn{
-    width:132px;
-    height:48px;
-
-    font-size:18px;
-  }
-}
-
-/* =========================================
-   MOBILE
-========================================= */
 
 @media(max-width:480px){
 
-  .auroViewMoreBtn{
-    width:118px;
-    height:44px;
+  .successSection{
+    padding:70px 0;
+  }
 
-    font-size:16px;
+  .successContainer{
+    padding:0 18px;
+  }
 
-    border-radius:34px;
+  .successHeading h2{
+    font-size:32px;
+  }
+
+  .successHeading p{
+    font-size:14px;
+  }
+
+  .successImageCard{
+    height:340px;
+
+    border-radius:24px;
+  }
+
+  .successQuoteCard{
+    padding:18px;
+  }
+
+  .successQuoteCard p{
+    font-size:14px;
+    line-height:1.6;
+  }
+
+  .successProfile{
+    flex-direction:column;
+    align-items:flex-start;
+
+    gap:18px;
+  }
+
+  .successProfile h3{
+    font-size:24px;
+  }
+
+  .successNav{
+    width:100%;
+  }
+
+  .successNav button{
+    width:50px;
+    height:50px;
+  }
+
+  .storyCard{
+    padding:22px;
+
+    border-radius:24px;
+  }
+
+  .storyCard h3{
+    font-size:20px;
+  }
+
+  .storyCard p{
+    font-size:13px;
+    line-height:1.75;
   }
 }

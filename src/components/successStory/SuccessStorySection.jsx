@@ -9,13 +9,15 @@ import React, {
 import {
   ArrowLeft,
   ArrowRight,
+  Quote,
+  Sparkles,
 } from "lucide-react";
 
 import "./SuccessStorySection.css";
 
-/* =========================================
+/* =========================================================
    STORIES DATA
-========================================= */
+========================================================= */
 
 const stories = [
 
@@ -27,19 +29,19 @@ const stories = [
     role: "Backend Developer",
 
     image:
-      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?q=80&w=1200&auto=format&fit=crop",
+      "https://plus.unsplash.com/premium_photo-1723568666044-1b066e26b1fb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MXx8dGVzdGltb25pYWwlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
 
     quote:
-      "Globetech gave me not just skills but the confidence to dream big. Today, I’m working at my dream company!",
+      "Globetech gave me not just skills but the confidence to dream big.",
 
     before:
-      "Fresh graduate with a BCom degree, struggling to find employment. Limited technical skills and no industry exposure.",
+      "Fresh graduate struggling with employment and lacking technical exposure.",
 
     journey:
-      "Enrolled in Globetech's 6-month Full Stack Development program. Worked on real-world projects and mock interviews.",
+      "Joined a 6-month Full Stack Development program with mentorship and real-world projects.",
 
     today:
-      "Placed as a Backend Developer at TCS with a starting package of ₹4.5 LPA.",
+      "Placed as a Backend Developer at TCS with a ₹4.5 LPA package.",
   },
 
   {
@@ -47,22 +49,22 @@ const stories = [
 
     name: "Karthick",
 
-    role: "Designer",
+    role: "Product Designer",
 
     image:
-      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1649738463288-fc499fe96608?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8dGVzdGltb25pYWwlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
 
     quote:
-      "The mentorship and practical exposure helped me become industry-ready and confident in my career journey.",
+      "The mentorship and practical exposure transformed my confidence and career.",
 
     before:
-      "Completed college without proper portfolio guidance and lacked confidence in interviews.",
+      "No portfolio guidance and limited confidence in interviews.",
 
     journey:
-      "Joined UI/UX training program with mentorship, portfolio building and live client projects.",
+      "Completed UI/UX mentorship with portfolio and live client projects.",
 
     today:
-      "Now working as a Product Designer in a leading startup with strong career growth.",
+      "Now working as a Product Designer in a fast-growing startup.",
   },
 
   {
@@ -73,207 +75,278 @@ const stories = [
     role: "Frontend Developer",
 
     image:
-      "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1658724684973-8791f6bc1206?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MjZ8fHRlc3RpbW9uaWFsJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D",
 
     quote:
-      "I transformed from a beginner to a professional developer through hands-on learning and mentorship.",
+      "I transformed from a beginner into a confident developer through practical learning.",
 
     before:
-      "Fresh graduate with a BCom degree, struggling to find employment. Limited technical skills and no industry exposure. Coming from a rural background with financial constraints.",
+      "Rural background with financial challenges and no technical exposure.",
 
     journey:
-      "Enrolled in Globetech's 6-month Full Stack Development program. Received hands-on training, mentorship, and career guidance. Worked on real-world projects and participated in mock interviews.",
+      "Received mentorship, mock interviews, and real-world project experience.",
 
     today:
-      "Successfully placed as a Software Developer at TCS with a starting package of ₹4.5 LPA. Supporting her family and inspiring others in her community to purue tech careers.",
+      "Placed as a Software Developer and now supporting her family.",
   },
 
 ];
 
 const SuccessStorySection = () => {
 
-  const [current, setCurrent] = useState(0);
+  const [current, setCurrent] =
+    useState(0);
+
+  const [showContent, setShowContent] =
+    useState(false);
 
   const sectionRef = useRef(null);
 
-  const [showContent, setShowContent] = useState(false);
-
-  /* =========================================
+  /* =========================================================
      NEXT
-  ========================================= */
+  ========================================================= */
 
   const nextSlide = () => {
 
     setCurrent(
-      (prev) => (prev + 1) % stories.length
+      (prev) =>
+        (prev + 1) % stories.length
     );
 
   };
 
-  /* =========================================
+  /* =========================================================
      PREV
-  ========================================= */
+  ========================================================= */
 
   const prevSlide = () => {
 
     setCurrent(
       (prev) =>
+
         prev === 0
           ? stories.length - 1
           : prev - 1
+
     );
 
   };
 
-  /* =========================================
-     SCROLL ANIMATION
-  ========================================= */
+  /* =========================================================
+     AUTO SLIDE
+  ========================================================= */
 
   useEffect(() => {
 
-    const observer = new IntersectionObserver(
+    const auto =
+      setInterval(() => {
 
-      ([entry]) => {
+        nextSlide();
 
-        if (entry.isIntersecting) {
+      }, 7000);
 
-          setShowContent(true);
+    return () =>
+      clearInterval(auto);
 
+  }, []);
+
+  /* =========================================================
+     SCROLL ANIMATION
+  ========================================================= */
+
+  useEffect(() => {
+
+    const observer =
+      new IntersectionObserver(
+
+        ([entry]) => {
+
+          if (entry.isIntersecting) {
+
+            setShowContent(true);
+
+          }
+
+        },
+
+        {
+          threshold: 0.15,
         }
 
-      },
-
-      {
-        threshold: 0.2,
-      }
-
-    );
+      );
 
     if (sectionRef.current) {
 
-      observer.observe(sectionRef.current);
+      observer.observe(
+        sectionRef.current
+      );
 
     }
 
-    return () => observer.disconnect();
+    return () =>
+      observer.disconnect();
 
   }, []);
 
   return (
 
     <section
-      className="auroSuccessSection"
+      className="successSection"
       ref={sectionRef}
     >
 
-      <div className="auroSuccessContainer">
+      {/* GLOW */}
 
-        {/* =====================================
+      <div className="successGlowOne"></div>
+
+      <div className="successGlowTwo"></div>
+
+      {/* =========================================================
+          CONTAINER
+      ========================================================= */}
+
+      <div className="successContainer">
+
+        {/* =========================================================
             HEADING
-        ===================================== */}
+        ========================================================= */}
 
-        <div className="auroSuccessHeading">
+        <div
+          className={
+            showContent
+              ? "successHeading showSuccessHeading"
+              : "successHeading"
+          }
+        >
 
-          <div className="auroSuccessTag">
-
-            <p>
-              Real Impact Story
-            </p>
-
-            <span></span>
-
-
-          </div>
+        
 
           <h2>
-            How Globetech transforms lives through skill development
+
+            Transforming
+          
+
+            Lives Through
+           
+
+            Opportunities.
+
           </h2>
+
+          <p>
+
+            Real journeys of students and
+            communities empowered through
+            skills, mentorship, and career
+            opportunities.
+
+          </p>
 
         </div>
 
-        {/* =====================================
-            SLIDER WRAPPER
-        ===================================== */}
+        {/* =========================================================
+            SLIDER
+        ========================================================= */}
 
-        <div className="auroSuccessWrapper">
+        <div className="successSliderWrapper">
 
           <div
-            className="auroSuccessSlider"
+            className="successSlider"
             style={{
-              transform: `translateX(-${current * 100}%)`,
+              transform:
+                `translateX(-${current * 100}%)`,
             }}
           >
 
             {stories.map((story) => (
 
               <div
-                className="auroSuccessSlide"
+                className="successSlide"
                 key={story.id}
               >
 
-                {/* =====================================
+                {/* =========================================================
                     LEFT
-                ===================================== */}
+                ========================================================= */}
 
                 <div
-                  className={`auroSuccessLeft ${showContent
-                      ? "show-success-left"
-                      : ""
-                    }`}
+                  className={
+                    showContent
+                      ? "successLeft showSuccessLeft"
+                      : "successLeft"
+                  }
                 >
 
-                  {/* TOP */}
+                  {/* IMAGE */}
 
-                  <div className="auroSuccessTitleRow">
-
-                    <div>
-
-                      <h3>
-                        {story.name}
-                      </h3>
-
-
-                      <h4>
-                        {story.role}
-                      </h4>
-
-                    </div>
-
-
-                    {/* NAVIGATION */}
-  <div className="auroSuccessNav">
-
-                  <button onClick={prevSlide}>
-
-                    <ArrowLeft size={18} />
-
-                  </button>
-
-                  <button onClick={nextSlide}>
-
-                    <ArrowRight size={18} />
-
-                  </button>
-
-                </div>
-
-
-                  </div>
-
-                  {/* IMAGE CARD */}
-
-                  <div className="auroSuccessImageCard">
+                  <div className="successImageCard">
 
                     <img
                       src={story.image}
                       alt={story.name}
                     />
 
-                    <div className="auroSuccessOverlay"></div>
+                    <div className="successOverlay"></div>
 
-                    <div className="auroSuccessQuote">
+                    {/* QUOTE */}
 
-                      "{story.quote}"
+                    <div className="successQuoteCard">
+
+                      <Quote size={28} />
+
+                      <p>
+
+                        {story.quote}
+
+                      </p>
+
+                    </div>
+
+                  </div>
+
+                  {/* PROFILE */}
+
+                  <div className="successProfile">
+
+                    <div>
+
+                      <h3>
+
+                        {story.name}
+
+                      </h3>
+
+                      <span>
+
+                        {story.role}
+
+                      </span>
+
+                    </div>
+
+                    {/* NAV */}
+
+                    <div className="successNav">
+
+                      <button
+                        onClick={prevSlide}
+                      >
+
+                        <ArrowLeft
+                          size={18}
+                        />
+
+                      </button>
+
+                      <button
+                        onClick={nextSlide}
+                      >
+
+                        <ArrowRight
+                          size={18}
+                        />
+
+                      </button>
 
                     </div>
 
@@ -281,56 +354,80 @@ const SuccessStorySection = () => {
 
                 </div>
 
-                {/* =====================================
+                {/* =========================================================
                     RIGHT
-                ===================================== */}
-              
+                ========================================================= */}
+
                 <div
-                  className={`auroSuccessRight ${showContent
-                      ? "show-success-right"
-                      : ""
-                    }`}
+                  className={
+                    showContent
+                      ? "successRight showSuccessRight"
+                      : "successRight"
+                  }
                 >
 
                   {/* CARD */}
 
+                  <div className="storyCard beforeCard">
 
-                  <div className="auroTimelineCard redBorder">
+                    <span>
+                      BEFORE
+                    </span>
 
                     <h3>
-                      Before Globetech
+
+                      The Challenge
+
                     </h3>
 
                     <p>
+
                       {story.before}
+
                     </p>
 
                   </div>
 
                   {/* CARD */}
 
-                  <div className="auroTimelineCard yellowBorder">
+                  <div className="storyCard journeyCard">
+
+                    <span>
+                      JOURNEY
+                    </span>
 
                     <h3>
-                      The Journey
+
+                      The Transformation
+
                     </h3>
 
                     <p>
+
                       {story.journey}
+
                     </p>
 
                   </div>
 
                   {/* CARD */}
 
-                  <div className="auroTimelineCard greenBorder">
+                  <div className="storyCard todayCard">
+
+                    <span>
+                      TODAY
+                    </span>
 
                     <h3>
-                      Today
+
+                      The Outcome
+
                     </h3>
 
                     <p>
+
                       {story.today}
+
                     </p>
 
                   </div>
@@ -345,21 +442,7 @@ const SuccessStorySection = () => {
 
         </div>
 
-
-
-<div className="auroSuccessBtnWrapper">
-
-  <button className="auroViewMoreBtn">
-
-    View More
-
-  </button>
-
-</div>
-
-
       </div>
-
 
     </section>
 

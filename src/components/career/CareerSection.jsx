@@ -1,136 +1,3 @@
-// import React from "react";
-
-// import career1 from "../../assets/career-1.png";
-// import career2 from "../../assets/career-2.png";
-// import career3 from "../../assets/career-3.png";
-// import career4 from "../../assets/career-4.png";
-
-// import "./CareerSection.css";
-
-// const careerData = [
-//   {
-//     id: 1,
-//     title: "Industry Visits",
-//     description:
-//       "Real-world exposure to modern manufacturing and corporate environments.",
-//     image: career2,
-//   },
-
-//   {
-//     id: 2,
-//     title: "Workshops",
-//     description:
-//       "Hands-On technical sessions led by expert trainers and professionals.",
-//     image: career1,
-//   },
-
-//   {
-//     id: 3,
-//     title: "Internships",
-//     description:
-//       "Practical work experience to ensure smooth transition into the workforce.",
-//     image: career3,
-//   },
-
-//   {
-//     id: 4,
-//     title: "Job Drives",
-//     description:
-//       "Regular recruitment events connecting talent directly with employers.",
-//     image: career4,
-//   },
-// ];
-
-// const CareerSection = () => {
-
-//   return (
-
-//     <section className="auroCareerSection">
-
-//       <div className="auroCareerContainer">
-
-//         {/* =====================================
-//             HEADING
-//         ====================================== */}
-
-//         <div className="auroCareerHeading">
-
-//           {/* TAG */}
-
-//           <div className="auroCareerTag">
-
-//             <span></span>
-
-//             <p>
-//               Career Readiness
-//             </p>
-
-//           </div>
-
-//           {/* TITLE */}
-
-//           <h2>
-//             Building Industry Ready Professionals
-//           </h2>
-
-//         </div>
-
-//         {/* =====================================
-//             GRID
-//         ====================================== */}
-
-//         <div className="auroCareerGrid">
-
-//           {careerData.map((item) => (
-
-//             <div
-//               className="auroCareerCard"
-//               key={item.id}
-//             >
-
-//               {/* IMAGE */}
-
-//               <img
-//                 src={item.image}
-//                 alt={item.title}
-//               />
-
-//               {/* OVERLAY */}
-
-//               <div className="auroCareerOverlay"></div>
-
-//               {/* CONTENT */}
-
-//               <div className="auroCareerContent">
-
-//                 <h3>
-//                   {item.title}
-//                 </h3>
-
-//                 <p>
-//                   {item.description}
-//                 </p>
-
-//               </div>
-
-//             </div>
-
-//           ))}
-
-//         </div>
-
-//       </div>
-
-//     </section>
-
-//   );
-// };
-
-// export default CareerSection;
-
-
-
-
 // CareerSection.jsx
 
 import React, {
@@ -139,6 +6,11 @@ import React, {
   useState,
 } from "react";
 
+import {
+  ArrowRight,
+  Sparkles,
+} from "lucide-react";
+
 import career1 from "../../assets/career-1.png";
 import career2 from "../../assets/career-2.png";
 import career3 from "../../assets/career-3.png";
@@ -146,174 +18,261 @@ import career4 from "../../assets/career-4.png";
 
 import "./CareerSection.css";
 
-/* =========================================
+/* =========================================================
    DATA
-========================================= */
+========================================================= */
 
 const careerData = [
+
   {
     id: 1,
+
     title: "Industry Visits",
+
     description:
-      "Real-World exposure to modern manufacturing and corporate environments.",
+      "Students gain real-world exposure through industrial and corporate learning experiences.",
+
     image: career2,
   },
 
   {
     id: 2,
-    title: "Workshops",
+
+    title: "Hands-On Workshops",
+
     description:
-      "Hands-On technical sessions led by expert trainers and professionals.",
+      "Interactive technical workshops conducted by experienced mentors and professionals.",
+
     image: career1,
   },
 
   {
     id: 3,
+
     title: "Internships",
+
     description:
-      "Practical work experience to ensure smooth transition into the workforce.",
+      "Practical opportunities helping students transition into real work environments.",
+
     image: career3,
   },
 
   {
     id: 4,
+
     title: "Job Drives",
+
     description:
-      "Regular recruitment events connecting talent directly with employers.",
+      "Career opportunities and placement initiatives connecting talent with industries.",
+
     image: career4,
   },
+
 ];
 
 const CareerSection = () => {
 
   const sectionRef = useRef(null);
 
-  const [showCards, setShowCards] = useState(false);
+  const [visible, setVisible] =
+    useState(false);
 
-  /* =========================================
-     SCROLL ANIMATION
-  ========================================= */
+  /* =========================================================
+     SCROLL REVEAL
+  ========================================================= */
 
   useEffect(() => {
 
-    const observer = new IntersectionObserver(
+    const observer =
+      new IntersectionObserver(
 
-      ([entry]) => {
+        ([entry]) => {
 
-        if (entry.isIntersecting) {
+          if (entry.isIntersecting) {
 
-          setShowCards(true);
+            setVisible(true);
 
+          }
+
+        },
+
+        {
+          threshold: 0.12,
+
+          rootMargin:
+            "0px 0px -80px 0px",
         }
 
-      },
-
-      {
-        threshold: 0.2,
-      }
-
-    );
+      );
 
     if (sectionRef.current) {
 
-      observer.observe(sectionRef.current);
+      observer.observe(
+        sectionRef.current
+      );
 
     }
 
-    return () => observer.disconnect();
+    return () =>
+      observer.disconnect();
 
   }, []);
 
   return (
 
     <section
-      className="auroCareerSection"
+      className="careerSection"
       ref={sectionRef}
     >
 
-      <div className="auroCareerContainer">
+      {/* =========================================================
+          BACKGROUND GLOW
+      ========================================================= */}
 
-        {/* =====================================
-            HEADING
-        ===================================== */}
+      <div className="careerBgGlow"></div>
 
-        <div className="auroCareerHeading">
+      {/* =========================================================
+          CONTAINER
+      ========================================================= */}
 
-          {/* TAG */}
+      <div className="careerContainer">
 
-          <div className="auroCareerTag">
+        {/* =========================================================
+            LEFT CONTENT
+        ========================================================= */}
 
-            <p>
-              Career Readiness
-            </p>
+        <div
+          className={
+            visible
+              ? "careerLeft showCareerLeft"
+              : "careerLeft"
+          }
+        >
 
-            <span></span>
+          {/* BADGE */}
 
-          </div>
+     
 
           {/* TITLE */}
 
           <h2>
-            Building Industry Ready Professionals
+
+            Building
+            <br />
+
+            Future Ready
+            <br />
+
+            Careers.
+
           </h2>
+
+          {/* DESCRIPTION */}
+
+          <p>
+
+   Empowering students and youth through practical exposure and hands-on learning experiences.
+Providing workshops, internships, mentorship, and skill development opportunities to bridge the gap between education and industry.
+Helping young minds build confidence, gain real-world experience, and unlock successful career opportunities.
+          </p>
+
+          {/* BUTTON */}
+
+          <button className="careerMainBtn">
+
+            Explore Programs
+
+            <span>
+
+              <ArrowRight size={16} />
+
+            </span>
+
+          </button>
 
         </div>
 
-        {/* =====================================
-            GRID
-        ===================================== */}
+        {/* =========================================================
+            RIGHT TIMELINE
+        ========================================================= */}
 
-        <div className="auroCareerGrid">
+        <div className="careerTimeline">
 
-          {careerData.map((item, index) => (
+          {careerData.map(
+            (item, index) => (
 
-            <div
-              className={`auroCareerCard ${
-                showCards
-                  ? "show-career-card"
-                  : ""
-              }`}
-              key={item.id}
-              style={{
-                transitionDelay: `${index * 180}ms`,
-              }}
-            >
+              <div
+                key={item.id}
 
-              {/* IMAGE */}
+                className={
+                  visible
+                    ? "careerStep showCareerStep"
+                    : "careerStep"
+                }
 
-              <img
-                src={item.image}
-                alt={item.title}
-              />
+                style={{
+                  transitionDelay:
+                    `${index * 220}ms`,
+                }}
+              >
 
-              {/* OVERLAY */}
+                {/* LINE */}
 
-              <div className="auroCareerOverlay"></div>
+                {index !==
+                  careerData.length - 1 && (
 
-              {/* CONTENT */}
+                  <div className="careerLine"></div>
 
-              <div className="auroCareerContent">
+                )}
 
-                <h3>
-                  {item.title}
-                </h3>
+                {/* IMAGE */}
 
-                <p>
-                  {item.description}
-                </p>
+                <div className="careerImageWrapper">
+
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                    className="careerImage"
+                  />
+
+                  <div className="careerImageOverlay"></div>
+
+                </div>
+
+                {/* CONTENT */}
+
+                <div className="careerStepContent">
+
+                  <span>
+
+                    0{item.id}
+
+                  </span>
+
+                  <h3>
+
+                    {item.title}
+
+                  </h3>
+
+                  <p>
+
+                    {item.description}
+
+                  </p>
+
+                </div>
 
               </div>
 
-            </div>
-
-          ))}
+            )
+          )}
 
         </div>
 
       </div>
 
     </section>
-
   );
 };
 

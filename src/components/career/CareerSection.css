@@ -1,324 +1,588 @@
-/* CareerSection.css */
+/* =========================================================
+   PREMIUM NGO CAREER TIMELINE SECTION
+========================================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-/* =========================================
+/* =========================================================
    SECTION
-========================================= */
+========================================================= */
 
-.auroCareerSection {
-  width: 100%;
+.careerSection{
+  width:100%;
 
-  background: #f3f3f3;
+  position:relative;
+  overflow:hidden;
 
-  padding: 14px 0 32px;
+  padding:120px 0;
 
-  overflow: hidden;
+  /* background:
+    linear-gradient(
+      135deg,
+      #6b6a6aa5 0%,
+      #eff0f1 100%
+    ); */
+    background: #fff;
 
-  font-family: "Poppins", sans-serif;
+  font-family:"Inter",sans-serif;
 }
 
-/* =========================================
+/* =========================================================
+   BACKGROUND GLOW
+========================================================= */
+
+.careerBgGlow{
+  position:absolute;
+
+  width:520px;
+  height:520px;
+
+  border-radius:50%;
+
+  background:
+    rgba(0,183,255,.12);
+
+  filter:blur(120px);
+
+  top:-180px;
+  right:-180px;
+}
+
+/* =========================================================
    CONTAINER
-========================================= */
+========================================================= */
 
-.auroCareerContainer {
-  width: 100%;
-  max-width: 1240px;
+.careerContainer{
+  width:100%;
+  max-width:1350px;
 
-  margin: auto;
+  margin:auto;
+  padding:0 60px;
 
-  padding: 0 34px;
+  display:grid;
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap:70px;
+
+  align-items:center;
+
+  position:relative;
+  z-index:5;
 }
 
-/* =========================================
-   HEADING
-========================================= */
+/* =========================================================
+   LEFT CONTENT
+========================================================= */
 
-.auroCareerHeading {
-  margin-bottom: 34px;
+.careerLeft{
+  opacity:0;
+
+  transform:
+    translateY(80px)
+    scale(.95);
+
+  filter:blur(10px);
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
 }
 
-/* TAG */
+.showCareerLeft{
+  opacity:1;
 
-.auroCareerTag {
-  display: flex;
-  align-items: center;
+  transform:
+    translateY(0)
+    scale(1);
 
-  gap: 12px;
-
-  margin-bottom: 10px;
+  filter:blur(0);
 }
 
-.auroCareerTag p {
-  color: #ef6b2f;
+/* BADGE */
 
-  font-size: 16px;
-  font-weight: 500;
-}
+.careerBadge{
+  width:fit-content;
 
-.auroCareerTag span {
-  width: 52px;
-  height: 1.5px;
+  padding:10px 18px;
 
-  background: rgba(0, 0, 0, 0.25);
+  border-radius:100px;
+
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  color:#070707;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  font-size:13px;
+  font-weight:700;
+
+  margin-bottom:24px;
 }
 
 /* TITLE */
 
-.auroCareerHeading h2 {
-  color: #141414;
+.careerLeft h2{
+  color:#3967ff;
 
-  font-size: 24px;
-  font-weight: 600;
+  font-size:56px;
+  line-height:1.02;
 
-  line-height: 1.2;
+  font-weight:700;
+
+  letter-spacing:-2px;
+
+  margin-bottom:24px;
 }
 
-/* =========================================
-   GRID
-========================================= */
+/* DESCRIPTION */
 
-.auroCareerGrid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
+.careerLeft p{
+  color:
+    rgba(7, 7, 7, 0.78);
 
-  gap: 30px;
+  font-size:17px;
+  line-height:1.9;
+
+  margin-bottom:40px;
+
+  max-width:560px;
 }
 
-/* =========================================
-   CARD
-========================================= */
+/* BUTTON */
 
-.auroCareerCard {
-  position: relative;
+.careerMainBtn{
+  height:58px;
 
-  height: 250px;
+  padding:0 10px 0 24px;
 
-  border-radius: 22px;
+  border:none;
+  cursor:pointer;
 
-  overflow: hidden;
+  border-radius:100px;
 
-  cursor: pointer;
+  background:#fa7c2d;
 
-  opacity: 0;
+  color:#ffffff;
 
-  transform: translateY(70px) scale(0.95);
+  font-size:15px;
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+  transition:.4s ease;
+}
+
+.careerMainBtn:hover{
+  transform:
+    translateY(-4px);
+}
+
+.careerMainBtn span{
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e6ebf2,
+      #f5f6f7
+    );
+
+  color:#1a63f5;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.careerTimeline{
+  display:flex;
+  flex-direction:column;
+
+  gap:34px;
+
+  position:relative;
+}
+
+/* =========================================================
+   STEP
+========================================================= */
+
+.careerStep{
+  position:relative;
+
+  display:flex;
+  align-items:flex-start;
+
+  gap:24px;
+
+  opacity:0;
+
+  transform:
+    translateY(100px);
+
+  filter:blur(10px);
 
   transition:
-    transform 0.9s ease,
-    opacity 0.9s ease,
-    box-shadow 0.4s ease;
+    1s cubic-bezier(.22,1,.36,1);
 }
 
 /* SHOW */
 
-.auroCareerCard.show-career-card {
-  opacity: 1;
+.showCareerStep{
+  opacity:1;
 
-  transform: translateY(0) scale(1);
+  transform:
+    translateY(0);
+
+  filter:blur(0);
+}
+
+/* =========================================================
+   LINE
+========================================================= */
+
+.careerLine{
+  position:absolute;
+
+  top:120px;
+  left:58px;
+
+  width:2px;
+  height:110px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255,255,255,.18),
+      transparent
+    );
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.careerImageWrapper{
+  position:relative;
+
+  width:120px;
+  height:120px;
+
+  min-width:120px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  box-shadow:
+    0 15px 35px rgba(0,0,0,.18);
+
+  transition:
+    .45s cubic-bezier(.22,1,.36,1);
+}
+
+/* HOVER */
+
+.careerStep:hover
+.careerImageWrapper{
+
+  transform:
+    translateY(-8px)
+    rotate(-3deg);
+
+  box-shadow:
+    0 25px 50px rgba(0,0,0,.28);
 }
 
 /* IMAGE */
 
-.auroCareerCard img {
-  width: 100%;
-  height: 100%;
+.careerImage{
+  width:100%;
+  height:100%;
 
-  object-fit: cover;
+  object-fit:cover;
 
-  transition: transform 0.8s ease;
+  transition:
+    transform 1s cubic-bezier(.22,1,.36,1),
+    filter .4s ease;
+}
+
+/* IMAGE HOVER */
+
+.careerStep:hover
+.careerImage{
+
+  transform:
+    scale(1.12);
+
+  filter:
+    brightness(1.06);
 }
 
 /* OVERLAY */
 
-.auroCareerOverlay {
-  position: absolute;
+.careerImageOverlay{
+  position:absolute;
+  inset:0;
 
-  inset: 0;
-
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.72),
-    rgba(0, 0, 0, 0.12)
-  );
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.35)
+    );
 }
 
-/* CONTENT */
+/* =========================================================
+   CONTENT
+========================================================= */
 
-.auroCareerContent {
-  position: absolute;
-
-  left: 22px;
-  bottom: 20px;
-
-  z-index: 2;
-
-  width: 82%;
+.careerStepContent{
+  padding-top:8px;
 }
 
-.auroCareerContent h3 {
-  color: white;
+.careerStepContent span{
+  color:#1787ff;
 
-  font-size: 20px;
-  font-weight: 600;
+  font-size:13px;
+  font-weight:700;
 
-  margin-bottom: 8px;
+  letter-spacing:1px;
+
+  display:block;
+
+  margin-bottom:12px;
 }
 
-.auroCareerContent p {
-  color: rgba(255, 255, 255, 0.92);
+.careerStepContent h3{
+  color:#050505;
 
-  font-size: 16px;
-  font-weight: 400;
+  font-size:30px;
+  line-height:1.3;
 
-  line-height: 1.6;
+  font-weight:700;
+
+  margin-bottom:14px;
+
+  transition:.35s ease;
 }
 
-/* =========================================
-   HOVER
-========================================= */
-
-.auroCareerCard:hover {
-  transform: translateY(-10px);
-
-  box-shadow: 0 18px 35px rgba(0, 0, 0, 0.22);
+.careerStep:hover
+.careerStepContent h3{
+  color:#007bfe;
 }
 
-.auroCareerCard:hover img {
-  transform: scale(1.08);
+.careerStepContent p{
+  color:
+    rgba(9, 9, 9, 0.72);
+
+  font-size:15px;
+  line-height:1.8;
+
+  max-width:520px;
 }
 
-.auroCareerCard:hover .auroCareerOverlay {
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.82),
-    rgba(0, 0, 0, 0.18)
-  );
-}
-
-/* =========================================
+/* =========================================================
    RESPONSIVE
-========================================= */
+========================================================= */
 
-@media (max-width: 1100px) {
+@media(max-width:1200px){
 
-  .auroCareerHeading h2 {
-    font-size: 30px;
+  .careerLeft h2{
+    font-size:56px;
+  }
+
+  .careerStepContent h3{
+    font-size:26px;
   }
 }
 
-/* TABLET */
+@media(max-width:992px){
 
-@media (max-width: 992px) {
-
-  .auroCareerGrid {
-    gap: 24px;
+  .careerSection{
+    padding:90px 0;
   }
 
-  .auroCareerCard {
-    height: 200px;
-  }
-}
+  .careerContainer{
+    grid-template-columns:1fr;
 
-/* MOBILE */
+    gap:60px;
 
-@media (max-width: 768px) {
-
-  .auroCareerContainer {
-    padding: 0 18px;
+    padding:0 30px;
   }
 
-  .auroCareerHeading {
-    margin-bottom: 28px;
+  .careerLeft{
+    text-align:center;
   }
 
-  .auroCareerHeading h2 {
-    font-size: 26px;
+  .careerBadge{
+    margin-inline:auto;
   }
 
-  .auroCareerGrid {
-    grid-template-columns: 1fr;
-
-    gap: 22px;
+  .careerLeft p{
+    margin-inline:auto;
   }
 
-  .auroCareerCard {
-    height: 220px;
-
-    border-radius: 18px;
+  .careerMainBtn{
+    margin:auto;
   }
 
-  .auroCareerContent {
-    left: 18px;
-    bottom: 18px;
-  }
+  .careerTimeline{
+    max-width:720px;
 
-  .auroCareerContent h3 {
-    font-size: 15px;
-  }
-
-  .auroCareerContent p {
-    font-size: 12px;
-
-    line-height: 1.6;
+    margin:auto;
   }
 }
 
-/* SMALL MOBILE */
+@media(max-width:768px){
 
-@media (max-width: 480px) {
-
-  .auroCareerSection {
-    padding: 12px 0 24px;
+  .careerSection{
+    padding:80px 0;
   }
 
-  .auroCareerContainer {
-    padding: 0 14px;
+  .careerContainer{
+    padding:0 22px;
   }
 
-  .auroCareerTag {
-    gap: 10px;
+  .careerLeft h2{
+    font-size:40px;
+
+    line-height:1.1;
   }
 
-  .auroCareerTag p {
-    font-size: 12px;
+  .careerLeft p{
+    font-size:15px;
   }
 
-  .auroCareerTag span {
-    width: 40px;
+  .careerTimeline{
+    gap:28px;
   }
 
-  .auroCareerHeading h2 {
-    font-size: 22px;
+  .careerStep{
+    gap:18px;
   }
 
-  .auroCareerCard {
-    height: 200px;
+  .careerImageWrapper{
+    width:90px;
+    height:90px;
 
-    border-radius: 16px;
+    min-width:90px;
+
+    border-radius:22px;
   }
 
-  .auroCareerContent {
-    left: 16px;
-    bottom: 16px;
+  .careerLine{
+    left:44px;
 
-    width: 86%;
+    top:92px;
   }
 
-  .auroCareerContent h3 {
-    font-size: 14px;
+  .careerStepContent h3{
+    font-size:24px;
   }
 
-  .auroCareerContent p {
-    font-size: 11px;
+  .careerStepContent p{
+    font-size:14px;
+  }
+}
 
-    line-height: 1.6;
+@media(max-width:480px){
+
+  .careerSection{
+    padding:70px 0;
+  }
+
+  .careerContainer{
+    padding:0 18px;
+  }
+
+  .careerLeft h2{
+    font-size:32px;
+
+    line-height:1.12;
+  }
+
+  .careerLeft p{
+    font-size:14px;
+  }
+
+  .careerTimeline{
+    gap:24px;
+  }
+
+  .careerStep{
+    gap:14px;
+  }
+
+  .careerImageWrapper{
+    width:74px;
+    height:74px;
+
+    min-width:74px;
+
+    border-radius:18px;
+  }
+
+  .careerLine{
+    left:36px;
+
+    top:78px;
+
+    height:90px;
+  }
+
+  .careerStepContent span{
+    font-size:11px;
+  }
+
+  .careerStepContent h3{
+    font-size:20px;
+
+    margin-bottom:10px;
+  }
+
+  .careerStepContent p{
+    font-size:13px;
+
+    line-height:1.75;
+  }
+
+  .careerMainBtn{
+    width:100%;
+
+    justify-content:center;
+
+    height:52px;
+
+    font-size:14px;
+  }
+
+  .careerMainBtn span{
+    width:38px;
+    height:38px;
   }
 }

@@ -1,237 +1,502 @@
-/* PillarCard.css */
+/* =========================================================
+   PREMIUM NGO PILLARS SECTION
+========================================================= */
 
-.focusSection {
-  width: 100%;
-  padding: 90px 0;
-  background: #f4f4f4;
-  overflow: hidden;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-/* =========================================
-   CONTAINER
-========================================= */
+/* =========================================================
+   SECTION
+========================================================= */
 
-.focusContainer {
-  width: 92%;
-  max-width: 1320px;
+.pillarsSection {
+  width: 100%;
+
+  position: relative;
+  overflow: hidden;
+
+  padding: 120px 0;
+
+  background:
+    linear-gradient(
+      180deg,
+      #f6f9ff 0%,
+      #ffffff 100%
+    );
+
+  font-family: "Inter", sans-serif;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.pillarsContainer {
+  width: 100%;
+  max-width: 1350px;
+
+  margin: auto;
+  padding: 0 60px;
+}
+
+/* =========================================================
+   HEADING
+========================================================= */
+
+.pillarsHeadingWrapper {
+  max-width: 760px;
+
+  margin: auto;
+  margin-bottom: 70px;
+
+  text-align: center;
+
+  opacity: 0;
+
+  transform:
+    translateY(70px)
+    scale(0.96);
+
+  filter: blur(8px);
+
+  transition:
+    1s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.showHeadingWrapper {
+  opacity: 1;
+
+  transform:
+    translateY(0px)
+    scale(1);
+
+  filter: blur(0px);
+}
+
+/* BADGE */
+
+.pillarsBadge {
+  width: fit-content;
+
+  padding: 10px 18px;
+
+  border-radius: 100px;
+
+  background:
+    rgba(0, 95, 209, 0.08);
+
+  border:
+    1px solid rgba(0, 95, 209, 0.1);
+
+  color: #005fd1;
+
+  font-size: 13px;
+  font-weight: 700;
+
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+  margin: auto;
+  margin-bottom: 24px;
+}
+
+/* TITLE */
+
+.pillarsHeadingWrapper h2 {
+  color: #4d9bfa;
+
+  font-size: 49px;
+  line-height: 1.05;
+
+  font-weight: 700;
+
+  letter-spacing: 0px;
+
+  margin-bottom: 22px;
+}
+
+/* DESCRIPTION */
+
+.pillarsHeadingWrapper p {
+  color: #2e2d2cac;
+
+  font-size: 17px;
+  line-height: 1.9;
+
+  max-width: 680px;
+
   margin: auto;
 }
 
-/* =========================================
-   HEADING
-========================================= */
-
-.focusHeading {
-  text-align: center;
-
-  font-size: 52px;
-  font-weight: 800;
-  color: #0066df;
-
-  margin-bottom: 55px;
-
-  opacity: 0;
-  transform: translateY(40px);
-
-  transition: all 0.8s ease;
-}
-
-.showHeading {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-/* =========================================
+/* =========================================================
    GRID
-========================================= */
+========================================================= */
 
-.focusGrid {
+.pillarsGrid {
   display: grid;
-
-  grid-template-columns: repeat(
-    3,
-    1fr
-  );
+  grid-template-columns: repeat(3, 1fr);
 
   gap: 28px;
 }
 
-/* =========================================
+/* =========================================================
    CARD
-========================================= */
+========================================================= */
 
-.focusCard {
-  background: #fff;
-
-  border-radius: 10px;
+.pillarCard {
+  position: relative;
 
   overflow: hidden;
 
-  box-shadow: 0 4px 14px
-    rgba(0, 0, 0, 0.08);
+  border-radius: 30px;
+
+  background: #ffffff;
+
+  border:
+    1px solid rgba(0, 0, 0, 0.04);
+
+  box-shadow:
+    0 15px 40px rgba(0, 0, 0, 0.05);
 
   opacity: 0;
 
-  transform: translateY(60px)
-    scale(0.96);
+  transform:
+    translateY(100px)
+    scale(0.9);
 
-  transition: all 0.8s ease;
+  filter:
+    blur(12px);
+
+  transition:
+    opacity 1s cubic-bezier(0.22, 1, 0.36, 1),
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.45s ease;
 }
 
-.showCard {
+/* SHOW */
+
+.showPillarCard {
   opacity: 1;
 
-  transform: translateY(0)
+  transform:
+    translateY(0px)
     scale(1);
+
+  filter:
+    blur(0px);
 }
 
-.focusCard:hover {
-  transform: translateY(-8px);
+/* HOVER */
 
-  box-shadow: 0 15px 35px
-    rgba(0, 0, 0, 0.14);
+.pillarCard:hover {
+  transform:
+    translateY(-16px)
+    scale(1.015);
+
+  box-shadow:
+    0 35px 70px rgba(0, 0, 0, 0.12);
 }
 
-/* =========================================
-   IMAGE AREA
-========================================= */
+/* GLOW */
 
-.focusImageWrapper {
+.pillarCard::before {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0, 183, 255, 0.12);
+
+  filter: blur(70px);
+
+  top: -70px;
+  right: -70px;
+
+  opacity: 0;
+
+  transition: 0.5s ease;
+
+  z-index: 1;
+}
+
+.pillarCard:hover::before {
+  opacity: 1;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.pillarImageWrapper {
   position: relative;
 
   width: 100%;
-  height: 250px;
+  height: 260px;
 
   overflow: hidden;
 }
 
-.focusImage {
+.pillarImage {
   width: 100%;
   height: 100%;
 
   object-fit: cover;
 
-  transition: transform 0.6s ease;
+  transition:
+    transform 1s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 0.5s ease;
 }
 
-.focusCard:hover .focusImage {
-  transform: scale(1.08);
+/* IMAGE HOVER */
+
+.pillarCard:hover .pillarImage {
+  transform:
+    scale(1.12);
+
+  filter:
+    brightness(1.05);
 }
 
-/* =========================================
-   OVERLAY
-========================================= */
+/* OVERLAY */
 
-.focusOverlay {
+.pillarOverlay {
   position: absolute;
   inset: 0;
 
-  background: linear-gradient(
-    to top,
-    rgba(0, 0, 0, 0.85),
-    rgba(0, 0, 0, 0.1)
-  );
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 0, 0, 0.08),
+      rgba(0, 0, 0, 0.45)
+    );
+
+  transition: 0.4s ease;
 }
 
-/* =========================================
-   TITLE
-========================================= */
+.pillarCard:hover .pillarOverlay {
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0, 95, 209, 0.12),
+      rgba(0, 0, 0, 0.52)
+    );
+}
 
-.focusImageWrapper h3 {
-  position: absolute;
+/* =========================================================
+   CONTENT
+========================================================= */
 
-  left: 18px;
-  right: 18px;
-  bottom: 18px;
+.pillarContent {
+  position: relative;
+  z-index: 5;
 
-  color: white;
+  padding: 28px;
+}
 
-  font-size: 25px;
-  font-weight: 700;
+/* TOP */
 
+.pillarTop {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+
+  gap: 14px;
+
+  margin-bottom: 18px;
+}
+
+/* TITLE */
+
+.pillarTop h3 {
+  color: #071b34;
+
+  font-size: 24px;
   line-height: 1.3;
 
-  z-index: 2;
+  font-weight: 700;
 
-  text-align: center;
+  transition: 0.35s ease;
 }
 
-/* =========================================
-   CONTENT
-========================================= */
-
-.focusContent {
-  padding: 24px 22px 28px;
+.pillarCard:hover .pillarTop h3 {
+  color: #005fd1;
 }
 
-.focusContent p {
-  font-size: 16px;
+/* ARROW */
+
+.pillarArrow {
+  width: 42px;
+  height: 42px;
+
+  min-width: 42px;
+
+  border-radius: 50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #005fd1,
+      #0078ff
+    );
+
+  color: #ffffff;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  transition:
+    transform 0.45s cubic-bezier(0.22, 1, 0.36, 1),
+    box-shadow 0.35s ease;
+}
+
+.pillarCard:hover .pillarArrow {
+  transform:
+    rotate(45deg)
+    scale(1.1);
+
+  box-shadow:
+    0 12px 24px rgba(0, 95, 209, 0.28);
+}
+
+/* DESCRIPTION */
+
+.pillarContent p {
+  color: #667085;
+
+  font-size: 15px;
   line-height: 1.8;
 
-  color: #666;
-
-  text-align: center;
+  transition: 0.35s ease;
 }
 
-/* =========================================
+.pillarCard:hover .pillarContent p {
+  color: #4c5665;
+}
+
+/* =========================================================
    RESPONSIVE
-========================================= */
+========================================================= */
 
-@media screen and (max-width: 1100px) {
-  .focusGrid {
-    grid-template-columns: repeat(
-      2,
-      1fr
-    );
+@media (max-width: 1200px) {
+
+  .pillarsHeadingWrapper h2 {
+    font-size: 54px;
   }
 
-  .focusHeading {
-    font-size: 42px;
+  .pillarsGrid {
+    gap: 22px;
+  }
+
+  .pillarTop h3 {
+    font-size: 22px;
   }
 }
 
-@media screen and (max-width: 768px) {
-  .focusGrid {
+@media (max-width: 992px) {
+
+  .pillarsSection {
+    padding: 90px 0;
+  }
+
+  .pillarsContainer {
+    padding: 0 30px;
+  }
+
+  .pillarsGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .pillarsHeadingWrapper h2 {
+    font-size: 48px;
+  }
+}
+
+@media (max-width: 768px) {
+
+  .pillarsSection {
+    padding: 80px 0;
+  }
+
+  .pillarsContainer {
+    padding: 0 22px;
+  }
+
+  .pillarsGrid {
     grid-template-columns: 1fr;
+
+    gap: 22px;
   }
 
-  .focusHeading {
-    font-size: 34px;
+  .pillarsHeadingWrapper h2 {
+    font-size: 38px;
 
-    margin-bottom: 40px;
+    line-height: 1.12;
   }
 
-  .focusImageWrapper {
+  .pillarsHeadingWrapper p {
+    font-size: 15px;
+  }
+
+  .pillarImageWrapper {
     height: 230px;
   }
 
-  .focusImageWrapper h3 {
-    font-size: 21px;
+  .pillarContent {
+    padding: 24px;
   }
 
-  .focusContent p {
-    font-size: 15px;
+  .pillarTop h3 {
+    font-size: 22px;
   }
 }
 
-@media screen and (max-width: 480px) {
-  .focusSection {
-    padding: 70px 0;
+@media (max-width: 480px) {
+
+  .pillarsContainer {
+    padding: 0 18px;
   }
 
-  .focusContainer {
-    width: 94%;
+  .pillarsHeadingWrapper h2 {
+    font-size: 32px;
   }
 
-  .focusHeading {
-    font-size: 30px;
+  .pillarsHeadingWrapper p {
+    font-size: 14px;
   }
 
-  .focusImageWrapper {
+  .pillarImageWrapper {
     height: 210px;
   }
 
-  .focusContent {
-    padding: 22px 18px 24px;
+  .pillarContent {
+    padding: 22px;
+  }
+
+  .pillarTop h3 {
+    font-size: 20px;
+  }
+
+  .pillarContent p {
+    font-size: 13px;
+  }
+
+  .pillarArrow {
+    width: 38px;
+    height: 38px;
+
+    min-width: 38px;
   }
 }

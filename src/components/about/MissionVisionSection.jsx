@@ -1,8 +1,15 @@
 // MissionVisionSection.jsx
 
-import React, { useEffect, useRef, useState } from "react";
+import React, {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
 import {
+  ArrowRight,
   CheckCircle2,
+  Sparkles,
 } from "lucide-react";
 
 import bgImage from "../../assets/aboutmission.jpg";
@@ -11,103 +18,147 @@ import "./MissionVisionSection.css";
 
 const MissionVisionSection = () => {
 
+  /* =========================================================
+     REF
+  ========================================================= */
+
   const sectionRef = useRef(null);
 
-  const [showContent, setShowContent] = useState(false);
+  /* =========================================================
+     ANIMATION STATE
+  ========================================================= */
 
-  /* =========================
-     SCROLL ANIMATION
-  ========================= */
+  const [visible, setVisible] =
+    useState(false);
+
+  /* =========================================================
+     SCROLL REVEAL
+  ========================================================= */
 
   useEffect(() => {
 
-    const observer = new IntersectionObserver(
+    const observer =
+      new IntersectionObserver(
 
-      ([entry]) => {
+        ([entry]) => {
 
-        if (entry.isIntersecting) {
-          setShowContent(true);
+          if (entry.isIntersecting) {
+            setVisible(true);
+          }
+
+        },
+
+        {
+          threshold: 0.15,
+          rootMargin:
+            "0px 0px -80px 0px",
         }
 
-      },
-
-      {
-        threshold: 0.2,
-      }
-
-    );
+      );
 
     if (sectionRef.current) {
-      observer.observe(sectionRef.current);
+
+      observer.observe(
+        sectionRef.current
+      );
+
     }
 
-    return () => observer.disconnect();
+    return () =>
+      observer.disconnect();
 
   }, []);
 
   return (
 
     <section
-      className="missionSection"
+      className="missionVisionSection"
       ref={sectionRef}
     >
 
-      {/* BG IMAGE */}
-
-      <div className="missionBgOverlay"></div>
+      {/* =========================================================
+          BACKGROUND
+      ========================================================= */}
 
       <img
         src={bgImage}
-        alt="Background"
+        alt="Mission Background"
         className="missionBgImage"
       />
 
+      <div className="missionOverlay"></div>
+
+      {/* =========================================================
+          CONTAINER
+      ========================================================= */}
+
       <div className="missionContainer">
 
-        <div className="missionWrapper">
+        <div className="missionGrid">
 
-          {/* =========================
-              LEFT SIDE
-          ========================= */}
 
-          <div
-            className={`missionLeft ${
-              showContent ? "showLeft" : ""
-            }`}
+ <div
+            className={
+              visible
+                ? "missionCards showMissionCards"
+                : "missionCards"
+            }
           >
 
-            {/* MISSION CARD */}
+            {/* MISSION */}
 
-            <div className="missionCard">
+            <div className="glassMissionCard">
 
-              <div className="missionTag">
+              <div className="cardGlow"></div>
+
+              <span className="cardMiniTag">
+
                 Our Mission
-              </div>
+
+              </span>
+
+              <h3>
+
+                Empowering Through
+                Education & Innovation
+
+              </h3>
 
               <p>
 
-                Empowering underserved communities through education,
-                skill development, and technology-driven initiatives.
-                We create practical, scalable solutions that improve
-                livelihoods and enable individuals to build a better future.
+                Helping communities access
+                opportunities, skills, and
+                resources needed to thrive in
+                the modern world.
 
               </p>
 
             </div>
 
-            {/* VISION CARD */}
+            {/* VISION */}
 
-            <div className="missionCard">
+            <div className="glassMissionCard visionCard">
 
-              <div className="missionTag">
+              <div className="cardGlow"></div>
+
+              <span className="cardMiniTag">
+
                 Our Vision
-              </div>
+
+              </span>
+
+              <h3>
+
+                A More Inclusive &
+                Sustainable Future
+
+              </h3>
 
               <p>
 
-                To build a future where everyone has access to opportunities,
-                resources, and the tools needed to thrive. We aim to create
-                inclusive, resilient communities that drive lasting positive change.
+                Creating resilient communities
+                driven by equality, innovation,
+                and long-term positive change.
 
               </p>
 
@@ -115,25 +166,44 @@ const MissionVisionSection = () => {
 
           </div>
 
-          {/* =========================
-              RIGHT SIDE
-          ========================= */}
+          {/* =========================================================
+              LEFT CONTENT
+          ========================================================= */}
 
           <div
-            className={`missionRight ${
-              showContent ? "showRight" : ""
-            }`}
+            className={
+              visible
+                ? "missionContent showMissionContent"
+                : "missionContent"
+            }
           >
 
+            {/* TAG */}
+
+           
+
+            {/* TITLE */}
+
             <h2>
-              Closing the Gap.
+
+              Creating
+             
+
+              Opportunities
+              <br />
+
+              For Every Individual.
+
             </h2>
 
-            <p className="missionDescription">
+            {/* DESCRIPTION */}
 
-              Access to opportunities is still out of reach for many
-              communities. We exist to create inclusive pathways through
-              education, technology, and sustainable support.
+            <p>
+
+              We are committed to empowering communities
+              through education, digital transformation,
+              skill development, and sustainable initiatives
+              that create long-term positive impact.
 
             </p>
 
@@ -150,7 +220,10 @@ const MissionVisionSection = () => {
                 </div>
 
                 <p>
-                  Improving access to quality education and digital literacy.
+
+                  Accessible digital education and
+                  career-focused learning.
+
                 </p>
 
               </div>
@@ -164,7 +237,10 @@ const MissionVisionSection = () => {
                 </div>
 
                 <p>
-                  Empowering individuals with skills for sustainable livelihoods.
+
+                  Skill development programs for
+                  underserved communities.
+
                 </p>
 
               </div>
@@ -178,7 +254,10 @@ const MissionVisionSection = () => {
                 </div>
 
                 <p>
-                  Strengthening communities through inclusive and scalable initiatives.
+
+                  Sustainable social initiatives
+                  creating measurable impact.
+
                 </p>
 
               </div>
@@ -189,17 +268,33 @@ const MissionVisionSection = () => {
 
             <div className="missionButtons">
 
-              <button>
-                Reach us
+              <button className="primaryMissionBtn">
+
+                Reach Us
+
+                <span>
+
+                  <ArrowRight size={16} />
+
+                </span>
+
               </button>
 
-              <button>
-                Recent Projects
+              <button className="secondaryMissionBtn">
+
+                View Programs
+
               </button>
 
             </div>
 
           </div>
+
+          {/* =========================================================
+              RIGHT SIDE CARDS
+          ========================================================= */}
+
+      
 
         </div>
 

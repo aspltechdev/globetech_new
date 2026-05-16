@@ -1,6 +1,9 @@
-/* Footer.css */
+/* =========================================================
+   PREMIUM COMPACT NGO FOOTER
+   FULLY RESPONSIVE
+========================================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
 
 *{
   margin:0;
@@ -8,369 +11,527 @@
   box-sizing:border-box;
 }
 
-.globetech-footer-wrapper{
-  width:100%;
-  background:#71A9EC;
-  padding:34px 0 16px;
+/* =========================================================
+   FOOTER
+========================================================= */
+
+.ngoFooter{
+  position:relative;
+
   overflow:hidden;
-  font-family:"Poppins",sans-serif;
+
+  background:
+    linear-gradient(
+      135deg,
+      #03172f 0%,
+      #052447 100%
+    );
+
+  font-family:"Inter",sans-serif;
+
+  padding-top:70px;
 }
 
-.globetech-footer-container{
+/* =========================================================
+   GLOW EFFECTS
+========================================================= */
+
+.footerGlowOne{
+  position:absolute;
+
+  width:340px;
+  height:340px;
+
+  border-radius:50%;
+
+  background:
+    rgba(0,183,255,.10);
+
+  filter:blur(110px);
+
+  top:-160px;
+  left:-160px;
+}
+
+.footerGlowTwo{
+  position:absolute;
+
+  width:260px;
+  height:260px;
+
+  border-radius:50%;
+
+  background:
+    rgba(0,95,209,.12);
+
+  filter:blur(100px);
+
+  bottom:-120px;
+  right:-120px;
+}
+
+/* =========================================================
+   CONTAINER
+========================================================= */
+
+.ngoFooterContainer{
   width:100%;
-  max-width:1240px;
+  max-width:1350px;
+
   margin:auto;
-  padding:0 42px;
+
+  padding:0 50px;
+
+  position:relative;
+  z-index:5;
 }
 
-/* =========================================
-   TOP AREA
-========================================= */
+/* =========================================================
+   FOOTER GRID
+========================================================= */
 
-.globetech-footer-top-area{
-  display:flex;
-  justify-content:space-between;
-  align-items:flex-start;
+.footerGrid{
+  display:grid;
+
+  grid-template-columns:
+    1.2fr
+    .8fr
+    .8fr
+    1fr;
+
+  gap:50px;
+
+  padding-bottom:50px;
 }
 
-/* =========================================
-   LEFT SIDE
-========================================= */
+/* =========================================================
+   BRAND AREA
+========================================================= */
 
-.globetech-footer-brand-box{
-  width:308px;
+.footerBrandArea{
+  max-width:360px;
 }
 
 /* LOGO */
 
-.globetech-footer-logo-image{
-  width:179px;
-  display:block;
-  margin:0 auto 10px auto;
-  object-fit:contain;
+.footerLogo{
+  width:155px;
+
+  margin-bottom:20px;
 }
 
-/* TAGLINE */
+/* DESCRIPTION */
 
-.globetech-footer-brand-tagline{
-  width:308px;
+.footerDescription{
+  color:
+    rgba(255,255,255,.72);
 
-  color:#111111;
+  font-size:14px;
+  line-height:1.85;
 
-  font-size:15px;
-  font-weight:400;
-
-  line-height:1.35;
-
-  text-align:left;
-
-  margin-bottom:14px;
+  margin-bottom:26px;
 }
 
-/* =========================================
-   MAP
-========================================= */
+/* =========================================================
+   CONTACT
+========================================================= */
 
-.globetech-footer-map-wrapper{
-  width:310px;
-  height:245px;
-
-  border-radius:18px;
-  overflow:hidden;
-
-  box-shadow:
-    0 4px 12px rgba(0,0,0,0.12),
-    inset 0 0 0 1px rgba(255,255,255,0.08);
-}
-
-.globetech-footer-map-wrapper iframe{
-  width:100%;
-  height:100%;
-  border:none;
-}
-
-/* =========================================
-   LINKS SECTION
-========================================= */
-
-.globetech-footer-links-section{
+.footerContactList{
   display:flex;
-  gap:130px;
+  flex-direction:column;
 
-  padding:120px;
+  gap:15px;
+
+  margin-bottom:28px;
 }
 
-/* COLUMN */
+.footerContactItem{
+  display:flex;
+  align-items:flex-start;
 
-.globetech-footer-link-column{
-  min-width:180px;
+  gap:12px;
 }
 
-/* TITLE */
+.footerContactItem svg{
+  color:#8ec5ff;
 
-.globetech-footer-link-column h4{
-  color:#111111;
+  margin-top:4px;
 
-  font-size:17px;
-  font-weight:600;
-
-  margin-bottom:12px;
+  font-size:14px;
 }
 
-/* EXTRA SPACING */
+.footerContactItem a,
+.footerContactItem p{
+  color:
+    rgba(255,255,255,.72);
 
-.footer-space-top{
-  margin-top:18px;
+  text-decoration:none;
+
+  font-size:13px;
+  line-height:1.7;
+
+  transition:.3s ease;
+}
+
+.footerContactItem a:hover{
+  color:#fff;
+}
+
+/* =========================================================
+   SOCIALS
+========================================================= */
+
+.footerSocials{
+  display:flex;
+  gap:12px;
+
+  flex-wrap:wrap;
+}
+
+.footerSocials a{
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  color:#fff;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  text-decoration:none;
+
+  transition:.4s ease;
+}
+
+.footerSocials a:hover{
+  transform:
+    translateY(-4px);
+
+  background:#005fd1;
+}
+
+/* =========================================================
+   LINKS
+========================================================= */
+
+.footerLinksColumn h3,
+.footerNewsletter h3{
+  color:#fff;
+
+  font-size:20px;
+  font-weight:700;
+
+  margin-bottom:22px;
 }
 
 /* LIST */
 
-.globetech-footer-link-column ul{
+.footerLinksColumn ul{
   list-style:none;
   padding: 0;
+
+  display:flex;
+  flex-direction:column;
+
+  gap:14px;
 }
 
-/* ITEM */
+.footerLinksColumn ul li a{
+  color:
+    rgba(255,255,255,.72);
 
-.globetech-footer-link-column ul li{
-  margin-bottom:10px;
+  text-decoration:none;
+
+  font-size:14px;
+
+  transition:.3s ease;
+}
+
+.footerLinksColumn ul li a:hover{
+  color:#fff;
+
+  padding-left:6px;
+}
+
+/* =========================================================
+   NEWSLETTER
+========================================================= */
+
+.footerNewsletter{
+  max-width:100%;
+}
+
+.footerNewsletter p{
+  color:
+    rgba(255,255,255,.72);
+
+  font-size:14px;
+  line-height:1.8;
+
+  margin-bottom:24px;
+}
+
+/* INPUT */
+
+.footerNewsletterInput{
+  display:flex;
+  flex-direction:column;
+
+  gap:14px;
+}
+
+.footerNewsletterInput input{
+  width:100%;
+  height:54px;
+
+  border:none;
+  outline:none;
+
+  border-radius:100px;
+
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.08);
+
+  padding:0 20px;
+
+  color:#fff;
+
+  font-size:14px;
+}
+
+.footerNewsletterInput input::placeholder{
+  color:
+    rgba(255,255,255,.45);
+}
+
+/* BUTTON */
+
+.footerNewsletterInput button{
+  width:100%;
+  height:52px;
+
+  border:none;
+  cursor:pointer;
+
+  border-radius:100px;
+
+  background:
+    linear-gradient(
+      135deg,
+      #005fd1,
+      #0078ff
+    );
+
+  color:#fff;
+
+  font-size:14px;
+  font-weight:700;
+
+  transition:.35s ease;
+}
+
+.footerNewsletterInput button:hover{
+  transform:
+    translateY(-3px);
+}
+
+/* =========================================================
+   COPYRIGHT
+========================================================= */
+
+.footerBottom{
+  border-top:
+    1px solid rgba(255,255,255,.08);
+
+  padding:22px 0;
+
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+/* COPYRIGHT */
+
+.footerBottom p{
+  color:
+    rgba(255,255,255,.62);
+
+  font-size:13px;
 }
 
 /* LINKS */
 
-.globetech-footer-link-column ul li a{
-  color:#1d1d1d;
+.footerBottomLinks{
+  display:flex;
+  align-items:center;
+
+  gap:20px;
+
+  flex-wrap:wrap;
+}
+
+.footerBottomLinks a{
+  color:
+    rgba(255,255,255,.62);
 
   text-decoration:none;
 
-  font-size:15px;
-  font-weight:400;
+  font-size:13px;
 
-  line-height:1.4;
-
-  transition:0.3s ease;
+  transition:.3s ease;
 }
 
-.globetech-footer-link-column ul li a:hover{
-  color:white;
+.footerBottomLinks a:hover{
+  color:#fff;
 }
 
-/* =========================================
-   CONTACT
-========================================= */
-
-.globetech-footer-contact-list{
-  margin-top:18px;
-}
-
-.globetech-footer-contact-item{
-  display:flex;
-  align-items:center;
-  gap:12px;
-
-  margin-bottom:16px;
-}
-
-/* ICON */
-
-.globetech-footer-contact-icon{
-  color:#111111;
-  font-size:15px;
-  min-width:15px;
-}
-
-/* CONTACT LINK */
-
-.globetech-footer-contact-item a{
-  color:#1d1d1d;
-
-  text-decoration:none;
-
-  font-size:15px;
-  font-weight:400;
-}
-
-/* =========================================
-   SOCIAL
-========================================= */
-
-.globetech-footer-social-icons{
-  display:flex;
-  align-items:center;
-  gap:16px;
-
-  margin-top:8px;
-}
-
-/* ICON */
-
-.globetech-footer-social-icons a{
-  color:#111111;
-
-  font-size:21px;
-
-  transition:0.35s ease;
-}
-
-.globetech-footer-social-icons a:hover{
-  color:white;
-  transform:translateY(-3px);
-}
-
-/* =========================================
-   COPYRIGHT
-========================================= */
-
-.globetech-footer-bottom-area{
-  width:100%;
-  text-align:center;
-
-  margin-top:10px;
-}
-
-.globetech-footer-bottom-area p{
-  color:#111111;
-
-  font-size:14px;
-  font-weight:400;
-}
-
-/* =========================================
+/* =========================================================
    LARGE TABLET
-========================================= */
+========================================================= */
 
 @media(max-width:1100px){
 
-  .globetech-footer-links-section{
-    gap:70px;
+  .footerGrid{
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .footerBrandArea{
+    max-width:100%;
   }
 }
 
-/* =========================================
+/* =========================================================
    TABLET
-========================================= */
-
-@media(max-width:992px){
-
-  .globetech-footer-top-area{
-    flex-direction:column;
-    gap:50px;
-  }
-
-  .globetech-footer-links-section{
-    width:100%;
-    justify-content:space-between;
-  }
-
-  .globetech-footer-brand-box{
-    width:100%;
-  }
-
-  .globetech-footer-brand-tagline{
-    width:100%;
-    max-width:320px;
-  }
-}
-
-/* =========================================
-   MOBILE
-========================================= */
+========================================================= */
 
 @media(max-width:768px){
 
-  .globetech-footer-wrapper{
-    padding:32px 0 18px;
+  .ngoFooter{
+    padding-top:55px;
   }
 
-  .globetech-footer-container{
-    padding:0 18px;
+  .ngoFooterContainer{
+    padding:0 24px;
   }
 
-  .globetech-footer-links-section{
-    flex-direction:column;
-    gap:38px;
+  .footerGrid{
+    grid-template-columns:1fr;
+
+    gap:40px;
+
+    padding-bottom:40px;
   }
 
-  .globetech-footer-logo-image{
-    width:118px;
+  .footerBrandArea{
+    max-width:100%;
   }
 
-  .globetech-footer-brand-tagline{
-    font-size:14px;
-  }
-
-  .globetech-footer-link-column h4{
-    font-size:16px;
-  }
-
-  .globetech-footer-link-column ul li a{
-    font-size:14px;
-  }
-
-  .globetech-footer-contact-item a{
-    font-size:14px;
-  }
-
-  .globetech-footer-social-icons a{
-    font-size:19px;
-  }
-}
-
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media(max-width:480px){
-
-  .globetech-footer-container{
-    padding:0 14px;
-  }
-
-  .globetech-footer-logo-image{
-    width:105px;
-  }
-
-  .globetech-footer-brand-tagline{
-    font-size:13px;
-    line-height:1.6;
-  }
-
-  .globetech-footer-map-wrapper{
-    width:100%;
-    max-width:240px;
-    height:180px;
-  }
-
-  .globetech-footer-link-column h4{
-    font-size:15px;
-  }
-
-  .globetech-footer-link-column ul li a{
-    font-size:13px;
-  }
-
-  .globetech-footer-contact-item{
-    gap:10px;
-  }
-
-  .globetech-footer-contact-item a{
-    font-size:13px;
-  }
-
-  .globetech-footer-social-icons{
-    gap:14px;
-  }
-
-  .globetech-footer-social-icons a{
+  .footerLinksColumn h3,
+  .footerNewsletter h3{
     font-size:18px;
   }
 
-  .globetech-footer-bottom-area{
-    margin-top:18px;
+  .footerDescription{
+    font-size:13px;
   }
 
-  .globetech-footer-bottom-area p{
+  .footerBottom{
+    flex-direction:column;
+
+    align-items:flex-start;
+
+    gap:14px;
+  }
+
+  .footerBottomLinks{
+    gap:16px;
+  }
+}
+
+/* =========================================================
+   MOBILE
+========================================================= */
+
+@media(max-width:480px){
+
+  .ngoFooter{
+    padding-top:45px;
+  }
+
+  .ngoFooterContainer{
+    padding:0 18px;
+  }
+
+  .footerGrid{
+    gap:34px;
+  }
+
+  .footerLogo{
+    width:135px;
+  }
+
+  .footerDescription{
+    font-size:13px;
+
+    line-height:1.8;
+  }
+
+  .footerLinksColumn ul{
+    gap:12px;
+  }
+
+  .footerLinksColumn ul li a{
+    font-size:13px;
+  }
+
+  .footerNewsletter p{
+    font-size:13px;
+  }
+
+  .footerNewsletterInput input{
+    height:50px;
+
+    font-size:13px;
+  }
+
+  .footerNewsletterInput button{
+    height:48px;
+
+    font-size:13px;
+  }
+
+  .footerSocials a{
+    width:40px;
+    height:40px;
+  }
+
+  .footerBottom{
+    padding:18px 0;
+  }
+
+  .footerBottom p{
     font-size:12px;
+
     line-height:1.7;
+  }
+
+  .footerBottomLinks a{
+    font-size:12px;
   }
 }

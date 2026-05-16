@@ -174,17 +174,15 @@
 
 
 
-
-
-
-
-
-
-
 // HeroSection.jsx
 
 import React, { useEffect, useState } from "react";
-import { HandHeart } from "lucide-react";
+import {
+  HandHeart,
+  ArrowRight,
+  Play,
+  Sparkles,
+} from "lucide-react";
 
 import "./HeroSection.css";
 
@@ -196,7 +194,6 @@ import heroImg1 from "../../assets/hero/hero1.png";
 import heroImg2 from "../../assets/hero/hero2.png";
 import heroImg3 from "../../assets/hero/hero3.png";
 import heroImg4 from "../../assets/hero/hero4.png";
-import heroVector from "../../assets/heroVector.png";
 
 /* =========================
    SLIDES
@@ -204,44 +201,51 @@ import heroVector from "../../assets/heroVector.png";
 
 const slides = [
   {
-    title: "Empowering Youth\nSkills & Opportunities",
+    title: "Empowering Youth\nThrough Skills & Hope",
 
     description:
-      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities.",
+      "We help underserved communities access digital education, career opportunities, and life-changing mentorship programs that create long-term social impact.",
 
     image: heroImg1,
+
+    stats: "12K+ Students Empowered",
   },
 
   {
-    title: "Building Careers\nFor The Future",
+    title: "Building Futures\nThat Truly Matter",
 
-  description:
-      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities.",
+    description:
+      "From education to employment, we create pathways that help young people become financially independent and future-ready.",
 
     image: heroImg2,
+
+    stats: "320+ Career Placements",
   },
 
   {
-    title: "Education That\nCreates Impact",
+    title: "Education That\nTransforms Lives",
 
-  description:
-      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities.",
+    description:
+      "Accessible learning experiences, real-world training, and community-led programs designed for meaningful change.",
 
     image: heroImg3,
+
+    stats: "45+ Community Programs",
   },
 
   {
-    title: "Creating Leaders\nThrough Skills",
+    title: "Creating Impact\nFor The Next Generation",
 
-   description:
-      "We support young individuals in gaining industry-relevant skills that open doors to sustainable employment and entrepreneurship. Our programs focus on making vocational training more accessible and inclusive, especially for underserved and marginalized communities.",
+    description:
+      "Together with volunteers, donors, and educators, we are shaping a generation driven by innovation and purpose.",
 
     image: heroImg4,
+
+    stats: "100+ Volunteers",
   },
 ];
 
 const HeroSection = () => {
-
   const [activeSlide, setActiveSlide] = useState(0);
 
   /* =========================
@@ -249,37 +253,34 @@ const HeroSection = () => {
   ========================= */
 
   useEffect(() => {
-
     const interval = setInterval(() => {
-
       setActiveSlide((prev) =>
         prev === slides.length - 1 ? 0 : prev + 1
       );
-
-    }, 4000);
+    }, 5000);
 
     return () => clearInterval(interval);
-
   }, []);
 
   return (
-
     <section className="heroSection">
+      {/* BACKGROUND GLOW */}
+      <div className="heroBlur heroBlur1"></div>
+      <div className="heroBlur heroBlur2"></div>
 
       <div className="heroContainer">
-
-        <div className="heroCard">
-
+        <div className="heroGrid">
           {/* =========================
               LEFT CONTENT
           ========================= */}
 
           <div className="heroLeft">
+           
+              
+         
 
             <div className="heroContent">
-
               <h1>
-
                 {slides[activeSlide].title
                   .split("\n")
                   .map((line, index) => (
@@ -288,31 +289,28 @@ const HeroSection = () => {
                       <br />
                     </span>
                   ))}
-
               </h1>
 
-              <p>
-                {slides[activeSlide].description}
-              </p>
+              <p>{slides[activeSlide].description}</p>
 
-              {/* BUTTON */}
+              {/* CTA BUTTONS */}
 
-              <button className="heroBtn">
+              <div className="heroActions">
+                <button className="heroBtn primaryBtn">
+                  <span>Donate Now</span>
 
-                <span>
-                  Donate Now
-                </span>
+                  <div className="heroBtnIcon">
+                    <HandHeart size={16} />
+                  </div>
+                </button>
 
-                <div className="heroBtnIcon">
+              
+              </div>
 
-                  <HandHeart size={14} />
+              {/* STATS */}
 
-                </div>
-
-              </button>
-
+          
             </div>
-
           </div>
 
           {/* =========================
@@ -320,39 +318,42 @@ const HeroSection = () => {
           ========================= */}
 
           <div className="heroRight">
+            {/* FLOATING CARDS */}
 
-      
+            {/* <div className="floatingCard topCard">
+              <span>✨ Impact Driven</span>
+            </div> */}
 
-            {/* <div className="heroDotPattern"></div> */}
-          
+            <div className="floatingCard bottomCard">
+              <div>
+                <h4>{slides[activeSlide].stats}</h4>
+                <p>Changing Lives Everyday</p>
+              </div>
 
-<img
-  src={heroVector}
-  alt="Vector Pattern"
-  className="heroVector"
-/>
+              <ArrowRight size={18} />
+            </div>
 
-            {/* IMAGE */}
+            {/* IMAGE WRAPPER */}
 
-            <img
-              src={slides[activeSlide].image}
-              alt="Hero"
-              className="heroImage"
-            />
+            <div className="heroImageWrapper">
+              <div className="heroCircle"></div>
 
+              <img
+                src={slides[activeSlide].image}
+                alt="NGO Hero"
+                className="heroImage"
+              />
+            </div>
           </div>
-
         </div>
 
         {/* =========================
-            DOTS
+            SLIDER DOTS
         ========================= */}
 
         <div className="heroDots">
-
           {slides.map((_, index) => (
-
-            <span
+            <button
               key={index}
               className={
                 activeSlide === index
@@ -360,14 +361,10 @@ const HeroSection = () => {
                   : "heroDot"
               }
               onClick={() => setActiveSlide(index)}
-            ></span>
-
+            ></button>
           ))}
-
         </div>
-
       </div>
-
     </section>
   );
 };

@@ -1,172 +1,325 @@
-import React from "react";
-import { Star } from "lucide-react";
+// // TestimonialSection.jsx
+
+import React, {
+  useEffect,
+  useRef,
+  useState,
+} from "react";
+
+import {
+  Quote,
+  Sparkles,
+  Star,
+} from "lucide-react";
 
 import "./TestimonialSection.css";
 
-
+/* =========================================================
+   TOP TESTIMONIALS
+========================================================= */
 
 const testimonialsTop = [
+
   {
     name: "Vignesh Jayapalan",
-    role: "Assistant Manager - Bosch Design R&D",
+
+    role:
+      "Assistant Manager - Bosch Design R&D",
+
     text:
-      "Our Bosch Adugodi R&D design team were looking for in depth training program for latest UG/NX Software Version 2206. Globetech provided exceptional training requirements exactly matching our industrial needs.",
+      "Globetech provided exceptional training programs matching real industrial requirements and practical workflows.",
   },
 
   {
     name: "Manjunatha",
-    role: "Toyota Group, Bangalore",
+
+    role:
+      "Toyota Group, Bangalore",
+
     text:
-      "Perfect place for learning & development. I recommended couple of my juniors for learning Cadd Design & SAP courses. The training quality and guidance were extremely professional.",
+      "Perfect place for learning and development. The mentorship and practical guidance were extremely professional.",
   },
 
   {
     name: "Supreeth S Bhat",
-    role: "Networking Engineer DXC Technologies",
+
+    role:
+      "Networking Engineer DXC Technologies",
+
     text:
-      "One of the best training institutes in Bangalore. They help students with strong development guidance and practical exposure to projects.",
+      "One of the best institutes for practical exposure, project guidance, and industry-ready development training.",
   },
+
 ];
 
-/* =========================================
+/* =========================================================
    BOTTOM TESTIMONIALS
-========================================= */
+========================================================= */
 
 const testimonialsBottom = [
+
   {
     name: "Prashanth Gowda",
-    role: "Coordinator, DBSDC",
+
+    role:
+      "Coordinator, DBSDC",
+
     text:
-      "DBSDC is happy to collaborate with your organization in delivering advanced programs for students. Thanks for the excellent placement support.",
+      "Excellent collaboration and placement support helping students gain confidence and opportunities.",
   },
 
   {
     name: "Krishnaraj Upadhya",
-    role: "Bangalore",
+
+    role:
+      "Bangalore",
+
     text:
-      "Perfect place for SAP Training. Trainers are highly supportive and practical sessions were extremely useful for career development.",
+      "Highly supportive trainers with practical sessions that truly improved career readiness.",
   },
 
   {
     name: "Shriyans Jain",
-    role: "Chairman, SD-EDP KASSIA",
+
+    role:
+      "Chairman, SD-EDP KASSIA",
+
     text:
-      "Globetech is a total finishing school for engineering students. CAD, SAP and Japanese language courses provide strong industry advantage.",
+      "A strong finishing school for engineering students with real industry-focused learning programs.",
   },
+
 ];
 
-/* =========================================
+/* =========================================================
    CARD
-========================================= */
+========================================================= */
 
-const TestimonialCard = ({ item, border }) => {
+const TestimonialCard = ({
+  item,
+}) => {
 
   return (
 
-    <div className={`auroTestimonialCard ${border}`}>
+    <div className="testimonialCard">
 
-      {/* NAME */}
+      {/* GLOW */}
 
-      <h3>
-        {item.name}
-      </h3>
+      <div className="testimonialGlow"></div>
 
-      {/* ROLE */}
+      {/* QUOTE */}
 
-      <h4>
-        {item.role}
-      </h4>
+      <div className="testimonialQuote">
+
+        <Quote size={24} />
+
+      </div>
 
       {/* STARS */}
 
-      <div className="auroStars">
+      <div className="testimonialStars">
 
-        {[1, 2, 3, 4, 5].map((star) => (
+        {[1, 2, 3, 4, 5]
+          .map((star) => (
 
-          <Star
-            key={star}
-            size={24}
-            fill="#FFC700"
-            color="#FFC700"
-          />
+            <Star
+              key={star}
+              size={16}
+              fill="#FFC700"
+              color="#FFC700"
+            />
 
-        ))}
+          ))}
 
       </div>
 
       {/* TEXT */}
 
       <p>
-        "{item.text}"
+
+        {item.text}
+
       </p>
+
+      {/* PROFILE */}
+
+      <div className="testimonialProfile">
+
+        <div className="testimonialAvatar">
+
+          {item.name.charAt(0)}
+
+        </div>
+
+        <div>
+
+          <h3>
+
+            {item.name}
+
+          </h3>
+
+          <span>
+
+            {item.role}
+
+          </span>
+
+        </div>
+
+      </div>
 
     </div>
 
   );
 };
 
-/* =========================================
+/* =========================================================
    MAIN COMPONENT
-========================================= */
+========================================================= */
 
 const TestimonialSection = () => {
 
+  const sectionRef = useRef(null);
+
+  const [visible, setVisible] =
+    useState(false);
+
+  /* =========================================================
+     SCROLL ANIMATION
+  ========================================================= */
+
+  useEffect(() => {
+
+    const observer =
+      new IntersectionObserver(
+
+        ([entry]) => {
+
+          if (entry.isIntersecting) {
+
+            setVisible(true);
+
+          }
+
+        },
+
+        {
+          threshold: 0.12,
+        }
+
+      );
+
+    if (sectionRef.current) {
+
+      observer.observe(
+        sectionRef.current
+      );
+
+    }
+
+    return () =>
+      observer.disconnect();
+
+  }, []);
+
   return (
 
-    <section className="auroTestimonialSection">
+    <section
+      className="testimonialSection"
+      ref={sectionRef}
+    >
 
-      <div className="auroTestimonialContainer">
+      {/* =========================================================
+          GLOW
+      ========================================================= */}
 
-        {/* =====================================
+      <div className="testimonialBgGlow"></div>
+
+      {/* =========================================================
+          CONTAINER
+      ========================================================= */}
+
+      <div className="testimonialContainer">
+
+        {/* =========================================================
             HEADING
-        ====================================== */}
+        ========================================================= */}
 
-        <div className="auroTestimonialHeading">
+        <div
+          className={
+            visible
+              ? "testimonialHeading showTestimonialHeading"
+              : "testimonialHeading"
+          }
+        >
+
+        
 
           <h2>
-            Feedback From Customers
+
+            Voices Of
+       
+
+            Transformation
+         
+
+            & Trust.
+
           </h2>
+
+          <p>
+
+            Real stories and feedback from
+            students, industry professionals,
+            mentors, and organizations who
+            experienced impactful learning
+            and career transformation.
+
+          </p>
 
         </div>
 
-        {/* =====================================
-            TOP ROW - RIGHT SLIDE
-        ====================================== */}
+        {/* =========================================================
+            TOP SLIDER
+        ========================================================= */}
 
-        <div className="auroSliderWrapper">
+        <div className="testimonialSliderWrapper">
 
-          <div className="auroSliderTrack auroSlideRight">
+          <div className="testimonialTrack moveRight">
 
-            {[...testimonialsTop, ...testimonialsTop].map((item, index) => (
+            {[...testimonialsTop,
+              ...testimonialsTop]
+              .map((item, index) => (
 
-              <TestimonialCard
-                key={index}
-                item={item}
-              />
+                <TestimonialCard
+                  key={index}
+                  item={item}
+                />
 
-            ))}
+              ))}
 
           </div>
 
         </div>
 
-        {/* =====================================
-            BOTTOM ROW - LEFT SLIDE
-        ====================================== */}
+        {/* =========================================================
+            BOTTOM SLIDER
+        ========================================================= */}
 
-        <div className="auroSliderWrapper bottomSpacing">
+        <div className="testimonialSliderWrapper secondRow">
 
-          <div className="auroSliderTrack auroSlideLeft">
+          <div className="testimonialTrack moveLeft">
 
-            {[...testimonialsBottom, ...testimonialsBottom].map((item, index) => (
+            {[...testimonialsBottom,
+              ...testimonialsBottom]
+              .map((item, index) => (
 
-              <TestimonialCard
-                key={index}
-                item={item}
-                border="blueBorder"
-              />
+                <TestimonialCard
+                  key={index}
+                  item={item}
+                />
 
-            ))}
+              ))}
 
           </div>
 
