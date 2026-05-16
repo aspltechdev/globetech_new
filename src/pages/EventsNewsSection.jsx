@@ -1,434 +1,314 @@
-// // ImmersiveEventsCarousel.jsx
-
-// import React, { useEffect, useState } from "react";
-// import "./EventsNewsSection.css";
-
-// import {
-//   FaArrowRight,
-//   FaCalendarAlt,
-// } from "react-icons/fa";
-
-// const events = [
-//   {
-//     title: "Future Education Summit",
-//     category: "Education",
-//     date: "12 AUG 2025",
-//     image:
-//       "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1400&auto=format&fit=crop",
-//   },
-
-//   {
-//     title: "Youth Leadership Program",
-//     category: "Leadership",
-//     date: "16 AUG 2025",
-//     image:
-//       "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop",
-//   },
-
-//   {
-//     title: "Women Empowerment Drive",
-//     category: "Community",
-//     date: "20 AUG 2025",
-//     image:
-//       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1400&auto=format&fit=crop",
-//   },
-
-//   {
-//     title: "Digital Literacy Camp",
-//     category: "Technology",
-//     date: "24 AUG 2025",
-//     image:
-//       "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1400&auto=format&fit=crop",
-//   },
-
-//   {
-//     title: "Green Earth Initiative",
-//     category: "Environment",
-//     date: "28 AUG 2025",
-//     image:
-//       "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1400&auto=format&fit=crop",
-//   },
-
-//   {
-//     title: "Healthcare Mission",
-//     category: "Healthcare",
-//     date: "02 SEP 2025",
-//     image:
-//       "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1400&auto=format&fit=crop",
-//   },
-// ];
-
-// export default function EventsNewsSection() {
-
-//   const [active, setActive] = useState(0);
-
-//   /* AUTO SLIDE */
-
-//   useEffect(() => {
-
-//     const interval = setInterval(() => {
-
-//       setActive((prev) =>
-//         prev === events.length - 1
-//           ? 0
-//           : prev + 1
-//       );
-
-//     }, 3500);
-
-//     return () => clearInterval(interval);
-
-//   }, []);
-
-//   return (
-//     <section className="immersive-events">
-
-//       {/* BACKGROUND */}
-
-//       <div className="ambient ambient-one"></div>
-//       <div className="ambient ambient-two"></div>
-
-//       <div className="immersive-container">
-
-//         {/* HEADER */}
-
-//         <div className="immersive-header">
-
-//           <div>
-
-         
-//   <span className="immersive-badge">
-//               EVENTS & STORIES
-//             </span>
-
-//             <h2>
-//             Inspiring Experiences
-//               {/* <span> Move People</span> */}
-//             </h2>
-
-//           </div>
-
-        
-
-//         </div>
-
-//         {/* CAROUSEL */}
-
-//         <div className="carousel-stage">
-
-//           {events.map((item, index) => {
-
-//             let position = index - active;
-
-//             if (position < -1)
-//               position += events.length;
-
-//             if (position > 1)
-//               position -= events.length;
-
-//             return (
-
-//               <div
-//                 key={index}
-//                 className={`immersive-card position-${position}`}
-//               >
-
-//                 {/* IMAGE */}
-
-//                 <div className="immersive-image">
-
-//                   <img
-//                     src={item.image}
-//                     alt={item.title}
-//                   />
-
-//                   <div className="immersive-overlay"></div>
-
-//                   <span className="immersive-category">
-//                     {item.category}
-//                   </span>
-
-//                 </div>
-
-//                 {/* CONTENT */}
-
-//                 <div className="immersive-content">
-
-//                   <div className="immersive-date">
-
-//                     <FaCalendarAlt />
-
-//                     <span>{item.date}</span>
-
-//                   </div>
-
-//                   <h3>{item.title}</h3>
-
-//                   <p>
-//                     Discover inspiring stories and
-//                     impactful initiatives transforming
-//                     lives and communities.
-//                   </p>
-
-//                   <button>
-
-//                     Explore Story
-
-//                     <FaArrowRight />
-
-//                   </button>
-
-//                 </div>
-
-//               </div>
-
-//             );
-//           })}
-
-//         </div>
-
-//       </div>
-
-//     </section>
-//   );
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // EventsNewsSection.jsx
 
-import React, { useEffect, useState } from "react";
-import "./EventsNewsSection.css";
+import React, { useEffect, useState, useRef } from "react";
 
 import {
-  FaArrowRight,
-  FaCalendarAlt,
-  FaArrowLeft,
-} from "react-icons/fa";
+  ArrowRight,
+  Calendar,
+  Sparkles,
+} from "lucide-react";
 
-const events = [
+import "./EventsNewsSection.css";
+
+/* =========================
+   HERO SLIDES
+========================= */
+
+const heroSlides = [
   {
-    title: "Future Education Summit",
+    title: "Future Education Summit 2026",
     category: "Education",
-    date: "12 AUG 2025",
+    description:
+      "Bringing together educators, students, NGOs, and innovators to shape future-ready learning ecosystems.",
     image:
       "https://images.unsplash.com/photo-1544717305-2782549b5136?q=80&w=1400&auto=format&fit=crop",
   },
 
   {
-    title: "Youth Leadership Program",
-    category: "Leadership",
-    date: "16 AUG 2025",
-    image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop",
-  },
-
-  {
-    title: "Women Empowerment Drive",
+    title: "Women Empowerment Mission",
     category: "Community",
-    date: "20 AUG 2025",
+    description:
+      "Supporting women through mentorship, entrepreneurship, and career readiness programs.",
     image:
       "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1400&auto=format&fit=crop",
   },
 
   {
-    title: "Digital Literacy Camp",
+    title: "Digital Literacy Campaign",
     category: "Technology",
-    date: "24 AUG 2025",
+    description:
+      "Creating access to digital learning opportunities for underserved communities.",
     image:
       "https://images.unsplash.com/photo-1513258496099-48168024aec0?q=80&w=1400&auto=format&fit=crop",
   },
 
   {
-    title: "Green Earth Initiative",
-    category: "Environment",
-    date: "28 AUG 2025",
+    title: "Youth Leadership Program",
+    category: "Leadership",
+    description:
+      "Preparing young minds with confidence, communication, and leadership skills.",
     image:
-      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1400&auto=format&fit=crop",
   },
 
   {
+    title: "Green Earth Initiative",
+    category: "Environment",
+    description:
+      "Promoting sustainability awareness and community-driven environmental action.",
+    image:
+      "https://images.unsplash.com/photo-1542601906990-b4d3fb778b09?q=80&w=1400&auto=format&fit=crop",
+  },
+];
+
+/* =========================
+   EVENT CARDS
+========================= */
+
+const cards = [
+  {
     title: "Healthcare Mission",
-    category: "Healthcare",
-    date: "02 SEP 2025",
+    date: "02 FEB 2026",
     image:
       "https://images.unsplash.com/photo-1516574187841-cb9cc2ca948b?q=80&w=1400&auto=format&fit=crop",
   },
+
+  {
+    title: "Community Outreach",
+    date: "12 MAR 2026",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    title: "Skill Development Camp",
+    date: "18 APR 2026",
+    image:
+      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    title: "Women Career Support",
+    date: "24 MAY 2026",
+    image:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    title: "Rural Education Drive",
+    date: "08 JUN 2026",
+    image:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    title: "Volunteer Meetup",
+    date: "16 JUL 2026",
+    image:
+      "https://images.unsplash.com/photo-1529156069898-49953e39b3ac?q=80&w=1400&auto=format&fit=crop",
+  },
 ];
+
+/* =========================
+   REVEAL
+========================= */
+
+const Reveal = ({ children }) => {
+  const ref = useRef(null);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          ref.current.classList.add("show");
+        }
+      },
+      {
+        threshold: 0.15,
+      }
+    );
+
+    if (ref.current) observer.observe(ref.current);
+
+    return () => observer.disconnect();
+  }, []);
+
+  return (
+    <div
+      ref={ref}
+      className="fade-up"
+    >
+      {children}
+    </div>
+  );
+};
 
 export default function EventsNewsSection() {
 
   const [active, setActive] = useState(0);
 
-  /* =========================
-     AUTO SLIDE
-  ========================= */
+  /* AUTO SLIDE */
 
   useEffect(() => {
 
     const interval = setInterval(() => {
 
       setActive((prev) =>
-        prev === events.length - 1
+        prev === heroSlides.length - 1
           ? 0
           : prev + 1
       );
 
-    }, 3500);
+    }, 4500);
 
     return () => clearInterval(interval);
 
   }, []);
 
-  /* =========================
-     NEXT
-  ========================= */
-
-  const nextSlide = () => {
-
-    setActive((prev) =>
-      prev === events.length - 1
-        ? 0
-        : prev + 1
-    );
-
-  };
-
-  /* =========================
-     PREV
-  ========================= */
-
-  const prevSlide = () => {
-
-    setActive((prev) =>
-      prev === 0
-        ? events.length - 1
-        : prev - 1
-    );
-
-  };
-
   return (
-    <section className="immersive-events">
+    <section className="events-section">
 
-      {/* BACKGROUND */}
+      <div className="events-glow glow1"></div>
+      <div className="events-glow glow2"></div>
 
-      <div className="ambient ambient-one"></div>
-      <div className="ambient ambient-two"></div>
+      <div className="events-container">
 
-      <div className="immersive-container">
+        {/* HERO SLIDER */}
 
-        {/* HEADER */}
+        <div className="hero-slider">
 
-        <div className="immersive-header">
+          {heroSlides.map((slide, index) => (
 
-          <div>
-
-            
-
-         <h2>   Events & Stories </h2>
-
-          </div>
-
-          {/* NAVIGATION */}
-
-          <div className="carousel-navigation">
-
-            <button
-              className="carousel-btn"
-              onClick={prevSlide}
+            <div
+              key={index}
+              className={`hero-slide ${
+                active === index
+                  ? "active"
+                  : ""
+              }`}
             >
-              <FaArrowLeft />
-            </button>
 
-            <button
-              className="carousel-btn"
-              onClick={nextSlide}
-            >
-              <FaArrowRight />
-            </button>
+              <img
+                src={slide.image}
+                alt=""
+              />
+
+              <div className="hero-overlay"></div>
+
+              <div className="hero-content">
+
+                <div className="hero-tag">
+
+                  <Sparkles size={15} />
+
+                  {slide.category}
+
+                </div>
+
+                <h1>
+                  {slide.title}
+                </h1>
+
+                <p>
+                  {slide.description}
+                </p>
+
+                <button>
+
+                  Explore Story
+
+                  <ArrowRight size={18} />
+
+                </button>
+
+              </div>
+
+            </div>
+
+          ))}
+
+          {/* DOTS */}
+
+          <div className="hero-dots">
+
+            {heroSlides.map((_, index) => (
+
+              <button
+                key={index}
+                className={`dot ${
+                  active === index
+                    ? "active-dot"
+                    : ""
+                }`}
+                onClick={() =>
+                  setActive(index)
+                }
+              ></button>
+
+            ))}
 
           </div>
 
         </div>
 
-        {/* CAROUSEL */}
+        {/* HEADER */}
 
-        <div className="carousel-stage">
+        <Reveal>
 
-          {events.map((item, index) => {
+          <div className="events-header">
 
-            let position = index - active;
+            <span>
+              Events & Stories
+            </span>
 
-            if (position < -1)
-              position += events.length;
+            <h2>
+              Community Stories That Inspire Change
+            </h2>
 
-            if (position > 1)
-              position -= events.length;
+          </div>
 
-            return (
+        </Reveal>
 
-              <div
-                key={index}
-                className={`immersive-card position-${position}`}
-              >
+        {/* NEW ANIMATION GRID */}
 
-                {/* IMAGE */}
+        <div className="cards-grid">
 
-                <div className="immersive-image">
+          {cards.map((item, index) => (
+
+            <Reveal key={index}>
+
+              <div className="event-card">
+
+                <div className="event-image">
 
                   <img
                     src={item.image}
-                    alt={item.title}
+                    alt=""
                   />
 
-                  <div className="immersive-overlay"></div>
-
-                  <span className="immersive-category">
-                    {item.category}
-                  </span>
+                  <div className="event-overlay"></div>
 
                 </div>
 
-                {/* CONTENT */}
+                <div className="event-content">
 
-                <div className="immersive-content">
+                  <div className="event-date">
 
-                  <div className="immersive-date">
+                    <Calendar size={15} />
 
-                    <FaCalendarAlt />
-
-                    <span>{item.date}</span>
+                    {item.date}
 
                   </div>
 
-                  <h3>{item.title}</h3>
-
-                  <p>
-                    Discover inspiring stories and
-                    impactful initiatives transforming
-                    lives and communities.
-                  </p>
+                  <h3>
+                    {item.title}
+                  </h3>
 
                   <button>
 
-                    Explore Story
+                    Read Story
 
-                    <FaArrowRight />
+                    <ArrowRight size={16} />
 
                   </button>
 
@@ -436,13 +316,13 @@ export default function EventsNewsSection() {
 
               </div>
 
-            );
-          })}
+            </Reveal>
+
+          ))}
 
         </div>
 
       </div>
-
     </section>
   );
 }

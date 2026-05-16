@@ -1,78 +1,112 @@
+// ProgramsSection.jsx
+
 import React, { useEffect } from "react";
+import {
+  GraduationCap,
+  Users,
+  Briefcase,
+  Laptop,
+  ArrowRight,
+  Sparkles,
+  HeartHandshake,
+  Globe,
+} from "lucide-react";
+
 import "./Programs.css";
 
 const programs = [
   {
     title: "Women Empowerment",
-    category: "Leadership & Growth",
+    category: "Leadership",
+    icon: <HeartHandshake size={20} />,
     description:
-      "Building confidence, leadership, and financial independence among women through practical learning and mentorship.",
+      "Empowering women through leadership training, mentorship, and financial literacy.",
     image:
       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
   },
+
   {
     title: "Youth Skill Development",
-    category: "Career Training",
+    category: "Career Growth",
+    icon: <GraduationCap size={20} />,
     description:
-      "Industry-focused skill training programs designed to improve employability and career opportunities for youth.",
+      "Industry-focused training helping youth build modern employable skills.",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
   },
+
+  {
+    title: "Digital Literacy",
+    category: "Technology",
+    icon: <Laptop size={20} />,
+    description:
+      "Providing digital education and internet literacy for underserved communities.",
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+  },
+
   {
     title: "Placement Assistance",
-    category: "Employment Support",
+    category: "Employment",
+    icon: <Briefcase size={20} />,
     description:
-      "Career guidance, interview preparation, and job placement drives connecting candidates with employers.",
+      "Interview support, placement drives, and employer connections.",
     image:
       "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
   },
   {
-    title: "Digital Literacy",
-    category: "Technology Education",
+    title: "Placement Assistance",
+    category: "Employment",
+    icon: <Briefcase size={20} />,
     description:
-      "Computer basics, internet skills, and digital learning programs for students and underserved communities.",
+      "Interview support, placement drives, and employer connections.",
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
   },
   {
-    title: "Entrepreneurship Training",
-    category: "Startup & Business",
+    title: "Placement Assistance",
+    category: "Employment",
+    icon: <Briefcase size={20} />,
     description:
-      "Helping aspiring entrepreneurs develop business ideas, financial knowledge, and startup management skills.",
+      "Interview support, placement drives, and employer connections.",
     image:
-      "https://images.unsplash.com/photo-1552664688-cf412ec27db2?q=80&w=1200&auto=format&fit=crop",
-  },
-  {
-    title: "Community Development",
-    category: "Social Impact",
-    description:
-      "Creating sustainable community initiatives focused on education, awareness, and local empowerment.",
-    image:
-      "https://images.unsplash.com/photo-1491438590914-bc09fcaaf77a?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
   },
 ];
 
 const stats = [
-  { number: "5000+", label: "Students Trained" },
-  { number: "120+", label: "Workshops Conducted" },
-  { number: "3500+", label: "Placements Supported" },
-  { number: "40+", label: "Partner Organizations" },
+  {
+    number: "5000+",
+    label: "Students Trained",
+  },
+  {
+    number: "3500+",
+    label: "Placements",
+  },
+  {
+    number: "120+",
+    label: "Workshops",
+  },
+  {
+    number: "40+",
+    label: "Communities",
+  },
 ];
 
-export default function ProgramsSection() {
+export default function Programs() {
   useEffect(() => {
-    const cards = document.querySelectorAll(".animate-card");
+    const cards = document.querySelectorAll(".fade-up");
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
-            entry.target.classList.add("show-animation");
+            entry.target.classList.add("show");
           }
         });
       },
       {
-        threshold: 0.2,
+        threshold: 0.15,
       }
     );
 
@@ -83,24 +117,26 @@ export default function ProgramsSection() {
 
   return (
     <section className="programs-section">
-      {/* Floating Background Shapes */}
-      <div className="bg-circle bg1"></div>
-      <div className="bg-circle bg2"></div>
+      <div className="gradient-circle circle1"></div>
+      <div className="gradient-circle circle2"></div>
 
-      <div className="programs-container">
+      <div className="container">
         {/* HERO */}
-        <div className="programs-hero">
-          <div className="hero-left animate-card">
-            <span className="section-tag">Our Programs</span>
+        <div className="hero-section">
+          <div className="hero-left fade-up">
+            <div className="tag">
+              <Sparkles size={14} />
+              Our Programs
+            </div>
 
-            <h1>
-              Empowering Communities Through Education & Skills
-            </h1>
+            <h2>
+              Empowering Communities Through Education & Opportunity
+            </h2>
 
             <p>
-              We create meaningful opportunities for women and youth through
-              education, digital literacy, livelihood programs, and employment
-              support.
+              Creating meaningful opportunities for youth and women through
+              education, digital literacy, employability, and social impact
+              programs.
             </p>
 
             <div className="hero-buttons">
@@ -114,21 +150,38 @@ export default function ProgramsSection() {
             </div>
           </div>
 
-          <div className="hero-right animate-card">
-            <img
-              src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
-              alt="NGO Programs"
-            />
+          <div className="hero-right fade-up">
+            <div className="hero-image-wrapper">
+              <img
+                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
+                alt="NGO"
+              />
+
+              <div className="floating-card card1">
+                
+
+                <div>
+                  <h4>5000+</h4>
+                  <p>Lives Impacted</p>
+                </div>
+              </div>
+
+              <div className="floating-card card2">
+               
+
+                <div>
+                  <h4>40+</h4>
+                  <p>Communities</p>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
 
         {/* STATS */}
-        <div className="stats-section">
+        <div className="stats-grid fade-up">
           {stats.map((item, index) => (
-            <div
-              className="stat-card animate-card"
-              key={index}
-            >
+            <div className="stat-card" key={index}>
               <h2>{item.number}</h2>
               <p>{item.label}</p>
             </div>
@@ -136,18 +189,14 @@ export default function ProgramsSection() {
         </div>
 
         {/* HEADER */}
-        <div className="section-header animate-card">
-          <span className="section-tag">
-            Featured Initiatives
-          </span>
+        <div className="section-header fade-up">
+          <span>Featured Initiatives</span>
 
-          <h2>
-            Programs That Create Real Impact
-          </h2>
+          <h2>Programs Creating Real Impact</h2>
 
           <p>
-            Our initiatives bridge education, technology, and livelihood
-            opportunities while creating inclusive growth for communities.
+            Our initiatives bridge education, employment, technology, and
+            empowerment to build sustainable futures.
           </p>
         </div>
 
@@ -155,10 +204,10 @@ export default function ProgramsSection() {
         <div className="programs-grid">
           {programs.map((program, index) => (
             <div
-              className="program-card animate-card"
+              className="program-card fade-up"
               key={index}
               style={{
-                transitionDelay: `${index * 0.15}s`,
+                transitionDelay: `${index * 0.1}s`,
               }}
             >
               <div className="program-image">
@@ -166,10 +215,18 @@ export default function ProgramsSection() {
                   src={program.image}
                   alt={program.title}
                 />
+
+                <div className="overlay"></div>
+
+                <div className="category-tag">
+                  {program.category}
+                </div>
               </div>
 
               <div className="program-content">
-                <span>{program.category}</span>
+                {/* <div className="program-icon">
+                  {program.icon}
+                </div> */}
 
                 <h3>{program.title}</h3>
 
@@ -177,66 +234,67 @@ export default function ProgramsSection() {
 
                 <button>
                   Learn More
+                  <ArrowRight size={16} />
                 </button>
               </div>
             </div>
           ))}
         </div>
 
-        {/* WHY SECTION */}
-        <div className="why-section">
-          <div className="why-left animate-card">
+        {/* FEATURE SECTION */}
+        <div className="feature-section fade-up">
+          <div className="feature-image">
             <img
               src="https://images.unsplash.com/photo-1517048676732-d65bc937f952?q=80&w=1200&auto=format&fit=crop"
-              alt="Why Choose Us"
+              alt=""
             />
           </div>
 
-          <div className="why-right animate-card">
-            <span className="section-tag">
-              Why Choose Us
-            </span>
+          <div className="feature-content">
+            <span>Why Choose Us</span>
 
             <h2>
-              Building Brighter Futures Together
+              Building Better Futures Through Inclusive Learning
             </h2>
 
-            <div className="why-points">
-              <div className="why-card">
-                <h4>Experienced Trainers</h4>
-                <p>
-                  Learn from skilled mentors with real industry and community
-                  experience.
-                </p>
+            <p>
+              We focus on practical learning, mentorship, career opportunities,
+              and sustainable community transformation.
+            </p>
+
+            <div className="feature-points">
+              <div className="point">
+                <div className="dot"></div>
+                Experienced Trainers
               </div>
 
-              <div className="why-card">
-                <h4>Hands-on Learning</h4>
-                <p>
-                  Practical workshops and project-based learning for better
-                  outcomes.
-                </p>
+              <div className="point">
+                <div className="dot"></div>
+                Hands-on Workshops
               </div>
 
-              <div className="why-card">
-                <h4>Career Opportunities</h4>
-                <p>
-                  Placement support and career guidance for long-term success.
-                </p>
+              <div className="point">
+                <div className="dot"></div>
+                Placement Assistance
+              </div>
+
+              <div className="point">
+                <div className="dot"></div>
+                Community Development
               </div>
             </div>
           </div>
         </div>
 
         {/* CTA */}
-        <div className="cta-section animate-card">
+        <div className="cta-section fade-up">
           <h2>
-            Ready to Start Your Learning Journey?
+            Together We Can Create Opportunities 
           </h2>
 
           <p>
-            Join our programs and become part of a community focused on growth,
-            empowerment, and opportunity.
+            Join our mission to empower communities through education,
+            opportunity, and sustainable growth.
           </p>
 
           <div className="cta-buttons">
@@ -245,7 +303,7 @@ export default function ProgramsSection() {
             </button>
 
             <button className="secondary-btn">
-              Contact Admissions
+              Donate Now
             </button>
           </div>
         </div>
