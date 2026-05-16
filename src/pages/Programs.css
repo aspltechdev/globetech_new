@@ -1,510 +1,484 @@
-/* Programs.css */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
 
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap");
-
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-  background:#f3f3f3;
-  font-family:"Poppins",sans-serif;
+body {
+  font-family: "Poppins", sans-serif;
+  overflow-x: hidden;
 }
 
-/* =========================================
-   SECTION
-========================================= */
-
-.programs-section{
-  width:100%;
-  background:#f3f3f3;
-  padding:18px 0 42px;
+.programs-section {
+  position: relative;
+  width: 100%;
+  background: linear-gradient(to bottom, #f8fbff, #eef4ff);
+  padding: 90px 20px;
+  overflow: hidden;
 }
 
-/* =========================================
-   CONTAINER
-========================================= */
-
-.programs-container{
-  width:100%;
-  max-width:1240px;
-  margin:auto;
-  padding:0 42px;
+.programs-container {
+  width: 100%;
+  max-width: 1300px;
+  margin: auto;
+  position: relative;
+  z-index: 2;
 }
 
-/* =========================================
-   HEADER
-========================================= */
+/* ================= BACKGROUND EFFECTS ================= */
 
-.section-header{
-  margin-bottom:34px;
+.bg-circle {
+  position: absolute;
+  border-radius: 50%;
+  filter: blur(100px);
+  opacity: 0.2;
+  z-index: 0;
 }
 
-/* TITLE */
-
-.section-header h2{
-  color:#111111;
-
-  font-size:52px;
-  font-weight:700;
-
-  line-height:1.1;
-
-  margin-bottom:14px;
+.bg1 {
+  width: 350px;
+  height: 350px;
+  background: #2563eb;
+  top: -100px;
+  left: -100px;
 }
 
-/* TEXT */
-
-.section-header p{
-  color:#505050;
-
-  font-size:13px;
-  font-weight:400;
-
-  line-height:1.9;
-
-  max-width:1160px;
-
-  margin-bottom:8px;
+.bg2 {
+  width: 300px;
+  height: 300px;
+  background: #7c3aed;
+  bottom: -100px;
+  right: -100px;
 }
 
-/* =========================================
-   GRID
-========================================= */
+/* ================= ANIMATIONS ================= */
 
-.programs-grid{
-  display:grid;
-  grid-template-columns:repeat(2,1fr);
-
-  gap:34px;
-
-  margin-bottom:42px;
+.animate-card {
+  opacity: 0;
+  transform: translateY(80px) scale(0.9) rotateX(15deg);
+  transition: all 1s cubic-bezier(0.17, 0.55, 0.55, 1);
 }
 
-/* =========================================
-   CARD
-========================================= */
-
-.program-card{
-  position:relative;
-
-  width:100%;
-  height:360px;
-
-  border-radius:22px;
-
-  overflow:hidden;
-
-  cursor:pointer;
-
-  transition:
-    transform 0.45s ease,
-    box-shadow 0.45s ease;
+.show-animation {
+  opacity: 1;
+  transform: translateY(0) scale(1) rotateX(0deg);
 }
 
-/* IMAGE */
+@keyframes floating {
+  0% {
+    transform: translateY(0px);
+  }
 
-.program-card img{
-  width:100%;
-  height:100%;
+  50% {
+    transform: translateY(-12px);
+  }
 
-  object-fit:cover;
-
-  transition:0.8s ease;
+  100% {
+    transform: translateY(0px);
+  }
 }
 
-/* =========================================
-   OVERLAY
-========================================= */
+/* ================= HERO ================= */
 
-.program-overlay{
-  position:absolute;
-  inset:0;
+.programs-hero {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
+  align-items: center;
+  margin-bottom: 100px;
+}
 
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.75),
-    rgba(0,0,0,0.12)
+.section-tag {
+  background: rgba(37, 99, 235, 0.1);
+  color: #2563eb;
+  padding: 10px 20px;
+  border-radius: 50px;
+  font-size: 0.85rem;
+  font-weight: 600;
+}
+
+.hero-left h1 {
+  font-size: 3.5rem;
+  line-height: 1.15;
+  margin: 25px 0;
+  color: #0f172a;
+}
+
+.hero-left p {
+  color: #475569;
+  line-height: 1.9;
+  margin-bottom: 35px;
+  font-size: 1rem;
+}
+
+.hero-buttons {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.primary-btn,
+.secondary-btn,
+.program-content button {
+  padding: 15px 30px;
+  border-radius: 14px;
+  border: none;
+  cursor: pointer;
+  transition: 0.4s ease;
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.primary-btn {
+  background: linear-gradient(135deg, #2563eb, #1d4ed8);
+  color: white;
+  box-shadow: 0 10px 30px rgba(37, 99, 235, 0.35);
+}
+
+.primary-btn:hover {
+  transform: translateY(-5px);
+}
+
+.secondary-btn {
+  background: white;
+  border: 1px solid #dbeafe;
+  color: #0f172a;
+}
+
+.secondary-btn:hover {
+  background: #f1f5f9;
+}
+
+.hero-right img {
+  width: 100%;
+  border-radius: 35px;
+  object-fit: cover;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+  animation: floating 5s ease-in-out infinite;
+}
+
+/* ================= STATS ================= */
+
+.stats-section {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 25px;
+  margin-bottom: 100px;
+}
+
+.stat-card {
+  background: rgba(255, 255, 255, 0.75);
+  backdrop-filter: blur(20px);
+  border-radius: 28px;
+  padding: 35px 20px;
+  text-align: center;
+  border: 1px solid rgba(255, 255, 255, 0.4);
+  transition: 0.4s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.05);
+}
+
+.stat-card:hover {
+  transform: translateY(-10px) scale(1.03);
+}
+
+.stat-card h2 {
+  color: #2563eb;
+  font-size: 2.4rem;
+  margin-bottom: 10px;
+}
+
+.stat-card p {
+  color: #475569;
+}
+
+/* ================= HEADER ================= */
+
+.section-header {
+  text-align: center;
+  max-width: 800px;
+  margin: auto;
+  margin-bottom: 70px;
+}
+
+.section-header h2 {
+  font-size: 2.8rem;
+  margin: 20px 0;
+  color: #0f172a;
+}
+
+.section-header p {
+  color: #64748b;
+  line-height: 1.8;
+}
+
+/* ================= PROGRAM GRID ================= */
+
+.programs-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 35px;
+  margin-bottom: 120px;
+}
+
+.program-card {
+  background: rgba(255, 255, 255, 0.8);
+  backdrop-filter: blur(18px);
+  border-radius: 30px;
+  overflow: hidden;
+  transition: 0.5s ease;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.06);
+  position: relative;
+}
+
+.program-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    180deg,
+    transparent,
+    rgba(37, 99, 235, 0.04)
   );
-
-  display:flex;
-  align-items:flex-end;
-
-  padding:18px;
+  opacity: 0;
+  transition: 0.5s ease;
 }
 
-/* =========================================
-   CONTENT BOX
-========================================= */
-
-.program-content{
-  width:100%;
-
-  background:rgba(255,255,255,0.20);
-
-  backdrop-filter:blur(14px);
-
-  border:1px solid rgba(255,255,255,0.22);
-
-  border-radius:18px;
-
-  padding:18px 18px 16px;
+.program-card:hover::before {
+  opacity: 1;
 }
 
-/* TITLE */
-
-.program-content h3{
-  color:white;
-
-  font-size:22px;
-  font-weight:600;
-
-  line-height:1.4;
-
-  margin-bottom:10px;
+.program-card:hover {
+  transform: translateY(-15px) rotateX(5deg) rotateY(-5deg);
 }
 
-/* DESCRIPTION */
-
-.program-content p{
-  color:rgba(255,255,255,0.90);
-
-  font-size:13px;
-  font-weight:400;
-
-  line-height:1.8;
-
-  margin-bottom:18px;
+.program-image {
+  height: 250px;
+  overflow: hidden;
 }
 
-/* BUTTON */
-
-.program-content button{
-  width:100%;
-  height:46px;
-
-  border:none;
-  outline:none;
-
-  border-radius:40px;
-
-  background:#0d63d7;
-
-  color:white;
-
-  font-size:16px;
-  font-weight:600;
-
-  cursor:pointer;
-
-  transition:0.35s ease;
+.program-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: 0.6s ease;
 }
 
-/* =========================================
-   HOVER
-========================================= */
-
-.program-card:hover{
-  transform:translateY(-8px);
-
-  box-shadow:0 18px 36px rgba(0,0,0,0.16);
+.program-card:hover img {
+  transform: scale(1.1);
 }
 
-.program-card:hover img{
-  transform:scale(1.08);
+.program-content {
+  padding: 30px;
 }
 
-.program-content button:hover{
-  background:#0954ba;
+.program-content span {
+  color: #2563eb;
+  font-size: 0.82rem;
+  font-weight: 600;
+  letter-spacing: 1px;
 }
 
-/* =========================================
-   CTA BOX
-========================================= */
-
-.cta-box{
-  width:100%;
-  max-width:980px;
-
-  margin:auto;
-
-  background:#0d63d7;
-
-  border-radius:24px;
-
-  padding:52px 30px;
-
-  text-align:center;
+.program-content h3 {
+  margin: 18px 0;
+  color: #0f172a;
+  font-size: 1.45rem;
 }
 
-/* TITLE */
-
-.cta-box h2{
-  color:white;
-
-  font-size:48px;
-  font-weight:700;
-
-  line-height:1.25;
-
-  margin-bottom:16px;
+.program-content p {
+  color: #64748b;
+  line-height: 1.8;
+  margin-bottom: 25px;
 }
 
-/* TEXT */
-
-.cta-box p{
-  color:rgba(255,255,255,0.92);
-
-  font-size:17px;
-  font-weight:400;
-
-  line-height:1.7;
-
-  margin-bottom:30px;
+.program-content button {
+  background: #0f172a;
+  color: white;
 }
 
-/* BUTTON */
-
-.cta-btn{
-  width:260px;
-  height:56px;
-
-  border:none;
-  outline:none;
-
-  border-radius:50px;
-
-  background:white;
-
-  color:#0d63d7;
-
-  font-size:17px;
-  font-weight:600;
-
-  cursor:pointer;
-
-  transition:0.35s ease;
+.program-content button:hover {
+  background: #2563eb;
+  transform: translateY(-4px);
 }
 
-/* HOVER */
+/* ================= WHY SECTION ================= */
 
-.cta-btn:hover{
-  transform:translateY(-4px);
-
-  background:#f1f1f1;
+.why-section {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 70px;
+  align-items: center;
+  margin-bottom: 120px;
 }
 
-/* =========================================
-   LARGE TABLET
-========================================= */
+.why-left img {
+  width: 100%;
+  border-radius: 35px;
+  box-shadow: 0 30px 60px rgba(0, 0, 0, 0.12);
+}
 
-@media(max-width:1100px){
+.why-right h2 {
+  font-size: 2.7rem;
+  margin: 20px 0 35px;
+  color: #0f172a;
+}
 
-  .section-header h2{
-    font-size:42px;
+.why-points {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.why-card {
+  background: white;
+  border-radius: 24px;
+  padding: 25px;
+  transition: 0.4s ease;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+}
+
+.why-card:hover {
+  transform: translateX(10px);
+}
+
+.why-card h4 {
+  margin-bottom: 10px;
+  color: #0f172a;
+}
+
+.why-card p {
+  color: #64748b;
+  line-height: 1.7;
+}
+
+/* ================= CTA ================= */
+
+.cta-section {
+  background: linear-gradient(135deg, #2563eb, #1e40af);
+  padding: 80px 40px;
+  border-radius: 40px;
+  text-align: center;
+  color: white;
+  position: relative;
+  overflow: hidden;
+}
+
+.cta-section::before {
+  content: "";
+  position: absolute;
+  width: 500px;
+  height: 500px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 50%;
+  top: -250px;
+  right: -250px;
+}
+
+.cta-section h2 {
+  font-size: 2.8rem;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.cta-section p {
+  max-width: 700px;
+  margin: auto;
+  line-height: 1.8;
+  margin-bottom: 35px;
+  position: relative;
+}
+
+.cta-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+  position: relative;
+}
+
+/* ================= RESPONSIVE ================= */
+
+@media (max-width: 1100px) {
+  .programs-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .program-card{
-    height:330px;
+  .stats-section {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .cta-box h2{
-    font-size:40px;
+  .hero-left h1 {
+    font-size: 2.8rem;
   }
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
-@media(max-width:992px){
-
-  .programs-grid{
-    grid-template-columns:1fr;
+@media (max-width: 768px) {
+  .programs-hero,
+  .why-section,
+  .programs-grid,
+  .stats-section {
+    grid-template-columns: 1fr;
   }
 
-  .program-card{
-    height:380px;
+  .programs-section {
+    padding: 70px 15px;
   }
 
-  .cta-box{
-    padding:44px 24px;
-  }
-}
-
-/* =========================================
-   MOBILE
-========================================= */
-
-@media(max-width:768px){
-
-  .programs-container{
-    padding:0 18px;
+  .hero-left h1 {
+    font-size: 2.2rem;
   }
 
-  .section-header{
-    margin-bottom:28px;
+  .section-header h2,
+  .why-right h2,
+  .cta-section h2 {
+    font-size: 2rem;
   }
 
-  .section-header h2{
-    font-size:34px;
+  .hero-buttons,
+  .cta-buttons {
+    flex-direction: column;
   }
 
-  .section-header p{
-    font-size:12px;
-    line-height:1.85;
+  .primary-btn,
+  .secondary-btn {
+    width: 100%;
   }
 
-  .programs-grid{
-    gap:22px;
+  .program-card:hover {
+    transform: translateY(-10px);
   }
 
-  .program-card{
-    height:320px;
-
-    border-radius:18px;
+  .cta-section {
+    padding: 60px 20px;
   }
 
-  .program-overlay{
-    padding:14px;
-  }
-
-  .program-content{
-    padding:16px;
-  }
-
-  .program-content h3{
-    font-size:18px;
-  }
-
-  .program-content p{
-    font-size:12px;
-
-    line-height:1.7;
-  }
-
-  .program-content button{
-    height:42px;
-
-    font-size:15px;
-  }
-
-  .cta-box{
-    border-radius:20px;
-
-    padding:38px 20px;
-  }
-
-  .cta-box h2{
-    font-size:30px;
-  }
-
-  .cta-box p{
-    font-size:14px;
-  }
-
-  .cta-btn{
-    width:220px;
-    height:50px;
-
-    font-size:15px;
+  .program-image {
+    height: 220px;
   }
 }
 
-/* =========================================
-   SMALL MOBILE
-========================================= */
-
-@media(max-width:480px){
-
-  .programs-section{
-    padding:16px 0 30px;
+@media (max-width: 480px) {
+  .hero-left h1 {
+    font-size: 1.9rem;
   }
 
-  .programs-container{
-    padding:0 14px;
+  .section-header h2,
+  .why-right h2,
+  .cta-section h2 {
+    font-size: 1.7rem;
   }
 
-  .section-header h2{
-    font-size:28px;
-
-    margin-bottom:12px;
+  .program-content {
+    padding: 22px;
   }
 
-  .section-header p{
-    font-size:11px;
-
-    line-height:1.8;
+  .stat-card {
+    padding: 25px 15px;
   }
 
-  .programs-grid{
-    gap:18px;
-
-    margin-bottom:30px;
-  }
-
-  .program-card{
-    height:270px;
-
-    border-radius:16px;
-  }
-
-  .program-overlay{
-    padding:12px;
-  }
-
-  .program-content{
-    border-radius:14px;
-
-    padding:14px;
-  }
-
-  .program-content h3{
-    font-size:15px;
-
-    margin-bottom:8px;
-  }
-
-  .program-content p{
-    font-size:10px;
-
-    line-height:1.7;
-
-    margin-bottom:12px;
-  }
-
-  .program-content button{
-    height:38px;
-
-    font-size:13px;
-  }
-
-  .cta-box{
-    border-radius:18px;
-
-    padding:30px 16px;
-  }
-
-  .cta-box h2{
-    font-size:24px;
-
-    margin-bottom:12px;
-  }
-
-  .cta-box p{
-    font-size:12px;
-
-    line-height:1.7;
-
-    margin-bottom:20px;
-  }
-
-  .cta-btn{
-    width:190px;
-    height:44px;
-
-    font-size:14px;
+  .stat-card h2 {
+    font-size: 2rem;
   }
 }

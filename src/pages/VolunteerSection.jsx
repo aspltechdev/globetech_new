@@ -1,244 +1,114 @@
-// VolunteerSection.jsx
+// PartnershipSection.jsx
 
 import React from "react";
 import "./VolunteerSection.css";
 
-import {
-  FaHandsHelping,
-  FaBullhorn,
-  FaLaptop,
-} from "react-icons/fa";
+const partners = [
+  {
+    name: "IBM",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/5/51/IBM_logo.svg",
+  },
+  {
+    name: "HDFC",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/28/HDFC_Bank_Logo.svg",
+  },
+  {
+    name: "TVS",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/83/TVS_Motor_Logo.svg",
+  },
+  {
+    name: "Infosys",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/95/Infosys_logo.svg",
+  },
+  {
+    name: "Toyota",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/9/9d/Toyota_carlogo.svg",
+  },
+  {
+    name: "Bosch",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/2/20/Bosch-logo.svg",
+  },
+  {
+    name: "Tata",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Tata_logo.svg",
+  },
+  {
+    name: "ICICI",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/12/ICICI_Bank_Logo.svg",
+  },
+];
 
-const VolunteerSection = () => {
+export default function VolunteerSection() {
   return (
-    <section className="volunteer-main-section">
+    <section className="partner-section">
 
-      <div className="volunteer-main-container">
+      {/* BACKGROUND GLOW */}
 
-        {/* TOP AREA */}
-        <div className="volunteer-top-layout">
+      <div className="partner-glow one"></div>
+      <div className="partner-glow two"></div>
 
-          {/* LEFT CONTENT */}
-          <div className="volunteer-left-content">
+      <div className="partner-container">
 
-            <h2>
-              Volunteer Application
-            </h2>
+        {/* HEADER */}
 
-            <p>
-              We believe everyone has a gift to offer. Tell us a bit
-              about yourself and your skills, and our volunteer
-              coordination team will reach out within 48 hours to
-              discuss potential placements.
-            </p>
+        <div className="partner-header">
 
-            {/* FEATURES */}
-            <div className="volunteer-feature-list">
+          <span className="partner-tag">
+            TRUSTED PARTNERS
+          </span>
 
-              {/* ITEM */}
-              <div className="volunteer-feature-item">
+          <h2>
+            Together We Create
+            <span> Bigger Impact</span>
+          </h2>
 
-                <div className="volunteer-icon-box">
-                  <FaHandsHelping />
-                </div>
-
-                <div>
-
-                  <h4>
-                    Skilled Mentorship
-                  </h4>
-
-                  <p>
-                    Share your professional expertise with emerging
-                    leaders in our partner communities.
-                  </p>
-
-                </div>
-
-              </div>
-
-              {/* ITEM */}
-              <div className="volunteer-feature-item">
-
-                <div className="volunteer-icon-box">
-                  <FaBullhorn />
-                </div>
-
-                <div>
-
-                  <h4>
-                    Field Operations
-                  </h4>
-
-                  <p>
-                    Assist on-ground teams with logistics,
-                    construction, or healthcare delivery.
-                  </p>
-
-                </div>
-
-              </div>
-
-              {/* ITEM */}
-              <div className="volunteer-feature-item">
-
-                <div className="volunteer-icon-box">
-                  <FaLaptop />
-                </div>
-
-                <div>
-
-                  <h4>
-                    Digital Advocacy
-                  </h4>
-
-                  <p>
-                    Help us spread the word through social media,
-                    design, and storytelling.
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-          {/* RIGHT FORM */}
-          <div className="volunteer-form-wrapper">
-
-            <form className="volunteer-form-box">
-
-              {/* GRID */}
-              <div className="volunteer-input-grid">
-
-                <div className="volunteer-input-group">
-
-                  <label>
-                    FULL NAME
-                  </label>
-
-                  <input
-                    type="text"
-                    placeholder="Enter Your Name"
-                  />
-
-                </div>
-
-                <div className="volunteer-input-group">
-
-                  <label>
-                    EMAIL ADDRESS
-                  </label>
-
-                  <input
-                    type="email"
-                    placeholder="Enter Your Email Address"
-                  />
-
-                </div>
-
-              </div>
-
-              {/* SELECT */}
-              <div className="volunteer-input-group">
-
-                <label>
-                  PRIMARY SKILLSET
-                </label>
-
-                <select>
-
-                  <option>
-                    Education
-                  </option>
-
-                  <option>
-                    Technology
-                  </option>
-
-                  <option>
-                    Healthcare
-                  </option>
-
-                </select>
-
-              </div>
-
-              {/* TEXTAREA */}
-              <div className="volunteer-input-group">
-
-                <label>
-                  TELL US WHY YOU WANT TO JOIN
-                </label>
-
-                <textarea
-                  placeholder="What motivates you to work with Globotech?"
-                ></textarea>
-
-              </div>
-
-              {/* CHECKBOX */}
-              <label className="volunteer-checkbox">
-
-                <input type="checkbox" />
-
-                <span>
-                  I agree to the volunteer code of conduct and privacy policy.
-                </span>
-
-              </label>
-
-              {/* BUTTON */}
-              <button type="submit">
-                Submit Application ▷
-              </button>
-
-            </form>
-
-          </div>
+          <p>
+            We collaborate with visionary brands and organizations
+            committed to creating sustainable social change and
+            empowering communities worldwide.
+          </p>
 
         </div>
 
-        {/* CTA SECTION */}
-        <div className="volunteer-cta-section">
+        {/* LOGO GRID */}
 
-          {/* LEFT */}
-          <div className="volunteer-cta-content">
+        <div className="partner-grid">
 
-            <h2>
-              Be the Change You Wish to
-              <br />
-              See in the World.
-            </h2>
+          {partners.map((item, index) => (
 
-            <p>
-              Whether you give your time, your talent, or your treasure,
-              you are making a difference. Join our mission today.
-            </p>
+            <div className="partner-card" key={index}>
 
-            {/* BUTTONS */}
-            <div className="volunteer-cta-buttons">
-
-              <button className="donate-btn">
-                Donate Now
-              </button>
-
-              <button className="volunteer-btn">
-                Volunteer
-              </button>
-
-              <button className="partner-btn">
-                Partner With Us
-              </button>
+              <img
+                src={item.logo}
+                alt={item.name}
+              />
 
             </div>
 
+          ))}
+
+        </div>
+
+        {/* CTA */}
+
+        <div className="partner-cta">
+
+          <div className="partner-cta-content">
+
+            <h3>
+              Become A Strategic Partner
+            </h3>
+
+            <p>
+              Join hands with us to scale impact-driven
+              initiatives and build stronger communities together.
+            </p>
+
           </div>
 
-          {/* YELLOW SHAPE */}
-          <div className="volunteer-yellow-shape"></div>
+          <button>
+            Partner With Us
+          </button>
 
         </div>
 
@@ -246,6 +116,4 @@ const VolunteerSection = () => {
 
     </section>
   );
-};
-
-export default VolunteerSection;
+}

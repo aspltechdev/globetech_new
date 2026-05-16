@@ -1,529 +1,445 @@
-/* =========================================
-   GLOBAL
-========================================= */
+/* VolunteerImpactExperience.css */
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-.ways-impact-section {
-  width: 100%;
-  background: #f5f5f5;
-  padding: 70px 20px 80px;
-  overflow: hidden;
-  font-family: "Poppins", sans-serif;
+body{
+  font-family:"Inter",sans-serif;
+  background:#fff;
 }
 
-.ways-impact-container {
-  max-width: 1240px;
-  margin: auto;
+.impact-experience{
+  position:relative;
+  overflow:hidden;
+  padding:140px 6%;
+  background:#ffffff;
 }
 
-/* =========================================
-   HEADER
-========================================= */
-
-.ways-impact-header {
-  text-align: center;
-  margin-bottom: 60px;
+.impact-container{
+  max-width:1450px;
+  margin:auto;
+  position:relative;
+  z-index:2;
 }
 
-.ways-impact-header h2 {
-  font-size: 40px;
-  font-weight: 700;
-  line-height: 1.05;
-  color: #0d63d8;
-  margin-bottom: 14px;
-  letter-spacing: -1px;
+/* BACKGROUND EFFECTS */
+
+.blur-circle{
+  position:absolute;
+  width:500px;
+  height:500px;
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:.08;
+  z-index:1;
 }
 
-.ways-impact-header p {
-  max-width: 720px;
-  margin: auto;
-  color: #6f7782;
-  font-size: 16px;
-  line-height: 1.7;
+.blur-circle.one{
+  background:#8b5cf6;
+  top:-100px;
+  left:-150px;
 }
 
-/* =========================================
-   TOP CARDS
-========================================= */
-
-.ways-impact-cards {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 46px;
-  margin-bottom: 60px;
+.blur-circle.two{
+  background:#00bfff;
+  bottom:-100px;
+  right:-150px;
 }
 
-.ways-impact-card {
-  background: #f7f7f7;
-  border-radius: 24px;
- padding: 14px;
-  min-height: 157px;
-  box-shadow:
-    0 10px 20px rgba(0,0,0,0.08),
-    0 3px 6px rgba(0,0,0,0.05);
-  position: relative;
-  transition:
-    transform 0.4s ease,
-    box-shadow 0.4s ease;
+/* INTRO */
+
+.intro-section{
+  text-align:center;
+  max-width:950px;
+  margin:auto;
+  margin-bottom:140px;
 }
 
-.ways-impact-card:hover {
-  transform: translateY(-7px);
-  box-shadow:
-    0 18px 32px rgba(0,0,0,0.12),
-    0 6px 10px rgba(0,0,0,0.06);
+.mini-tag{
+  display:inline-block;
+  padding:10px 22px;
+  border-radius:100px;
+  background:#f4f4f4;
+  color:#111;
+  font-size:13px;
+  font-weight:600;
+  letter-spacing:2px;
+  margin-bottom:28px;
 }
 
-.ways-impact-blue-card {
-  background: #0664d8;
+.intro-section h1{
+  font-size:82px;
+  line-height:1;
+  font-weight:800;
+  color:#111;
+  margin-bottom:30px;
 }
 
-.ways-impact-icon-wrap {
-  width: 62px;
-  height: 62px;
-  display: flex;
-  align-items: center;
-  justify-content: flex-start;
-  margin-bottom: 28px;
+.intro-section h1 span{
+  color:#8b5cf6;
 }
 
-.ways-impact-icon {
-  font-size: 38px;
-  color: #0664d8;
+.intro-section p{
+  font-size:20px;
+  line-height:2;
+  color:#666;
 }
 
-.ways-impact-white-icon {
-  color: white;
+/* STORIES */
+
+.story-wrapper{
+  display:flex;
+  flex-direction:column;
+  gap:160px;
 }
 
-.ways-impact-card h3 {
-  font-size: 16px;
-  line-height: 1.2;
-  font-weight: 500;
-  margin-bottom: 18px;
-  color: #0b0b0b;
+.story-block{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  gap:80px;
+  align-items:center;
 }
 
-.ways-impact-blue-card h3 {
-  color: white;
+.story-block.reverse{
+  grid-template-columns:.9fr 1.1fr;
 }
 
-.ways-impact-card p {
-  font-size: 16px;
-  line-height: 1.9;
-  color: #6c7380;
-  margin-bottom: 26px;
-  max-width: 95%;
+.story-block.reverse .story-image{
+  order:2;
 }
 
-.ways-impact-blue-card p {
-  color: rgba(255,255,255,0.82);
+.story-block.reverse .story-content{
+  order:1;
 }
 
-.ways-impact-card a {
-  text-decoration: none;
-  font-size: 15px;
-  font-weight: 700;
-  color: #0664d8;
+/* IMAGE */
+
+.story-image{
+  position:relative;
+  overflow:hidden;
+  border-radius:40px;
 }
 
-.ways-impact-blue-card a {
-  color: white;
+.story-image img{
+  width:100%;
+  height:700px;
+  object-fit:cover;
+  transition:1.5s ease;
 }
 
-/* =========================================
-   CORPORATE SECTION
-========================================= */
-
-.ways-impact-corporate {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-  gap: 80px;
-  align-items: center;
+.story-block:hover .story-image img{
+  transform:scale(1.08);
 }
 
-/* LEFT */
-
-.ways-impact-corporate-left h4 {
-  font-size: 28px;
-  font-weight: 600;
-  color: #1565d8;
-  margin-bottom: 18px;
+.image-overlay{
+  position:absolute;
+  inset:0;
+  background:linear-gradient(
+    to top,
+    rgba(0,0,0,.45),
+    transparent 50%
+  );
 }
 
-.ways-impact-corporate-left p {
-  font-size: 16px;
-  line-height: 1.9;
-  color: #5f6673;
-  margin-bottom: 34px;
-  max-width: 650px;
+/* FLOATING QUOTE */
+
+.floating-quote{
+  position:absolute;
+  bottom:40px;
+  left:40px;
+  background:rgba(255,255,255,.14);
+  backdrop-filter:blur(18px);
+  padding:18px 24px;
+  border-radius:20px;
+  color:white;
+  max-width:320px;
+  line-height:1.7;
+  font-size:15px;
+  border:1px solid rgba(255,255,255,.15);
+  animation:floatQuote 5s ease-in-out infinite;
 }
 
-.ways-impact-list {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 20px 36px;
-  margin-bottom: 36px;
+@keyframes floatQuote{
+  0%,100%{
+    transform:translateY(0px);
+  }
+
+  50%{
+    transform:translateY(-12px);
+  }
 }
 
-.ways-impact-list-item {
-  display: flex;
-  align-items: center;
-  gap: 12px;
+/* CONTENT */
+
+.story-content{
+  position:relative;
 }
 
-.ways-impact-check {
-  color: #1565d8;
-  font-size: 14px;
-  flex-shrink: 0;
+.story-line{
+  width:120px;
+  height:2px;
+  background:#8b5cf6;
+  margin-bottom:35px;
+  position:relative;
 }
 
-.ways-impact-list-item span {
-  font-size: 15px;
-  color: #374151;
+.story-line::after{
+  content:"";
+  position:absolute;
+  right:0;
+  top:50%;
+  width:14px;
+  height:14px;
+  border-radius:50%;
+  background:#8b5cf6;
+  transform:translateY(-50%);
+  animation:pulse 2s infinite;
 }
 
-.ways-impact-corporate-left button {
-  height: 56px;
-  padding: 0 34px;
-  border-radius: 14px;
-  border: 1px solid #bfc8d7;
-  background: white;
-  color: #1565d8;
-  font-size: 15px;
-  font-weight: 700;
-  cursor: pointer;
-  transition: all 0.35s ease;
+@keyframes pulse{
+  0%{
+    transform:translateY(-50%) scale(1);
+    opacity:1;
+  }
+
+  100%{
+    transform:translateY(-50%) scale(2.3);
+    opacity:0;
+  }
 }
 
-.ways-impact-corporate-left button:hover {
-  background: #1565d8;
-  color: white;
+.story-content h2{
+  font-size:56px;
+  line-height:1.1;
+  color:#111;
+  margin-bottom:30px;
+  font-weight:800;
 }
 
-/* =========================================
-   LOGOS
-========================================= */
-
-.ways-impact-logo-grid {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 26px;
+.story-content p{
+  color:#666;
+  line-height:2;
+  font-size:18px;
+  margin-bottom:40px;
 }
 
-.ways-impact-logo-card {
-  background: white;
-  height: 118px;
-  border-radius: 18px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow:
-    0 10px 20px rgba(0,0,0,0.08),
-    0 3px 6px rgba(0,0,0,0.05);
-  transition:
-    transform 0.35s ease,
-    box-shadow 0.35s ease;
+/* BUTTON */
+
+.story-content button,
+.join-btn{
+  border:none;
+  background:#111;
+  color:white;
+  padding:18px 34px;
+  border-radius:70px;
+  font-size:15px;
+  font-weight:600;
+  display:flex;
+  align-items:center;
+  gap:14px;
+  cursor:pointer;
+  transition:.4s ease;
 }
 
-.ways-impact-logo-card:hover {
-  transform: translateY(-5px);
-  box-shadow:
-    0 18px 30px rgba(0,0,0,0.12),
-    0 5px 10px rgba(0,0,0,0.06);
+.story-content button:hover,
+.join-btn:hover{
+  transform:translateY(-5px);
+  padding-right:42px;
+  background:#8b5cf6;
 }
 
-.ways-impact-logo-card img {
-  width: 72%;
-  height: auto;
-  object-fit: contain;
+/* CTA */
+
+.emotion-cta{
+  margin-top:180px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:70px;
+  align-items:center;
+  background:#fafafa;
+  border-radius:50px;
+  padding:50px;
+  overflow:hidden;
 }
 
-/* =========================================
-   SCROLL REVEAL
-========================================= */
-
-.reveal-scroll {
-  opacity: 0;
-  transform: translateY(70px) scale(0.96);
-  transition: all 1s ease;
+.emotion-image img{
+  width:100%;
+  height:700px;
+  object-fit:cover;
+  border-radius:35px;
 }
 
-.reveal-scroll.active-reveal {
-  opacity: 1;
-  transform: translateY(0) scale(1);
+.emotion-content span{
+  color:#8b5cf6;
+  letter-spacing:2px;
+  font-size:14px;
+  font-weight:600;
 }
 
-/* =========================================
-   LARGE DEVICES
-========================================= */
-
-@media (max-width: 1200px) {
-
-  .ways-impact-container {
-    max-width: 100%;
-  }
-
-  .ways-impact-cards {
-    gap: 30px;
-  }
-
-  .ways-impact-corporate {
-    gap: 50px;
-  }
-
-  .ways-impact-card h3 {
-    font-size: 30px;
-  }
-
+.emotion-content h2{
+  font-size:68px;
+  line-height:1.05;
+  color:#111;
+  margin:25px 0;
+  font-weight:800;
 }
 
-/* =========================================
-   TABLET
-========================================= */
-
-@media (max-width: 992px) {
-
-  .ways-impact-section {
-    padding: 70px 24px;
-  }
-
-  .ways-impact-header {
-    margin-bottom: 50px;
-  }
-
-  .ways-impact-header h2 {
-    font-size: 42px;
-  }
-
-  .ways-impact-header p {
-    font-size: 15px;
-    max-width: 650px;
-  }
-
-  .ways-impact-cards {
-    grid-template-columns: 1fr;
-    gap: 28px;
-    margin-bottom: 55px;
-  }
-
-  .ways-impact-card {
-    min-height: auto;
-    padding: 38px;
-  }
-
-  .ways-impact-card h3 {
-    font-size: 28px;
-  }
-
-  .ways-impact-card p {
-    max-width: 100%;
-    font-size: 15px;
-  }
-
-  .ways-impact-corporate {
-    grid-template-columns: 1fr;
-    gap: 50px;
-  }
-
-  .ways-impact-corporate-left {
-    width: 100%;
-  }
-
-  .ways-impact-corporate-left p {
-    max-width: 100%;
-    font-size: 15px;
-  }
-
-  .ways-impact-logo-grid {
-    width: 100%;
-  }
-
+.emotion-content p{
+  color:#666;
+  line-height:2;
+  font-size:18px;
+  margin-bottom:45px;
 }
 
-/* =========================================
-   MOBILE LARGE
-========================================= */
+/* STATS */
 
-@media (max-width: 768px) {
-
-  .ways-impact-section {
-    padding: 60px 18px;
-  }
-
-  .ways-impact-header h2 {
-    font-size: 36px;
-    line-height: 1.15;
-  }
-
-  .ways-impact-header p {
-    font-size: 14px;
-    line-height: 1.7;
-  }
-
-  .ways-impact-card {
-    border-radius: 22px;
-    padding: 32px 28px;
-  }
-
-  .ways-impact-icon-wrap {
-    width: 56px;
-    height: 56px;
-    margin-bottom: 22px;
-  }
-
-  .ways-impact-icon {
-    font-size: 32px;
-  }
-
-  .ways-impact-card h3 {
-    font-size: 24px;
-    margin-bottom: 16px;
-  }
-
-  .ways-impact-card p {
-    font-size: 14px;
-    line-height: 1.8;
-    margin-bottom: 22px;
-  }
-
-  .ways-impact-card a {
-    font-size: 14px;
-  }
-
-  .ways-impact-corporate-left h4 {
-    font-size: 24px;
-  }
-
-  .ways-impact-corporate-left p {
-    font-size: 14px;
-    line-height: 1.8;
-  }
-
-  .ways-impact-list {
-    grid-template-columns: 1fr;
-    gap: 18px;
-  }
-
-  .ways-impact-list-item span {
-    font-size: 14px;
-  }
-
-  .ways-impact-corporate-left button {
-    height: 52px;
-    font-size: 14px;
-    padding: 0 28px;
-  }
-
-  .ways-impact-logo-grid {
-    grid-template-columns: repeat(2, 1fr);
-    gap: 18px;
-  }
-
-  .ways-impact-logo-card {
-    height: 95px;
-    border-radius: 16px;
-  }
-
-  .ways-impact-logo-card img {
-    width: 68%;
-  }
-
+.impact-stats{
+  display:flex;
+  gap:25px;
+  flex-wrap:wrap;
+  margin-bottom:45px;
 }
 
-/* =========================================
-   MOBILE SMALL
-========================================= */
-
-@media (max-width: 580px) {
-
-  .ways-impact-section {
-    padding: 55px 16px;
-  }
-
-  .ways-impact-header {
-    margin-bottom: 42px;
-  }
-
-  .ways-impact-header h2 {
-    font-size: 30px;
-  }
-
-  .ways-impact-header p {
-    font-size: 13px;
-  }
-
-  .ways-impact-card {
-    padding: 28px 22px;
-  }
-
-  .ways-impact-icon-wrap {
-    margin-bottom: 20px;
-  }
-
-  .ways-impact-card h3 {
-    font-size: 22px;
-  }
-
-  .ways-impact-card p {
-    font-size: 13px;
-  }
-
-  .ways-impact-corporate-left h4 {
-    font-size: 22px;
-  }
-
-  .ways-impact-corporate-left p {
-    font-size: 13px;
-  }
-
-  .ways-impact-logo-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .ways-impact-logo-card {
-    height: 88px;
-  }
-
-  .ways-impact-corporate-left button {
-    width: 100%;
-  }
-
+.stat-box{
+  background:white;
+  padding:28px;
+  border-radius:28px;
+  min-width:170px;
+  transition:.4s ease;
 }
 
-/* =========================================
-   EXTRA SMALL DEVICES
-========================================= */
+.stat-box:hover{
+  transform:translateY(-8px);
+  box-shadow:0 15px 40px rgba(0,0,0,.08);
+}
 
-@media (max-width: 400px) {
+.stat-box h3{
+  font-size:38px;
+  color:#111;
+  margin-bottom:10px;
+}
 
-  .ways-impact-header h2 {
-    font-size: 26px;
+.stat-box p{
+  margin:0;
+  color:#777;
+  font-size:15px;
+}
+
+/* SCROLL REVEAL */
+
+.reveal{
+  opacity:0;
+  transform:translateY(90px);
+  transition:1.2s ease;
+}
+
+.reveal.active{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* MOBILE */
+
+@media(max-width:1200px){
+
+  .story-block,
+  .story-block.reverse,
+  .emotion-cta{
+    grid-template-columns:1fr;
   }
 
-  .ways-impact-card {
-    padding: 24px 18px;
+  .story-block.reverse .story-image,
+  .story-block.reverse .story-content{
+    order:unset;
   }
 
-  .ways-impact-card h3 {
-    font-size: 20px;
+  .intro-section h1{
+    font-size:62px;
   }
 
-  .ways-impact-card p {
-    font-size: 12.5px;
+  .emotion-content h2{
+    font-size:54px;
+  }
+}
+
+@media(max-width:768px){
+
+  .impact-experience{
+    padding:90px 20px;
   }
 
-  .ways-impact-card a {
-    font-size: 13px;
+  .intro-section{
+    margin-bottom:90px;
   }
 
-  .ways-impact-logo-card {
-    height: 82px;
+  .intro-section h1{
+    font-size:42px;
   }
 
+  .intro-section p{
+    font-size:16px;
+    line-height:1.8;
+  }
+
+  .story-wrapper{
+    gap:100px;
+  }
+
+  .story-image img{
+    height:420px;
+  }
+
+  .story-content h2{
+    font-size:34px;
+  }
+
+  .story-content p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .floating-quote{
+    left:20px;
+    right:20px;
+    bottom:20px;
+    max-width:unset;
+  }
+
+  .emotion-cta{
+    margin-top:120px;
+    padding:25px;
+    border-radius:30px;
+  }
+
+  .emotion-image img{
+    height:420px;
+  }
+
+  .emotion-content h2{
+    font-size:38px;
+  }
+
+  .emotion-content p{
+    font-size:15px;
+    line-height:1.8;
+  }
+
+  .impact-stats{
+    flex-direction:column;
+  }
+
+  .stat-box{
+    width:100%;
+  }
+
+  .story-content button,
+  .join-btn{
+    width:100%;
+    justify-content:center;
+  }
 }

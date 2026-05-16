@@ -1,296 +1,217 @@
-// WaysImpactSection.jsx
+// VolunteerImpactExperience.jsx
 
 import React, { useEffect, useRef } from "react";
 import "./WaysImpactSection.css";
-import bosch from '../assets/placements/pl8.png';
-import tata from '../assets/placements/pl13.png';
-import icici from '../assets/placements/pl7.png';
-import tvs from '../assets/placements/pl3.png';
+import { FaArrowRight } from "react-icons/fa";
 
-import {
-  FaHandHoldingHeart,
-  FaUserPlus,
-  FaCheckCircle,
-} from "react-icons/fa";
+const stories = [
+  {
+    title: "A Child’s Future Changed Forever",
+    text: "One volunteer introduced digital education to a rural classroom. Today, dozens of children are learning technology for the very first time.",
+    image:
+      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1400&auto=format&fit=crop",
+  },
 
-/* =========================================
-   SCROLL REVEAL COMPONENT
-========================================= */
+  {
+    title: "Communities Learning Together",
+    text: "From education drives to awareness programs, every initiative creates stronger, more connected communities.",
+    image:
+      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    title: "Women Building Independent Lives",
+    text: "Skill development and mentorship programs are helping women create sustainable careers and financial independence.",
+    image:
+      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop",
+  },
+];
 
 const Reveal = ({ children }) => {
-
-  const ref = useRef(null);
+  const ref = useRef();
 
   useEffect(() => {
-
     const observer = new IntersectionObserver(
-
       ([entry]) => {
-
         if (entry.isIntersecting) {
-
-          entry.target.classList.add("active-reveal");
-
+          ref.current.classList.add("active");
         }
-
       },
-
-      {
-        threshold: 0.15,
-      }
-
+      { threshold: 0.2 }
     );
 
-    if (ref.current) {
-
-      observer.observe(ref.current);
-
-    }
+    if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
-
   }, []);
 
   return (
-
-    <div ref={ref} className="reveal-scroll">
-
+    <div ref={ref} className="reveal">
       {children}
-
     </div>
-
   );
-
 };
 
-const WaysImpactSection = () => {
-
+export default function WaysImpactSection() {
   return (
+    <section className="impact-experience">
 
-    <section className="ways-impact-section">
+      {/* FLOATING BACKGROUND */}
 
-      <div className="ways-impact-container">
+      <div className="blur-circle one"></div>
+      <div className="blur-circle two"></div>
 
-        {/* ======================================
-            HEADER
-        ======================================= */}
+      <div className="impact-container">
+
+        {/* INTRO */}
+
+        <Reveal>
+          <div className="intro-section">
+
+            {/* <span className="mini-tag">
+              VOLUNTEER EXPERIENCE
+            </span> */}
+
+            <h1>
+              People Don’t Join
+              <span> NGOs.</span>
+              <br />
+              They Join
+              <span> Purpose.</span>
+            </h1>
+
+            <p>
+              Every action creates a ripple effect.
+              Every volunteer becomes part of a story bigger
+              than themselves. This is where compassion becomes impact.
+            </p>
+
+          </div>
+        </Reveal>
+
+        {/* IMMERSIVE STORY BLOCKS */}
+
+        <div className="story-wrapper">
+
+          {stories.map((item, index) => (
+
+            <Reveal key={index}>
+
+              <div
+                className={`story-block ${
+                  index % 2 === 0 ? "" : "reverse"
+                }`}
+              >
+
+                {/* IMAGE */}
+
+                <div className="story-image">
+
+                  <img
+                    src={item.image}
+                    alt={item.title}
+                  />
+
+                  <div className="image-overlay"></div>
+
+                  {/* FLOATING QUOTE */}
+
+                  <div className="floating-quote">
+                    “Real impact begins with small acts of kindness.”
+                  </div>
+
+                </div>
+
+                {/* CONTENT */}
+
+                <div className="story-content">
+
+                  <div className="story-line"></div>
+
+                  <h2>{item.title}</h2>
+
+                  <p>{item.text}</p>
+
+                  <button>
+                    Become A Volunteer
+                    <FaArrowRight />
+                  </button>
+
+                </div>
+
+              </div>
+
+            </Reveal>
+
+          ))}
+
+        </div>
+
+        {/* EMOTIONAL CTA */}
 
         <Reveal>
 
-          <div className="ways-impact-header">
+          <div className="emotion-cta">
 
-            <h2>
-              Ways to Make an Impact
-            </h2>
+            <div className="emotion-image">
 
-            <p>
-              We provide multiple avenues for individuals and organizations
-              to contribute to our mission of humanized professionalism.
-            </p>
+              <img
+                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1400&auto=format&fit=crop"
+                alt=""
+              />
+
+            </div>
+
+            <div className="emotion-content">
+
+              <span>JOIN THE MOVEMENT</span>
+
+              <h2>
+                Your Time Can
+                Change Someone’s
+                Entire Life
+              </h2>
+
+              <p>
+                Whether you teach, mentor, organize,
+                support, or simply care — your presence
+                can create opportunities and hope for people
+                who truly need it.
+              </p>
+
+              {/* STATS */}
+
+              <div className="impact-stats">
+
+                <div className="stat-box">
+                  <h3>12K+</h3>
+                  <p>Lives Impacted</p>
+                </div>
+
+                <div className="stat-box">
+                  <h3>450+</h3>
+                  <p>Volunteers</p>
+                </div>
+
+                <div className="stat-box">
+                  <h3>80+</h3>
+                  <p>Programs</p>
+                </div>
+
+              </div>
+
+              <button className="join-btn">
+                Start Your Journey
+                <FaArrowRight />
+              </button>
+
+            </div>
 
           </div>
 
         </Reveal>
 
-        {/* ======================================
-            TOP CARDS
-        ======================================= */}
-
-        <div className="ways-impact-cards">
-
-          {/* LEFT CARD */}
-
-          <Reveal>
-
-            <div className="ways-impact-card">
-
-              <div className="ways-impact-icon-wrap">
-
-                <FaHandHoldingHeart className="ways-impact-icon" />
-
-              </div>
-
-              <h3>
-                Empower Through Donation
-              </h3>
-
-              <p>
-                Every dollar fueled into Globetech is tracked with 100%
-                transparency. Your donation funds healthcare, education,
-                and sustainable infrastructure.
-              </p>
-
-              <a href="/">
-                Current Initiative: Clean Water 2024
-              </a>
-
-            </div>
-
-          </Reveal>
-
-          {/* RIGHT CARD */}
-
-          <Reveal>
-
-            <div className="ways-impact-card ways-impact-blue-card">
-
-              <div className="ways-impact-icon-wrap">
-
-                <FaUserPlus className="ways-impact-icon ways-impact-white-icon" />
-
-              </div>
-
-              <h3>
-                Be the Hands and Feet
-              </h3>
-
-              <p>
-                Join our field teams or contribute remotely with your
-                professional skills.
-              </p>
-
-              <a href="/">
-                Apply to Volunteer →
-              </a>
-
-            </div>
-
-          </Reveal>
-
-        </div>
-
-        {/* ======================================
-            CORPORATE SECTION
-        ======================================= */}
-
-        <div className="ways-impact-corporate">
-
-          {/* LEFT */}
-
-          <Reveal>
-
-            <div className="ways-impact-corporate-left">
-
-              <h4>
-                Corporate Partnerships
-              </h4>
-
-              <p>
-                Align your brand with global impact. We partner with
-                forward-thinking organizations to solve the world’s
-                most pressing challenges through CSR initiatives.
-              </p>
-
-              <div className="ways-impact-list">
-
-                <div className="ways-impact-list-item">
-
-                  <FaCheckCircle className="ways-impact-check" />
-
-                  <span>
-                    Branded Impact Reports
-                  </span>
-
-                </div>
-
-                <div className="ways-impact-list-item">
-
-                  <FaCheckCircle className="ways-impact-check" />
-
-                  <span>
-                    Employee Engagement
-                  </span>
-
-                </div>
-
-                <div className="ways-impact-list-item">
-
-                  <FaCheckCircle className="ways-impact-check" />
-
-                  <span>
-                    Tax-Deductible Contributions
-                  </span>
-
-                </div>
-
-                <div className="ways-impact-list-item">
-
-                  <FaCheckCircle className="ways-impact-check" />
-
-                  <span>
-                    Joint Public Relations
-                  </span>
-
-                </div>
-
-              </div>
-
-              <button>
-                Become a Partner
-              </button>
-
-            </div>
-
-          </Reveal>
-
-          {/* RIGHT */}
-
-          <Reveal>
-
-            <div className="ways-impact-logo-grid">
-
-              <div className="ways-impact-logo-card">
-
-  <img
-    src={bosch}
-    alt="Bosch"
-  />
-
-</div>
-
-<div className="ways-impact-logo-card">
-
-  <img
-    src={tata}
-    alt="Tata"
-  />
-
-</div>
-
-<div className="ways-impact-logo-card">
-
-  <img
-    src={icici}
-    alt="ICICI"
-  />
-
-</div>
-
-<div className="ways-impact-logo-card">
-
-  <img
-    src={tvs}
-    alt="TVS"
-  />
-
-</div>
-
-           
-
-          
-
-            </div>
-
-          </Reveal>
-
-        </div>
-
       </div>
-
     </section>
-
   );
-
-};
-
-export default WaysImpactSection;
+}

@@ -675,9 +675,9 @@
     flex-direction:column;
   }
 
-  .reachButtons button{
+  /* .reachButtons button{
     width:100%;
-  }
+  } */
 
   .statCard{
     padding:32px 24px;
