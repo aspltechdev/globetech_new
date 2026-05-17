@@ -69,19 +69,19 @@
   color:#005fd1;
 
   font-size:13px;
-  font-weight:700;
+  font-weight:600;
 
   margin-bottom:24px;
 }
 
 /* TITLE */
 
-.modernPillarHeading h2{
-  font-size:49px;
+.modernPillarHeading h3{
+  font-size:40px;
 
   line-height:1.05;
 letter-spacing: -3px;
-  font-weight:600;
+  font-weight:500;
 
   color:#3791ff;
 
@@ -141,7 +141,7 @@ letter-spacing: -3px;
 .modernPillarCard{
   min-width:320px;
 
-  height:620px;
+  height:420px;
 
   border-radius:36px;
 

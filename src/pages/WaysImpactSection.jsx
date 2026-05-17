@@ -1,289 +1,76 @@
-// // VolunteerImpactExperience.jsx
-
-// import React, { useEffect, useRef } from "react";
-// import "./WaysImpactSection.css";
-// import { FaArrowRight } from "react-icons/fa";
-
-// const stories = [
-//   {
-//     title: "A Child’s Future Changed Forever",
-//     text: "One volunteer introduced digital education to a rural classroom. Today, dozens of children are learning technology for the very first time.",
-//     image:
-//       "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1400&auto=format&fit=crop",
-//   },
-
-//   {
-//     title: "Communities Learning Together",
-//     text: "From education drives to awareness programs, every initiative creates stronger, more connected communities.",
-//     image:
-//       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop",
-//   },
-
-//   {
-//     title: "Women Building Independent Lives",
-//     text: "Skill development and mentorship programs are helping women create sustainable careers and financial independence.",
-//     image:
-//       "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop",
-//   },
-// ];
-
-// const Reveal = ({ children }) => {
-//   const ref = useRef();
-
-//   useEffect(() => {
-//     const observer = new IntersectionObserver(
-//       ([entry]) => {
-//         if (entry.isIntersecting) {
-//           ref.current.classList.add("active");
-//         }
-//       },
-//       { threshold: 0.2 }
-//     );
-
-//     if (ref.current) observer.observe(ref.current);
-
-//     return () => observer.disconnect();
-//   }, []);
-
-//   return (
-//     <div ref={ref} className="reveal">
-//       {children}
-//     </div>
-//   );
-// };
-
-// export default function WaysImpactSection() {
-//   return (
-//     <section className="impact-experience">
-
-//       {/* FLOATING BACKGROUND */}
-
-//       <div className="blur-circle one"></div>
-//       <div className="blur-circle two"></div>
-
-//       <div className="impact-container">
-
-//         {/* INTRO */}
-
-//         <Reveal>
-//           <div className="intro-section">
-
-//             {/* <span className="mini-tag">
-//               VOLUNTEER EXPERIENCE
-//             </span> */}
-
-//             <h1>
-//               People Don’t Join
-//               <span> NGOs.</span>
-//               <br />
-//               They Join
-//               <span> Purpose.</span>
-//             </h1>
-
-//             <p>
-//               Every action creates a ripple effect.
-//               Every volunteer becomes part of a story bigger
-//               than themselves. This is where compassion becomes impact.
-//             </p>
-
-//           </div>
-//         </Reveal>
-
-//         {/* IMMERSIVE STORY BLOCKS */}
-
-//         <div className="story-wrapper">
-
-//           {stories.map((item, index) => (
-
-//             <Reveal key={index}>
-
-//               <div
-//                 className={`story-block ${
-//                   index % 2 === 0 ? "" : "reverse"
-//                 }`}
-//               >
-
-//                 {/* IMAGE */}
-
-//                 <div className="story-image">
-
-//                   <img
-//                     src={item.image}
-//                     alt={item.title}
-//                   />
-
-//                   <div className="image-overlay"></div>
-
-//                   {/* FLOATING QUOTE */}
-
-//                   <div className="floating-quote">
-//                     “Real impact begins with small acts of kindness.”
-//                   </div>
-
-//                 </div>
-
-//                 {/* CONTENT */}
-
-//                 <div className="story-content">
-
-//                   <div className="story-line"></div>
-
-//                   <h2>{item.title}</h2>
-
-//                   <p>{item.text}</p>
-
-//                   <button>
-//                     Become A Volunteer
-//                     <FaArrowRight />
-//                   </button>
-
-//                 </div>
-
-//               </div>
-
-//             </Reveal>
-
-//           ))}
-
-//         </div>
-
-//         {/* EMOTIONAL CTA */}
-
-//         <Reveal>
-
-//           <div className="emotion-cta">
-
-//             <div className="emotion-image">
-
-//               <img
-//                 src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1400&auto=format&fit=crop"
-//                 alt=""
-//               />
-
-//             </div>
-
-//             <div className="emotion-content">
-
-//               <span>JOIN THE MOVEMENT</span>
-
-//               <h2>
-//                 Your Time Can
-//                 Change Someone’s
-//                 Entire Life
-//               </h2>
-
-//               <p>
-//                 Whether you teach, mentor, organize,
-//                 support, or simply care — your presence
-//                 can create opportunities and hope for people
-//                 who truly need it.
-//               </p>
-
-//               {/* STATS */}
-
-//               <div className="impact-stats">
-
-//                 <div className="stat-box">
-//                   <h3>12K+</h3>
-//                   <p>Lives Impacted</p>
-//                 </div>
-
-//                 <div className="stat-box">
-//                   <h3>450+</h3>
-//                   <p>Volunteers</p>
-//                 </div>
-
-//                 <div className="stat-box">
-//                   <h3>80+</h3>
-//                   <p>Programs</p>
-//                 </div>
-
-//               </div>
-
-//               <button className="join-btn">
-//                 Start Your Journey
-//                 <FaArrowRight />
-//               </button>
-
-//             </div>
-
-//           </div>
-
-//         </Reveal>
-
-//       </div>
-//     </section>
-//   );
-// }
-
-// VolunteerImpactSection.jsx
+// WaysImpactSection.jsx
 
 import React, { useEffect, useRef } from "react";
 
 import {
   ArrowRight,
   HeartHandshake,
-  Users,
   GraduationCap,
+  BriefcaseBusiness,
+  Users,
 } from "lucide-react";
 
 import "./WaysImpactSection.css";
 
-const stories = [
+const involvementStories = [
   {
-    title: "Women Empowerment",
+    id: "01",
+    title: "Volunteer With Purpose",
+    subtitle: "Become part of real grassroots impact",
     text:
-      "Skill development and mentorship programs helping women build sustainable careers.",
+      "Support education drives, mentorship programs, awareness campaigns, and rural outreach initiatives transforming communities across India.",
     image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    title: "Digital Education",
-    text:
-      "Volunteers introduced technology learning to underserved rural communities.",
-    image:
-      "https://images.unsplash.com/photo-1509062522246-3755977927d7?q=80&w=1200&auto=format&fit=crop",
-  },
-
-  {
-    title: "Community Growth",
-    text:
-      "Awareness programs and education drives creating stronger communities.",
-    image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
-  },
-];
-
-const stats = [
-  {
-    number: "25K+",
-    label: "Lives Impacted",
+      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1600&auto=format&fit=crop",
     icon: <HeartHandshake size={22} />,
   },
 
   {
-    number: "850+",
-    label: "Active Volunteers",
-    icon: <Users size={22} />,
+    id: "02",
+    title: "Sponsor A Student",
+    subtitle: "Empower futures through education",
+    text:
+      "Help deserving students access digital learning, career readiness training, workshops, internships, and mentorship opportunities.",
+    image:
+      "https://images.unsplash.com/flagged/photo-1574098335395-18cf525e45d6?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8c3BvbnNlciUyMGElMjBzdHVkZW50JTIwaW5kaWF8ZW58MHx8MHx8fDA%3D",
+    icon: <GraduationCap size={22} />,
   },
 
   {
-    number: "120+",
-    label: "Education Programs",
-    icon: <GraduationCap size={22} />,
+    id: "03",
+    title: "Internship Opportunities",
+    subtitle: "Grow while creating impact",
+    text:
+      "Work alongside social innovators and trainers while contributing to real-world NGO programs and community transformation projects.",
+    image:
+      "https://images.unsplash.com/photo-1629306262232-1f854b4b0b13?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTJ8fGlueWVybnNoaXAlMjBzdHVkZW50JTIwaW5kaWF8ZW58MHx8MHx8fDA%3D",
+    icon: <BriefcaseBusiness size={22} />,
+  },
+
+  {
+    id: "04",
+    title: "Partner With Us",
+    subtitle: "Collaborate for scalable change",
+    text:
+      "CSR organizations, institutions, and industry leaders can join us to create sustainable social impact initiatives nationwide.",
+    image:
+      "https://media.istockphoto.com/id/1541867715/photo/portrait-of-happy-indian-couple-planting-tree-in-soil-and-pour-water-outdoor-garden-activity.webp?a=1&b=1&s=612x612&w=0&k=20&c=46oGX9lIGvVq8BpecAnJO8YsV--RTbiVuR7V8dt0_0Y=",
+    icon: <Users size={22} />,
   },
 ];
 
-const Reveal = ({ children }) => {
+const Reveal = ({ children, delay = 0 }) => {
+
   const ref = useRef(null);
 
   useEffect(() => {
+
     const observer = new IntersectionObserver(
       ([entry]) => {
+
         if (entry.isIntersecting) {
           ref.current.classList.add("show");
         }
+
       },
       {
         threshold: 0.15,
@@ -293,12 +80,16 @@ const Reveal = ({ children }) => {
     if (ref.current) observer.observe(ref.current);
 
     return () => observer.disconnect();
+
   }, []);
 
   return (
     <div
       ref={ref}
-      className="fade-up"
+      className="gsifadeup"
+      style={{
+        transitionDelay: `${delay}ms`,
+      }}
     >
       {children}
     </div>
@@ -306,70 +97,152 @@ const Reveal = ({ children }) => {
 };
 
 export default function WaysImpactSection() {
+
   return (
-    <section className="volunteer-section">
 
-      <div className="glow glow1"></div>
-      <div className="glow glow2"></div>
+    <section className="gsiwrapper">
 
-      <div className="volunteer-container">
+      {/* BACKGROUND LIGHTS */}
 
-        {/* INTRO */}
+      <div className="gsiblur gsiblur1"></div>
+      <div className="gsiblur gsiblur2"></div>
+
+      <div className="gsicontainer">
+
+        {/* HEADER */}
 
         <Reveal>
 
-          <div className="volunteer-intro">
+          <div className="gsiheader">
 
-            {/* <span>
-              Volunteer Impact
-            </span> */}
+          
 
-            <h1>
-              People Join Purpose,
-              Not Just Organizations
-            </h1>
+            <h2>
+              Be The Reason
+          
+              Someone Gets
+           
+              A Better Future
+            </h2>
 
             <p>
-              Every volunteer becomes part of a movement focused on
-              education, empowerment, and sustainable community change.
+              At Globetech Social Impact Foundation, every volunteer,
+              mentor, donor, and partner contributes toward meaningful
+              opportunities in education, skilling, employability,
+              and community development across India.
             </p>
 
           </div>
 
         </Reveal>
 
-        {/* STORY GRID */}
+        {/* FEATURED BLOCK */}
 
-        <div className="story-grid">
+        <Reveal>
 
-          {stories.map((item, index) => (
+          <div className="gsifeatured">
 
-            <Reveal key={index}>
+            <img
+              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1800&auto=format&fit=crop"
+              alt=""
+            />
 
-              <div className="story-card">
+            <div className="gsifeaturedoverlay"></div>
 
-                <div className="story-image">
+            <div className="gsifeaturedcontent">
+
+              
+
+              <h2>
+                Together,
+                <br />
+                We Create
+                <br />
+                Real Change
+              </h2>
+
+              <p>
+                From livelihood training programs and job drives
+                to digital education and rural outreach — your
+                involvement directly changes lives. Inspired by
+                Globetech Foundation’s skilling, placement,
+                and community initiatives across India.
+              </p>
+
+              <button>
+
+                Join The Movement
+
+                <ArrowRight size={18} />
+
+              </button>
+
+            </div>
+
+          </div>
+
+        </Reveal>
+
+        {/* STORY LAYOUT */}
+
+        <div className="gsistorylayout">
+
+          {involvementStories.map((item, index) => (
+
+            <Reveal
+              key={index}
+              delay={index * 120}
+            >
+
+              <div className="gsistorycard">
+
+                {/* IMAGE */}
+
+                <div className="gsistoryimage">
 
                   <img
                     src={item.image}
                     alt=""
                   />
 
+                  <div className="gsistoryoverlay"></div>
+
                 </div>
 
-                <div className="story-content">
+                {/* CONTENT */}
 
-                  <h3>
-                    {item.title}
-                  </h3>
+                <div className="gsistorycontent">
 
-                  <p>
-                    {item.text}
-                  </p>
+                  <div className="gsistorytop">
+
+                
+
+                  
+
+                  </div>
+
+                  <div>
+
+                    <h3>
+                      {item.title}
+                    </h3>
+
+                    <h4>
+                      {item.subtitle}
+                    </h4>
+
+                    <p>
+                      {item.text}
+                    </p>
+
+                  </div>
 
                   <button>
-                    Learn More
+
+                    Explore More
+
                     <ArrowRight size={16} />
+
                   </button>
 
                 </div>
@@ -382,54 +255,8 @@ export default function WaysImpactSection() {
 
         </div>
 
-        {/* IMPACT BANNER */}
-
-        <Reveal>
-
-          <div className="impact-banner">
-
-            <div className="impact-banner-image">
-
-              <img
-                src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1400&auto=format&fit=crop"
-                alt=""
-              />
-
-            </div>
-
-            <div className="impact-banner-content">
-
-              <span>
-                Join The Movement
-              </span>
-
-              <h2>
-                Your Time Can Change
-                Someone’s Entire Future
-              </h2>
-
-              <p>
-                Whether you mentor, teach, organize, or support —
-                your contribution creates opportunities and hope
-                for communities that truly need it.
-              </p>
-
-              <button className="join-btn">
-                Become A Volunteer
-                <ArrowRight size={18} />
-              </button>
-
-            </div>
-
-          </div>
-
-        </Reveal>
-
-        {/* STATS */}
-
-    
-
       </div>
+
     </section>
   );
 }

@@ -1,19 +1,20 @@
-// Footer.jsx
-
 import React from "react";
 
 import "./Footer.css";
 
-import logo1 from "../../assets/footer1.png";
+import logo from "../../assets/footer1.png";
 
 import {
   FaFacebookF,
   FaInstagram,
-  FaXTwitter,
   FaLinkedinIn,
   FaYoutube,
+  FaPhoneAlt,
   FaEnvelope,
-  FaPhone,
+  FaArrowRight,
+} from "react-icons/fa";
+
+import {
   FaLocationDot,
 } from "react-icons/fa6";
 
@@ -21,96 +22,65 @@ const Footer = () => {
 
   return (
 
-    <footer className="ngoFooter">
+    <footer className="modernFooter">
 
-      {/* =========================================================
-          GLOW EFFECTS
-      ========================================================= */}
+      <div className="modernFooterContainer">
 
-      <div className="footerGlowOne"></div>
+        {/* =========================
+            TOP CTA
+        ========================= */}
 
-      <div className="footerGlowTwo"></div>
+        {/* <div className="footerCtaBox">
 
-      {/* =========================================================
-          CONTAINER
-      ========================================================= */}
+          <div className="footerCtaContent">
 
-      <div className="ngoFooterContainer">
+            <span>
+              COMMUNITY • EDUCATION • IMPACT
+            </span>
 
-        {/* =========================================================
-            GRID
-        ========================================================= */}
+            <h2>
+              Empowering Communities
+              Through Education & Opportunity
+            </h2>
 
-        <div className="footerGrid">
+          </div>
 
-          {/* =========================================================
-              BRAND AREA
-          ========================================================= */}
+          <button>
 
-          <div className="footerBrandArea">
+            Get Involved
 
-            {/* LOGO */}
+            <FaArrowRight />
+
+          </button>
+
+        </div> */}
+
+        {/* =========================
+            MAIN FOOTER
+        ========================= */}
+
+        <div className="footerMain">
+
+          {/* LEFT */}
+
+          <div className="footerBrand">
 
             <img
-              src={logo1}
-              alt="Globetech Foundation"
+              src={logo}
+              alt=""
               className="footerLogo"
             />
 
-            {/* DESCRIPTION */}
+            <p>
 
-            <p className="footerDescription">
-
-              Creating sustainable social
-              impact through education,
-              skill development, digital
-              empowerment, and community
-              transformation initiatives.
+              Globetech Social Impact Foundation
+              empowers students and communities
+              through livelihood training,
+              placement initiatives, workshops,
+              and sustainable development programs
+              across India.
 
             </p>
-
-            {/* CONTACT */}
-
-            <div className="footerContactList">
-
-              <div className="footerContactItem">
-
-                <FaEnvelope />
-
-                <a href="mailto:info@globetechfoundation.org">
-
-                  info@globetechfoundation.org
-
-                </a>
-
-              </div>
-
-              <div className="footerContactItem">
-
-                <FaPhone />
-
-                <a href="tel:+919632223061">
-
-                  +91 96322 23061
-
-                </a>
-
-              </div>
-
-              <div className="footerContactItem">
-
-                <FaLocationDot />
-
-                <p>
-
-                  Bangalore & Pondicherry,
-                  India
-
-                </p>
-
-              </div>
-
-            </div>
 
             {/* SOCIALS */}
 
@@ -125,10 +95,6 @@ const Footer = () => {
               </a>
 
               <a href="/">
-                <FaXTwitter />
-              </a>
-
-              <a href="/">
                 <FaLinkedinIn />
               </a>
 
@@ -140,148 +106,150 @@ const Footer = () => {
 
           </div>
 
-          {/* =========================================================
-              QUICK LINKS
-          ========================================================= */}
+          {/* CENTER */}
 
-          <div className="footerLinksColumn">
+          <div className="footerLinksArea">
 
-            <h3>
+            {/* LINKS */}
 
-              Quick Links
+            <div className="footerColumn">
 
-            </h3>
+              <h3>
+                Navigation
+              </h3>
 
-            <ul>
+              <a href="/">
+                Home
+              </a>
 
-              <li>
-                <a href="/">
-                  Home
-                </a>
-              </li>
+              <a href="/">
+                About
+              </a>
 
-              <li>
-                <a href="/">
-                  About Us
-                </a>
-              </li>
+              <a href="/">
+                Programs
+              </a>
 
-              <li>
-                <a href="/">
-                  Programs
-                </a>
-              </li>
+              <a href="/">
+                Events
+              </a>
 
-              <li>
-                <a href="/">
-                  Events
-                </a>
-              </li>
+              <a href="/">
+                Contact
+              </a>
 
-              <li>
-                <a href="/">
-                  Impact Stories
-                </a>
-              </li>
+            </div>
 
-              <li>
-                <a href="/">
-                  Contact
-                </a>
-              </li>
+            {/* PROGRAMS */}
 
-            </ul>
+            <div className="footerColumn">
 
-          </div>
+              <h3>
+                Programs
+              </h3>
 
-          {/* =========================================================
-              PROGRAMS
-          ========================================================= */}
+              <a href="/">
+                Skill Development
+              </a>
 
-          <div className="footerLinksColumn">
+              <a href="/">
+                Placement Drives
+              </a>
 
-            <h3>
+              <a href="/">
+                Women Empowerment
+              </a>
 
-              Programs
+              <a href="/">
+                Career Guidance
+              </a>
 
-            </h3>
+              <a href="/">
+                Community Outreach
+              </a>
 
-            <ul>
-
-              <li>
-                <a href="/">
-                  Skill Development
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  Women Empowerment
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  Career Readiness
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  Community Programs
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  Placement Support
-                </a>
-              </li>
-
-              <li>
-                <a href="/">
-                  NGO Initiatives
-                </a>
-              </li>
-
-            </ul>
+            </div>
 
           </div>
 
-          {/* =========================================================
-              NEWSLETTER
-          ========================================================= */}
+          {/* RIGHT */}
 
-          <div className="footerNewsletter">
+          <div className="footerContactCard">
 
-            <h3>
+            <div className="footerCardTop">
 
-              Newsletter
+              <span>
+                HEAD OFFICE
+              </span>
 
-            </h3>
+              <h3>
+                Contact Information
+              </h3>
 
-            <p>
+            </div>
 
-              Subscribe to receive updates
-              about our programs, impact
-              stories, workshops and events.
+            {/* ADDRESS */}
 
-            </p>
+            <div className="footerInfoItem">
 
-            {/* INPUT */}
+              <div className="footerInfoIcon">
 
-            <div className="footerNewsletterInput">
+                <FaLocationDot />
 
-              <input
-                type="email"
-                placeholder="Enter your email address"
-              />
+              </div>
 
-              <button>
+              <p>
 
-                Subscribe
+                No.188, 2nd Floor,
+                Above HDFC Bank,
+                Kanakadasa Circle,
+                BEML Layout,
+                RR Nagar,
+                Bengaluru – 560098
 
-              </button>
+              </p>
+
+            </div>
+
+            {/* PHONE */}
+
+            <div className="footerInfoItem">
+
+              <div className="footerInfoIcon">
+
+                <FaPhoneAlt />
+
+              </div>
+
+              <div className="footerPhoneGroup">
+
+                <a href="tel:+919632223061">
+                  +91 96322 23061
+                </a>
+
+                <a href="tel:+919901477144">
+                  +91 99014 77144
+                </a>
+
+              </div>
+
+            </div>
+
+            {/* EMAIL */}
+
+            <div className="footerInfoItem">
+
+              <div className="footerInfoIcon">
+
+                <FaEnvelope />
+
+              </div>
+
+              <a href="mailto:globetechsocialimpact@gmail.com">
+
+                globetechsocialimpact@gmail.com
+
+              </a>
 
             </div>
 
@@ -289,9 +257,9 @@ const Footer = () => {
 
         </div>
 
-        {/* =========================================================
-            COPYRIGHT
-        ========================================================= */}
+        {/* =========================
+            BOTTOM
+        ========================= */}
 
         <div className="footerBottom">
 

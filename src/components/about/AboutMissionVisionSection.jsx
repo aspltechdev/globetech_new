@@ -191,11 +191,11 @@ const AboutMissionVisionSection = () => {
 
             </button>
 
-            <button className="ngoSecondaryBtn">
+            {/* <button className="ngoSecondaryBtn">
 
               Watch Story
 
-            </button>
+            </button> */}
 
           </div>
 
@@ -288,11 +288,11 @@ const AboutMissionVisionSection = () => {
 
         <div className="ngoWhatCard">
 
-          <span>
+          {/* <span>
 
             WHAT WE DO
 
-          </span>
+          </span> */}
 
           <h3>
 
@@ -314,11 +314,11 @@ const AboutMissionVisionSection = () => {
 
         <div className="ngoWhatCard">
 
-          <span>
+          {/* <span>
 
             COMMUNITY IMPACT
 
-          </span>
+          </span> */}
 
           <h3>
 
@@ -341,11 +341,11 @@ const AboutMissionVisionSection = () => {
 
         <div className="ngoWhatCard">
 
-          <span>
+          {/* <span>
 
             DIGITAL INNOVATION
 
-          </span>
+          </span> */}
 
           <h3>
 

@@ -22,7 +22,7 @@ const programs = [
     description:
       "Empowering women through leadership training, mentorship, and financial literacy.",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1708593337380-6f97a307696f?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NDB8fHdvbWVuJTIwZW1wb3dlcm1lbnQlMjBpbmRpYXxlbnwwfHwwfHx8MA%3D%3D",
   },
 
   {
@@ -32,7 +32,7 @@ const programs = [
     description:
       "Industry-focused training helping youth build modern employable skills.",
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1616674202799-054e7c831378?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8N3x8eW91dGglMjBza2lsbCUyMHJ1cmFsJTIwaW5kaWF8ZW58MHx8MHx8fDA%3D",
   },
 
   {
@@ -42,17 +42,17 @@ const programs = [
     description:
       "Providing digital education and internet literacy for underserved communities.",
     image:
-      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/3401402/pexels-photo-3401402.jpeg",
   },
 
   {
-    title: "Placement Assistance",
-    category: "Employment",
+    title: "Healthcare Awareness",
+    category: "Community Health",
     icon: <Briefcase size={20} />,
     description:
-      "Interview support, placement drives, and employer connections.",
+      "Conducting health camps, awareness programs, and preventive healthcare initiatives.",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/28141441/pexels-photo-28141441.jpeg",
   },
   {
     title: "Placement Assistance",
@@ -61,16 +61,16 @@ const programs = [
     description:
       "Interview support, placement drives, and employer connections.",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/13062476/pexels-photo-13062476.jpeg",
   },
   {
-    title: "Placement Assistance",
+    title: "Rural Education Support",
     category: "Employment",
     icon: <Briefcase size={20} />,
     description:
-      "Interview support, placement drives, and employer connections.",
+      "Supporting rural students with learning resources, scholarships, and tutoring programs.",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/37249876/pexels-photo-37249876.jpeg",
   },
 ];
 
@@ -153,7 +153,7 @@ export default function Programs() {
           <div className="hero-right fade-up">
             <div className="hero-image-wrapper">
               <img
-                src="https://images.unsplash.com/photo-1529390079861-591de354faf5?q=80&w=1200&auto=format&fit=crop"
+                src="https://images.unsplash.com/photo-1542810634-71277d95dcbb?w=600&auto=format&fit=crop&q=60&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cG9vciUyMGVkdWNhdGlvbnxlbnwwfHwwfHx8MA%3D%3D"
                 alt="NGO"
               />
 
@@ -179,14 +179,7 @@ export default function Programs() {
         </div>
 
         {/* STATS */}
-        <div className="stats-grid fade-up">
-          {stats.map((item, index) => (
-            <div className="stat-card" key={index}>
-              <h2>{item.number}</h2>
-              <p>{item.label}</p>
-            </div>
-          ))}
-        </div>
+    
 
         {/* HEADER */}
         <div className="section-header fade-up">
@@ -251,38 +244,26 @@ export default function Programs() {
           </div>
 
           <div className="feature-content">
-            <span>Why Choose Us</span>
+            {/* <span>Why Choose Us</span> */}
 
             <h2>
-              Building Better Futures Through Inclusive Learning
+              Inclusive Learning for Better Futures
             </h2>
 
             <p>
-              We focus on practical learning, mentorship, career opportunities,
-              and sustainable community transformation.
+             We focus on practical learning, mentorship, career opportunities,
+and sustainable community transformation.
+
+Our initiatives are designed to empower individuals with real-world
+skills, confidence, and access to meaningful growth opportunities.
+
+
             </p>
+              <button className="primary-btn">
+                Explore Programs
+              </button>
 
-            <div className="feature-points">
-              <div className="point">
-                <div className="dot"></div>
-                Experienced Trainers
-              </div>
-
-              <div className="point">
-                <div className="dot"></div>
-                Hands-on Workshops
-              </div>
-
-              <div className="point">
-                <div className="dot"></div>
-                Placement Assistance
-              </div>
-
-              <div className="point">
-                <div className="dot"></div>
-                Community Development
-              </div>
-            </div>
+          
           </div>
         </div>
 
@@ -294,7 +275,7 @@ export default function Programs() {
 
           <p>
             Join our mission to empower communities through education,
-            opportunity, and sustainable growth.
+           and sustainable growth.
           </p>
 
           <div className="cta-buttons">

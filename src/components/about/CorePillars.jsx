@@ -418,11 +418,11 @@ export default function CorePillars() {
 
         </span>
 
-        <h2>
+        <h3>
 
          Empowering Communities with Innovation & Action
 
-        </h2>
+        </h3>
 
       </div>
 
