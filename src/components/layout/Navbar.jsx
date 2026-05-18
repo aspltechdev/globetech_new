@@ -154,9 +154,10 @@ const Navbar = () => {
     { name: "Programs", path: "/programs" },
     { name: "Impact", path: "/impact" },
     { name: "Get Involved", path: "/get-involved" },
+     { name: "Courses", path: "/courses" },
     { name: "Events", path: "/events" },
     { name: "Contact", path: "/contact" },
-    { name: "Courses", path: "/courses" },
+   
   ];
 
   const toggleMobileMenu = () => {
