@@ -11,6 +11,7 @@ import SuccessStorySection from "../components/successStory/SuccessStorySection"
 import TestimonialSection from "../components/testimonials/TestimonialSection";
 import GallerySection from "../components/gallery/GallerySection";
 import Footer from "../components/layout/Footer";
+import ReachImpactSection from "../components/reach/ReachImpactSection";
 
 const Home = () => {
   return (
@@ -22,6 +23,7 @@ const Home = () => {
       <MissionVisionSection />
       <PillarsSection />
       <ReachSection />
+      <ReachImpactSection/>
       <CareerSection />
       <PlacementSection />
       <SuccessStorySection />

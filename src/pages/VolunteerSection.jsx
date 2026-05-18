@@ -154,6 +154,7 @@ import {
 } from "lucide-react";
 
 import "./VolunteerSection.css";
+import { Link } from "react-router-dom";
 
 const partners = [
   {
@@ -330,7 +331,7 @@ export default function VolunteerSection() {
               </p>
 
             </div>
-
+<Link to="/contact">
             <button className="partner-btn">
 
               Partner With Us
@@ -338,6 +339,7 @@ export default function VolunteerSection() {
               <ArrowRight size={18} />
 
             </button>
+            </Link>
 
           </div>
 

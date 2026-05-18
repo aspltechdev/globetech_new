@@ -183,6 +183,7 @@ import {
   Play,
   Sparkles,
 } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import "./HeroSection.css";
 
@@ -296,13 +297,23 @@ const HeroSection = () => {
               {/* CTA BUTTONS */}
 
               <div className="heroActions">
-                <button className="heroBtn primaryBtn">
+                {/* <button className="heroBtn primaryBtn">
                   <span>Donate Now</span>
 
                   <div className="heroBtnIcon">
                     <HandHeart size={16} />
                   </div>
-                </button>
+                </button> */}
+
+<Link to="/contact">
+  <button className="heroBtn primaryBtn">
+    <span>Donate Now</span>
+
+    <div className="heroBtnIcon">
+      <HandHeart size={16} />
+    </div>
+  </button>
+</Link>
 
               
               </div>

@@ -193,10 +193,10 @@
   border-radius: 50%;
 
   background:
-    rgba(255, 255, 255, 0.08);
+    rgba(248, 248, 248, 0.934);
 
   border:
-    1px solid rgba(255, 255, 255, 0.12);
+    1px solid rgba(255, 255, 255, 0.916);
 
   color: #8ec5ff;
 
@@ -359,7 +359,7 @@
 
   /* background:
     rgba(255, 255, 255, 0.08); */
-    background: #ffffff75;
+    background: #ffffffe1;
 
   border:
     1px solid rgba(255, 255, 255, 0.12);

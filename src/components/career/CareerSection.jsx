@@ -17,6 +17,7 @@ import career3 from "../../assets/career-3.png";
 import career4 from "../../assets/career-4.png";
 
 import "./CareerSection.css";
+import { Link } from "react-router-dom";
 
 /* =========================================================
    DATA
@@ -177,7 +178,7 @@ Helping young minds build confidence, gain real-world experience, and unlock suc
           </p>
 
           {/* BUTTON */}
-
+<Link to="/programs">
           <button className="careerMainBtn">
 
             Explore Programs
@@ -189,6 +190,7 @@ Helping young minds build confidence, gain real-world experience, and unlock suc
             </span>
 
           </button>
+          </Link>
 
         </div>
 
@@ -216,7 +218,7 @@ Helping young minds build confidence, gain real-world experience, and unlock suc
                 }}
               >
 
-                {/* LINE */}
+             
 
                 {index !==
                   careerData.length - 1 && (
@@ -243,11 +245,11 @@ Helping young minds build confidence, gain real-world experience, and unlock suc
 
                 <div className="careerStepContent">
 
-                  <span>
+                  {/* <span>
 
                     0{item.id}
 
-                  </span>
+                  </span> */}
 
                   <h3>
 

@@ -8,6 +8,7 @@ import {
 } from "lucide-react";
 
 import "./Events.css";
+import { Link } from "react-router-dom";
 
 /* =========================================
    EVENTS DATA
@@ -151,14 +152,15 @@ export default function Events() {
                 practical knowledge, and employability
                 skills through hands-on learning programs.
               </p>
-
+<Link to="/programs">
               <button>
 
                 Explore Programs
 
                 <ArrowRight size={18} />
 
-              </button>
+              </button> 
+              </Link>
 
             </div>
 

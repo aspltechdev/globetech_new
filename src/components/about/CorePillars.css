@@ -7,7 +7,7 @@
 .modernPillarSection{
   width:100%;
 
-  padding:20px 0;
+  padding:120px 0;
 
   background:
     linear-gradient(
@@ -192,7 +192,7 @@ letter-spacing: -3px;
 
 .showModernCard{
   opacity:1;
-
+cursor: pointer;
   transform:
     translateY(0);
 
@@ -420,6 +420,7 @@ letter-spacing: -3px;
 
 .modernPillarContent h3{
   font-size:34px;
+  cursor: pointer;
 
   line-height:1.2;
 
@@ -868,4 +869,17 @@ letter-spacing: -3px;
     width:42px;
     height:42px;
   }
+}
+
+
+
+
+
+
+.pillarLink {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }

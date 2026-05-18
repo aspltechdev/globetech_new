@@ -1,7 +1,4 @@
-/* =========================================================
-   PREMIUM NGO HERO SECTION
-   HEIGHT: 650px DESKTOP
-========================================================= */
+
 
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap");
 
@@ -44,6 +41,14 @@
 /* =========================================================
    CONTAINER
 ========================================================= */
+
+
+
+a {
+  text-decoration: none !important;
+}
+
+
 
 .heroContainer {
   width: 100%;
@@ -156,7 +161,7 @@
 
   border-radius: 100px;
 
-  background: #ffffff;
+  background: #ffc012;
 
   display: flex;
   align-items: center;
@@ -331,7 +336,7 @@
   position: absolute;
   z-index: 5;
 
-  background: rgba(255, 255, 255, 0.1);
+  background: rgba(255, 188, 33, 0.932);
 
   border: 1px solid rgba(255, 255, 255, 0.14);
 

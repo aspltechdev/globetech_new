@@ -14,6 +14,7 @@ import {
 import "./AboutMissionVisionSection.css";
 
 import aboutImg from "../../assets/about123.jpg";
+import { Link } from "react-router-dom";
 
 const AboutMissionVisionSection = () => {
 
@@ -176,6 +177,7 @@ const AboutMissionVisionSection = () => {
           {/* BUTTONS */}
 
           <div className="ngoMissionButtons">
+            <Link to="/programs">
 
             <button className="ngoPrimaryBtn">
 
@@ -189,7 +191,8 @@ const AboutMissionVisionSection = () => {
 
               </span>
 
-            </button>
+            </button> 
+            </Link>
 
             {/* <button className="ngoSecondaryBtn">
 

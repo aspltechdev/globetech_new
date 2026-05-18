@@ -7,7 +7,7 @@
 .ngoAboutMissionSection{
   width:100%;
 
-  padding:20px 0;
+  padding:120px 0;
 
   background:#6aa8f9;
 
@@ -98,7 +98,7 @@
   border-radius:100px;
 
   background:
-    rgba(241, 243, 244, 0.852);
+    rgb(241, 243, 244);
 
   color:#005fd1;
 
@@ -222,7 +222,7 @@
   background:
     linear-gradient(
       135deg,
-      #005fd1,
+      #4196ffe1,
       #007bff
     );
 
@@ -402,9 +402,9 @@
 .ngoFloatingCard h3{
   font-size:24px;
 
-  font-weight:700;
+  font-weight:800;
 
-  color:#f5f6f7;
+  color:#ffffff;
 
   margin-bottom:14px;
 }
@@ -416,7 +416,7 @@
 
   line-height:1.9;
 
-  color:#5c6674;
+  color:#19191a;
 }
 
 /* MISSION */
@@ -498,7 +498,7 @@
 /* CARD */
 
 .ngoWhatCard{
-  background:#f7ac21db;
+  background:#f7ac21ea;
 
   padding:16px;
 
@@ -525,7 +525,7 @@
 .ngoWhatCard span{
   font-size:20px;
 
-  font-weight:600;
+  font-weight:700;
 
   color:#f9fafc;
 
@@ -540,6 +540,7 @@
   line-height:1.3;
 
   color:#f6f7f8;
+  font-weight: 700;
 
   margin:
     8px 0;
@@ -552,7 +553,7 @@
 
   line-height:1.9;
 
-  color:#5f6977;
+  color:#1c1c1c;
 }
 
 /* =====================================================

@@ -249,7 +249,7 @@ const Navbar = () => {
               ))}
               
               {/* Mobile Donate Button */}
-              <Link to="/donate" className="globetech-mobile-donate-btn" onClick={closeMobileMenu}>
+              <Link to="/contact " className="globetech-mobile-donate-btn" onClick={closeMobileMenu}>
                 Donate Now
                 <span className="globetech-mobile-btn-icon">
                   <FaArrowRight />

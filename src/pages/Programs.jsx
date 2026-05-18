@@ -13,6 +13,7 @@ import {
 } from "lucide-react";
 
 import "./Programs.css";
+import { Link } from "react-router-dom";
 
 const programs = [
   {
@@ -65,7 +66,7 @@ const programs = [
   },
   {
     title: "Rural Education Support",
-    category: "Employment",
+    category: "Development",
     icon: <Briefcase size={20} />,
     description:
       "Supporting rural students with learning resources, scholarships, and tutoring programs.",
@@ -140,14 +141,18 @@ export default function Programs() {
             </p>
 
             <div className="hero-buttons">
+               <Link to="/contact">
               <button className="primary-btn">
                 Explore Programs
               </button>
-
+              </Link>
+ <Link to="/contact">
               <button className="secondary-btn">
                 Contact Us
               </button>
+               </Link>
             </div>
+
           </div>
 
           <div className="hero-right fade-up">
@@ -259,10 +264,12 @@ skills, confidence, and access to meaningful growth opportunities.
 
 
             </p>
+
+            <Link to="/contact">
               <button className="primary-btn">
                 Explore Programs
               </button>
-
+</Link>
           
           </div>
         </div>
@@ -279,13 +286,16 @@ skills, confidence, and access to meaningful growth opportunities.
           </p>
 
           <div className="cta-buttons">
+             <Link to="/contact">
             <button className="primary-btn">
               Apply Now
             </button>
-
+</Link>
+ <Link to="/contact">
             <button className="secondary-btn">
               Donate Now
             </button>
+            </Link>
           </div>
         </div>
       </div>

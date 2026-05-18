@@ -2,6 +2,7 @@
 
 import React, { useEffect, useRef, useState } from "react";
 import { ArrowUpRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 import aboutImage from "../../assets/aboutimg.png";
 
@@ -104,6 +105,8 @@ rootMargin: "0px 0px -80px 0px",
 
 </div>
 
+
+<Link to="/about-us">
             <button className="aboutBtn">
 
               <span>Know More</span>
@@ -115,6 +118,7 @@ rootMargin: "0px 0px -80px 0px",
               </div>
 
             </button>
+            </Link>
 
           </div>
 

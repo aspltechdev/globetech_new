@@ -11,6 +11,7 @@ import {
 } from "lucide-react";
 
 import "./WaysImpactSection.css";
+import { Link } from "react-router-dom";
 
 const involvementStories = [
   {
@@ -20,7 +21,7 @@ const involvementStories = [
     text:
       "Support education drives, mentorship programs, awareness campaigns, and rural outreach initiatives transforming communities across India.",
     image:
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1600&auto=format&fit=crop",
+      "https://media.istockphoto.com/id/1318617341/photo/low-angle-view-group-of-volunteers-busy-working-by-arranging-vegetables-and-clothes-on.jpg?b=1&s=612x612&w=0&k=20&c=rM9EB2ExDim42qMK3P_B8FPFOIs9J_ckg0X4i6kllg4=",
     icon: <HeartHandshake size={22} />,
   },
 
@@ -168,7 +169,7 @@ export default function WaysImpactSection() {
                 Globetech Foundation’s skilling, placement,
                 and community initiatives across India.
               </p>
-
+<Link to="/contact">
               <button>
 
                 Join The Movement
@@ -176,6 +177,7 @@ export default function WaysImpactSection() {
                 <ArrowRight size={18} />
 
               </button>
+              </Link>
 
             </div>
 
@@ -236,7 +238,7 @@ export default function WaysImpactSection() {
                     </p>
 
                   </div>
-
+<Link to="/contact">
                   <button>
 
                     Explore More
@@ -244,6 +246,7 @@ export default function WaysImpactSection() {
                     <ArrowRight size={16} />
 
                   </button>
+                  </Link>
 
                 </div>
 

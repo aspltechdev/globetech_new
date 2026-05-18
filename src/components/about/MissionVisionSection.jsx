@@ -15,18 +15,15 @@ import {
 import bgImage from "../../assets/aboutmission.jpg";
 
 import "./MissionVisionSection.css";
+import { Link } from "react-router-dom";
 
 const MissionVisionSection = () => {
 
-  /* =========================================================
-     REF
-  ========================================================= */
+ 
 
   const sectionRef = useRef(null);
 
-  /* =========================================================
-     ANIMATION STATE
-  ========================================================= */
+
 
   const [visible, setVisible] =
     useState(false);
@@ -267,7 +264,7 @@ const MissionVisionSection = () => {
             {/* BUTTONS */}
 
             <div className="missionButtons">
-
+<Link to ="/contact">
               <button className="primaryMissionBtn">
 
                 Reach Us
@@ -279,12 +276,14 @@ const MissionVisionSection = () => {
                 </span>
 
               </button>
-
+              </Link>
+<Link to ="/programs">
               <button className="secondaryMissionBtn">
 
                 View Programs
 
               </button>
+              </Link>
 
             </div>
 

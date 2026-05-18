@@ -19,6 +19,7 @@ import img3 from "../../assets/pillar-3.png";
 import img4 from "../../assets/pillar-4.png";
 import img5 from "../../assets/pillar-5.png";
 import img6 from "../../assets/pillar-5.png";
+import { Link } from "react-router-dom";
 
 /* =========================================================
    DATA
@@ -210,7 +211,7 @@ const PillarsSection = () => {
               >
 
                 {/* IMAGE */}
-
+<Link to="/programs">
                 <div className="pillarImageWrapper">
 
                   <img
@@ -222,6 +223,7 @@ const PillarsSection = () => {
                   <div className="pillarOverlay"></div>
 
                 </div>
+                </Link>
 
                 {/* CONTENT */}
 

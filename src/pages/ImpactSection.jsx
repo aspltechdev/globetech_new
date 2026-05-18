@@ -1,13 +1,14 @@
 // ProfessionalImpactSection.jsx
 
 import React from "react";
-
+import { Link } from "react-router-dom";
 import {
   GraduationCap,
   BriefcaseBusiness,
   Building2,
   Globe2,
   ArrowUpRight,
+
 } from "lucide-react";
 
 import "./ImpactSection.css";
@@ -95,9 +96,15 @@ export default function ImpactSection() {
               to opportunities for underserved communities.
             </p>
 
+
+<Link to="/contact">
             <button>
               Explore Our Journey
             </button>
+            </Link>
+
+
+                
 
           </div>
 

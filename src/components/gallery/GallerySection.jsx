@@ -19,6 +19,7 @@ import impact5 from "../../assets/impact/impact-5.png";
 import impact6 from "../../assets/impact/impact-6.png";
 
 import "./GallerySection.css";
+import { Link } from "react-router-dom";
 
 /* =========================================================
    GALLERY DATA
@@ -271,6 +272,7 @@ const GallerySection = () => {
               : "galleryBtnWrapper"
           }
         >
+          <Link to="/events">
 
           <button className="galleryBtn">
 
@@ -285,6 +287,7 @@ const GallerySection = () => {
             </span>
 
           </button>
+          </Link>
 
         </div>
 
