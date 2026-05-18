@@ -9,6 +9,7 @@ import {
 
 import "./Events.css";
 import { Link } from "react-router-dom";
+import SocialWall from "./SocialWall";
 
 /* =========================================
    EVENTS DATA
@@ -100,7 +101,7 @@ const Reveal = ({ children, delay = 0 }) => {
 export default function Events() {
 
   return (
-
+<div>
     <section className="evtwrapper">
 
       <div className="evtcontainer">
@@ -253,5 +254,7 @@ export default function Events() {
       </div>
 
     </section>
+    <SocialWall/>
+    </div>
   );
 }
