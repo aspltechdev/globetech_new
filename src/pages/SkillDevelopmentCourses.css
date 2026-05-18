@@ -2,13 +2,10 @@
    SECTION
 ========================================================= */
 
-.proCoursesSection {
+.sdcProCoursesSection {
   position: relative;
-
   padding: 40px 7% 140px;
-
   background: #ffffff;
-
   overflow: hidden;
 }
 
@@ -16,98 +13,75 @@
    HERO SECTION
 ========================================================= */
 
-.proCoursesHero {
+.sdcProCoursesHero {
   position: relative;
-
   height: 78vh;
-
   min-height: 660px;
-
   border-radius: 42px;
-
   overflow: hidden;
-
   margin-bottom: 90px;
 }
 
 /* HERO IMAGE */
 
-.proCoursesHero img {
+.sdcProCoursesHero img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
-
   transform: scale(1);
-
-  transition:
-    transform 1.6s ease;
+  transition: transform 1.6s ease;
 }
 
-.proCoursesHero:hover img {
+.sdcProCoursesHero:hover img {
   transform: scale(1.05);
 }
 
 /* OVERLAY */
 
-.heroOverlay {
+.sdcHeroOverlay {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(28, 28, 28, 0.941),
-      rgba(0,0,0,0.38),
-      rgba(0,0,0,0.08)
-    );
+  background: linear-gradient(
+    to top,
+    rgba(28, 28, 28, 0.941),
+    rgba(0, 0, 0, 0.38),
+    rgba(0, 0, 0, 0.08)
+  );
 }
 
 /* =========================================================
    HERO CONTENT
 ========================================================= */
 
-.heroContent {
+.sdcHeroContent {
   position: absolute;
-
   left: 70px;
   right: 70px;
   bottom: 70px;
-
   max-width: 760px;
-
   z-index: 2;
 }
 
-.heroContent span {
+.sdcHeroContent span {
   display: inline-block;
-
   margin-bottom: 24px;
-
-  color: rgba(255,255,255,0.82);
-
+  color: rgba(255, 255, 255, 0.82);
   font-size: 12px;
   font-weight: 700;
-
   letter-spacing: 3px;
 }
 
-.heroContent h1 {
+.sdcHeroContent h1 {
   font-size: 5rem;
   line-height: 1;
   font-weight: 700;
-
-
   color: white;
-
-  /* margin-bottom: 30px; */
 }
 
-.heroContent p {
+.sdcHeroContent p {
   max-width: 620px;
-
-  color: rgba(255,255,255,0.74);
-
+  color: rgba(255, 255, 255, 0.74);
   font-size: 1.05rem;
   line-height: 2;
 }
@@ -116,12 +90,9 @@
    FLOATING COURSES WRAPPER
 ========================================================= */
 
-.floatingCoursesWrapper {
+.sdcFloatingCoursesWrapper {
   display: grid;
-
-  grid-template-columns:
-    repeat(12,1fr);
-
+  grid-template-columns: repeat(12, 1fr);
   gap: 24px;
 }
 
@@ -129,17 +100,12 @@
    COURSE CARD
 ========================================================= */
 
-.floatingCourseCard {
+.sdcFloatingCourseCard {
   position: relative;
-
   height: 340px;
-
   border-radius: 30px;
-
   overflow: hidden;
-
   cursor: pointer;
-
   background: #111827;
 
   transition:
@@ -151,23 +117,23 @@
    ASYMMETRIC GRID
 ========================================================= */
 
-.card1,
-.card4,
-.card7,
-.card10,
-.card13 {
+.sdcCard1,
+.sdcCard4,
+.sdcCard7,
+.sdcCard10,
+.sdcCard13 {
   grid-column: span 7;
 }
 
-.card2,
-.card3,
-.card5,
-.card6,
-.card8,
-.card9,
-.card11,
-.card12,
-.card14 {
+.sdcCard2,
+.sdcCard3,
+.sdcCard5,
+.sdcCard6,
+.sdcCard8,
+.sdcCard9,
+.sdcCard11,
+.sdcCard12,
+.sdcCard14 {
   grid-column: span 5;
 }
 
@@ -175,10 +141,9 @@
    IMAGE
 ========================================================= */
 
-.floatingCourseCard img {
+.sdcFloatingCourseCard img {
   width: 100%;
   height: 100%;
-
   object-fit: cover;
 
   transition:
@@ -186,9 +151,8 @@
     filter 1.3s ease;
 }
 
-.floatingCourseCard:hover img {
+.sdcFloatingCourseCard:hover img {
   transform: scale(1.08);
-
   filter: brightness(1.05);
 }
 
@@ -196,100 +160,86 @@
    OVERLAY
 ========================================================= */
 
-.floatingOverlay {
+.sdcFloatingOverlay {
   position: absolute;
   inset: 0;
 
-  background:
-    linear-gradient(
-      to top,
-      rgba(0,0,0,0.9),
-      rgba(0,0,0,0.35),
-      rgba(0,0,0,0)
-    );
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0)
+  );
 }
 
 /* =========================================================
    HOVER EFFECT
 ========================================================= */
 
-.floatingCourseCard::after {
+.sdcFloatingCourseCard::after {
   content: "";
 
   position: absolute;
-
   inset: 0;
 
-  background:
-    linear-gradient(
-      135deg,
-      rgba(0,191,255,0.12),
-      transparent,
-      rgba(0,208,132,0.08)
-    );
+  background: linear-gradient(
+    135deg,
+    rgba(0, 191, 255, 0.12),
+    transparent,
+    rgba(0, 208, 132, 0.08)
+  );
 
   opacity: 0;
-
   transition: opacity 0.6s ease;
 }
 
-.floatingCourseCard:hover::after {
+.sdcFloatingCourseCard:hover::after {
   opacity: 1;
 }
 
-.floatingCourseCard:hover {
+.sdcFloatingCourseCard:hover {
   transform: translateY(-12px);
 
-  box-shadow:
-    0 40px 100px rgba(15,23,42,0.18);
+  box-shadow: 0 40px 100px rgba(15, 23, 42, 0.18);
 }
 
 /* =========================================================
    CONTENT
 ========================================================= */
 
-.floatingContent {
+.sdcFloatingContent {
   position: absolute;
-
   left: 28px;
   right: 28px;
   bottom: 28px;
-
   z-index: 2;
 }
 
 /* NUMBER */
 
-.floatingContent span {
+.sdcFloatingContent span {
   display: inline-block;
-
   margin-bottom: 14px;
-
-  color: rgba(255,255,255,0.72);
-
+  color: rgba(255, 255, 255, 0.72);
   font-size: 11px;
   font-weight: 700;
-
   letter-spacing: 3px;
 }
 
 /* TITLE */
 
-.floatingContent h3 {
+.sdcFloatingContent h3 {
   font-size: 1.85rem;
   line-height: 1.15;
   font-weight: 700;
-
   color: white;
-
   margin-bottom: 20px;
-
   max-width: 90%;
 }
 
 /* BUTTON */
 
-.floatingContent button {
+.sdcFloatingContent button {
   display: inline-flex;
   align-items: center;
   gap: 10px;
@@ -299,7 +249,7 @@
   border: none;
   border-radius: 100px;
 
-  background: rgba(255,255,255,0.14);
+  background: rgba(255, 255, 255, 0.14);
 
   backdrop-filter: blur(14px);
 
@@ -310,13 +260,11 @@
 
   cursor: pointer;
 
-  transition:
-    all 0.4s ease;
+  transition: all 0.4s ease;
 }
 
-.floatingContent button:hover {
+.sdcFloatingContent button:hover {
   background: #00a6d6;
-
   gap: 16px;
 }
 
@@ -325,11 +273,9 @@
 ========================================================= */
 
 @media (max-width: 1400px) {
-
-  .heroContent h1 {
+  .sdcHeroContent h1 {
     font-size: 4.5rem;
   }
-
 }
 
 /* =========================================================
@@ -337,37 +283,34 @@
 ========================================================= */
 
 @media (max-width: 1200px) {
-
-  .proCoursesSection {
+  .sdcProCoursesSection {
     padding: 40px 5% 120px;
   }
 
-  .heroContent h1 {
+  .sdcHeroContent h1 {
     font-size: 3.9rem;
   }
 
-  .floatingCoursesWrapper {
-    grid-template-columns:
-      repeat(2,1fr);
+  .sdcFloatingCoursesWrapper {
+    grid-template-columns: repeat(2, 1fr);
   }
 
-  .card1,
-  .card2,
-  .card3,
-  .card4,
-  .card5,
-  .card6,
-  .card7,
-  .card8,
-  .card9,
-  .card10,
-  .card11,
-  .card12,
-  .card13,
-  .card14 {
+  .sdcCard1,
+  .sdcCard2,
+  .sdcCard3,
+  .sdcCard4,
+  .sdcCard5,
+  .sdcCard6,
+  .sdcCard7,
+  .sdcCard8,
+  .sdcCard9,
+  .sdcCard10,
+  .sdcCard11,
+  .sdcCard12,
+  .sdcCard13,
+  .sdcCard14 {
     grid-column: span 1;
   }
-
 }
 
 /* =========================================================
@@ -375,27 +318,24 @@
 ========================================================= */
 
 @media (max-width: 992px) {
-
-  .proCoursesHero {
+  .sdcProCoursesHero {
     height: 700px;
-
     min-height: auto;
   }
 
-  .heroContent {
+  .sdcHeroContent {
     left: 50px;
     right: 50px;
     bottom: 50px;
   }
 
-  .heroContent h1 {
+  .sdcHeroContent h1 {
     font-size: 3.4rem;
   }
 
-  .floatingCourseCard {
+  .sdcFloatingCourseCard {
     height: 320px;
   }
-
 }
 
 /* =========================================================
@@ -403,81 +343,63 @@
 ========================================================= */
 
 @media (max-width: 768px) {
-
-  .proCoursesSection {
+  .sdcProCoursesSection {
     padding: 20px 20px 90px;
   }
 
-  /* HERO */
-
-  .proCoursesHero {
+  .sdcProCoursesHero {
     height: 520px;
-
     border-radius: 24px;
-
     margin-bottom: 50px;
   }
 
-  .heroContent {
+  .sdcHeroContent {
     left: 24px;
     right: 24px;
     bottom: 24px;
   }
 
-  .heroContent span {
+  .sdcHeroContent span {
     font-size: 10px;
-
     letter-spacing: 2px;
   }
 
-  .heroContent h1 {
+  .sdcHeroContent h1 {
     font-size: 2.5rem;
-
     line-height: 1.05;
-
     margin-bottom: 20px;
   }
 
-  .heroContent p {
+  .sdcHeroContent p {
     font-size: 0.96rem;
-
     line-height: 1.8;
   }
 
-  /* GRID */
-
-  .floatingCoursesWrapper {
+  .sdcFloatingCoursesWrapper {
     grid-template-columns: 1fr;
-
     gap: 18px;
   }
 
-  /* CARD */
-
-  .floatingCourseCard {
+  .sdcFloatingCourseCard {
     height: 300px;
-
     border-radius: 22px;
   }
 
-  .floatingContent {
+  .sdcFloatingContent {
     left: 22px;
     right: 22px;
     bottom: 22px;
   }
 
-  .floatingContent h3 {
+  .sdcFloatingContent h3 {
     font-size: 1.55rem;
-
     margin-bottom: 16px;
   }
 
-  .floatingContent button {
+  .sdcFloatingContent button {
     padding: 11px 18px;
-
     font-size: 12px;
   }
-
 }
 
 /* =========================================================
@@ -485,35 +407,32 @@
 ========================================================= */
 
 @media (max-width: 480px) {
-
-  .proCoursesHero {
+  .sdcProCoursesHero {
     height: 460px;
   }
 
-  .heroContent h1 {
+  .sdcHeroContent h1 {
     font-size: 2rem;
   }
 
-  .heroContent p {
+  .sdcHeroContent p {
     font-size: 0.92rem;
   }
 
-  .floatingCourseCard {
+  .sdcFloatingCourseCard {
     height: 250px;
   }
 
-  .floatingContent h3 {
+  .sdcFloatingContent h3 {
     font-size: 1.3rem;
   }
 
-  .floatingContent span {
+  .sdcFloatingContent span {
     font-size: 10px;
   }
 
-  .floatingContent button {
+  .sdcFloatingContent button {
     width: 100%;
-
     justify-content: center;
   }
-
 }
