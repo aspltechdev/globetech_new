@@ -112,6 +112,8 @@ body{
 .footerLogo{
   width:170px;
   margin-bottom:22px;
+  background-color: azure;
+  border-radius: 12px;
 }
 
 .footerBrand p{

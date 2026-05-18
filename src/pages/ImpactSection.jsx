@@ -43,28 +43,75 @@ const stats = [
   },
 ];
 
+// const stories = [
+//   {
+//     title: "Career Transformation",
+//     text: "Students transitioned from limited opportunities to industry-ready careers through mentorship and training.",
+//     image:
+//       "https://images.pexels.com/photos/3231359/pexels-photo-3231359.jpeg",
+//   },
+
+//   {
+//     title: "Women Empowerment",
+//     text: "Leadership and entrepreneurship programs helping women achieve financial independence.",
+//     image:
+//       "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+//   },
+
+//   {
+//     title: "Digital Literacy",
+//     text: "Providing digital education access to underserved communities and rural students.",
+//     image:
+//       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+//   },
+// ];
+
+
+
 const stories = [
   {
     title: "Career Transformation",
     text: "Students transitioned from limited opportunities to industry-ready careers through mentorship and training.",
     image:
-      "https://images.unsplash.com/photo-1521737604893-d14cc237f11d?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/3231359/pexels-photo-3231359.jpeg",
   },
 
   {
     title: "Women Empowerment",
     text: "Leadership and entrepreneurship programs helping women achieve financial independence.",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/36746074/pexels-photo-36746074.jpeg",
   },
 
   {
     title: "Digital Literacy",
     text: "Providing digital education access to underserved communities and rural students.",
     image:
-      "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/10638068/pexels-photo-10638068.jpeg",
+  },
+
+  {
+    title: "Healthcare Access",
+    text: "Improving access to essential healthcare services through medical camps and awareness programs.",
+    image:
+      "https://images.pexels.com/photos/28141441/pexels-photo-28141441.jpeg",
+  },
+
+  {
+    title: "Youth Skill Development",
+    text: "Equipping young individuals with technical and professional skills for future employment opportunities.",
+    image:
+      "https://images.pexels.com/photos/31712541/pexels-photo-31712541.jpeg",
+  },
+
+  {
+    title: "Environmental Sustainability",
+    text: "Community-driven initiatives focused on tree plantation, clean energy, and environmental awareness.",
+    image:
+      "https://images.pexels.com/photos/36751334/pexels-photo-36751334.jpeg",
   },
 ];
+
 
 export default function ImpactSection() {
   return (

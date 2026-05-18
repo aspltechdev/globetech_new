@@ -684,13 +684,13 @@ export default function HeadquartersSection() {
 
               <div className="hqv2formtop">
 
-                <div className="hqv2badge">
+                {/* <div className="hqv2badge">
 
                   <FaHandshake />
 
                   Let’s Collaborate
 
-                </div>
+                </div> */}
 
                 <h2>
                   Send A Message

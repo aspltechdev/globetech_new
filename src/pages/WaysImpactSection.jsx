@@ -144,7 +144,7 @@ export default function WaysImpactSection() {
           <div className="gsifeatured">
 
             <img
-              src="https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1800&auto=format&fit=crop"
+              src="https://images.pexels.com/photos/13127145/pexels-photo-13127145.jpeg"
               alt=""
             />
 

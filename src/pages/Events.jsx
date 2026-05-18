@@ -19,7 +19,7 @@ const latestUpdates = [
     title: "Livelihood Training Workshop",
     date: "March 2025",
     image:
-      "https://images.pexels.com/photos/31090832/pexels-photo-31090832.jpeg",
+      "https://images.pexels.com/photos/36739505/pexels-photo-36739505.jpeg",
   },
 
   {
@@ -33,14 +33,14 @@ const latestUpdates = [
     title: "Women Empowerment Drive",
     date: "January 2025",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/33808945/pexels-photo-33808945.jpeg",
   },
 
   {
     title: "Career Guidance Session",
     date: "December 2024",
     image:
-      "https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=1200&auto=format&fit=crop",
+      "https://images.pexels.com/photos/32662455/pexels-photo-32662455.jpeg",
   },
 
   {

@@ -1,267 +1,258 @@
-// CareerProjectsSection.jsx
-
-import React, { useEffect, useRef } from "react";
+import React from "react";
 
 import {
-  ArrowRight,
-  Sparkles,
-  Briefcase,
-  Globe2,
-  GraduationCap,
+  ArrowUpRight,
 } from "lucide-react";
 
 import "./SkillDevelopmentCourses.css";
+import { Link } from "react-router-dom";
 
-/* =========================
-   PROJECTS DATA
-========================= */
+const featuredCourse = {
 
-const projects = [
+  title:
+    "Future Skills & Technology Training",
+
+  description:
+    "Empowering students and underserved communities through industry-oriented technology programs, digital innovation and career-focused skill development initiatives.",
+
+  image:
+    "https://images.pexels.com/photos/31968811/pexels-photo-31968811.jpeg",
+
+};
+
+// const courses = [
+
+//   {
+//     number: "01",
+//     title: "Artificial Intelligence",
+//     image:
+//       "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1200&auto=format&fit=crop",
+//   },
+
+//   {
+//     number: "02",
+//     title: "Cloud Computing",
+//     image:
+//       "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1200&auto=format&fit=crop",
+//   },
+
+//   {
+//     number: "03",
+//     title: "Full Stack Development",
+//     image:
+//       "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1200&auto=format&fit=crop",
+//   },
+
+//   {
+//     number: "04",
+//     title: "Data Science",
+//     image:
+//       "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1200&auto=format&fit=crop",
+//   },
+
+// ];
+
+
+
+const courses = [
+
   {
-    title: "Industry Internship Program",
-    category: "Career Development",
+    number: "01",
+    title: "Civil CAD",
     image:
-      "https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop",
+      "https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=1400&auto=format&fit=crop",
   },
 
   {
-    title: "AI & Data Science Lab",
-    category: "Technology",
+    number: "02",
+    title: "Mechanical CAD",
+    image:
+      "https://images.unsplash.com/photo-1581092921461-eab62e97a780?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "03",
+    title: "Embedded Systems",
+    image:
+      "https://images.unsplash.com/photo-1518770660439-4636190af475?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "04",
+    title: "Graphic Designing",
+    image:
+      "https://images.unsplash.com/photo-1558655146-9f40138edfeb?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "05",
+    title: "SAP & Tally",
+    image:
+      "https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "06",
+    title: "Lean Six Sigma",
+    image:
+      "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "07",
+    title: "Online Degree Programs",
+    image:
+      "https://images.unsplash.com/photo-1523240795612-9a054b0db644?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "08",
+    title: "Programming Languages",
+    image:
+      "https://images.unsplash.com/photo-1515879218367-8466d910aaa4?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "09",
+    title: "Data Science",
+    image:
+      "https://images.unsplash.com/photo-1551288049-bebda4e38f71?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "10",
+    title: "Full Stack Development",
+    image:
+      "https://images.unsplash.com/photo-1498050108023-c5249f4df085?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "11",
+    title: "Software Testing",
     image:
       "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?q=80&w=1400&auto=format&fit=crop",
   },
 
   {
-    title: "Global Leadership Bootcamp",
-    category: "Leadership",
-    image:
-      "https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=1400&auto=format&fit=crop",
-  },
-
-  {
-    title: "Software Engineering Academy",
-    category: "Engineering",
-    image:
-      "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?q=80&w=1400&auto=format&fit=crop",
-  },
-
-  {
-    title: "Women Career Empowerment",
-    category: "Social Impact",
-    image:
-      "https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1400&auto=format&fit=crop",
-  },
-
-  {
-    title: "International Language Program",
-    category: "Global Learning",
+    number: "12",
+    title: "Foreign Languages",
     image:
       "https://images.unsplash.com/photo-1522202222206-b750f2f1f0a3?q=80&w=1400&auto=format&fit=crop",
   },
+
+  {
+    number: "13",
+    title: "Artificial Intelligence",
+    image:
+      "https://images.unsplash.com/photo-1677442136019-21780ecad995?q=80&w=1400&auto=format&fit=crop",
+  },
+
+  {
+    number: "14",
+    title: "Cloud Computing",
+    image:
+      "https://images.unsplash.com/photo-1451187580459-43490279c0fa?q=80&w=1400&auto=format&fit=crop",
+  },
+
 ];
-
-/* =========================
-   REVEAL
-========================= */
-
-const Reveal = ({ children }) => {
-
-  const ref = useRef(null);
-
-  useEffect(() => {
-
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-
-        if (entry.isIntersecting) {
-          ref.current.classList.add("show");
-        }
-
-      },
-      {
-        threshold:0.15,
-      }
-    );
-
-    if (ref.current) observer.observe(ref.current);
-
-    return () => observer.disconnect();
-
-  }, []);
-
-  return (
-    <div
-      ref={ref}
-      className="fade-up"
-    >
-      {children}
-    </div>
-  );
-};
-
 export default function SkillDevelopmentCourses() {
 
   return (
-    <section className="career-projects-section">
 
-      {/* GLOW */}
+    <section className="proCoursesSection">
 
-      <div className="projects-glow glow1"></div>
-      <div className="projects-glow glow2"></div>
+      {/* HERO */}
 
-      <div className="career-projects-container">
+      <div className="proCoursesHero">
 
-        {/* HERO */}
+        <img
+          src={featuredCourse.image}
+          alt=""
+        />
 
-        <Reveal>
+        <div className="heroOverlay"></div>
 
-          <div className="projects-hero">
+        <div className="heroContent">
 
-            {/* LEFT */}
+          <span>
 
-            <div className="projects-left">
+            SKILL DEVELOPMENT PROGRAMS
 
-              <div className="projects-badge">
+          </span>
 
-                <Sparkles size={15} />
+          <h1>
 
-                Career Excellence
+            Building Careers
+            Through Future-Ready
+            Technology Education
 
-              </div>
+          </h1>
 
-              <h1>
-                Building Future Careers
-                Through Real Projects
-              </h1>
+          <p>
 
-              <p>
-                Our career-focused initiatives combine
-                practical learning, mentorship, industry
-                exposure, and innovation-driven experiences
-                preparing youth for the future workforce.
-              </p>
+            Our organization provides practical,
+            industry-focused training
+            programs helping youth
+            build sustainable careers
+            in emerging technologies.
 
-              <div className="projects-buttons">
-
-                <button className="primary-btn">
-
-                  Explore Programs
-
-                  <ArrowRight size={18} />
-
-                </button>
-
-                <button className="secondary-btn">
-
-                  View Success Stories
-
-                </button>
-
-              </div>
-
-            </div>
-
-            {/* RIGHT */}
-
-            <div className="projects-right">
-
-              <img
-                src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1400&auto=format&fit=crop"
-                alt=""
-              />
-
-              {/* FLOAT CARD */}
-
-              <div className="floating-project-card">
-
-               
-
-                <div>
-
-                  <h3>
-                    5000+
-                  </h3>
-
-                  <p>
-                    Students Career Ready
-                  </p>
-
-                </div>
-
-              </div>
-
-            </div>
-
-          </div>
-
-        </Reveal>
-
-       
-
-
-        {/* PROJECT GRID */}
-
-        <div className="projects-grid">
-
-          {projects.map((project, index) => (
-
-            <Reveal key={index}>
-
-              <div className="project-card">
-
-                {/* IMAGE */}
-
-                <div className="project-image">
-
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                  />
-
-                  <div className="project-overlay"></div>
-
-                  <span className="project-category">
-
-                    {project.category}
-
-                  </span>
-
-                </div>
-
-                {/* CONTENT */}
-
-                <div className="project-content">
-
-                  <h3>
-                    {project.title}
-                  </h3>
-
-                  <p>
-                    Real-world learning experiences helping
-                    students gain practical exposure and
-                    professional confidence.
-                  </p>
-
-                  <button>
-
-                    Explore Project
-
-                    <ArrowRight size={16} />
-
-                  </button>
-
-                </div>
-
-              </div>
-
-            </Reveal>
-
-          ))}
+          </p>
 
         </div>
 
       </div>
 
+      {/* FLOATING COURSES */}
+
+      <div className="floatingCoursesWrapper">
+
+        {courses.map((course, index) => (
+
+          <div
+            className={`floatingCourseCard card${index + 1}`}
+            key={index}
+          >
+
+            <img
+              src={course.image}
+              alt=""
+            />
+
+            <div className="floatingOverlay"></div>
+
+            <div className="floatingContent">
+
+              <span>
+
+                {course.number}
+
+              </span>
+
+              <h3>
+
+                {course.title}
+
+              </h3>
+<Link to="/contact">
+              <button>
+
+                Explore Program
+
+                <ArrowUpRight size={16} />
+
+              </button>
+              </Link>
+
+            </div>
+
+          </div>
+
+        ))}
+
+      </div>
+
     </section>
+
   );
+
 }

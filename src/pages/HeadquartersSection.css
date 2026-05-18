@@ -299,9 +299,11 @@ body{
 }
 
 .hqv2formtop h2{
-  font-size:34px;
-  color:#0f172a;
+  font-size:36px;
+  color:#1c5ae8;
   margin-bottom:12px;
+  font-weight: 600;
+  letter-spacing: -3px;
 }
 
 .hqv2formtop p{

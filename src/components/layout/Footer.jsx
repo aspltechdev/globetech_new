@@ -148,23 +148,23 @@ const Footer = () => {
                 Programs
               </h3>
 
-              <a href="/">
+              <a href="/get-involved">
                 Skill Development
               </a>
 
-              <a href="/">
+              <a href="/contact">
                 Placement Drives
               </a>
 
-              <a href="/">
+              <a href="/contact">
                 Women Empowerment
               </a>
 
-              <a href="/">
+              <a href="/contact">
                 Career Guidance
               </a>
 
-              <a href="/">
+              <a href="/contact">
                 Community Outreach
               </a>
 
@@ -245,9 +245,9 @@ const Footer = () => {
 
               </div>
 
-              <a href="mailto:globetechsocialimpact@gmail.com">
+              <a href="mailto: info@globetechsocial.com">
 
-                globetechsocialimpact@gmail.com
+                info@globetechsocial.com
 
               </a>
 

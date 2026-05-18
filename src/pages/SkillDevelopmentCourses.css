@@ -1,413 +1,519 @@
-/* CareerProjectsSection.css */
+/* =========================================================
+   SECTION
+========================================================= */
 
-@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap");
+.proCoursesSection {
+  position: relative;
 
-*{
-  margin:0;
-  padding:0;
-  box-sizing:border-box;
+  padding: 40px 7% 140px;
+
+  background: #ffffff;
+
+  overflow: hidden;
 }
 
-.career-projects-section{
-  position:relative;
-  overflow:hidden;
-  background:#F8FAFC;
-  padding:100px 20px;
-  font-family:"Inter",sans-serif;
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.proCoursesHero {
+  position: relative;
+
+  height: 78vh;
+
+  min-height: 660px;
+
+  border-radius: 42px;
+
+  overflow: hidden;
+
+  margin-bottom: 90px;
 }
 
-.career-projects-container{
-  max-width:1280px;
-  margin:auto;
-  position:relative;
-  z-index:2;
+/* HERO IMAGE */
+
+.proCoursesHero img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1);
+
+  transition:
+    transform 1.6s ease;
 }
 
-/* GLOW */
-
-.projects-glow{
-  position:absolute;
-  border-radius:50%;
-  filter:blur(120px);
-  opacity:0.12;
+.proCoursesHero:hover img {
+  transform: scale(1.05);
 }
 
-.glow1{
-  width:380px;
-  height:380px;
-  background:#2563EB;
-  top:-100px;
-  left:-120px;
+/* OVERLAY */
+
+.heroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(28, 28, 28, 0.941),
+      rgba(0,0,0,0.38),
+      rgba(0,0,0,0.08)
+    );
 }
 
-.glow2{
-  width:380px;
-  height:380px;
-  background:#60A5FA;
-  right:-120px;
-  bottom:-120px;
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.heroContent {
+  position: absolute;
+
+  left: 70px;
+  right: 70px;
+  bottom: 70px;
+
+  max-width: 760px;
+
+  z-index: 2;
 }
 
-/* HERO */
+.heroContent span {
+  display: inline-block;
 
-.projects-hero{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:70px;
-  align-items:center;
-  margin-bottom:90px;
+  margin-bottom: 24px;
+
+  color: rgba(255,255,255,0.82);
+
+  font-size: 12px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
 }
 
-.projects-badge{
-  display:inline-flex;
-  align-items:center;
-  gap:8px;
+.heroContent h1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
 
-  padding:10px 18px;
-  border-radius:50px;
 
-  background:rgba(37,99,235,0.08);
-  color:#2563EB;
+  color: white;
 
-  font-weight:600;
-
-  margin-bottom:24px;
+  /* margin-bottom: 30px; */
 }
 
-.projects-left h1{
-  font-size:49px;
-  line-height:1.05;
-  color:#0F172A;
-  margin-bottom:24px;
-  letter-spacing: -3px;
+.heroContent p {
+  max-width: 620px;
+
+  color: rgba(255,255,255,0.74);
+
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+/* =========================================================
+   FLOATING COURSES WRAPPER
+========================================================= */
+
+.floatingCoursesWrapper {
+  display: grid;
+
+  grid-template-columns:
+    repeat(12,1fr);
+
+  gap: 24px;
+}
+
+/* =========================================================
+   COURSE CARD
+========================================================= */
+
+.floatingCourseCard {
+  position: relative;
+
+  height: 340px;
+
+  border-radius: 30px;
+
+  overflow: hidden;
+
+  cursor: pointer;
+
+  background: #111827;
+
+  transition:
+    transform 0.7s ease,
+    box-shadow 0.7s ease;
+}
+
+/* =========================================================
+   ASYMMETRIC GRID
+========================================================= */
+
+.card1,
+.card4,
+.card7,
+.card10,
+.card13 {
+  grid-column: span 7;
+}
+
+.card2,
+.card3,
+.card5,
+.card6,
+.card8,
+.card9,
+.card11,
+.card12,
+.card14 {
+  grid-column: span 5;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.floatingCourseCard img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1.3s ease,
+    filter 1.3s ease;
+}
+
+.floatingCourseCard:hover img {
+  transform: scale(1.08);
+
+  filter: brightness(1.05);
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.floatingOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.9),
+      rgba(0,0,0,0.35),
+      rgba(0,0,0,0)
+    );
+}
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.floatingCourseCard::after {
+  content: "";
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(0,191,255,0.12),
+      transparent,
+      rgba(0,208,132,0.08)
+    );
+
+  opacity: 0;
+
+  transition: opacity 0.6s ease;
+}
+
+.floatingCourseCard:hover::after {
+  opacity: 1;
+}
+
+.floatingCourseCard:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 40px 100px rgba(15,23,42,0.18);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.floatingContent {
+  position: absolute;
+
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+
+  z-index: 2;
+}
+
+/* NUMBER */
+
+.floatingContent span {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color: rgba(255,255,255,0.72);
+
+  font-size: 11px;
+  font-weight: 700;
+
+  letter-spacing: 3px;
+}
+
+/* TITLE */
+
+.floatingContent h3 {
+  font-size: 1.85rem;
+  line-height: 1.15;
+  font-weight: 700;
+
+  color: white;
+
+  margin-bottom: 20px;
+
+  max-width: 90%;
+}
+
+/* BUTTON */
+
+.floatingContent button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: rgba(255,255,255,0.14);
+
+  backdrop-filter: blur(14px);
+
+  color: white;
+
+  font-size: 13px;
   font-weight: 600;
 
+  cursor: pointer;
+
+  transition:
+    all 0.4s ease;
 }
 
-.projects-left p{
-  color:#64748B;
-  line-height:1.9;
-  font-size:1.05rem;
-  margin-bottom:35px;
+.floatingContent button:hover {
+  background: #00a6d6;
+
+  gap: 16px;
 }
 
-.projects-buttons{
-  display:flex;
-  gap:18px;
-  flex-wrap:wrap;
-}
+/* =========================================================
+   RESPONSIVE - LARGE LAPTOP
+========================================================= */
 
-.primary-btn,
-.secondary-btn{
-  display:flex;
-  align-items:center;
-  gap:10px;
+@media (max-width: 1400px) {
 
-  padding:16px 28px;
-
-  border-radius:16px;
-
-  font-weight:700;
-
-  cursor:pointer;
-
-  transition:0.4s ease;
-}
-
-.primary-btn{
-  background:linear-gradient(
-    135deg,
-    #2563EB,
-    #3B82F6
-  );
-
-  color:white;
-  border:none;
-}
-
-.secondary-btn{
-  background:white;
-  color:#0F172A;
-
-  border:1px solid rgba(37,99,235,0.08);
-}
-
-.primary-btn:hover,
-.secondary-btn:hover{
-  transform:translateY(-4px);
-}
-
-.projects-right{
-  position:relative;
-}
-
-.projects-right img{
-  width:100%;
-  border-radius:34px;
-  object-fit:cover;
-
-  box-shadow:
-    0 30px 60px rgba(15,23,42,0.12);
-}
-
-.floating-project-card{
-  position:absolute;
-
-  bottom:30px;
-  left:-30px;
-
-  background:rgba(255,255,255,0.9);
-
-  backdrop-filter:blur(16px);
-
-  padding:20px 24px;
-
-  border-radius:24px;
-
-  display:flex;
-  align-items:center;
-  gap:16px;
-
-  box-shadow:
-    0 12px 40px rgba(15,23,42,0.08);
-}
-
-.float-icon{
-  width:52px;
-  height:52px;
-
-  border-radius:16px;
-
-  background:rgba(37,99,235,0.08);
-  color:#2563EB;
-
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-
-.floating-project-card h3{
-  font-size:1.8rem;
-  color:#0F172A;
-}
-
-.floating-project-card p{
-  color:#64748B;
-}
-
-/* STATS */
-
-.projects-stats-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-  gap:24px;
-
-  margin-bottom:80px;
-}
-
-.project-stat-card{
-  background:rgba(255,255,255,0.82);
-
-  backdrop-filter:blur(18px);
-
-  border-radius:26px;
-
-  padding:30px;
-
-  border:1px solid rgba(37,99,235,0.08);
-
-  transition:0.45s ease;
-}
-
-.project-stat-card:hover{
-  transform:translateY(-8px);
-
-  box-shadow:
-    0 20px 40px rgba(37,99,235,0.12),
-    0 8px 20px rgba(15,23,42,0.06);
-}
-
-.project-stat-card svg{
-  color:#2563EB;
-  margin-bottom:20px;
-}
-
-.project-stat-card h2{
-  font-size:2.2rem;
-  color:#0F172A;
-  margin-bottom:10px;
-}
-
-.project-stat-card p{
-  color:#64748B;
-}
-
-/* GRID */
-
-.projects-grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
-  gap:28px;
-}
-
-/* CARD */
-
-.project-card{
-  background:rgba(255,255,255,0.82);
-
-  backdrop-filter:blur(18px);
-
-  border-radius:30px;
-
-  overflow:hidden;
-
-  border:1px solid rgba(37,99,235,0.08);
-
-  transition:0.5s ease;
-}
-
-.project-card:hover{
-  transform:translateY(-12px);
-
-  box-shadow:
-    0 30px 60px rgba(37,99,235,0.14),
-    0 10px 24px rgba(15,23,42,0.08);
-}
-
-/* IMAGE */
-
-.project-image{
-  position:relative;
-  height:260px;
-  overflow:hidden;
-}
-
-.project-image img{
-  width:100%;
-  height:100%;
-
-  object-fit:cover;
-
-  transition:0.8s ease;
-}
-
-.project-card:hover img{
-  transform:scale(1.08);
-}
-
-.project-overlay{
-  position:absolute;
-  inset:0;
-
-  background:linear-gradient(
-    to top,
-    rgba(0,0,0,0.65),
-    transparent
-  );
-}
-
-.project-category{
-  position:absolute;
-
-  top:18px;
-  left:18px;
-
-  padding:10px 16px;
-
-  border-radius:50px;
-
-  background:rgba(255,255,255,0.14);
-
-  backdrop-filter:blur(10px);
-
-  color:white;
-
-  font-size:0.82rem;
-  font-weight:600;
-}
-
-/* CONTENT */
-
-.project-content{
-  padding:28px;
-}
-
-.project-content h3{
-  font-size:1.45rem;
-  line-height:1.4;
-  color:#0F172A;
-  margin-bottom:14px;
-}
-
-.project-content p{
-  color:#64748B;
-  line-height:1.8;
-  margin-bottom:26px;
-}
-
-.project-content button{
-  display:flex;
-  align-items:center;
-  gap:8px;
-
-  background:none;
-  border:none;
-
-  color:#2563EB;
-  font-weight:700;
-
-  cursor:pointer;
-}
-
-/* REVEAL */
-
-.fade-up{
-  opacity:0;
-  transform:translateY(40px);
-  transition:all 1s ease;
-}
-
-.fade-up.show{
-  opacity:1;
-  transform:translateY(0);
-}
-
-/* RESPONSIVE */
-
-@media(max-width:1100px){
-
-  .projects-hero{
-    grid-template-columns:1fr;
+  .heroContent h1 {
+    font-size: 4.5rem;
   }
 
 }
 
-@media(max-width:768px){
+/* =========================================================
+   RESPONSIVE - LAPTOP
+========================================================= */
 
-  .career-projects-section{
-    padding:70px 18px;
+@media (max-width: 1200px) {
+
+  .proCoursesSection {
+    padding: 40px 5% 120px;
   }
 
-  .floating-project-card{
-    position:relative;
-    left:auto;
-    bottom:auto;
-    margin-top:20px;
-    width:fit-content;
+  .heroContent h1 {
+    font-size: 3.9rem;
+  }
+
+  .floatingCoursesWrapper {
+    grid-template-columns:
+      repeat(2,1fr);
+  }
+
+  .card1,
+  .card2,
+  .card3,
+  .card4,
+  .card5,
+  .card6,
+  .card7,
+  .card8,
+  .card9,
+  .card10,
+  .card11,
+  .card12,
+  .card13,
+  .card14 {
+    grid-column: span 1;
   }
 
 }
 
-@media(max-width:500px){
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
 
-  .projects-left h1{
-    font-size:2.3rem;
+@media (max-width: 992px) {
+
+  .proCoursesHero {
+    height: 700px;
+
+    min-height: auto;
   }
 
-  .primary-btn,
-  .secondary-btn{
-    width:100%;
-    justify-content:center;
+  .heroContent {
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+  }
+
+  .heroContent h1 {
+    font-size: 3.4rem;
+  }
+
+  .floatingCourseCard {
+    height: 320px;
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .proCoursesSection {
+    padding: 20px 20px 90px;
+  }
+
+  /* HERO */
+
+  .proCoursesHero {
+    height: 520px;
+
+    border-radius: 24px;
+
+    margin-bottom: 50px;
+  }
+
+  .heroContent {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .heroContent span {
+    font-size: 10px;
+
+    letter-spacing: 2px;
+  }
+
+  .heroContent h1 {
+    font-size: 2.5rem;
+
+    line-height: 1.05;
+
+    margin-bottom: 20px;
+  }
+
+  .heroContent p {
+    font-size: 0.96rem;
+
+    line-height: 1.8;
+  }
+
+  /* GRID */
+
+  .floatingCoursesWrapper {
+    grid-template-columns: 1fr;
+
+    gap: 18px;
+  }
+
+  /* CARD */
+
+  .floatingCourseCard {
+    height: 300px;
+
+    border-radius: 22px;
+  }
+
+  .floatingContent {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
+  .floatingContent h3 {
+    font-size: 1.55rem;
+
+    margin-bottom: 16px;
+  }
+
+  .floatingContent button {
+    padding: 11px 18px;
+
+    font-size: 12px;
+  }
+
+}
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+
+  .proCoursesHero {
+    height: 460px;
+  }
+
+  .heroContent h1 {
+    font-size: 2rem;
+  }
+
+  .heroContent p {
+    font-size: 0.92rem;
+  }
+
+  .floatingCourseCard {
+    height: 250px;
+  }
+
+  .floatingContent h3 {
+    font-size: 1.3rem;
+  }
+
+  .floatingContent span {
+    font-size: 10px;
+  }
+
+  .floatingContent button {
+    width: 100%;
+
+    justify-content: center;
   }
 
 }

@@ -39,7 +39,7 @@ const Topbar = () => {
         <div className="globetech-topbar-right">
           <div className="globetech-topbar-item">
             <FaEnvelope />
-            <span>info@globetechfoundation.org</span>
+            <span> info@globetechsocial.com</span>
           </div>
 
           <div className="globetech-topbar-divider"></div>
