@@ -138,13 +138,11 @@ export default function ImpactSection() {
             </h2>
 
             <p>
-              Our initiatives focus on long-term transformation —
-              improving careers, confidence, leadership, and access
-              to opportunities for underserved communities.
+             Our initiatives are designed to create long-term, meaningful transformation in the lives of individuals and communities. We focus on empowering people through career development, skill enhancement, leadership training, and confidence-building programs that prepare them for sustainable growth. By improving access to education, technology, mentorship, and opportunities, we help underserved communities unlock their true potential.
             </p>
 
 
-<Link to="/contact">
+<Link to="/events">
             <button>
               Explore Our Journey
             </button>

@@ -12,6 +12,7 @@ import TestimonialSection from "../components/testimonials/TestimonialSection";
 import GallerySection from "../components/gallery/GallerySection";
 import Footer from "../components/layout/Footer";
 import ReachImpactSection from "../components/reach/ReachImpactSection";
+import SocialWall from "./SocialWall";
 
 const Home = () => {
   return (
@@ -29,6 +30,7 @@ const Home = () => {
       <SuccessStorySection />
       <TestimonialSection />
       <GallerySection />
+      <SocialWall/>
       {/* <Footer /> */}
     </>
   );

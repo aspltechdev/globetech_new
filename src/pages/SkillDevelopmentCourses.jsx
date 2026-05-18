@@ -366,7 +366,7 @@ const courses = [
     number: "12",
     title: "Foreign Languages",
     image:
-      "https://images.unsplash.com/photo-1522202222206-b750f2f1f0a3?q=80&w=1400&auto=format&fit=crop",
+      "https://images.pexels.com/photos/19902307/pexels-photo-19902307.jpeg",
   },
 
   {

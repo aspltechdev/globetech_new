@@ -86,15 +86,15 @@ const Footer = () => {
 
             <div className="footerSocials">
 
-              <a href="/">
+              <a href="/https://www.facebook.com/profile.php?id=61573486966651">
                 <FaFacebookF />
               </a>
 
-              <a href="/">
+              <a href="/https://www.instagram.com/globetech_ngo/">
                 <FaInstagram />
               </a>
 
-              <a href="/">
+              <a href="/https://www.linkedin.com/company/113444515/admin/dashboard/">
                 <FaLinkedinIn />
               </a>
 
@@ -122,19 +122,19 @@ const Footer = () => {
                 Home
               </a>
 
-              <a href="/">
+              <a href="/about-us">
                 About
               </a>
 
-              <a href="/">
+              <a href="/programs">
                 Programs
               </a>
 
-              <a href="/">
+              <a href="/events">
                 Events
               </a>
 
-              <a href="/">
+              <a href="/contact">
                 Contact
               </a>
 

@@ -191,10 +191,10 @@ import "./HeroSection.css";
    IMAGES
 ========================= */
 
-import heroImg1 from "../../assets/hero/hero1.png";
-import heroImg2 from "../../assets/hero/hero2.png";
-import heroImg3 from "../../assets/hero/hero3.png";
-import heroImg4 from "../../assets/hero/hero4.png";
+import heroImg1 from "../../assets/group4.png";
+import heroImg2 from "../../assets/group1.png";
+import heroImg3 from "../../assets/group2.png";
+import heroImg4 from "../../assets/group3.png";
 
 /* =========================
    SLIDES

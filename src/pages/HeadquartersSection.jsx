@@ -476,7 +476,7 @@ export default function HeadquartersSection() {
 
     emailjs.sendForm(
 
-      "YOUR_SERVICE_ID",
+      "service_hfaq72p",
 
       "YOUR_TEMPLATE_ID",
 

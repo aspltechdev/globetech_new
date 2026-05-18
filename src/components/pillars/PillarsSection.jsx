@@ -13,12 +13,12 @@ import {
 
 import "./PillarCard.css";
 
-import img1 from "../../assets/pillar-1.png";
-import img2 from "../../assets/pillar-2.png";
-import img3 from "../../assets/pillar-3.png";
-import img4 from "../../assets/pillar-4.png";
-import img5 from "../../assets/pillar-5.png";
-import img6 from "../../assets/pillar-5.png";
+import img1 from "../../assets/core6.png";
+import img2 from "../../assets/core5.png";
+import img3 from "../../assets/core4.png";
+import img4 from "../../assets/core3.png";
+import img5 from "../../assets/core2.png";
+import img6 from "../../assets/core1.png";
 import { Link } from "react-router-dom";
 
 /* =========================================================
