@@ -1,5 +1,6 @@
 import React from "react";
-import HeadquartersSection from "./Head";
+import ContactSection from "./ContactSection";
+
 
 
 
@@ -12,8 +13,7 @@ const Contact = () => {
     <>
      
 
-     
-    <HeadquartersSection/>
+   <ContactSection/>
      
     </>
   );
