@@ -1,5 +1,6 @@
 import React from "react";
-import HeadquartersSection from "./HeadquartersSection";
+import HeadquartersSection from "./Head";
+
 
 
 
