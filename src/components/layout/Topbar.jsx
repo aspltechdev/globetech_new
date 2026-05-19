@@ -18,19 +18,19 @@ const Topbar = () => {
       <div className="globetech-topbar-container">
         {/* LEFT SOCIAL */}
         <div className="globetech-topbar-socials">
-          <a href="/https://www.linkedin.com/company/113444515/admin/dashboard/">
+          <a href="https://www.facebook.com/profile.php?id=61573486966651">
             <FaFacebookF />
           </a>
-          <a href="/">
+          <a href="https://x.com/">
             <FaTwitter />
           </a>
-          <a href="/https://www.instagram.com/globetech_ngo/">
+          <a href="https://www.instagram.com/globetech_ngo/">
             <FaInstagram />
           </a>
-          <a href="/">
+          <a href="https://youtube.com/@globetechsocialfoundation?si=fhkkVT4qoP1X6U3_">
             <FaYoutube />
           </a>
-          <a href="/https://www.linkedin.com/company/113444515/admin/dashboard/">
+          <a href="https://www.linkedin.com/company/113444515/admin/dashboard/">
             <FaLinkedinIn />
           </a>
         </div>
