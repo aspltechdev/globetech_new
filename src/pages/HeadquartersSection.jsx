@@ -160,7 +160,7 @@ export default function HeadquartersSection() {
 
       formData.append(
         "subject",
-        `🌍 Globetech Inquiry - ${inquiryType}`
+        `Globetech Inquiry - ${inquiryType}`
       );
 
       /* PROFESSIONAL SENDER */
@@ -179,10 +179,10 @@ export default function HeadquartersSection() {
 
       /* AUTO RESPONSE */
 
-      formData.append(
-        "autoresponse",
-        "Thank you for contacting Globetech Social Impact Foundation. Our team will contact you within 24 business hours."
-      );
+    //   formData.append(
+    //     "autoresponse",
+    //     "Thank you for contacting Globetech Social Impact Foundation. Our team will contact you within 24 business hours."
+    //   );
 
       /* FORM DATA */
 
