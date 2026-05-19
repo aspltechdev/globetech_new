@@ -74,6 +74,13 @@ export default function ContactSection() {
   const [success, setSuccess] =
     useState("");
 
+  const [
+    selectedInquiry,
+    setSelectedInquiry,
+  ] = useState(
+    "Partnerships"
+  );
+
   const handleSubmit = () => {
     setLoading(true);
 
@@ -247,20 +254,20 @@ export default function ContactSection() {
                 {/* WEB3FORMS ACCESS KEY */}
 
                 <input
-  type="hidden"
-  name="access_key"
-  value="f64d2dba-5fbc-445e-b726-8c62b56e0e1c"
-/>
+                  type="hidden"
+                  name="access_key"
+                  value="f64d2dba-5fbc-445e-b726-8c62b56e0e1c"
+                />
 
-                {/* OPTIONAL SUBJECT */}
+                {/* DYNAMIC SUBJECT */}
 
                 <input
                   type="hidden"
                   name="subject"
-                  value="🌍 Globetech Inquiry"
+                  value={`New Inquiry for ${selectedInquiry}`}
                 />
 
-                {/* OPTIONAL FROM NAME */}
+                {/* FROM NAME */}
 
                 <input
                   type="hidden"
@@ -268,12 +275,16 @@ export default function ContactSection() {
                   value="Globetech Social Impact Foundation"
                 />
 
-                {/* OPTIONAL AUTO RESPONSE */}
+                {/* AUTO RESPONSE */}
+
+               
+
+                {/* REDIRECT AFTER SUBMIT */}
 
                 <input
                   type="hidden"
-                  name="autoresponse"
-                  value="Thank you for contacting Globetech Social Impact Foundation. Our team will contact you within 24 business hours."
+                  name="redirect"
+                  value="https://web3forms.com/success"
                 />
 
                 {/* NAME GRID */}
@@ -342,7 +353,17 @@ export default function ContactSection() {
                     Inquiry Type
                   </label>
 
-                  <select name="inquiry">
+                  <select
+                    name="inquiry"
+                    value={
+                      selectedInquiry
+                    }
+                    onChange={(e) =>
+                      setSelectedInquiry(
+                        e.target.value
+                      )
+                    }
+                  >
                     <option>
                       Partnerships
                     </option>
