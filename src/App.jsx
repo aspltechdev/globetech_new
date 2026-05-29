@@ -65,10 +65,12 @@ import Events from "./pages/Events";
 import Courses from "./pages/Courses";
 import Contact from "./pages/Contact";
 import './App.css';
+import ScrollToTop from "./ScrollToTop";
 
 function App() {
   return (
     <BrowserRouter>
+    <ScrollToTop/>
       <Topbar />
       <Navbar />
 
