@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block admin or private areas if they exist
+
+Disallow: /admin/
+Disallow: /dashboard/
+Disallow: /private/
+Disallow: /api/
+
+# Sitemap
+
+Sitemap: https://www.globetechsocial.com/sitemap.xml
