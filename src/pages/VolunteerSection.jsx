@@ -174,7 +174,7 @@ const partners = [
 
   {
     name: "Bosch",
-    logo: "https://www.bing.com/images/search?view=detailV2&ccid=JcJIcT6j&id=F3CC4086D5DC206D92F19CF4F9FCB4B520567926&thid=OIP.JcJIcT6jGwkQ9u61Fq0HEQHaEo&mediaurl=https%3a%2f%2f1000logos.net%2fwp-content%2fuploads%2f2016%2f10%2fBosch-Logo.png&exph=3124&expw=5000&q=+bosh+logo&FORM=IRPRST&ck=444F0CCCAB70AF2E507FB6C07122281F&selectedIndex=0&itb=1",
+    logo: "https://upload.wikimedia.org/wikipedia/commons/1/16/Bosch-logo.svg",
   },
 
   {

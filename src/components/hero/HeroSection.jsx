@@ -386,7 +386,7 @@ import hero3 from "../../assets/hero14.png";
 import pl1 from "../../assets/placements/pl1.png";
 import pl2 from "../../assets/placements/pl2.png";
 import pl3 from "../../assets/placements/pl3.png";
-import pl4 from "../../assets/placements/pl4.png";
+import pl4 from "../../assets/placements/iit_mandi.png";
 import pl5 from "../../assets/placements/pl5.png";
 import pl6 from "../../assets/placements/pl6.png";
 import pl7 from "../../assets/placements/pl7.png";
@@ -601,25 +601,16 @@ const HeroSection = () => {
       <div className="csrLogoStrip">
         <div className="csrLogoTrack">
 
-          {/* <img src="{pl1}" alt="TCSS" />
-          <img src="{pl2}" alt="Wipro" />
-          <img src="{pl3}" alt="Infosys" />
-          <img src="{pl4}" alt="HCL" />
-          <img src="{pl5}" alt="Accenture" /> */}
-          <img src={pl1} alt="TCSS" />
-<img src={pl2} alt="Wipro" />
-<img src={pl3} alt="Infosys" />
-<img src={pl4} alt="HCL" />
-<img src={pl5} alt="Accenture" />
-        <img src={pl2} alt="Wipro" />
-<img src={pl3} alt="Infosys" />
-<img src={pl4} alt="HCL" />
-<img src={pl5} alt="Accenture" /> 
-<img src={pl2} alt="Wipro" />
-<img src={pl3} alt="Infosys" />
-<img src={pl4} alt="HCL" />
-<img src={pl5} alt="Accenture" />
-
+       
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Bosch-logo.svg" alt="Bosch" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Nasscom-logo-svg.svg" alt="Nasscom" />
+<img src={pl4} alt="IIT MANDI" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Bosch-logo.svg" alt="Bosch" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Nasscom-logo-svg.svg" alt="Nasscom" />
+<img src={pl4} alt="IIT MANDI" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Bosch-logo.svg" alt="Bosch" />
+<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Nasscom-logo-svg.svg" alt="Nasscom" />
+<img src={pl4} alt="IIT MANDI" />
          
 
         </div>
