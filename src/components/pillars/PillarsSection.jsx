@@ -406,7 +406,7 @@
 import "./PillarCard.css";
 import { useEffect, useRef } from "react";
 
-import skillImg from "../../assets/core-1.png";
+import skillImg from "../../assets/core-1.jpeg";
 import womenImg from "../../assets/core-2.png";
 import healthImg from "../../assets/core3.png";
 import infraImg from "../../assets/core4.png";

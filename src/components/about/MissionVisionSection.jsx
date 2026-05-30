@@ -12,7 +12,7 @@
 // // //   Sparkles,
 // // // } from "lucide-react";
 
-// // // import bgImage from "../../assets/aboutmission.jpg";
+// // // import bgImage from "../../assets/aboutmission.jpeg";
 
 // // // import "./MissionVisionSection.css";
 // // // import { Link } from "react-router-dom";

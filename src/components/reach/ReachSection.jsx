@@ -15,7 +15,7 @@
 // } from "lucide-react";
 
 // import indiaMap from "../../assets/reachedind.png";
-// import bgImage from "../../assets/reachbging.jpg";
+// import bgImage from "../../assets/reachbging.png";
 
 // import "./ReachSection.css";
 // import { Link } from "react-router-dom";
