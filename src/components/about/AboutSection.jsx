@@ -5,9 +5,9 @@ import { ArrowUpRight } from "lucide-react";
 import { Link } from "react-router-dom";
 import gsap from "gsap";
 
-import img1 from "../../assets/about-1.jpg";
-import img2 from "../../assets/about-2.jpg";
-import img3 from "../../assets/about123.jpg";
+import img1 from "../../assets/about-1.png";
+import img2 from "../../assets/about-2.png";
+import img3 from "../../assets/about123.png";
 import img4 from "../../assets/aboutimg.png";
 
 import "./AboutSection.css";

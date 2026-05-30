@@ -1144,9 +1144,9 @@ import React, {
 
 import "./ReachImpactSection.css";
 
-import impact1 from "../../assets/about-1.jpg";
-import impact2 from "../../assets/about-2.jpg";
-import impact3 from "../../assets/about123.jpg";
+import impact1 from "../../assets/about-1.png";
+import impact2 from "../../assets/about-2.png";
+import impact3 from "../../assets/about123.png";
 import impact4 from "../../assets/aboutimg.png";
 
 /* =========================================================
