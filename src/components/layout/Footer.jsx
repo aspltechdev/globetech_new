@@ -142,13 +142,13 @@ const Footer = () => {
 
             {/* PROGRAMS */}
 
-            <div className="footerColumn">
+            {/* <div className="footerColumn">
 
               <h3>
                 Programs
               </h3>
 
-              <a href="/get-involved">
+              <a href="/courses">
                 Skill Development
               </a>
 
@@ -167,6 +167,39 @@ const Footer = () => {
               <a href="/contact">
                 Community Outreach
               </a>
+
+            </div> */}
+            <div className="footerColumn">
+
+              <h3>
+                Quick Links
+              </h3>
+
+              <a href="/about-us">
+                What We Do
+              </a>
+
+              <a href="/programs">
+                Livelihood Training
+              </a>
+
+              <a href="/courses">
+                Skill Development
+              </a>
+
+              <a href="/impact">
+                Impact Areas
+              </a>
+
+              <a href="/get-involved">
+                CSR Partners
+              </a>
+
+              <a href="/events">
+                Community Outreach
+              </a>
+
+
 
             </div>
 

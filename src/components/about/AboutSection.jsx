@@ -294,7 +294,7 @@ const AboutSection = () => {
 
           {/* METRICS */}
 
-          {/* <motion.div
+          <motion.div
             className="abtCinema_metrics"
             initial={{
               opacity: 0,
@@ -312,32 +312,33 @@ const AboutSection = () => {
           >
             <div>
               <h4>
-                <span ref={counter2}>0</span>+
+                {/* <span ref={counter2}>0</span>+ */}
+               <span> AAFTG3675G </span>
               </h4>
 
               <span>
-                Corporate Partners
+               PAN Number
               </span>
             </div>
 
             <div>
               <h4>
-                <span ref={counter3}>0</span>+
+                <span ref={counter3}>KA/2026/1090587</span>
               </h4>
 
               <span>
-                Training Programs
+    DARPAN ID
               </span>
             </div>
 
-            <div>
+            {/* <div>
               <span>25+</span>
 
               <span>
                 Cities Reached
               </span>
-            </div>
-          </motion.div> */}
+            </div> */}
+          </motion.div>
 
           {/* BUTTONS */}
 

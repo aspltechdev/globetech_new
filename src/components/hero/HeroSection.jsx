@@ -391,6 +391,14 @@ import pl5 from "../../assets/placements/pl5.png";
 import pl6 from "../../assets/placements/pl6.png";
 import pl7 from "../../assets/placements/pl7.png";
 import pl8 from "../../assets/placements/pl8.png";
+import nascom from "../../assets/iit.png";
+import iit from "../../assets/nascom.png";
+import anudip from "../../assets/anudip.png";
+import gram  from "../../assets/gramvikas.png";
+import kou from "../../assets/kou.png";
+import bos from "../../assets/bos.png";
+
+
 
 const slides = [
   {
@@ -602,15 +610,20 @@ const HeroSection = () => {
         <div className="csrLogoTrack">
 
        
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Bosch-logo.svg" alt="Bosch" />
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Nasscom-logo-svg.svg" alt="Nasscom" />
-<img src={pl4} alt="IIT MANDI" />
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Bosch-logo.svg" alt="Bosch" />
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Nasscom-logo-svg.svg" alt="Nasscom" />
-<img src={pl4} alt="IIT MANDI" />
-<img src="https://upload.wikimedia.org/wikipedia/commons/1/16/Bosch-logo.svg" alt="Bosch" />
-<img src="https://upload.wikimedia.org/wikipedia/commons/c/cc/Nasscom-logo-svg.svg" alt="Nasscom" />
-<img src={pl4} alt="IIT MANDI" />
+
+<img src={nascom} alt="Nasscom" />
+<img src={iit} alt="IIT MANDI" />
+
+<img src={anudip} alt="Nasscom" />
+<img src={gram} alt="Nasscom" />
+<img src={kou} alt="Nasscom" />
+<img src={bos} alt="Bosch" />
+<img src={nascom} alt="Nasscom" />
+<img src={iit} alt="IIT MANDI" />
+
+<img src={anudip} alt="Nasscom" />
+<img src={gram} alt="Nasscom" />
+<img src={kou} alt="Nasscom" />
          
 
         </div>
