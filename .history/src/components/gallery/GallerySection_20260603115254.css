@@ -1,0 +1,343 @@
+/* ============================================================
+   GALLERY SECTION — Netflix fan layout
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* Root */
+.gs-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0a0e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 80px 24px 60px;
+  font-family: 'DM Sans', sans-serif;
+  perspective: 1200px;
+}
+
+/* Ambient glow blob */
+.gs-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: background 1.2s ease;
+  z-index: 0;
+}
+
+/* ============================================================
+   INFO PANEL (slides from left)
+   ============================================================ */
+.gs-info-panel {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateX(-100%) translateY(-50%);
+  width: clamp(260px, 30vw, 360px);
+  background: rgba(10, 10, 14, 0.95);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-radius: 0 20px 20px 0;
+  padding: 40px 32px;
+  z-index: 50;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  backdrop-filter: blur(20px);
+}
+
+.gs-info-panel.gs-info-open {
+  transform: translateX(0) translateY(-50%);
+}
+
+.gs-info-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.gs-info-close:hover { background: rgba(255,255,255,0.16); color: #fff; }
+
+.gs-info-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.gs-info-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  color: #fff;
+  line-height: 1.05;
+  margin: 0 0 16px;
+  letter-spacing: 0.02em;
+}
+
+.gs-info-desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.55);
+  margin: 0 0 28px;
+}
+
+.gs-info-stat {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+  margin-bottom: 28px;
+}
+
+.gs-stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.9);
+}
+
+.gs-info-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 22px;
+  background: #fff;
+  color: #0a0a0e;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.gs-info-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* Backdrop */
+.gs-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.gs-header {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 56px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.gs-visible .gs-header { opacity: 1; transform: translateY(0); }
+
+.gs-eyebrow {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.gs-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(42px, 6vw, 76px);
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin: 0 0 12px;
+}
+
+.gs-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  margin: 0;
+}
+
+/* ============================================================
+   STAGE — 3D fan
+   ============================================================ */
+.gs-stage {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.gs-card {
+  position: absolute;
+  width: 260px;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.65s ease,
+    box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.gs-card:not(.gs-card-active):hover {
+  opacity: 0.8 !important;
+}
+
+.gs-card-active {
+  box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
+  cursor: default;
+}
+
+.gs-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+.gs-card-active .gs-card-img { transform: scale(1.03); }
+
+/* Dark overlay on card */
+.gs-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(0,0,0,0.45) 60%,
+    rgba(0,0,0,0.88) 100%
+  );
+}
+
+/* Metric badge top-right */
+.gs-card-metric {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 5px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Bottom content */
+.gs-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px 18px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+.gs-card-active .gs-card-body {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.gs-card-tag {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.gs-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+.gs-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.gs-card-btn:hover { background: rgba(255,255,255,0.24); }
+
+/* ============================================================
+   DOTS
+   ============================================================ */
+.gs-dots {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.gs-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, width 0.3s;
+  padding: 0;
+}
+
+.gs-dot-active {
+  background: #fff;
+  width: 22px;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 700px) {
+  .gs-stage { height: 340px; }
+  .gs-card { width: 200px; height: 300px; }
+  .gs-info-panel { width: 80vw; }
+}
+
