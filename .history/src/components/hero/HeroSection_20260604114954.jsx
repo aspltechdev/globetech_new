@@ -391,12 +391,12 @@ import pl5 from "../../assets/placements/pl5.png";
 import pl6 from "../../assets/placements/pl6.png";
 import pl7 from "../../assets/placements/pl7.png";
 import pl8 from "../../assets/placements/pl8.png";
-import nascom from "../../assets/ourplacementlogo/Group six.png";
-import iit from "../../assets/ourplacementlogo/Group four.png";
-import anudip from "../../assets/ourplacementlogo/Group three.png";
-import gram from "../../assets/ourplacementlogo/Group two.png";
+import nascom from "../../assets/ourplacementlogo/Groupsix.png";
+import iit from "../../assets/ourplacementlogo/Groupfour.png";
+import anudip from "../../assets/ourplacementlogo/Groupthree.png";
+import gram  from "../../assets/ourplacementlogo/Grouptwo.png";
 import kou from "../../assets/ourplacementlogo/Groupone.png";
-import bos from "../../assets/ourplacementlogo/Group five.png";
+import bos from "../../assets/ourplacementlogo/Groupfive.png";
 
 
 
@@ -614,15 +614,15 @@ const HeroSection = () => {
 <img src={nascom} alt="Nasscom" />
 <img src={iit} alt="IIT MANDI" />
 
-<img src={anudip} alt="Nasscom" />
-<img src={gram} alt="Nasscom" />
-<img src={kou} alt="Nasscom" />
-<img src={bos} alt="Bosch" />
-<img src={nascom} alt="Nasscom" />
-<img src={iit} alt="IIT MANDI" />
+<img src={Groupone} alt="Nasscom" />
+<img src={Grouptwo} alt="Nasscom" />
+<img src={Groupthree} alt="Nasscom" />
+<img src={Groupfour} alt="Bosch" />
+<img src={Groupfive} alt="Nasscom" />
+<img src={Groupsix} alt="IIT MANDI" />
 
-<img src={anudip} alt="Nasscom" />
-<img src={gram} alt="Nasscom" />
+<img src={Groupone} alt="Nasscom" />
+<img src={Grouptwo} alt="Nasscom" />
 <img src={kou} alt="Nasscom" />
          
 

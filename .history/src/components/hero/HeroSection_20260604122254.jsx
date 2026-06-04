@@ -393,10 +393,10 @@ import pl7 from "../../assets/placements/pl7.png";
 import pl8 from "../../assets/placements/pl8.png";
 import nascom from "../../assets/ourplacementlogo/Group six.png";
 import iit from "../../assets/ourplacementlogo/Group four.png";
-import anudip from "../../assets/ourplacementlogo/Group three.png";
-import gram from "../../assets/ourplacementlogo/Group two.png";
+import anudip from "../../assets/ourplacementlogo/Groupthree.png";
+import gram from "../../assets/ourplacementlogo/Grouptwo.png";
 import kou from "../../assets/ourplacementlogo/Groupone.png";
-import bos from "../../assets/ourplacementlogo/Group five.png";
+import bos from "../../assets/ourplacementlogo/Groupfive.png";
 
 
 

@@ -396,7 +396,7 @@ import iit from "../../assets/ourplacementlogo/Group four.png";
 import anudip from "../../assets/ourplacementlogo/Group three.png";
 import gram from "../../assets/ourplacementlogo/Group two.png";
 import kou from "../../assets/ourplacementlogo/Groupone.png";
-import bos from "../../assets/ourplacementlogo/Group five.png";
+import bos from "../../assets/ourplacementlogo/Groupfive.png";
 
 
 
