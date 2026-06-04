@@ -157,6 +157,7 @@ body {
 
 .mvLeft {
   position: relative;
+  overflow: visible;
 }
 
 .mvTag {
@@ -259,8 +260,9 @@ body {
 
   overflow: hidden;
 
-  background: #ff6a00;  /* premium orange */
-color: white;
+  background: white;
+
+  color: #050816;
 
   display: flex;
 
@@ -268,7 +270,9 @@ color: white;
 
   gap: 10px;
 }
-
+.mvSection {
+  overflow: visible;
+}
 .mvPrimaryBtn::before {
   content: "";
 

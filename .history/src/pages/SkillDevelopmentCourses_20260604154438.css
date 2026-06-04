@@ -116,23 +116,13 @@
 /* =========================================================
    ASYMMETRIC GRID
 ========================================================= */
-.sdcCard1,
-.sdcCard4,
-.sdcCard5,
-.sdcCard8,
-.sdcCard9,
-.sdcCard12,
-.sdcCard13 {
+.sdcCard:nth-child(4n + 1),
+.sdcCard:nth-child(4n + 4) {
   grid-column: span 7;
 }
 
-.sdcCard2,
-.sdcCard3,
-.sdcCard6,
-.sdcCard7,
-.sdcCard10,
-.sdcCard11,
-.sdcCard14 {
+.sdcCard:nth-child(4n + 2),
+.sdcCard:nth-child(4n + 3) {
   grid-column: span 5;
 }
 

@@ -116,22 +116,23 @@
 /* =========================================================
    ASYMMETRIC GRID
 ========================================================= */
+
 .sdcCard1,
 .sdcCard4,
-.sdcCard5,
-.sdcCard8,
-.sdcCard9,
-.sdcCard12,
+.sdcCard7,
+.sdcCard10,
 .sdcCard13 {
   grid-column: span 7;
 }
 
 .sdcCard2,
 .sdcCard3,
+.sdcCard5,
 .sdcCard6,
-.sdcCard7,
-.sdcCard10,
+.sdcCard8,
+.sdcCard9,
 .sdcCard11,
+.sdcCard12,
 .sdcCard14 {
   grid-column: span 5;
 }

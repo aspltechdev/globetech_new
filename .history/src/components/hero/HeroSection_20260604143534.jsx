@@ -544,10 +544,10 @@ const HeroSection = () => {
               </button>
             </Link>
 
-            <Link to="/impact" className="csrHeroSecondaryBtn">
-  <Play size={15} />
-  Watch Impact Story
-</Link>
+            <button className="csrHeroSecondaryBtn">
+              <Play size={15} />
+              Watch Impact Story
+            </button>
           </div>
           <div className="csrHeroFloatingStats">
 

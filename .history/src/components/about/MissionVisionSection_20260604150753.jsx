@@ -781,7 +781,7 @@ import {
 } from "lucide-react";
 
 import "./MissionVisionSection.css";
-import { Link } from "react-router-dom";
+
 import bgImage from "../../assets/aboutmission.jpg";
 
 const MissionVisionSection = () => {
@@ -1012,14 +1012,15 @@ const MissionVisionSection = () => {
             }}
             viewport={{ once: true }}
           >
-           <Link to="/impact" className="mvPrimaryBtn">
-  Explore Impact
-  <ArrowRight size={16} />
-</Link>
+            <button className="mvPrimaryBtn">
+              Explore Impact
 
-          <Link to="/programs" className="mvSecondaryBtn">
-  View Programs
-</Link>
+              <ArrowRight size={16} />
+            </button>
+
+            <button className="mvSecondaryBtn">
+              View Programs
+            </button>
           </motion.div>
         </motion.div>
 

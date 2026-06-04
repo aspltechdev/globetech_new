@@ -781,7 +781,7 @@ import {
 } from "lucide-react";
 
 import "./MissionVisionSection.css";
-import { Link } from "react-router-dom";
+
 import bgImage from "../../assets/aboutmission.jpg";
 
 const MissionVisionSection = () => {
@@ -1017,9 +1017,9 @@ const MissionVisionSection = () => {
   <ArrowRight size={16} />
 </Link>
 
-          <Link to="/programs" className="mvSecondaryBtn">
-  View Programs
-</Link>
+            <button className="mvSecondaryBtn">
+              View Programs
+            </button>
           </motion.div>
         </motion.div>
 

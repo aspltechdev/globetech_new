@@ -192,10 +192,10 @@ export default function Events() {
                 Latest Events & Updates
               </h3>
 
-              {/* <p>
+              <p>
                 Community workshops, awareness campaigns,
                 placement initiatives and outreach programs.
-              </p> */}
+              </p>
 
             </div>
 

@@ -644,7 +644,7 @@ import "./CareerSection.css";
 
 /* IMAGES */
 
-import img1 from "../../assets/career-1.jpg";
+import img1 from "../../assets/career-1.avif";
 import img2 from "../../assets/career-2.png";
 import img3 from "../../assets/career-3.png";
 import img4 from "../../assets/career-4.png";
@@ -672,7 +672,7 @@ const slides = [
     description:
       "Interactive workshops and practical learning experiences with industry experts.",
 
-    image: img1,
+    image: img2,
   },
 
   {

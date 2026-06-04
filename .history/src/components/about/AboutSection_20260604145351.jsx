@@ -49,7 +49,7 @@ const AboutSection = () => {
     link.href = "/GlobetechFoundation.pdf";
 
     link.download =
-      "GlobetechFoundation.pdf";
+      "Globetech-Foundation-Profile.pdf";
 
     document.body.appendChild(link);
 

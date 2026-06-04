@@ -644,7 +644,7 @@ import "./CareerSection.css";
 
 /* IMAGES */
 
-import img1 from "../../assets/career-1.jpg";
+import img1 from "../../assets/career-1.png";
 import img2 from "../../assets/career-2.png";
 import img3 from "../../assets/career-3.png";
 import img4 from "../../assets/career-4.png";
@@ -662,7 +662,7 @@ const slides = [
     description:
       "Real-world industrial exposure helping students understand professional ecosystems.",
 
-    image: img3,
+    image: img1,
   },
 
   {
@@ -672,7 +672,7 @@ const slides = [
     description:
       "Interactive workshops and practical learning experiences with industry experts.",
 
-    image: img1,
+    image: img2,
   },
 
   {
@@ -682,7 +682,7 @@ const slides = [
     description:
       "Building confidence through mentorship and immersive internship opportunities.",
 
-    image: img2,
+    image: img3,
   },
 
   {

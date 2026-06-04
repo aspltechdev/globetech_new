@@ -46,10 +46,10 @@ const AboutSection = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
 
-    link.href = "/GlobetechFoundation.pdf";
+    link.href = "/Globetech-Foundation-Profile.pdf";
 
     link.download =
-      "GlobetechFoundation.pdf";
+      "Globetech-Foundation-Profile.pdf";
 
     document.body.appendChild(link);
 
@@ -355,12 +355,14 @@ const AboutSection = () => {
               Download Profile
             </button> */}
 
-            <button
-              className="abtCinema_secondaryBtn"
-              onClick={downloadPDF}
-            >
-              Download Profile
-            </button>
+            <a
+  href="/GlobaltechFoundation.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="abtCinema_secondaryBtn"
+>
+  Download Profile
+</a>
           </motion.div>
         </motion.div>
       </div>

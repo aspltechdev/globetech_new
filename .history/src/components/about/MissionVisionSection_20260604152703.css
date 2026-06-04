@@ -190,14 +190,13 @@ body {
 
   font-size: clamp(3rem, 5vw, 5.8rem);
 
-  line-height: 1.19;
+  line-height: 1.15;
 
   letter-spacing: -0.05em;
 
   margin-bottom: 26px;
 
   font-weight: 700;
-   padding-bottom: 10px; 
 
   background:
     linear-gradient(
@@ -259,8 +258,9 @@ body {
 
   overflow: hidden;
 
-  background: #ff6a00;  /* premium orange */
-color: white;
+  background: white;
+
+  color: #050816;
 
   display: flex;
 

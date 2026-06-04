@@ -544,10 +544,15 @@ const HeroSection = () => {
               </button>
             </Link>
 
-            <Link to="/impact" className="csrHeroSecondaryBtn">
+            <a
+  href="/GlobaltechFoundation.pdf"
+  target="_blank"
+  rel="noopener noreferrer"
+  className="csrHeroSecondaryBtn"
+>
   <Play size={15} />
   Watch Impact Story
-</Link>
+</a>
           </div>
           <div className="csrHeroFloatingStats">
 
