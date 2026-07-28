@@ -332,11 +332,11 @@ import img2 from "../../assets/impact/galimgtwo.jpeg";
 import img3 from "../../assets/impact/galimg3.jpeg";
 import videoBg from "../../assets/impact/galvidone.mp4";
 import videoB from "../../assets/impact/galimgvidetwo.mp4";
-import img4 from "../../assets/impact/imgone.jpeg";
-import img5 from "../../assets/impact/imgtwo.jpeg";
-import img6 from "../../assets/impact/imgthree.jpeg";
-import img7 from "../../assets/impact/imgfour.jpeg";
-
+import img1 from "../../assets/impact/galimgone.jpeg";
+import img2 from "../../assets/impact/galimgtwo.jpeg";
+import img3 from "../../assets/impact/galimg3.jpeg";
+import videoBg from "../../assets/impact/galvidone.mp4";
+import videoB from "../../assets/impact/galimgvidetwo.mp4";
 
 
 /* =========================================================
@@ -345,75 +345,44 @@ import img7 from "../../assets/impact/imgfour.jpeg";
 
 const galleryData = [
   {
-  image: img1,
-  title: "Global Training Workshops",
-  desc: "Delivering international workshops that promote cross-cultural learning, professional excellence, and knowledge exchange.",
-  stat: "500+ Global Sessions",
-  glow: "#ff8a3d",
-},
+    image: img1,
+    title: "Training Workshops",
+    desc: "Conducting interactive workshops that foster learning and skill development.",
+    stat: "500+ Training Programs",
+    glow: "#ff8a3d",
+  },
 
-{
-  image: img2,
-  title: "International Education Programs",
-  desc: "Collaborating across borders to provide transformative educational experiences and lifelong learning opportunities.",
-  stat: "30+ Countries Reached",
-  glow: "#ff5fa2",
-},
-
-{
-  video: videoBg,
-  title: "Cross-Cultural Skill Development",
-  desc: "Equipping participants with globally relevant skills through immersive training and international exposure.",
-  stat: "Worldwide Participation",
-  glow: "#53a0ff",
-},
-
-{
-  video: videoB,
-  title: "Global Career Readiness",
-  desc: "Preparing individuals for international career opportunities through mentorship, leadership development, and industry engagement.",
-  stat: "1,200+ Career Success Stories",
-  glow: "#4ecdc4",
-},
-
-{
-  image: img3,
-  title: "Digital Learning Across Borders",
-  desc: "Expanding access to technology-driven learning through innovative programs connecting learners worldwide.",
-  stat: "Pan-Global Initiatives",
-  glow: "#00c27a",
-},
   {
-  image: img4,
-  title: "Community Outreach",
-  desc: "Engaging with communities through impactful initiatives that promote awareness, inclusion, and social development.",
-  stat: "100+ Community Drives",
-  glow: "#ff8a3d",
-},
+    image: img2,
+    title: "Educational Initiatives",
+    desc: "Celebrating initiatives that empower learning and social progress.",
+    stat: "500+ Programs Conducted",
+    glow: "#ff5fa2",
+  },
 
-{
-  image: img5,
-  title: "Youth Empowerment",
-  desc: "Inspiring young minds through mentorship, leadership programs, and opportunities for personal growth.",
-  stat: "5,000+ Youth Reached",
-  glow: "#ff5fa2",
-},
+  {
+    video: videoBg,
+    title: "Skill Development",
+    desc: "Empowering individuals with practical skills for personal and professional growth.",
+    stat: "Across Rural India",
+    glow: "#53a0ff",
+  },
 
-{
-  image: img6,
-  title: "Women Empowerment",
-  desc: "Supporting women through skill-building initiatives, awareness programs, and pathways to economic independence.",
-  stat: "2,000+ Women Impacted",
-  glow: "#53a0ff",
-},
+  {
+    video: videoB,
+    title: "Career Readiness Program",
+    desc: "Preparing students for successful careers through training, mentorship, and industry engagement.",
+    stat: "1,200+ Placements Facilitated",
+    glow: "#4ecdc4",
+  },
 
-{
-  image: img7,
-  title: "Social Impact Initiatives",
-  desc: "Creating meaningful change through collaborative programs focused on education, well-being, and sustainable development.",
-  stat: "Across Multiple Communities",
-  glow: "#4ecdc4",
-},
+  {
+    image: img3,
+    title: "Digital Skills Training",
+    desc: "Empowering students with practical technology skills through hands-on learning and industry-focused mentorship.",
+    stat: "Pan India Initiatives",
+    glow: "#00c27a",
+  },
 ];
 const GallerySection = () => {
 
@@ -432,26 +401,26 @@ const GallerySection = () => {
      AUTO CHANGE
   ========================================================= */
 
- useEffect(() => {
-  const interval = setInterval(() => {
-    setActive((prev) => {
-      const next =
-        prev === galleryData.length - 1
-          ? 0
-          : prev + 1;
+  useEffect(() => {
 
-      console.log(
-        "Prev:", prev,
-        "Next:", next,
-        "Length:", galleryData.length
-      );
+    const interval =
+      setInterval(() => {
 
-      return next;
-    });
-  }, 4200);
+        setActive((prev) =>
 
-  return () => clearInterval(interval);
-}, []);
+          prev ===
+          galleryData.length - 1
+            ? 0
+            : prev + 1
+
+        );
+
+      }, 4200);
+
+    return () =>
+      clearInterval(interval);
+
+  }, []);
 
   /* =========================================================
      SCROLL REVEAL
@@ -591,34 +560,76 @@ const GallerySection = () => {
             let cardClass =
               "gtSpatialCard";
 
-            const total = galleryData.length;
+            const total =
+              galleryData.length;
 
-const diff =
-  (index - active + total) % total;
+            const prev2 =
+              (active - 2 + total) %
+              total;
 
-if (diff === 0) {
-  cardClass += " activeSpatialCard";
-}
+            const prev1 =
+              (active - 1 + total) %
+              total;
 
-else if (diff === 1) {
-  cardClass += " rightSpatialCard";
-}
+            const next1 =
+              (active + 1) %
+              total;
 
-else if (diff === 2) {
-  cardClass += " farRightSpatialCard";
-}
+            const next2 =
+              (active + 2) %
+              total;
 
-else if (diff === total - 1) {
-  cardClass += " leftSpatialCard";
-}
+            if (
+              index === active
+            ) {
 
-else if (diff === total - 2) {
-  cardClass += " farLeftSpatialCard";
-}
+              cardClass +=
+                " activeSpatialCard";
 
-else {
-  cardClass += " hiddenSpatialCard";
-}
+            }
+
+            else if (
+              index === prev1
+            ) {
+
+              cardClass +=
+                " leftSpatialCard";
+
+            }
+
+            else if (
+              index === prev2
+            ) {
+
+              cardClass +=
+                " farLeftSpatialCard";
+
+            }
+
+            else if (
+              index === next1
+            ) {
+
+              cardClass +=
+                " rightSpatialCard";
+
+            }
+
+            else if (
+              index === next2
+            ) {
+
+              cardClass +=
+                " farRightSpatialCard";
+
+            }
+
+            else {
+
+              cardClass +=
+                " hiddenSpatialCard";
+
+            }
 
             return (
 

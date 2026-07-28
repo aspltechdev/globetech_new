@@ -583,15 +583,7 @@ const GallerySection = () => {
           SPATIAL FLOW
       ========================================================= */}
 
-      <div className="gtSpatialWrap">
-
-        {galleryData.map(
-          (item, index) => {
-
-            let cardClass =
-              "gtSpatialCard";
-
-            const total = galleryData.length;
+      const total = galleryData.length;
 
 const diff =
   (index - active + total) % total;
@@ -619,13 +611,6 @@ else if (diff === total - 2) {
 else {
   cardClass += " hiddenSpatialCard";
 }
-
-            return (
-
-              <div
-                key={index}
-                className={cardClass}
-              >
 
                 {/* MEDIA */}
 

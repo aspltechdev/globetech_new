@@ -591,34 +591,76 @@ const GallerySection = () => {
             let cardClass =
               "gtSpatialCard";
 
-            const total = galleryData.length;
+            const total =
+              galleryData.length;
 
-const diff =
-  (index - active + total) % total;
+            const diff = (index - active + total) % total;
 
 if (diff === 0) {
   cardClass += " activeSpatialCard";
-}
-
-else if (diff === 1) {
+} else if (diff === 1) {
   cardClass += " rightSpatialCard";
-}
-
-else if (diff === 2) {
+} else if (diff === 2) {
   cardClass += " farRightSpatialCard";
-}
-
-else if (diff === total - 1) {
+} else if (diff === total - 1) {
   cardClass += " leftSpatialCard";
-}
-
-else if (diff === total - 2) {
+} else if (diff === total - 2) {
   cardClass += " farLeftSpatialCard";
-}
-
-else {
+} else {
   cardClass += " hiddenSpatialCard";
 }
+
+            if (
+              index === active
+            ) {
+
+              cardClass +=
+                " activeSpatialCard";
+
+            }
+
+            else if (
+              index === prev1
+            ) {
+
+              cardClass +=
+                " leftSpatialCard";
+
+            }
+
+            else if (
+              index === prev2
+            ) {
+
+              cardClass +=
+                " farLeftSpatialCard";
+
+            }
+
+            else if (
+              index === next1
+            ) {
+
+              cardClass +=
+                " rightSpatialCard";
+
+            }
+
+            else if (
+              index === next2
+            ) {
+
+              cardClass +=
+                " farRightSpatialCard";
+
+            }
+
+            else {
+
+              cardClass +=
+                " hiddenSpatialCard";
+
+            }
 
             return (
 

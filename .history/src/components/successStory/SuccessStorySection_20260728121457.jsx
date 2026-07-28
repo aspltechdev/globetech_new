@@ -13,7 +13,7 @@ import "./SuccessStorySection.css";
 import img1 from "../../assets/Strategiclogo/s.png";
 import img3 from "../../assets/Strategiclogo/p.png";
 import img2 from "../../assets/v.png";
-import img4 from "../../assets/g.png";
+import img4 from "../../assets/jagan.png";
 
 /* =========================================================
    STORIES

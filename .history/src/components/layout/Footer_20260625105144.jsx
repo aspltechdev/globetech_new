@@ -299,9 +299,6 @@ const Footer = () => {
 
             © 2026 Globetech Social Impact Foundation.
             All Rights Reserved.
-            <span style={{ marginLeft: "15px" }}>
-    Crafted by Aspl Tech Solutions Pvt Ltd
-  </span>
 
           </p>
 
