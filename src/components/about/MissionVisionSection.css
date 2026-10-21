@@ -190,13 +190,14 @@ body {
 
   font-size: clamp(3rem, 5vw, 5.8rem);
 
-  line-height: 0.95;
+  line-height: 1.19;
 
   letter-spacing: -0.05em;
 
   margin-bottom: 26px;
 
   font-weight: 700;
+   padding-bottom: 10px; 
 
   background:
     linear-gradient(
@@ -258,9 +259,8 @@ body {
 
   overflow: hidden;
 
-  background: white;
-
-  color: #050816;
+  background: #ff6a00;  /* premium orange */
+color: white;
 
   display: flex;
 
@@ -464,7 +464,7 @@ body {
 
   letter-spacing: 0.2em;
 
-  color: #60a5fa;
+  color: #f7b611;
 
   font-weight: 700;
 }
@@ -570,4 +570,10 @@ body {
 
     line-height: 1.7;
   }
+}
+.mvSecondaryBtn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
 }

@@ -1,0 +1,995 @@
+/* =========================================================
+   SECTION
+========================================================= */
+
+.gtSpatialGallerySection {
+  position: relative;
+
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      135deg,
+      #539bf9f0,
+      #2b78d1eb,
+      #1d72d947
+    );
+
+  padding:
+    120px 0 140px;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+
+.gtSpatialGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.06) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.06) 1px,
+      transparent 1px
+    );
+
+  background-size: 90px 90px;
+
+  opacity: 0.2;
+}
+
+/* =========================================================
+   DYNAMIC GLOW
+========================================================= */
+
+.gtSpatialDynamicGlow {
+  position: absolute;
+
+  width: 1000px;
+  height: 1000px;
+
+  top: -300px;
+  right: -200px;
+
+  filter: blur(120px);
+
+  transition:
+    background 1.4s ease;
+}
+
+/* =========================================================
+   TYPOGRAPHY
+========================================================= */
+
+.gtSpatialWords {
+  position: absolute;
+  inset: 0;
+
+  pointer-events: none;
+}
+
+.gtSpatialWords span {
+  position: absolute;
+
+  font-size: 8vw;
+
+  font-weight: 800;
+
+  color:
+    rgba(255,255,255,0.05);
+
+  letter-spacing: -6px;
+
+  animation:
+    gtWordsFloat 10s ease-in-out infinite;
+}
+
+.gtSpatialWords span:nth-child(1) {
+  top: 10%;
+  left: 6%;
+}
+
+.gtSpatialWords span:nth-child(2) {
+  top: 58%;
+  right: 8%;
+}
+
+.gtSpatialWords span:nth-child(3) {
+  bottom: 8%;
+  left: 20%;
+}
+
+@keyframes gtWordsFloat {
+
+  0% {
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translateY(-18px);
+  }
+
+  100% {
+    transform:
+      translateY(0px);
+  }
+
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.gtSpatialTop {
+  position: relative;
+  z-index: 20;
+
+  text-align: center;
+
+  max-width: 950px;
+
+  margin: auto;
+
+  margin-bottom: 100px;
+
+  opacity: 0;
+
+  transform:
+    translateY(70px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+}
+
+.gtSpatialTopShow {
+  opacity: 1;
+
+  transform:
+    translateY(0);
+}
+
+.gtSpatialTop span {
+  display: inline-flex;
+
+  padding:
+    12px 22px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.12);
+
+  border:
+    1px solid rgba(255,255,255,0.16);
+
+  backdrop-filter: blur(20px);
+
+  color: white;
+
+  font-size: 12px;
+
+  letter-spacing: 4px;
+
+  margin-bottom: 24px;
+}
+
+.gtSpatialTop h2 {
+  font-size:
+    clamp(3rem, 8vw, 7rem);
+
+  line-height: 0.88;
+
+  letter-spacing: -6px;
+
+  color: white;
+
+  margin-bottom: 28px;
+}
+
+.gtSpatialTop p {
+  max-width: 700px;
+
+  margin: auto;
+
+  color:
+    rgba(255,255,255,0.82);
+
+  line-height: 1.9;
+
+  font-size: 1rem;
+}
+
+/* =========================================================
+   WRAP
+========================================================= */
+
+.gtSpatialWrap {
+  position: relative;
+
+  width: 100%;
+  height: 760px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  perspective: 2400px;
+}
+
+/* =========================================================
+   CARD
+========================================================= */
+
+.gtSpatialCard {
+  position: absolute;
+
+  width: 500px;
+  height: 620px;
+
+  border-radius: 42px;
+
+  overflow: hidden;
+
+  transition:
+    transform 1.4s cubic-bezier(0.22,1,0.36,1),
+    opacity 1.2s ease,
+    filter 1.2s ease;
+
+  box-shadow:
+    0 60px 120px rgba(0,0,0,0.22);
+
+  border:
+    1px solid rgba(255,255,255,0.14);
+}
+
+/* =========================================================
+   ACTIVE
+========================================================= */
+
+.activeSpatialCard {
+  opacity: 1;
+
+  transform:
+    translateX(0)
+    translateZ(220px)
+    scale(1);
+
+  z-index: 10;
+}
+
+/* =========================================================
+   LEFT
+========================================================= */
+
+.leftSpatialCard {
+  opacity: 0.5;
+
+  transform:
+    translateX(-380px)
+    rotateY(24deg)
+    scale(0.82);
+
+  z-index: 6;
+
+  filter:
+    blur(2px)
+    grayscale(25%);
+}
+
+/* =========================================================
+   FAR LEFT
+========================================================= */
+
+.farLeftSpatialCard {
+  opacity: 0.16;
+
+  transform:
+    translateX(-720px)
+    rotateY(34deg)
+    scale(0.64);
+
+  z-index: 2;
+
+  filter:
+    blur(5px)
+    grayscale(60%);
+}
+
+/* =========================================================
+   RIGHT
+========================================================= */
+
+.rightSpatialCard {
+  opacity: 0.5;
+
+  transform:
+    translateX(380px)
+    rotateY(-24deg)
+    scale(0.82);
+
+  z-index: 6;
+
+  filter:
+    blur(2px)
+    grayscale(25%);
+}
+
+/* =========================================================
+   FAR RIGHT
+========================================================= */
+
+.farRightSpatialCard {
+  opacity: 0.16;
+
+  transform:
+    translateX(720px)
+    rotateY(-34deg)
+    scale(0.64);
+
+  z-index: 2;
+
+  filter:
+    blur(5px)
+    grayscale(60%);
+}
+
+/* =========================================================
+   HIDDEN
+========================================================= */
+
+.hiddenSpatialCard {
+  opacity: 0;
+
+  transform:
+    scale(0.4);
+
+  z-index: 1;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.gtSpatialCard img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 2.5s ease;
+}
+
+.activeSpatialCard img {
+  animation:
+    gtSpatialZoom 8s linear infinite;
+}
+
+@keyframes gtSpatialZoom {
+
+  0% {
+    transform: scale(1.02);
+  }
+
+  100% {
+    transform: scale(1.12);
+  }
+
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.gtSpatialOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,0.94),
+      rgba(0,0,0,0.18),
+      transparent
+    );
+}
+
+/* =========================================================
+   METRIC
+========================================================= */
+
+.gtSpatialMetric {
+  position: absolute;
+
+  top: 28px;
+  left: 28px;
+
+  z-index: 5;
+
+  padding:
+    15px 22px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.14);
+
+  border:
+    1px solid rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(20px);
+
+  color: white;
+
+  font-size: 13px;
+
+  font-weight: 600;
+
+  animation:
+    gtMetricFloat 4s ease-in-out infinite;
+}
+
+@keyframes gtMetricFloat {
+
+  0% {
+    transform:
+      translateY(0px);
+  }
+
+  50% {
+    transform:
+      translateY(-8px);
+  }
+
+  100% {
+    transform:
+      translateY(0px);
+  }
+
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.gtSpatialContent {
+  position: absolute;
+
+  left: 34px;
+  right: 34px;
+  bottom: 34px;
+
+  z-index: 5;
+}
+
+.gtSpatialContent span {
+  display: inline-block;
+
+  margin-bottom: 14px;
+
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 12px;
+
+  letter-spacing: 3px;
+}
+
+.gtSpatialContent h3 {
+  color: white;
+
+  font-size:
+    clamp(2rem, 4vw, 3.8rem);
+
+  line-height: 0.92;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 18px;
+}
+
+.gtSpatialContent p {
+  color:
+    rgba(255,255,255,0.82);
+
+  line-height: 1.9;
+
+  margin-bottom: 28px;
+
+  font-size: 1rem;
+}
+
+/* BUTTON */
+
+.gtSpatialContent button {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    15px 24px;
+
+  border-radius: 999px;
+
+  border: none;
+
+  cursor: pointer;
+
+  background:
+    rgba(255,255,255,0.14);
+
+  border:
+    1px solid rgba(255,255,255,0.18);
+
+  backdrop-filter: blur(20px);
+
+  color: white;
+
+  transition: 0.4s ease;
+}
+
+.gtSpatialContent button:hover {
+  transform:
+    translateY(-4px);
+
+  background: white;
+
+  color: #1d72d9;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 1200px) {
+
+  .gtSpatialCard {
+    width: 360px;
+    height: 500px;
+  }
+
+  .leftSpatialCard {
+    transform:
+      translateX(-220px)
+      rotateY(18deg)
+      scale(0.78);
+  }
+
+  .rightSpatialCard {
+    transform:
+      translateX(220px)
+      rotateY(-18deg)
+      scale(0.78);
+  }
+
+  .farLeftSpatialCard,
+  .farRightSpatialCard {
+    opacity: 0.08;
+
+    transform:
+      scale(0.4);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .gtSpatialGallerySection {
+    padding:
+      90px 20px 100px;
+  }
+
+  .gtSpatialTop h2 {
+    font-size: 2.8rem;
+  }
+
+  .gtSpatialWrap {
+    height: 520px;
+  }
+
+  .gtSpatialCard {
+    width: 260px;
+    height: 360px;
+
+    border-radius: 28px;
+  }
+
+  .leftSpatialCard,
+  .rightSpatialCard {
+    opacity: 0.16;
+  }
+
+  .farLeftSpatialCard,
+  .farRightSpatialCard {
+    display: none;
+  }
+
+  .gtSpatialMetric {
+    padding:
+      10px 14px;
+
+    font-size: 11px;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .gtSpatialTop h2 {
+    font-size: 2.2rem;
+  }
+
+  .gtSpatialCard {
+    width: 220px;
+    height: 320px;
+  }
+
+  .gtSpatialContent h3 {
+    font-size: 1.6rem;
+  }
+
+  .gtSpatialContent p {
+    font-size: 0.88rem;
+  }
+
+  .gtSpatialWords {
+    display: none;
+  }
+
+}
+
+/* ============================================================
+   GALLERY SECTION — Netflix fan layout
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500&display=swap');
+
+/* Root */
+.gs-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  background: #0a0a0e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+  padding: 80px 24px 60px;
+  font-family: 'DM Sans', sans-serif;
+  perspective: 1200px;
+}
+
+/* Ambient glow blob */
+.gs-glow {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  transition: background 1.2s ease;
+  z-index: 0;
+}
+
+/* ============================================================
+   INFO PANEL (slides from left)
+   ============================================================ */
+.gs-info-panel {
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateX(-100%) translateY(-50%);
+  width: clamp(260px, 30vw, 360px);
+  background: rgba(10, 10, 14, 0.95);
+  border-right: 1px solid rgba(255,255,255,0.08);
+  border-top: 1px solid rgba(255,255,255,0.06);
+  border-bottom: 1px solid rgba(255,255,255,0.06);
+  border-radius: 0 20px 20px 0;
+  padding: 40px 32px;
+  z-index: 50;
+  transition: transform 0.55s cubic-bezier(0.22, 1, 0.36, 1);
+  backdrop-filter: blur(20px);
+}
+
+.gs-info-panel.gs-info-open {
+  transform: translateX(0) translateY(-50%);
+}
+
+.gs-info-close {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: rgba(255,255,255,0.08);
+  border: none;
+  border-radius: 50%;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgba(255,255,255,0.6);
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.gs-info-close:hover { background: rgba(255,255,255,0.16); color: #fff; }
+
+.gs-info-tag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.18em;
+  color: rgba(255,255,255,0.4);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.gs-info-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(28px, 3.5vw, 42px);
+  color: #fff;
+  line-height: 1.05;
+  margin: 0 0 16px;
+  letter-spacing: 0.02em;
+}
+
+.gs-info-desc {
+  font-size: 14px;
+  line-height: 1.75;
+  color: rgba(255,255,255,0.55);
+  margin: 0 0 28px;
+}
+
+.gs-info-stat {
+  border-top: 1px solid rgba(255,255,255,0.08);
+  padding-top: 20px;
+  margin-bottom: 28px;
+}
+
+.gs-stat-number {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  letter-spacing: 0.06em;
+  color: rgba(255,255,255,0.9);
+}
+
+.gs-info-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 11px 22px;
+  background: #fff;
+  color: #0a0a0e;
+  border: none;
+  border-radius: 8px;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  font-family: 'DM Sans', sans-serif;
+  transition: opacity 0.2s, transform 0.2s;
+}
+.gs-info-cta:hover { opacity: 0.88; transform: translateY(-1px); }
+
+/* Backdrop */
+.gs-backdrop {
+  position: absolute;
+  inset: 0;
+  z-index: 20;
+  cursor: pointer;
+}
+
+/* ============================================================
+   HEADER
+   ============================================================ */
+.gs-header {
+  position: relative;
+  z-index: 10;
+  text-align: center;
+  margin-bottom: 56px;
+  opacity: 0;
+  transform: translateY(24px);
+  transition: opacity 0.8s ease, transform 0.8s ease;
+}
+.gs-visible .gs-header { opacity: 1; transform: translateY(0); }
+
+.gs-eyebrow {
+  display: inline-block;
+  font-size: 10px;
+  letter-spacing: 0.22em;
+  color: rgba(255,255,255,0.35);
+  margin-bottom: 14px;
+  text-transform: uppercase;
+}
+
+.gs-heading {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: clamp(42px, 6vw, 76px);
+  color: #fff;
+  line-height: 1;
+  letter-spacing: 0.02em;
+  margin: 0 0 12px;
+}
+
+.gs-sub {
+  font-size: 14px;
+  color: rgba(255,255,255,0.4);
+  margin: 0;
+}
+
+/* ============================================================
+   STAGE — 3D fan
+   ============================================================ */
+.gs-stage {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 420px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transform-style: preserve-3d;
+}
+
+/* ============================================================
+   CARD
+   ============================================================ */
+.gs-card {
+  position: absolute;
+  width: 260px;
+  height: 380px;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  transition:
+    transform 0.65s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.65s ease,
+    box-shadow 0.4s ease;
+  transform-style: preserve-3d;
+  will-change: transform, opacity;
+}
+
+.gs-card:not(.gs-card-active):hover {
+  opacity: 0.8 !important;
+}
+
+.gs-card-active {
+  box-shadow: 0 32px 80px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.08);
+  cursor: default;
+}
+
+.gs-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.8s ease;
+}
+.gs-card-active .gs-card-img { transform: scale(1.03); }
+
+/* Dark overlay on card */
+.gs-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to bottom,
+    transparent 30%,
+    rgba(0,0,0,0.45) 60%,
+    rgba(0,0,0,0.88) 100%
+  );
+}
+
+/* Metric badge top-right */
+.gs-card-metric {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  background: rgba(0,0,0,0.55);
+  border: 1px solid rgba(255,255,255,0.12);
+  backdrop-filter: blur(8px);
+  color: #fff;
+  font-size: 11px;
+  font-weight: 500;
+  letter-spacing: 0.04em;
+  padding: 5px 10px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Bottom content */
+.gs-card-body {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 20px 18px 18px;
+  opacity: 0;
+  transform: translateY(8px);
+  transition: opacity 0.35s ease, transform 0.35s ease;
+  pointer-events: none;
+}
+.gs-card-active .gs-card-body {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.gs-card-tag {
+  display: block;
+  font-size: 9px;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.45);
+  text-transform: uppercase;
+  margin-bottom: 5px;
+}
+
+.gs-card-title {
+  font-family: 'Bebas Neue', sans-serif;
+  font-size: 22px;
+  color: #fff;
+  margin: 0 0 10px;
+  letter-spacing: 0.03em;
+  line-height: 1.1;
+}
+
+.gs-card-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  padding: 7px 14px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.2);
+  border-radius: 6px;
+  color: #fff;
+  font-size: 12px;
+  font-family: 'DM Sans', sans-serif;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.gs-card-btn:hover { background: rgba(255,255,255,0.24); }
+
+/* ============================================================
+   DOTS
+   ============================================================ */
+.gs-dots {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  gap: 8px;
+  margin-top: 36px;
+}
+
+.gs-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.2);
+  border: none;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.3s, width 0.3s;
+  padding: 0;
+}
+
+.gs-dot-active {
+  background: #fff;
+  width: 22px;
+  border-radius: 3px;
+}
+
+/* ============================================================
+   RESPONSIVE
+   ============================================================ */
+@media (max-width: 700px) {
+  .gs-stage { height: 340px; }
+  .gs-card { width: 200px; height: 300px; }
+  .gs-info-panel { width: 80vw; }
+}

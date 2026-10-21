@@ -1,0 +1,407 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+.modernFooter{
+  background:#071120;
+  padding:0 6% 24px;
+  position:relative;
+  overflow:hidden;
+  padding: 40px 20px;
+}
+
+/* =========================
+   CONTAINER
+========================= */
+
+.modernFooterContainer{
+  max-width:1320px;
+  margin:auto;
+}
+
+/* =========================
+   CTA
+========================= */
+
+.footerCtaBox{
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+
+  border-radius:28px;
+
+  padding:42px;
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:30px;
+
+  transform:translateY(-55px);
+}
+
+/* LEFT */
+
+.footerCtaContent span{
+  color:#bfdbfe;
+  font-size:12px;
+  letter-spacing:2px;
+  font-weight:700;
+}
+
+.footerCtaContent h2{
+  color:white;
+  font-size:clamp(28px,4vw,48px);
+  line-height:1.1;
+  margin-top:16px;
+  max-width:700px;
+}
+
+/* BUTTON */
+
+.footerCtaBox button{
+  min-width:210px;
+  height:56px;
+  border:none;
+  border-radius:14px;
+  background:white;
+  color:#0f172a;
+  font-weight:700;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.footerCtaBox button:hover{
+  transform:translateY(-2px);
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.footerMain{
+  display:grid;
+  grid-template-columns:1.1fr 0.8fr 1fr;
+  gap:50px;
+  margin-top:-10px;
+}
+
+/* =========================
+   BRAND
+========================= */
+
+.footerLogo{
+  width:170px;
+  margin-bottom:22px;
+  background-color: azure;
+  border-radius: 12px;
+}
+
+.footerBrand p{
+  color:rgba(255,255,255,0.72);
+  line-height:1.9;
+  font-size:15px;
+  margin-bottom:28px;
+  max-width:420px;
+}
+
+/* SOCIALS */
+
+.footerSocials a {
+  width: 46px;
+  height: 46px;
+  border-radius: 14px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+  font-size: 18px;
+
+  transition: 0.3s ease;
+}
+
+/* Facebook */
+.footerSocials a:nth-child(1) {
+  background: #1877F2;
+}
+
+/* Instagram (gradient look) */
+.footerSocials a:nth-child(2) {
+  background: radial-gradient(circle at 30% 107%,
+    #fdf497 0%,
+    #fdf497 5%,
+    #fd5949 45%,
+    #d6249f 60%,
+    #285AEB 90%);
+}
+
+/* LinkedIn */
+.footerSocials a:nth-child(3) {
+  background: #0A66C2;
+}
+
+/* YouTube */
+.footerSocials a:nth-child(4) {
+  background: #FF0000;
+}
+
+/* Hover */
+.footerSocials a:hover {
+  transform: translateY(-4px) scale(1.05);
+  opacity: 0.9;
+}
+
+/* =========================
+   LINKS
+========================= */
+
+.footerLinksArea{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:30px;
+}
+
+.footerColumn h3{
+  color:white;
+  font-size:18px;
+  margin-bottom:22px;
+}
+
+.footerColumn a{
+  display:block;
+  text-decoration:none;
+  color:rgba(255,255,255,0.72);
+  margin-bottom:15px;
+  transition:0.3s ease;
+  font-size:15px;
+}
+
+.footerColumn a:hover{
+  color:#93c5fd;
+  transform:translateX(4px);
+}
+
+/* =========================
+   CONTACT CARD
+========================= */
+
+.footerContactCard{
+  background:
+    linear-gradient(
+      135deg,
+      rgba(37,99,235,0.14),
+      rgba(59,130,246,0.08)
+    );
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  border-radius:24px;
+
+  padding:28px;
+}
+
+/* TOP */
+
+.footerCardTop span{
+  color:#93c5fd;
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+}
+
+.footerCardTop h3{
+  color:white;
+  font-size:28px;
+  margin:14px 0 26px;
+}
+
+/* INFO */
+
+.footerInfoItem{
+  display:flex;
+  gap:16px;
+  margin-bottom:24px;
+}
+
+.footerInfoItem:last-child{
+  margin-bottom:0;
+}
+
+/* ICON */
+
+.footerInfoIcon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:
+    rgba(255,255,255,0.08);
+
+  color:#93c5fd;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  flex-shrink:0;
+}
+
+/* TEXT */
+
+.footerInfoItem p,
+.footerInfoItem a{
+  color:rgba(255,255,255,0.76);
+  text-decoration:none;
+  line-height:1.8;
+  font-size:15px;
+  transition:0.3s ease;
+}
+
+.footerInfoItem a:hover{
+  color:#93c5fd;
+}
+
+/* PHONE GROUP */
+
+.footerPhoneGroup{
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+/* =========================
+   BOTTOM
+========================= */
+
+.footerBottom{
+  margin-top:60px;
+  padding-top:24px;
+
+  border-top:
+    1px solid rgba(255,255,255,0.08);
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:20px;
+}
+
+.footerBottom p{
+  color:rgba(255,255,255,0.56);
+  font-size:14px;
+}
+
+.footerBottomLinks{
+  display:flex;
+  gap:20px;
+}
+
+.footerBottomLinks a{
+  color:rgba(255,255,255,0.56);
+  text-decoration:none;
+  font-size:14px;
+  transition:0.3s ease;
+}
+
+.footerBottomLinks a:hover{
+  color:#93c5fd;
+}
+
+/* =========================
+   RESPONSIVE
+========================= */
+
+@media(max-width:1150px){
+
+  .footerMain{
+    grid-template-columns:1fr;
+    gap:40px;
+  }
+
+  .footerBrand p{
+    max-width:100%;
+  }
+
+}
+
+@media(max-width:850px){
+
+  .footerCtaBox{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+  .footerCtaBox button{
+    width:100%;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .modernFooter{
+    padding:0 20px 24px;
+  }
+
+  .footerCtaBox{
+    padding:32px;
+    border-radius:24px;
+  }
+
+  .footerLinksArea{
+    grid-template-columns:1fr;
+  }
+
+  .footerBottom{
+    flex-direction:column;
+    align-items:flex-start;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .footerLogo{
+    width:150px;
+  }
+
+  .footerCtaContent h2{
+    font-size:30px;
+  }
+
+  .footerContactCard{
+    padding:22px;
+    border-radius:20px;
+  }
+
+  .footerCardTop h3{
+    font-size:24px;
+  }
+
+  .footerBottomLinks{
+    flex-wrap:wrap;
+    gap:14px;
+  }
+
+}

@@ -1,0 +1,561 @@
+/* =====================================================
+   APPLE / STRIPE / VERCEL LEVEL ABOUT SECTION
+===================================================== */
+
+.abtCinema {
+  position: relative;
+  overflow: hidden;
+
+  background: #fafafa;
+
+  padding: 140px 6%;
+
+  isolation: isolate;
+}
+
+/* =====================================================
+   ATMOSPHERIC BLURS
+===================================================== */
+
+.abtCinema_blur {
+  position: absolute;
+  border-radius: 50%;
+
+  filter: blur(120px);
+
+  z-index: -1;
+}
+
+.abtCinema_blur1 {
+  width: 420px;
+  height: 420px;
+
+  background: rgba(255, 192, 18, 0.16);
+
+  top: -120px;
+  left: -120px;
+}
+
+.abtCinema_blur2 {
+  width: 320px;
+  height: 320px;
+
+  background: rgba(255, 192, 18, 0.12);
+
+  bottom: -120px;
+  right: -100px;
+}
+
+/* =====================================================
+   CONTAINER
+===================================================== */
+
+.abtCinema_container {
+  max-width: 1450px;
+
+  margin: auto;
+
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+
+  gap: 120px;
+
+  align-items: center;
+
+  position: relative;
+  z-index: 5;
+}
+
+/* =====================================================
+   VISUAL SYSTEM
+===================================================== */
+
+.abtCinema_visualWrap {
+  position: relative;
+
+  height: 840px;
+}
+
+/* =====================================================
+   MAIN IMAGE
+===================================================== */
+
+.abtCinema_mainImage {
+  position: absolute;
+
+  width: 78%;
+  height: 640px;
+
+  top: 90px;
+  left: 80px;
+
+  overflow: hidden;
+
+  border-radius: 42px;
+
+  box-shadow:
+    0 40px 100px rgba(0,0,0,0.12);
+
+  will-change: transform;
+}
+
+.abtCinema_mainImage img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1.4s cubic-bezier(
+      0.22,
+      1,
+      0.36,
+      1
+    );
+}
+
+.abtCinema_mainImage:hover img {
+  transform: scale(1.06);
+}
+
+/* =====================================================
+   FLOATING IMAGES
+===================================================== */
+
+.abtCinema_floatImg {
+  position: absolute;
+
+  overflow: hidden;
+
+  border-radius: 28px;
+
+  box-shadow:
+    0 24px 60px rgba(0,0,0,0.12);
+
+  backdrop-filter: blur(20px);
+
+  will-change: transform;
+}
+
+.abtCinema_floatImg img {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition:
+    transform 1s ease;
+}
+
+.abtCinema_floatImg:hover img {
+  transform: scale(1.08);
+}
+
+/* IMAGE 1 */
+
+.abtCinema_img1 {
+  width: 220px;
+  height: 260px;
+
+  top: 0;
+  left: 0;
+
+  transform: rotate(-6deg);
+  border-right: 5px solid #fafafa;
+  border-bottom: 5px solid #fafafa;
+}
+
+/* IMAGE 2 */
+
+.abtCinema_img2 {
+  width: 260px;
+  height: 290px;
+
+  bottom: 40px;
+  left: 30px;
+  border-right: 5px solid #fafafa;
+  border-top: 5px solid #fafafa;
+  transform: rotate(16deg);
+}
+
+/* =====================================================
+   GLASS CARD
+===================================================== */
+
+.abtCinema_glassCard {
+  position: absolute;
+
+  right: -90px;
+  bottom: 130px;
+
+  width: 300px;
+
+  padding: 34px;
+
+  border-radius: 30px;
+
+  background:
+    rgba(255,255,255,0.72);
+
+  backdrop-filter: blur(24px);
+
+  border:
+    1px solid rgba(255,255,255,0.4);
+
+  box-shadow:
+    0 30px 80px rgba(0,0,0,0.08);
+
+  will-change: transform;
+}
+
+.abtCinema_glassCard h3 {
+  font-size: 58px;
+
+  font-weight: 700;
+
+  color: #111111;
+
+  margin-bottom: 12px;
+
+  letter-spacing: -2px;
+}
+
+.abtCinema_glassCard p {
+  font-size: 15px;
+
+  line-height: 1.9;
+
+  color: #666666;
+}
+
+/* =====================================================
+   CONTENT
+===================================================== */
+
+.abtCinema_content {
+  position: relative;
+
+  will-change: transform;
+}
+
+/* LABEL */
+
+.abtCinema_label {
+  display: inline-flex;
+
+  align-items: center;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background: #FF9F1C;
+
+  color: #f9f8f7;
+
+  font-size: 12px;
+  font-weight: 600;
+
+  letter-spacing: 2px;
+
+  margin-bottom: 30px;
+}
+
+/* HEADING */
+
+.abtCinema_content h2 {
+  font-size: 5rem;
+
+  line-height: 0.98;
+
+  font-weight: 650;
+
+  letter-spacing: -4px;
+
+  color: #111111;
+
+  margin-bottom: 34px;
+
+  max-width: 720px;
+}
+
+/* DESCRIPTION */
+
+.abtCinema_content p {
+  font-size: 18px;
+
+  line-height: 2;
+
+  color: #666666;
+
+  max-width: 620px;
+
+  margin-bottom: 42px;
+}
+
+/* =====================================================
+   METRICS
+===================================================== */
+
+/* /* Container */
+.abtCinema_metrics {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  margin-bottom: 54px;
+}
+
+/* Glass Card */
+.glass_card {
+  padding: 22px 26px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+  min-width: 220px;
+
+  transition: all 0.3s ease;
+}
+
+/* Hover effect */
+.glass_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
+
+/* Number */
+.glass_card h4 {
+  font-size: 32px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: #111111;
+}
+
+/* Label */
+.glass_card span {
+  font-size: 14px;
+  color: #777777;
+}
+
+/* =====================================================
+   BUTTONS
+===================================================== */
+
+.abtCinema_actions {
+  display: flex;
+  gap: 20px;
+
+  flex-wrap: wrap;
+}
+
+/* PRIMARY */
+
+.abtCinema_primaryBtn {
+  height: 64px;
+
+  padding: 0 34px;
+
+  border: none;
+
+  border-radius: 999px;
+
+  background: #111111;
+
+  color: white;
+ text-decoration: none;
+  font-size: 15px;
+  font-weight: 600;
+
+  display: flex;
+  align-items: center;
+  gap: 12px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease,
+    color 0.4s ease;
+
+  box-shadow:
+    0 16px 40px rgba(0,0,0,0.12);
+}
+
+.abtCinema_primaryBtn:hover {
+  background: #ffc012;
+
+  color: #111111;
+
+  transform: translateY(-5px);
+}
+
+/* SECONDARY */
+
+.abtCinema_secondaryBtn {
+  height: 64px;
+
+  padding: 0 30px;
+
+  border-radius: 999px;
+
+  border: 1px solid #dddddd;
+
+  background: white;
+
+  color: #111111;
+
+  font-size: 15px;
+  font-weight: 500;
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+.abtCinema_secondaryBtn:hover {
+  border-color: #ffc012;
+
+  background: #fff9e5;
+
+  transform: translateY(-5px);
+}
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1200px) {
+  .abtCinema_container {
+    grid-template-columns: 1fr;
+
+    gap: 100px;
+  }
+
+  .abtCinema_content h2 {
+    font-size: 60px;
+  }
+}
+
+@media (max-width: 768px) {
+  .abtCinema {
+    padding: 100px 22px;
+  }
+
+  .abtCinema_visualWrap {
+    height: 620px;
+  }
+
+  .abtCinema_mainImage {
+    width: 78%;
+    height: 420px;
+
+    top: 80px;
+    left: 40px;
+  }
+
+  .abtCinema_img1 {
+    width: 150px;
+    height: 180px;
+  }
+
+  .abtCinema_img2 {
+    width: 180px;
+    height: 200px;
+
+    bottom: 60px;
+  }
+
+  .abtCinema_glassCard {
+    width: 220px;
+
+    bottom: 20px;
+
+    padding: 24px;
+  }
+
+  .abtCinema_glassCard h3 {
+    font-size: 38px;
+  }
+
+  .abtCinema_content h2 {
+    font-size: 42px;
+
+    line-height: 1.08;
+
+    letter-spacing: -1px;
+  }
+
+  .abtCinema_content p {
+    font-size: 15px;
+
+    line-height: 1.9;
+  }
+
+  .abtCinema_metrics {
+    gap: 30px;
+  }
+
+  .abtCinema_metrics h4 {
+    font-size: 34px;
+  }
+
+  .abtCinema_actions {
+    flex-direction: column;
+  }
+
+  .abtCinema_primaryBtn,
+  .abtCinema_secondaryBtn {
+    width: 100%;
+
+    justify-content: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .abtCinema_visualWrap {
+    height: 520px;
+  }
+
+  .abtCinema_mainImage {
+    width: 82%;
+    height: 300px;
+
+    left: 30px;
+  }
+
+  .abtCinema_img1 {
+    width: 110px;
+    height: 130px;
+  }
+
+  .abtCinema_img2 {
+    width: 130px;
+    height: 150px;
+  }
+
+  .abtCinema_glassCard {
+    width: 180px;
+
+    padding: 18px;
+  }
+
+  .abtCinema_glassCard h3 {
+    font-size: 30px;
+  }
+
+  .abtCinema_content h2 {
+    font-size: 34px;
+  }
+
+  .abtCinema_metrics {
+    flex-direction: column;
+
+    gap: 20px;
+  }
+}

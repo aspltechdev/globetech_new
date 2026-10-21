@@ -46,10 +46,10 @@ const AboutSection = () => {
   const downloadPDF = () => {
     const link = document.createElement("a");
 
-    link.href = "/Globetech-Foundation-Profile.pdf";
+    link.href = "/GlobetechFoundation.pdf";
 
     link.download =
-      "Globetech-Foundation-Profile.pdf";
+      "GlobetechFoundation.pdf";
 
     document.body.appendChild(link);
 
@@ -292,53 +292,38 @@ const AboutSection = () => {
 
           </motion.p>
 
-          {/* METRICS */}
+         <motion.div
+  className="abtCinema_metrics"
+  initial={{
+    opacity: 0,
+    y: 60,
+  }}
+  whileInView={{
+    opacity: 1,
+    y: 0,
+  }}
+  transition={{
+    delay: 0.3,
+    duration: 1,
+  }}
+  viewport={{ once: true }}
+>
 
-          <motion.div
-            className="abtCinema_metrics"
-            initial={{
-              opacity: 0,
-              y: 60,
-            }}
-            whileInView={{
-              opacity: 1,
-              y: 0,
-            }}
-            transition={{
-              delay: 0.3,
-              duration: 1,
-            }}
-            viewport={{ once: true }}
-          >
-            <div>
-              <h4>
-                {/* <span ref={counter2}>0</span>+ */}
-               <span> AAFTG3675G </span>
-              </h4>
+  <div className="glass_card">
+    <h4>
+      <span>AAFTG3675G</span>
+    </h4>
+    <span>PAN Number</span>
+  </div>
 
-              <span>
-               PAN Number
-              </span>
-            </div>
+  <div className="glass_card">
+    <h4>
+      <span>KA/2026/1090587</span>
+    </h4>
+    <span>DARPAN ID</span>
+  </div>
 
-            <div>
-              <h4>
-                <span ref={counter3}>KA/2026/1090587</span>
-              </h4>
-
-              <span>
-    DARPAN ID
-              </span>
-            </div>
-
-            {/* <div>
-              <span>25+</span>
-
-              <span>
-                Cities Reached
-              </span>
-            </div> */}
-          </motion.div>
+</motion.div>
 
           {/* BUTTONS */}
 

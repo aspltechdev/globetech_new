@@ -87,21 +87,20 @@ const Footer = () => {
             <div className="footerSocials">
 
               <a href="https://www.facebook.com/profile.php?id=61573486966651">
-                <FaFacebookF />
-              </a>
+    <FaFacebookF />
+  </a>
 
-              <a href="https://www.instagram.com/globetech_ngo/">
-                <FaInstagram />
-              </a>
+  <a href="https://www.instagram.com/globetech_ngo/">
+    <FaInstagram />
+  </a>
 
-              <a href="https://www.linkedin.com/company/113444515/admin/dashboard/">
-                <FaLinkedinIn />
-              </a>
+  <a href="https://www.linkedin.com/company/113444515/admin/dashboard/">
+    <FaLinkedinIn />
+  </a>
 
-              <a href="https://youtube.com/@globetechsocialfoundation?si=fhkkVT4qoP1X6U3_">
-                <FaYoutube />
-              </a>
-
+  <a href="https://youtube.com/@globetechsocialfoundation?si=fhkkVT4qoP1X6U3_">
+    <FaYoutube />
+  </a>
             </div>
 
           </div>
@@ -300,6 +299,9 @@ const Footer = () => {
 
             © 2026 Globetech Social Impact Foundation.
             All Rights Reserved.
+            <span style={{ marginLeft: "15px" }}>
+    Crafted by Aspl Tech Solutions Pvt Ltd
+  </span>
 
           </p>
 

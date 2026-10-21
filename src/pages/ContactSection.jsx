@@ -298,7 +298,7 @@ export default function ContactSection() {
                     <input
                       type="text"
                       name="first_name"
-                      placeholder="John"
+                      placeholder=""
                       required
                     />
                   </div>
@@ -311,7 +311,7 @@ export default function ContactSection() {
                     <input
                       type="text"
                       name="last_name"
-                      placeholder="Doe"
+                      placeholder=""
                     />
                   </div>
                 </div>
@@ -341,7 +341,7 @@ export default function ContactSection() {
                   <input
                     type="tel"
                     name="phone"
-                    placeholder="+91 9876543210"
+                    placeholder=""
                     required
                   />
                 </div>

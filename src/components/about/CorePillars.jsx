@@ -6,7 +6,7 @@ import "./CorePillars.css";
 import pillar1 from "../../assets/pillar-1.png";
 import pillar2 from "../../assets/pillar-2.png";
 import pillar3 from "../../assets/pillar-3.png";
-import pillar4 from "../../assets/pillar-4.png";
+import pillar4 from "../../assets/ourplacementlogo/Women.png";
 import pillar5 from "../../assets/pillar-5.png";
 
 const pillars = [

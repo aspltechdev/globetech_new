@@ -249,10 +249,9 @@
 
   border-radius: 999px;
 
-  background:
-    rgba(255,192,18,0.1);
+  background: #FF9F1C;
 
-  color: #c48d00;
+  color: #f9f8f7;
 
   font-size: 12px;
   font-weight: 600;
@@ -298,34 +297,49 @@
    METRICS
 ===================================================== */
 
+/* /* Container */
 .abtCinema_metrics {
   display: flex;
-  gap: 60px;
-
-  margin-bottom: 54px;
-
+  gap: 30px;
   flex-wrap: wrap;
+  margin-bottom: 54px;
 }
 
-.abtCinema_metrics div {
-  position: relative;
+/* Glass Card */
+.glass_card {
+  padding: 22px 26px;
+  border-radius: 18px;
+
+  background: rgba(255, 255, 255, 0.12);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+
+  border: 1px solid rgba(255, 255, 255, 0.2);
+
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+
+  min-width: 220px;
+
+  transition: all 0.3s ease;
 }
 
-.abtCinema_metrics h4 {
-  font-size: 46px;
+/* Hover effect */
+.glass_card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 45px rgba(0, 0, 0, 0.25);
+}
 
+/* Number */
+.glass_card h4 {
+  font-size: 32px;
   font-weight: 700;
-
+  margin-bottom: 6px;
   color: #111111;
-
-  margin-bottom: 8px;
-
-  letter-spacing: -0px;
 }
 
-.abtCinema_metrics span {
-  font-size: 15px;
-
+/* Label */
+.glass_card span {
+  font-size: 14px;
   color: #777777;
 }
 
@@ -351,9 +365,8 @@
 
   border-radius: 999px;
 
-  background: #111111;
-
-  color: white;
+ background: #ff8c00; /* orange */
+  color: #ffffff;
 
   font-size: 15px;
   font-weight: 600;
@@ -372,7 +385,9 @@
   box-shadow:
     0 16px 40px rgba(0,0,0,0.12);
 }
-
+a {
+  text-decoration: none !important;
+}
 .abtCinema_primaryBtn:hover {
   background: #ffc012;
 

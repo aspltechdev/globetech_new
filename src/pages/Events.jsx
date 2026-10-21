@@ -10,6 +10,7 @@ import {
 import "./Events.css";
 import { Link } from "react-router-dom";
 import SocialWall from "./SocialWall";
+import kidsImg from "../assets/ourplacementlogo/kids.jpg";
 
 /* =========================================
    EVENTS DATA
@@ -45,11 +46,10 @@ const latestUpdates = [
   },
 
   {
-    title: "Community Awareness Program",
-    date: "November 2024",
-    image:
-      "https://images.unsplash.com/photo-1488521787991-ed7bbaae773c?q=80&w=1200&auto=format&fit=crop",
-  },
+  title: "Community Awareness Program",
+  date: "November 2024",
+  image: kidsImg,
+},
 ];
 
 /* =========================================
@@ -192,10 +192,10 @@ export default function Events() {
                 Latest Events & Updates
               </h3>
 
-              <p>
+              {/* <p>
                 Community workshops, awareness campaigns,
                 placement initiatives and outreach programs.
-              </p>
+              </p> */}
 
             </div>
 

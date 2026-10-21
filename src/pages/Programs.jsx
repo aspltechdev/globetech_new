@@ -141,11 +141,11 @@ export default function Programs() {
             </p>
 
             <div className="hero-buttons">
-               <Link to="/contact">
+               {/* <Link to="/contact">
               <button className="primary-btn">
                 Explore Programs
               </button>
-              </Link>
+              </Link> */}
  <Link to="/contact">
               <button className="secondary-btn">
                 Contact Us
@@ -230,10 +230,10 @@ export default function Programs() {
 
                 <p>{program.description}</p>
 
-                <button>
+                {/* <button>
                   Learn More
                   <ArrowRight size={16} />
-                </button>
+                </button> */}
               </div>
             </div>
           ))}
@@ -261,14 +261,15 @@ and sustainable community transformation.
 
 Our initiatives are designed to empower individuals with real-world
 skills, confidence, and access to meaningful growth opportunities.
+By fostering innovation, inclusion, and lifelong learning, we help create stronger communities and a brighter future for all.
 
 
             </p>
 
             <Link to="/contact">
-              <button className="primary-btn">
+              {/* <button className="primary-btn">
                 Explore Programs
-              </button>
+              </button> */}
 </Link>
           
           </div>

@@ -327,100 +327,94 @@ import {
 
 import "./GallerySection.css";
 
-import img1 from "../../assets/impact/impact-1.png";
-import img2 from "../../assets/impact/impact-2.png";
-import img3 from "../../assets/impact/impact-3.png";
-import img4 from "../../assets/impact/impact-4.png";
-import img5 from "../../assets/impact/impact-5.png";
+import img1 from "../../assets/impact/galimgone.jpeg";
+import img2 from "../../assets/impact/galimgtwo.jpeg";
+import img3 from "../../assets/impact/galimg3.jpeg";
+import videoBg from "../../assets/impact/galvidone.mp4";
+import videoB from "../../assets/impact/galimgvidetwo.mp4";
+import img4 from "../../assets/impact/imgone.jpeg";
+import img5 from "../../assets/impact/imgtwo.jpeg";
+import img6 from "../../assets/impact/imgthree.jpeg";
+import img7 from "../../assets/impact/imgfour.jpeg";
+
+
 
 /* =========================================================
    DATA
 ========================================================= */
 
 const galleryData = [
-
   {
-    image: img1,
+  image: img1,
+  title: "Global Training Workshops",
+  desc: "Delivering international workshops that promote cross-cultural learning, professional excellence, and knowledge exchange.",
+  stat: "500+ Global Sessions",
+  glow: "#ff8a3d",
+},
 
-    title:
-      "Community Transformation",
+{
+  image: img2,
+  title: "International Education Programs",
+  desc: "Collaborating across borders to provide transformative educational experiences and lifelong learning opportunities.",
+  stat: "30+ Countries Reached",
+  glow: "#ff5fa2",
+},
 
-    desc:
-      "Creating opportunities and empowering communities through education.",
+{
+  video: videoBg,
+  title: "Cross-Cultural Skill Development",
+  desc: "Equipping participants with globally relevant skills through immersive training and international exposure.",
+  stat: "Worldwide Participation",
+  glow: "#53a0ff",
+},
 
-    stat:
-      "12,000+ Lives Impacted",
+{
+  video: videoB,
+  title: "Global Career Readiness",
+  desc: "Preparing individuals for international career opportunities through mentorship, leadership development, and industry engagement.",
+  stat: "1,200+ Career Success Stories",
+  glow: "#4ecdc4",
+},
 
-    glow:
-      "#ff8a3d",
-  },
-
+{
+  image: img3,
+  title: "Digital Learning Across Borders",
+  desc: "Expanding access to technology-driven learning through innovative programs connecting learners worldwide.",
+  stat: "Pan-Global Initiatives",
+  glow: "#00c27a",
+},
   {
-    image: img2,
+  image: img4,
+  title: "Community Outreach",
+  desc: "Engaging with communities through impactful initiatives that promote awareness, inclusion, and social development.",
+  stat: "100+ Community Drives",
+  glow: "#ff8a3d",
+},
 
-    title:
-      "Women Empowerment",
+{
+  image: img5,
+  title: "Youth Empowerment",
+  desc: "Inspiring young minds through mentorship, leadership programs, and opportunities for personal growth.",
+  stat: "5,000+ Youth Reached",
+  glow: "#ff5fa2",
+},
 
-    desc:
-      "Supporting confidence, leadership and independence.",
+{
+  image: img6,
+  title: "Women Empowerment",
+  desc: "Supporting women through skill-building initiatives, awareness programs, and pathways to economic independence.",
+  stat: "2,000+ Women Impacted",
+  glow: "#53a0ff",
+},
 
-    stat:
-      "500+ Women Empowered",
-
-    glow:
-      "#ff5fa2",
-  },
-
-  {
-    image: img3,
-
-    title:
-      "Digital Learning",
-
-    desc:
-      "Technology access transforming rural education ecosystems.",
-
-    stat:
-      "Across Rural India",
-
-    glow:
-      "#53a0ff",
-  },
-
-  {
-    image: img4,
-
-    title:
-      "Career Growth",
-
-    desc:
-      "Helping students become industry-ready professionals.",
-
-    stat:
-      "1,200+ Placements",
-
-    glow:
-      "#4ecdc4",
-  },
-
-  {
-    image: img5,
-
-    title:
-      "Social Impact",
-
-    desc:
-      "Driving sustainable social transformation initiatives.",
-
-    stat:
-      "Pan India Initiatives",
-
-    glow:
-      "#00c27a",
-  },
-
+{
+  image: img7,
+  title: "Social Impact Initiatives",
+  desc: "Creating meaningful change through collaborative programs focused on education, well-being, and sustainable development.",
+  stat: "Across Multiple Communities",
+  glow: "#4ecdc4",
+},
 ];
-
 const GallerySection = () => {
 
   const [active,
@@ -438,26 +432,26 @@ const GallerySection = () => {
      AUTO CHANGE
   ========================================================= */
 
-  useEffect(() => {
+ useEffect(() => {
+  const interval = setInterval(() => {
+    setActive((prev) => {
+      const next =
+        prev === galleryData.length - 1
+          ? 0
+          : prev + 1;
 
-    const interval =
-      setInterval(() => {
+      console.log(
+        "Prev:", prev,
+        "Next:", next,
+        "Length:", galleryData.length
+      );
 
-        setActive((prev) =>
+      return next;
+    });
+  }, 4200);
 
-          prev ===
-          galleryData.length - 1
-            ? 0
-            : prev + 1
-
-        );
-
-      }, 4200);
-
-    return () =>
-      clearInterval(interval);
-
-  }, []);
+  return () => clearInterval(interval);
+}, []);
 
   /* =========================================================
      SCROLL REVEAL
@@ -597,76 +591,34 @@ const GallerySection = () => {
             let cardClass =
               "gtSpatialCard";
 
-            const total =
-              galleryData.length;
+            const total = galleryData.length;
 
-            const prev2 =
-              (active - 2 + total) %
-              total;
+const diff =
+  (index - active + total) % total;
 
-            const prev1 =
-              (active - 1 + total) %
-              total;
+if (diff === 0) {
+  cardClass += " activeSpatialCard";
+}
 
-            const next1 =
-              (active + 1) %
-              total;
+else if (diff === 1) {
+  cardClass += " rightSpatialCard";
+}
 
-            const next2 =
-              (active + 2) %
-              total;
+else if (diff === 2) {
+  cardClass += " farRightSpatialCard";
+}
 
-            if (
-              index === active
-            ) {
+else if (diff === total - 1) {
+  cardClass += " leftSpatialCard";
+}
 
-              cardClass +=
-                " activeSpatialCard";
+else if (diff === total - 2) {
+  cardClass += " farLeftSpatialCard";
+}
 
-            }
-
-            else if (
-              index === prev1
-            ) {
-
-              cardClass +=
-                " leftSpatialCard";
-
-            }
-
-            else if (
-              index === prev2
-            ) {
-
-              cardClass +=
-                " farLeftSpatialCard";
-
-            }
-
-            else if (
-              index === next1
-            ) {
-
-              cardClass +=
-                " rightSpatialCard";
-
-            }
-
-            else if (
-              index === next2
-            ) {
-
-              cardClass +=
-                " farRightSpatialCard";
-
-            }
-
-            else {
-
-              cardClass +=
-                " hiddenSpatialCard";
-
-            }
+else {
+  cardClass += " hiddenSpatialCard";
+}
 
             return (
 
@@ -675,12 +627,24 @@ const GallerySection = () => {
                 className={cardClass}
               >
 
-                {/* IMAGE */}
+                {/* MEDIA */}
 
-                <img
-                  src={item.image}
-                  alt={item.title}
-                />
+{item.video ? (
+  <video
+    src={item.video}
+    autoPlay
+    muted
+    loop
+    playsInline
+    className="gtSpatialMedia"
+  />
+) : (
+  <img
+    src={item.image}
+    alt={item.title}
+    className="gtSpatialMedia"
+  />
+)}
 
                 {/* OVERLAY */}
 
@@ -700,7 +664,7 @@ const GallerySection = () => {
 
                   <span>
 
-                    HUMAN STORY
+                    {/* HUMAN STORY */}
 
                   </span>
 
@@ -716,7 +680,7 @@ const GallerySection = () => {
 
                   </p>
 
-                  <button>
+                  {/* <button>
 
                     Explore Story
 
@@ -724,7 +688,7 @@ const GallerySection = () => {
                       size={17}
                     />
 
-                  </button>
+                  </button> */}
 
                 </div>
 

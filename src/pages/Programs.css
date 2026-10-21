@@ -135,9 +135,9 @@
 }
 
 .secondary-btn {
-  background: white;
-  border: 1px solid #e2e8f0;
-  color: #0f172a;
+  background: #f97316; /* Orange */
+  border: 1px solid #f97316;
+  color: white;
 }
 
 .secondary-btn:hover {

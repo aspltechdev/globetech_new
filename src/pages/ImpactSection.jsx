@@ -128,7 +128,7 @@ export default function ImpactSection() {
 
             <span>
              
-              Real Transformation
+              Real Transformations
             </span>
 
             <h2>

@@ -1,6 +1,7 @@
 // WaysImpactSection.jsx
 
 import React, { useEffect, useRef } from "react";
+import sustainable from "../assets/ourplacementlogo/sustainable.png";
 
 import {
   ArrowRight,
@@ -48,15 +49,14 @@ const involvementStories = [
   },
 
   {
-    id: "04",
-    title: "Partner With Us",
-    subtitle: "Collaborate for scalable change",
-    text:
-      "CSR organizations, institutions, and industry leaders can join us to create sustainable social impact initiatives nationwide.",
-    image:
-      "https://media.istockphoto.com/id/1541867715/photo/portrait-of-happy-indian-couple-planting-tree-in-soil-and-pour-water-outdoor-garden-activity.webp?a=1&b=1&s=612x612&w=0&k=20&c=46oGX9lIGvVq8BpecAnJO8YsV--RTbiVuR7V8dt0_0Y=",
-    icon: <Users size={22} />,
-  },
+  id: "04",
+  title: "Partner With Us",
+  subtitle: "Collaborate for scalable change",
+  text:
+    "CSR organizations, institutions, and industry leaders can join us to create sustainable social impact initiatives nationwide.",
+  image: sustainable,
+  icon: <Users size={22} />,
+},
 ];
 
 const Reveal = ({ children, delay = 0 }) => {

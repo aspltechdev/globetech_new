@@ -1329,7 +1329,7 @@ const ReachImpactSection = () => {
 
         <span className="gtCinemaMiniTag">
 
-          PAN INDIA IMPACT
+          A Nationwide Initiative
 
         </span>
 

@@ -1,0 +1,545 @@
+/* =========================================================
+   SECTION
+========================================================= */
+
+.sdcProCoursesSection {
+  position: relative;
+  padding: 40px 7% 140px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* =========================================================
+   HERO SECTION
+========================================================= */
+
+.sdcProCoursesHero {
+  position: relative;
+  height: 78vh;
+  min-height: 660px;
+  border-radius: 42px;
+  overflow: hidden;
+  margin-bottom: 90px;
+}
+
+/* HERO IMAGE */
+
+.sdcProCoursesHero img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1);
+  transition: transform 1.6s ease;
+}
+
+.sdcProCoursesHero:hover img {
+  transform: scale(1.05);
+}
+
+/* OVERLAY */
+
+.sdcHeroOverlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(28, 28, 28, 0.941),
+    rgba(0, 0, 0, 0.38),
+    rgba(0, 0, 0, 0.08)
+  );
+}
+
+/* =========================================================
+   HERO CONTENT
+========================================================= */
+
+.sdcHeroContent {
+  position: absolute;
+  left: 70px;
+  right: 70px;
+  bottom: 70px;
+  max-width: 760px;
+  z-index: 2;
+}
+
+.sdcHeroContent span {
+  display: inline-block;
+  margin-bottom: 24px;
+  color: rgba(255, 255, 255, 0.82);
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+.sdcHeroContent h1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  color: white;
+}
+
+.sdcHeroContent p {
+  max-width: 620px;
+  color: rgba(255, 255, 255, 0.74);
+  font-size: 1.05rem;
+  line-height: 2;
+}
+
+/* =========================================================
+   FLOATING COURSES WRAPPER
+========================================================= */
+
+.sdcFloatingCoursesWrapper {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: 24px;
+}
+
+/* =========================================================
+   COURSE CARD
+========================================================= */
+
+.sdcFloatingCourseCard {
+  position: relative;
+  height: 340px;
+  border-radius: 30px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #111827;
+
+  transition:
+    transform 0.7s ease,
+    box-shadow 0.7s ease;
+}
+
+/* =========================================================
+   ASYMMETRIC GRID
+========================================================= */
+
+.sdcCard1,
+.sdcCard4,
+.sdcCard7,
+.sdcCard10,
+.sdcCard13 {
+  grid-column: span 7;
+}
+
+.sdcCard2,
+.sdcCard3,
+.sdcCard5,
+.sdcCard6,
+.sdcCard8,
+.sdcCard9,
+.sdcCard11,
+.sdcCard12,
+.sdcCard14 {
+  grid-column: span 5;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.sdcFloatingCourseCard img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition:
+    transform 1.3s ease,
+    filter 1.3s ease;
+}
+
+.sdcFloatingCourseCard:hover img {
+  transform: scale(1.08);
+  filter: brightness(1.05);
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.sdcFloatingOverlay {
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.35),
+    rgba(0, 0, 0, 0)
+  );
+}
+
+/* =========================================================
+   HOVER EFFECT
+========================================================= */
+
+.sdcFloatingCourseCard::after {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  background: linear-gradient(
+    135deg,
+    rgba(0, 191, 255, 0.12),
+    transparent,
+    rgba(0, 208, 132, 0.08)
+  );
+
+  opacity: 0;
+  transition: opacity 0.6s ease;
+}
+
+.sdcFloatingCourseCard:hover::after {
+  opacity: 1;
+}
+
+.sdcFloatingCourseCard:hover {
+  transform: translateY(-12px);
+
+  box-shadow: 0 40px 100px rgba(15, 23, 42, 0.18);
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.sdcFloatingContent {
+  position: absolute;
+  left: 28px;
+  right: 28px;
+  bottom: 28px;
+  z-index: 2;
+}
+
+/* NUMBER */
+
+.sdcFloatingContent span {
+  display: inline-block;
+  margin-bottom: 14px;
+  color: rgba(255, 255, 255, 0.72);
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 3px;
+}
+
+/* TITLE */
+
+.sdcFloatingContent h3 {
+  font-size: 1.85rem;
+  line-height: 1.15;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 20px;
+  max-width: 90%;
+}
+
+/* BUTTON */
+
+.sdcFloatingContent button {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+
+  padding: 12px 20px;
+
+  border: none;
+  border-radius: 100px;
+
+  background: rgba(255, 255, 255, 0.14);
+
+  backdrop-filter: blur(14px);
+
+  color: white;
+
+  font-size: 13px;
+  font-weight: 600;
+
+  cursor: pointer;
+
+  transition: all 0.4s ease;
+}
+
+.sdcFloatingContent button:hover {
+  background: #00a6d6;
+  gap: 16px;
+}
+
+/* =========================================================
+   RESPONSIVE - LARGE LAPTOP
+========================================================= */
+
+@media (max-width: 1400px) {
+  .sdcHeroContent h1 {
+    font-size: 4.5rem;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - LAPTOP
+========================================================= */
+
+@media (max-width: 1200px) {
+  .sdcProCoursesSection {
+    padding: 40px 5% 120px;
+  }
+
+  .sdcHeroContent h1 {
+    font-size: 3.9rem;
+  }
+
+  .sdcFloatingCoursesWrapper {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .sdcCard1,
+  .sdcCard2,
+  .sdcCard3,
+  .sdcCard4,
+  .sdcCard5,
+  .sdcCard6,
+  .sdcCard7,
+  .sdcCard8,
+  .sdcCard9,
+  .sdcCard10,
+  .sdcCard11,
+  .sdcCard12,
+  .sdcCard13,
+  .sdcCard14 {
+    grid-column: span 1;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - TABLET
+========================================================= */
+
+@media (max-width: 992px) {
+  .sdcProCoursesHero {
+    height: 700px;
+    min-height: auto;
+  }
+
+  .sdcHeroContent {
+    left: 50px;
+    right: 50px;
+    bottom: 50px;
+  }
+
+  .sdcHeroContent h1 {
+    font-size: 3.4rem;
+  }
+
+  .sdcFloatingCourseCard {
+    height: 320px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - MOBILE
+========================================================= */
+
+@media (max-width: 768px) {
+  .sdcProCoursesSection {
+    padding: 20px 20px 90px;
+  }
+
+  .sdcProCoursesHero {
+    height: 520px;
+    border-radius: 24px;
+    margin-bottom: 50px;
+  }
+
+  .sdcHeroContent {
+    left: 24px;
+    right: 24px;
+    bottom: 24px;
+  }
+
+  .sdcHeroContent span {
+    font-size: 10px;
+    letter-spacing: 2px;
+  }
+
+  .sdcHeroContent h1 {
+    font-size: 2.5rem;
+    line-height: 1.05;
+    margin-bottom: 20px;
+  }
+
+  .sdcHeroContent p {
+    font-size: 0.96rem;
+    line-height: 1.8;
+  }
+
+  .sdcFloatingCoursesWrapper {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+
+  .sdcFloatingCourseCard {
+    height: 300px;
+    border-radius: 22px;
+  }
+
+  .sdcFloatingContent {
+    left: 22px;
+    right: 22px;
+    bottom: 22px;
+  }
+
+  .sdcFloatingContent h3 {
+    font-size: 1.55rem;
+    margin-bottom: 16px;
+  }
+
+  .sdcFloatingContent button {
+    padding: 11px 18px;
+    font-size: 12px;
+  }
+}
+
+/* =========================================================
+   RESPONSIVE - SMALL MOBILE
+========================================================= */
+
+@media (max-width: 480px) {
+  .sdcProCoursesHero {
+    height: 460px;
+  }
+
+  .sdcHeroContent h1 {
+    font-size: 2rem;
+  }
+
+  .sdcHeroContent p {
+    font-size: 0.92rem;
+  }
+
+  .sdcFloatingCourseCard {
+    height: 250px;
+  }
+
+  .sdcFloatingContent h3 {
+    font-size: 1.3rem;
+  }
+
+  .sdcFloatingContent span {
+    font-size: 10px;
+  }
+
+  .sdcFloatingContent button {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* ==========================
+   PARTNER MARQUEE
+========================== */
+
+.sdcPartnersSection {
+  width: 100%;
+  padding: 100px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.sdcPartnersHeading {
+  text-align: center;
+  margin-bottom: 60px;
+}
+
+.sdcPartnersHeading span {
+  font-size: 14px;
+  font-weight: 600;
+  letter-spacing: 2px;
+  color: #2563eb;
+}
+
+.sdcPartnersHeading h2 {
+  margin-top: 15px;
+  font-size: 42px;
+  font-weight: 700;
+  line-height: 1.2;
+  color: #111827;
+}
+
+.sdcPartnerLogoCard {
+  width: 220px;
+  height: 120px;
+  background: #fff;
+  border-radius: 18px;
+  margin-right: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border: 1px solid #e5e7eb;
+
+  transition: all 0.3s ease;
+}
+
+.sdcPartnerLogoCard:hover {
+  transform: translateY(-6px);
+
+  box-shadow:
+    0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+.sdcPartnerLogoCard img {
+  width: auto;
+  max-width: 160px;
+  max-height: 70px;
+  object-fit: contain;
+}
+
+/* Tablet */
+
+@media (max-width: 992px) {
+  .sdcPartnersHeading h2 {
+    font-size: 34px;
+  }
+
+  .sdcPartnerLogoCard {
+    width: 180px;
+    height: 100px;
+  }
+
+  .sdcPartnerLogoCard img {
+    max-width: 130px;
+  }
+}
+
+/* Mobile */
+
+@media (max-width: 768px) {
+  .sdcPartnersSection {
+    padding: 70px 0;
+  }
+
+  .sdcPartnersHeading h2 {
+    font-size: 28px;
+  }
+
+  .sdcPartnerLogoCard {
+    width: 150px;
+    height: 90px;
+    margin-right: 18px;
+  }
+
+  .sdcPartnerLogoCard img {
+    max-width: 100px;
+    max-height: 50px;
+  }
+}
+.sdcPartnersRow {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
