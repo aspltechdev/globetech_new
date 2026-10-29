@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url><loc>https://globetechsocial.com/</loc></url>
@@ -8,4 +9,12 @@
   <url><loc>https://globetechsocial.com/courses</loc></url>
   <url><loc>https://globetechsocial.com/contact</loc></url>
   <url><loc>https://globetechsocial.com/events</loc></url>
+=======
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+<url>
+<loc>https://globetechsocial.com/</loc>
+<lastmod>2026-10-22T12:06:40+01:00</lastmod>
+<priority>1.0</priority>
+</url>
+>>>>>>> 830e6232d805eccfb830205606a27d83953c5f36
 </urlset>
