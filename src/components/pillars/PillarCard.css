@@ -1,0 +1,356 @@
+/* ==========================================
+   SECTION
+========================================== */
+
+.wwd-section {
+  position: relative;
+  padding: 120px 6%;
+  background: #f8fafc;
+  overflow: hidden;
+}
+
+.wwd-section::before {
+  content: "";
+  position: absolute;
+  width: 800px;
+  height: 800px;
+  right: -300px;
+  top: -300px;
+
+  background: radial-gradient(
+    circle,
+    rgba(37, 99, 235, 0.08),
+    transparent 70%
+  );
+
+  pointer-events: none;
+}
+
+/* ==========================================
+   HEADER
+========================================== */
+
+.wwd-header {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 80px;
+}
+
+.wwd-header span {
+  color: #2563eb;
+  font-size: 13px;
+  letter-spacing: 3px;
+  font-weight: 600;
+}
+
+.wwd-header h2 {
+  margin-top: 16px;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1.05;
+  font-weight: 700;
+  color: #0f172a;
+  letter-spacing: -4px;
+}
+
+.wwd-header p {
+  margin-top: 20px;
+  color: #64748b;
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+/* ==========================================
+   GRID
+========================================== */
+
+.wwd-grid {
+  max-width: 1450px;
+  margin: auto;
+
+  display: grid;
+  grid-template-columns:
+    1.5fr 1fr 1fr;
+
+  grid-template-rows:
+    320px 320px;
+
+  gap: 24px;
+}
+
+.featured {
+  grid-row: span 2;
+}
+
+/* ==========================================
+   CARD
+========================================== */
+
+.wwd-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+  cursor: pointer;
+
+  opacity: 0;
+  transform: translateY(60px);
+
+  transition:
+    transform 0.8s ease,
+    opacity 0.8s ease,
+    box-shadow 0.5s ease;
+}
+
+.wwd-card.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.wwd-card:hover {
+  transform: translateY(-10px);
+}
+
+.wwd-card:hover .wwd-image {
+  transform: scale(1.08);
+}
+
+/* ==========================================
+   IMAGE
+========================================== */
+
+.wwd-image {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transition: 1.4s ease;
+}
+
+/* ==========================================
+   OVERLAY
+========================================== */
+
+.wwd-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0,0,0,.88),
+      rgba(0,0,0,.35),
+      rgba(0,0,0,.08)
+    );
+}
+
+/* ==========================================
+   CONTENT
+========================================== */
+
+.wwd-content {
+  position: absolute;
+  inset: 0;
+
+  z-index: 2;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  padding: 34px;
+
+  color: white;
+}
+
+.wwd-stat {
+  width: fit-content;
+
+  padding: 8px 14px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,.15);
+
+  backdrop-filter: blur(10px);
+
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.wwd-content h3 {
+  margin-top: 16px;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.wwd-content p {
+  margin-top: 10px;
+  line-height: 1.6;
+  color: rgba(255,255,255,.85);
+}
+
+/* ==========================================
+   FEATURED
+========================================== */
+
+.featured h3 {
+  font-size: 2.8rem;
+}
+
+.featured p {
+  max-width: 500px;
+}
+
+.featured .wwd-content {
+  padding: 48px;
+}
+
+/* ==========================================
+   CINEMATIC LIGHT SWEEP
+========================================== */
+
+.wwd-card::before {
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+  left: -180%;
+
+  width: 70%;
+  height: 100%;
+
+  z-index: 3;
+
+  background:
+    linear-gradient(
+      90deg,
+      transparent,
+      rgba(255,255,255,.3),
+      transparent
+    );
+
+  transform: skewX(-20deg);
+}
+
+.wwd-card:hover::before {
+  left: 180%;
+  transition: 1.4s ease;
+}
+
+/* ==========================================
+   DESKTOP LARGE
+========================================== */
+
+@media (max-width: 1200px) {
+
+  .wwd-grid {
+    grid-template-columns:
+      1fr 1fr;
+  }
+
+  .featured {
+    grid-column: span 2;
+    grid-row: auto;
+    min-height: 500px;
+  }
+}
+
+/* ==========================================
+   TABLET
+========================================== */
+
+@media (max-width: 992px) {
+
+  .wwd-section {
+    padding: 100px 30px;
+  }
+
+  .wwd-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .featured {
+    grid-column: auto;
+    min-height: 450px;
+  }
+
+  .wwd-card {
+    min-height: 320px;
+  }
+
+  .featured h3 {
+    font-size: 2.2rem;
+  }
+}
+
+/* ==========================================
+   MOBILE
+========================================== */
+
+@media (max-width: 768px) {
+
+  .wwd-section {
+    padding: 80px 20px;
+  }
+
+  .wwd-header h2 {
+    font-size: 2.4rem;
+  }
+
+  .wwd-header p {
+    font-size: 15px;
+  }
+
+  .wwd-card {
+    min-height: 280px;
+    border-radius: 24px;
+  }
+
+  .wwd-content {
+    padding: 24px;
+  }
+
+  .featured .wwd-content {
+    padding: 28px;
+  }
+
+  .featured h3 {
+    font-size: 1.8rem;
+  }
+
+  .wwd-content h3 {
+    font-size: 1.3rem;
+  }
+
+  .wwd-content p {
+    font-size: 14px;
+  }
+}
+
+/* ==========================================
+   SMALL MOBILE
+========================================== */
+
+@media (max-width: 480px) {
+
+  .wwd-header h2 {
+    font-size: 2rem;
+  }
+
+  .wwd-card {
+    min-height: 250px;
+  }
+
+  .wwd-content {
+    padding: 20px;
+  }
+
+  .wwd-stat {
+    font-size: 11px;
+  }
+}

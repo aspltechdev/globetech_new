@@ -1,0 +1,654 @@
+/* .reachSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+    
+    background:
+  linear-gradient(
+    135deg,
+    #539bf9f0,
+    #2b78d1eb,
+    #1d72d947
+  );
+
+backdrop-filter: blur(20px);
+
+-webkit-backdrop-filter: blur(20px);
+
+border: 1px solid rgba(255,255,255,0.12);
+
+box-shadow:
+  0 8px 32px rgba(31, 38, 135, 0.2);
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 6%;
+} */
+
+.reachSection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  padding: 80px 6%;
+
+  overflow: hidden;
+
+  /* =========================================================
+     BACKGROUND IMAGE + GRADIENT
+  ========================================================= */
+
+  background:
+    linear-gradient(
+      135deg,
+      rgba(83,155,249,0.92),
+      rgba(43,120,209,0.88),
+      rgba(29,114,217,0.28)
+    ),
+    url("../../assets/rch5.png");
+
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  background-attachment: fixed;
+}
+
+/* =========================================================
+   GLASS OVERLAY
+========================================================= */
+
+.reachSection::before {
+  content: "";
+
+  position: absolute;
+  inset: 0;
+
+  /* background:
+    linear-gradient(
+      135deg,
+      rgba(255,255,255,0.16),
+      rgba(255,255,255,0.04)
+    ); */
+
+
+  /* backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px); */
+
+  z-index: 1;
+
+  pointer-events: none;
+}
+
+/* =========================================================
+   CINEMATIC LIGHT GLOW
+========================================================= */
+
+.reachSection::after {
+  content: "";
+
+  position: absolute;
+
+  width: 900px;
+  height: 900px;
+
+  top: -250px;
+  right: -250px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.18),
+      transparent 70%
+    );
+
+  filter: blur(90px);
+
+  animation:
+    cinematicGlow 12s ease-in-out infinite;
+
+  z-index: 0;
+}
+
+@keyframes cinematicGlow {
+  0% {
+    transform:
+      translate(0,0)
+      scale(1);
+  }
+
+  50% {
+    transform:
+      translate(-50px,40px)
+      scale(1.12);
+  }
+
+  100% {
+    transform:
+      translate(0,0)
+      scale(1);
+  }
+}
+
+/* =========================================================
+   CONTENT ABOVE OVERLAY
+========================================================= */
+
+.reachTop,
+.indiaExperience,
+.reachButtons {
+  position: relative;
+  z-index: 5;
+}
+/* GRID */
+
+.gridOverlay {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255,255,255,0.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  mask-image:
+    radial-gradient(circle, white, transparent);
+
+  z-index: 0;
+}
+
+/* BLURS */
+
+.premiumBlurOne {
+  position: absolute;
+  width: 700px;
+  height: 700px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,140,0,0.18),
+      transparent 70%
+    );
+
+  top: -250px;
+  right: -180px;
+
+  filter: blur(90px);
+}
+
+.premiumBlurTwo {
+  position: absolute;
+  width: 500px;
+  height: 500px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,255,255,0.06),
+      transparent 70%
+    );
+
+  bottom: -180px;
+  left: -180px;
+
+  filter: blur(90px);
+}
+
+/* CONTAINER */
+
+.reachContainer {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 1450px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  gap: 90px;
+}
+
+/* LEFT */
+
+.reachLeft {
+  flex: 1;
+  max-width: 580px;
+
+  opacity: 0;
+  transform: translateY(60px);
+
+  transition: 1s ease;
+}
+
+.showReachLeft {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.reachBadge {
+  display: inline-flex;
+
+  padding: 10px 18px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.06);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  color: #ff9d2f;
+
+  font-size: 13px;
+  letter-spacing: 1px;
+
+  margin-bottom: 24px;
+
+  backdrop-filter: blur(20px);
+}
+
+.reachLeft h1 {
+  font-size:
+    clamp(3rem, 5vw, 5rem);
+
+  line-height: 1.02;
+
+  color: white;
+
+  font-weight: 700;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 30px;
+}
+
+.reachLeft p {
+  color:
+    rgba(255,255,255,0.72);
+
+  font-size: 1.05rem;
+
+  line-height: 1.9;
+
+  margin-bottom: 40px;
+}
+
+/* POINTS */
+
+.reachPoints {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+
+  margin-bottom: 42px;
+}
+
+.reachPoint {
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  color:
+    rgba(255,255,255,0.85);
+}
+
+.reachPoint svg {
+  color: #ff9d2f;
+}
+
+/* BUTTONS */
+
+.reachButtons {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
+}
+
+.primaryBtn,
+.secondaryBtn {
+  height: 54px;
+
+  padding: 0 30px;
+
+  border-radius: 14px;
+
+  border: none;
+
+  cursor: pointer;
+
+  transition: 0.4s ease;
+}
+
+.primaryBtn {
+  background:
+    linear-gradient(
+      135deg,
+      #ff9d2f,
+      #ff7b00
+    );
+
+  color: white;
+
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.primaryBtn:hover {
+  transform: translateY(-4px);
+}
+
+.secondaryBtn {
+  background:
+    rgba(255,255,255,0.06);
+
+  color: white;
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(14px);
+}
+
+/* RIGHT */
+
+.reachRight {
+  flex: 1;
+
+  display: flex;
+  justify-content: center;
+
+  opacity: 0;
+  transform: translateX(80px);
+
+  transition: 1.1s ease;
+}
+
+.showReachRight {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+/* MAP */
+
+.mapWrapper {
+  position: relative;
+
+  width: 600px;
+
+  aspect-ratio: 1;
+
+  isolation: isolate;
+}
+
+/* MASK */
+
+.mapImageContainer {
+  position: absolute;
+  inset: 0;
+
+  mask:
+    url("../../assets/india-mask.png")
+    center / contain no-repeat;
+
+  -webkit-mask:
+    url("../../assets/india-mask.png")
+    center / contain no-repeat;
+
+  overflow: hidden;
+}
+
+/* IMAGES */
+
+.mapImage {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  opacity: 0;
+
+  transition:
+    opacity 1.4s ease,
+    transform 6s ease;
+
+  transform: scale(1.12);
+}
+
+.mapImage.active {
+  opacity: 1;
+  transform: scale(1);
+}
+
+/* OUTLINE */
+
+.indiaOutline {
+  position: absolute;
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: contain;
+
+  z-index: 3;
+
+  pointer-events: none;
+
+  filter:
+    drop-shadow(0 0 12px rgba(255,255,255,0.4));
+}
+
+/* GLOW */
+
+.mapGlow {
+  position: absolute;
+
+  width: 70%;
+  height: 70%;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,140,0,0.35),
+      transparent
+    );
+
+  top: 15%;
+  left: 15%;
+
+  filter: blur(90px);
+
+  z-index: -1;
+}
+
+/* FLOATING CARDS */
+
+.floatingCard {
+  position: absolute;
+
+  min-width: 190px;
+
+  padding: 16px 18px;
+
+  border-radius: 22px;
+
+  background:
+    rgba(255,255,255,0.08);
+
+  border:
+    1px solid rgba(255,255,255,0.08);
+
+  backdrop-filter: blur(20px);
+
+  display: flex;
+  align-items: center;
+
+  gap: 14px;
+
+  z-index: 5;
+
+  animation:
+    floatCard 5s ease-in-out infinite;
+}
+
+.floatingIcon {
+  width: 42px;
+  height: 42px;
+
+  border-radius: 12px;
+
+  background:
+    rgba(255,140,0,0.12);
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: #ff9d2f;
+}
+
+.floatingCard h4 {
+  color: white;
+  font-size: 16px;
+  margin-bottom: 4px;
+}
+
+.floatingCard p {
+  color:
+    rgba(255,255,255,0.65);
+
+  font-size: 13px;
+}
+
+/* CARD POSITIONS */
+
+.cardOne {
+  top: 8%;
+  left: -8%;
+}
+
+.cardTwo {
+  top: 18%;
+  right: -10%;
+}
+
+.cardThree {
+  bottom: 18%;
+  left: -10%;
+}
+
+.cardFour {
+  bottom: 10%;
+  right: -8%;
+}
+
+/* FLOAT */
+
+@keyframes floatCard {
+
+  0% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-12px);
+  }
+
+  100% {
+    transform: translateY(0px);
+  }
+
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1100px) {
+
+  .reachContainer {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .reachPoints {
+    align-items: center;
+  }
+
+  .reachButtons {
+    justify-content: center;
+  }
+
+  .mapWrapper {
+    width: 420px;
+  }
+
+  .floatingCard {
+    transform: scale(0.9);
+  }
+
+}
+
+@media (max-width: 768px) {
+
+  .reachSection {
+    padding: 100px 20px;
+  }
+
+  .mapWrapper {
+    width: 320px;
+  }
+
+  .reachLeft h1 {
+    font-size: 2.6rem;
+  }
+
+  .floatingCard {
+    min-width: 150px;
+    padding: 12px;
+  }
+
+  .floatingCard h4 {
+    font-size: 14px;
+  }
+
+  .floatingCard p {
+    font-size: 11px;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .floatingCard {
+    display: none;
+  }
+
+  .mapWrapper {
+    width: 280px;
+  }
+
+}

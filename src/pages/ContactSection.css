@@ -1,0 +1,481 @@
+/* HeadquartersSection.css */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:#f5f9ff;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.hqv2wrapper{
+  width:100%;
+  overflow:hidden;
+  position:relative;
+  background:
+    linear-gradient(
+      180deg,
+      #ffffff 0%,
+      #ffffff 100%
+    );
+  padding:50px 6%;
+}
+
+.hqv2container{
+  max-width:1320px;
+  margin:auto;
+  position:relative;
+  z-index:2;
+}
+
+/* =========================================
+   BLUR
+========================================= */
+
+/* .hqv2blur{
+  position:absolute;
+  border-radius:50%;
+  filter:blur(120px);
+  opacity:0.18;
+}
+
+.hqv2blur1{
+  width:300px;
+  height:300px;
+  background:#2563eb;
+  top:-80px;
+  left:-100px;
+}
+
+.hqv2blur2{
+  width:320px;
+  height:320px;
+  background:#60a5fa;
+  bottom:-100px;
+  right:-100px;
+} */
+
+/* =========================================
+   HEADER
+========================================= */
+
+.hqv2header{
+  text-align:center;
+  max-width:760px;
+  margin:auto auto 60px;
+}
+
+.hqv2header span{
+  font-size:12px;
+  font-weight:700;
+  letter-spacing:2px;
+  color:#2563eb;
+}
+
+.hqv2header h1{
+  font-size:46px;
+  line-height:1.05;
+  color:#0f172a;
+  margin:20px 0;
+  font-weight:700;
+  letter-spacing: -3px;
+}
+
+.hqv2header p{
+  font-size:16px;
+  line-height:1.9;
+  color:#64748b;
+}
+
+/* =========================================
+   GRID
+========================================= */
+
+.hqv2grid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:28px;
+}
+
+/* =========================================
+   MAP CARD
+========================================= */
+
+.hqv2mapcard{
+  position:relative;
+  height:420px;
+  overflow:hidden;
+  border-radius:28px;
+  margin-bottom:22px;
+  box-shadow:
+    0 20px 50px rgba(37,99,235,0.08);
+}
+
+.hqv2mapcard iframe{
+  width:100%;
+  height:100%;
+  border:none;
+  filter:grayscale(0.1);
+}
+
+/* OVERLAY */
+
+.hqv2mapoverlay{
+  position:absolute;
+  left:24px;
+  bottom:24px;
+  background:rgba(255,255,255,0.92);
+  backdrop-filter:blur(12px);
+  padding:22px;
+  border-radius:20px;
+  max-width:320px;
+}
+
+.hqv2locationbadge{
+  width:fit-content;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#dbeafe;
+  color:#2563eb;
+  padding:10px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:14px;
+}
+
+.hqv2mapoverlay h3{
+  font-size:24px;
+  line-height:1.3;
+  color:#0f172a;
+  margin-bottom:10px;
+}
+
+.hqv2mapoverlay p{
+  font-size:15px;
+  line-height:1.8;
+  color:#64748b;
+}
+
+/* =========================================
+   INFO GRID
+========================================= */
+
+.hqv2infogrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+  margin-bottom:18px;
+}
+
+.hqv2infocard{
+  background:white;
+  border:1px solid #dbeafe;
+  border-radius:22px;
+  padding:16px;
+  display:flex;
+  flex-direction: row;
+  gap:16px;
+  transition:0.35s ease;
+}
+
+.hqv2infocard:hover{
+  transform:translateY(-4px);
+  box-shadow:
+    0 18px 35px rgba(37,99,235,0.08);
+}
+
+/* ICON */
+
+.hqv2icon{
+  width:32px;
+  height:32px;
+  border-radius:16px;
+  background:#dbeafe;
+  color:#2563eb;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  flex-shrink:0;
+}
+
+.hqv2infocard h4{
+  font-size:18px;
+  color:#0f172a;
+  margin-bottom:8px;
+}
+
+.hqv2infocard p{
+  font-size:14px;
+  line-height:1.7;
+  color:#64748b;
+}
+
+/* =========================================
+   SOCIAL
+========================================= */
+
+.hqv2social{
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+  padding:28px;
+  border-radius:24px;
+  color:white;
+}
+
+.hqv2social h4{
+  font-size:22px;
+  margin-bottom:18px;
+}
+
+.hqv2socialicons{
+  display:flex;
+  gap:14px;
+}
+
+.hqv2socialicons a{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:rgba(255,255,255,0.12);
+  color:white;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  transition:0.3s ease;
+}
+
+.hqv2socialicons a:hover{
+  background:white;
+  color:#2563eb;
+  transform:translateY(-3px);
+}
+
+/* =========================================
+   FORM
+========================================= */
+
+.hqv2formcard{
+  background:white;
+  border:1px solid #dbeafe;
+  border-radius:28px;
+  padding:34px;
+  box-shadow:
+    0 20px 50px rgba(37,99,235,0.05);
+}
+
+/* TOP */
+
+.hqv2formtop{
+  margin-bottom:28px;
+}
+
+.hqv2badge{
+  width:fit-content;
+  display:flex;
+  align-items:center;
+  gap:8px;
+  background:#dbeafe;
+  color:#2563eb;
+  padding:10px 14px;
+  border-radius:999px;
+  font-size:13px;
+  font-weight:600;
+  margin-bottom:18px;
+}
+
+.hqv2formtop h2{
+  font-size:36px;
+  color:#1c5ae8;
+  margin-bottom:12px;
+  font-weight: 600;
+  letter-spacing: -3px;
+}
+
+.hqv2formtop p{
+  color:#64748b;
+  line-height:1.8;
+}
+
+/* FORM */
+
+.hqv2form{
+  display:flex;
+  flex-direction:column;
+  gap:20px;
+}
+
+.hqv2formgrid{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:18px;
+}
+
+.hqv2inputgroup{
+  display:flex;
+  flex-direction:column;
+}
+
+.hqv2inputgroup label{
+  font-size:14px;
+  font-weight:600;
+  margin-bottom:10px;
+  color:#0f172a;
+}
+
+.hqv2inputgroup input,
+.hqv2inputgroup select,
+.hqv2inputgroup textarea{
+  border:1px solid #dbeafe;
+  background:#f8fbff;
+  padding:15px 16px;
+  border-radius:14px;
+  font-size:15px;
+  outline:none;
+  transition:0.3s ease;
+}
+
+.hqv2inputgroup textarea{
+  min-height:140px;
+  resize:none;
+}
+
+.hqv2inputgroup input:focus,
+.hqv2inputgroup select:focus,
+.hqv2inputgroup textarea:focus{
+  border-color:#2563eb;
+  background:white;
+}
+
+/* BUTTON */
+
+.hqv2form button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  gap:10px;
+  background:
+    linear-gradient(
+      135deg,
+      #2563eb,
+      #1d4ed8
+    );
+  color:white;
+  border:none;
+  padding:16px;
+  border-radius:14px;
+  font-size:15px;
+  font-weight:600;
+  cursor:pointer;
+  transition:0.3s ease;
+}
+
+.hqv2form button:hover{
+  transform:translateY(-2px);
+}
+
+/* SUCCESS */
+
+.hqv2success{
+  background:#ecfdf3;
+  color:#027a48;
+  padding:14px;
+  border-radius:12px;
+  font-size:14px;
+}
+
+.hqv2error{
+  background:#fef2f2;
+  color:#b42318;
+  padding:14px;
+  border-radius:12px;
+  font-size:14px;
+}
+
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
+
+.hqfadeup{
+  opacity:0;
+  transform:translateY(60px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.hqfadeup.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+  .hqv2grid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .hqv2wrapper{
+    padding:70px 20px;
+  }
+
+  .hqv2mapcard{
+    height:360px;
+  }
+
+  .hqv2formgrid,
+  .hqv2infogrid{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .hqv2header h1{
+    font-size:34px;
+  }
+
+  .hqv2mapcard{
+    height:320px;
+    border-radius:22px;
+  }
+
+  .hqv2mapoverlay{
+    left:16px;
+    right:16px;
+    bottom:16px;
+    max-width:none;
+  }
+
+  .hqv2formcard{
+    padding:24px;
+  }
+
+  .hqv2formtop h2{
+    font-size:28px;
+  }
+
+}

@@ -1,0 +1,123 @@
+/* Topbar.css - Desktop Only Version */
+
+/* Main Topbar Container - Desktop Only */
+.globetech-topbar-main {
+  background: linear-gradient(135deg, #232336 0%, #16213e 100%);
+  color: #ffffff;
+  position: relative;
+  z-index: 1020;
+  border-bottom: 1px solid rgba(49, 133, 230, 0.2);
+}
+
+/* Container */
+.globetech-topbar-container {
+  max-width: 1440px;
+  margin: 0 auto;
+  padding: 0.75rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 1rem;
+}
+
+/* Social Icons Section */
+.globetech-topbar-socials {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.globetech-topbar-socials a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  color: #ffffff;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 50%;
+  transition: all 0.3s ease;
+  font-size: 0.875rem;
+  text-decoration: none;
+}
+
+.globetech-topbar-socials a:hover {
+  background: #3185e6;
+  transform: translateY(-2px);
+  color: #ffffff;
+  box-shadow: 0 4px 12px rgba(49, 133, 230, 0.3);
+}
+
+/* Right Section */
+.globetech-topbar-right {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+}
+
+/* Individual Info Item */
+.globetech-topbar-item {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  font-size: 0.875rem;
+  color: #e0e0e0;
+  transition: color 0.3s ease;
+}
+
+.globetech-topbar-item svg {
+  color: #3185e6;
+  font-size: 0.875rem;
+  transition: all 0.3s ease;
+}
+
+.globetech-topbar-item:hover {
+  color: #ffffff;
+}
+
+.globetech-topbar-item:hover svg {
+  transform: scale(1.1);
+  color: #3185e6;
+}
+
+/* Divider */
+.globetech-topbar-divider {
+  width: 1px;
+  height: 20px;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+/* ============================================ */
+/* SHOW ONLY ON DESKTOP (ABOVE 1024px) */
+/* ============================================ */
+
+/* Default: Hide on all devices */
+.globetech-topbar-main {
+  display: none;
+}
+
+/* Show only on screens ABOVE 1024px (Desktop) */
+@media screen and (min-width: 1025px) {
+  .globetech-topbar-main {
+    display: block;
+  }
+}
+
+/* For large desktops (optional adjustment) */
+@media screen and (min-width: 1440px) {
+  .globetech-topbar-container {
+    padding: 0.875rem 2rem;
+  }
+  
+  .globetech-topbar-socials a {
+    width: 34px;
+    height: 34px;
+    font-size: 0.9375rem;
+  }
+  
+  .globetech-topbar-item {
+    font-size: 0.9375rem;
+  }
+}

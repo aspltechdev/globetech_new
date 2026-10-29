@@ -1,0 +1,64 @@
+import React from "react";
+import "./Topbar.css";
+
+import {
+  FaFacebookF,
+  FaTwitter,
+  FaInstagram,
+  FaYoutube,
+  FaLinkedinIn,
+  FaEnvelope,
+  FaPhoneAlt,
+  FaClock,
+} from "react-icons/fa";
+
+const Topbar = () => {
+  return (
+    <section className="globetech-topbar-main">
+      <div className="globetech-topbar-container">
+        {/* LEFT SOCIAL */}
+        <div className="globetech-topbar-socials">
+          <a href="https://www.facebook.com/profile.php?id=61573486966651">
+            <FaFacebookF />
+          </a>
+          <a href="https://x.com/">
+            <FaTwitter />
+          </a>
+          <a href="https://www.instagram.com/globetech_ngo/">
+            <FaInstagram />
+          </a>
+          <a href="https://youtube.com/@globetechsocialfoundation?si=fhkkVT4qoP1X6U3_">
+            <FaYoutube />
+          </a>
+          <a href="https://www.linkedin.com/company/113444515/admin/dashboard/">
+            <FaLinkedinIn />
+          </a>
+        </div>
+
+        {/* RIGHT INFO */}
+        <div className="globetech-topbar-right">
+          <div className="globetech-topbar-item">
+            <FaEnvelope />
+            <span> info@globetechsocial.com</span>
+          </div>
+
+          <div className="globetech-topbar-divider"></div>
+
+          <div className="globetech-topbar-item">
+            <FaPhoneAlt />
+            <span>+91 96322 23061</span>
+          </div>
+
+          <div className="globetech-topbar-divider"></div>
+
+          <div className="globetech-topbar-item">
+            <FaClock />
+            <span>10.00AM - 6.00 PM</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  );
+};
+
+export default Topbar;

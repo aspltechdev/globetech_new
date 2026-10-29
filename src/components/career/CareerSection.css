@@ -1,0 +1,953 @@
+/* 
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+
+
+.careerSection{
+  width:100%;
+
+  position:relative;
+  overflow:hidden;
+
+  padding:120px 0;
+
+
+    background: #fff;
+
+  font-family:"Inter",sans-serif;
+}
+
+
+
+.careerBgGlow{
+  position:absolute;
+
+  width:520px;
+  height:520px;
+
+  border-radius:50%;
+
+  background:
+    rgba(0,183,255,.12);
+
+  filter:blur(120px);
+
+  top:-180px;
+  right:-180px;
+}
+
+
+
+.careerContainer{
+  width:100%;
+  max-width:1350px;
+
+  margin:auto;
+  padding:0 60px;
+
+  display:grid;
+  grid-template-columns:
+    .9fr 1.1fr;
+
+  gap:70px;
+
+  align-items:center;
+
+  position:relative;
+  z-index:5;
+}
+
+
+
+.careerLeft{
+  opacity:0;
+
+  transform:
+    translateY(80px)
+    scale(.95);
+
+  filter:blur(10px);
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
+}
+
+.showCareerLeft{
+  opacity:1;
+
+  transform:
+    translateY(0)
+    scale(1);
+
+  filter:blur(0);
+}
+
+
+
+.careerBadge{
+  width:fit-content;
+
+  padding:10px 18px;
+
+  border-radius:100px;
+
+  background:
+    rgba(255,255,255,.08);
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  color:#070707;
+
+  display:flex;
+  align-items:center;
+  gap:8px;
+
+  font-size:13px;
+  font-weight:700;
+
+  margin-bottom:24px;
+}
+
+
+
+.careerLeft h2{
+  color:#3967ff;
+
+  font-size:56px;
+  line-height:1.02;
+
+  font-weight:700;
+
+  letter-spacing:-2px;
+
+  margin-bottom:24px;
+}
+
+
+
+.careerLeft p{
+  color:
+    rgba(7, 7, 7, 0.78);
+
+  font-size:17px;
+  line-height:1.9;
+
+  margin-bottom:40px;
+
+  max-width:560px;
+}
+
+
+
+.careerMainBtn{
+  height:58px;
+
+  padding:0 10px 0 24px;
+
+  border:none;
+  cursor:pointer;
+
+  border-radius:100px;
+
+  background:#fa7c2d;
+
+  color:#ffffff;
+
+  font-size:15px;
+  font-weight:700;
+
+  display:flex;
+  align-items:center;
+  gap:18px;
+
+  transition:.4s ease;
+}
+
+.careerMainBtn:hover{
+  transform:
+    translateY(-4px);
+}
+
+.careerMainBtn span{
+  width:42px;
+  height:42px;
+
+  border-radius:50%;
+
+  background:
+    linear-gradient(
+      135deg,
+      #e6ebf2,
+      #f5f6f7
+    );
+
+  color:#1a63f5;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+
+
+.careerTimeline{
+  display:flex;
+  flex-direction:column;
+
+  gap:34px;
+
+  position:relative;
+}
+
+
+
+.careerStep{
+  position:relative;
+
+  display:flex;
+  align-items:flex-start;
+
+  gap:24px;
+
+  opacity:0;
+
+  transform:
+    translateY(100px);
+
+  filter:blur(10px);
+
+  transition:
+    1s cubic-bezier(.22,1,.36,1);
+}
+
+
+
+.showCareerStep{
+  opacity:1;
+
+  transform:
+    translateY(0);
+
+  filter:blur(0);
+}
+
+
+
+.careerLine{
+  position:absolute;
+
+  top:120px;
+  left:58px;
+
+  width:2px;
+  height:110px;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgb(59, 137, 255)
+    );
+}
+
+
+
+.careerImageWrapper{
+  position:relative;
+
+  width:120px;
+  height:120px;
+
+  min-width:120px;
+
+  border-radius:28px;
+
+  overflow:hidden;
+
+  border:
+    1px solid rgba(255,255,255,.1);
+
+  box-shadow:
+    0 15px 35px rgba(176, 168, 255, 0.358);
+
+  transition:
+    .45s cubic-bezier(.22,1,.36,1);
+}
+
+
+
+.careerStep:hover
+.careerImageWrapper{
+
+  transform:
+    translateY(-8px)
+    rotate(-3deg);
+
+  box-shadow:
+    0 25px 50px rgba(122, 184, 255, 0.632);
+}
+
+
+
+.careerImage{
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  transition:
+    transform 1s cubic-bezier(.22,1,.36,1),
+    filter .4s ease;
+}
+
+
+
+.careerStep:hover
+.careerImage{
+
+  transform:
+    scale(1.12);
+
+  filter:
+    brightness(1.06);
+}
+
+
+
+.careerImageOverlay{
+  position:absolute;
+  inset:0;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,.05),
+      rgba(0,0,0,.35)
+    );
+}
+
+
+
+.careerStepContent{
+  padding-top:8px;
+}
+
+.careerStepContent span{
+  color:#1787ff;
+
+  font-size:13px;
+  font-weight:700;
+
+  letter-spacing:1px;
+
+  display:block;
+
+  margin-bottom:12px;
+}
+
+.careerStepContent h3{
+  color:#050505;
+
+  font-size:30px;
+  line-height:1.3;
+
+  font-weight:700;
+
+  margin-bottom:14px;
+
+  transition:.35s ease;
+}
+
+.careerStep:hover
+.careerStepContent h3{
+  color:#007bfe;
+}
+
+.careerStepContent p{
+  color:
+    rgba(9, 9, 9, 0.72);
+
+  font-size:15px;
+  line-height:1.8;
+
+  max-width:520px;
+}
+
+
+
+@media(max-width:1200px){
+
+  .careerLeft h2{
+    font-size:56px;
+  }
+
+  .careerStepContent h3{
+    font-size:26px;
+  }
+}
+
+@media(max-width:992px){
+
+  .careerSection{
+    padding:90px 0;
+  }
+
+  .careerContainer{
+    grid-template-columns:1fr;
+
+    gap:60px;
+
+    padding:0 30px;
+  }
+
+  .careerLeft{
+    text-align:center;
+  }
+
+  .careerBadge{
+    margin-inline:auto;
+  }
+
+  .careerLeft p{
+    margin-inline:auto;
+  }
+
+  .careerMainBtn{
+    margin:auto;
+  }
+
+  .careerTimeline{
+    max-width:720px;
+
+    margin:auto;
+  }
+}
+
+@media(max-width:768px){
+
+  .careerSection{
+    padding:80px 0;
+  }
+
+  .careerContainer{
+    padding:0 22px;
+  }
+
+  .careerLeft h2{
+    font-size:40px;
+
+    line-height:1.1;
+  }
+
+  .careerLeft p{
+    font-size:15px;
+  }
+
+  .careerTimeline{
+    gap:28px;
+  }
+
+  .careerStep{
+    gap:18px;
+  }
+
+  .careerImageWrapper{
+    width:90px;
+    height:90px;
+
+    min-width:90px;
+
+    border-radius:22px;
+  }
+
+  .careerLine{
+    left:44px;
+
+    top:92px;
+  }
+
+  .careerStepContent h3{
+    font-size:24px;
+  }
+
+  .careerStepContent p{
+    font-size:14px;
+  }
+}
+
+@media(max-width:480px){
+
+  .careerSection{
+    padding:70px 0;
+  }
+
+  .careerContainer{
+    padding:0 18px;
+  }
+
+  .careerLeft h2{
+    font-size:32px;
+
+    line-height:1.12;
+  }
+
+  .careerLeft p{
+    font-size:14px;
+  }
+
+  .careerTimeline{
+    gap:24px;
+  }
+
+  .careerStep{
+    gap:14px;
+  }
+
+  .careerImageWrapper{
+    width:74px;
+    height:74px;
+
+    min-width:74px;
+
+    border-radius:18px;
+  }
+
+  .careerLine{
+    left:36px;
+
+    top:78px;
+
+    height:90px;
+  }
+
+  .careerStepContent span{
+    font-size:11px;
+  }
+
+  .careerStepContent h3{
+    font-size:20px;
+
+    margin-bottom:10px;
+  }
+
+  .careerStepContent p{
+    font-size:13px;
+
+    line-height:1.75;
+  }
+
+  .careerMainBtn{
+    width:100%;
+
+    justify-content:center;
+
+    height:52px;
+
+    font-size:14px;
+  }
+
+  .careerMainBtn span{
+    width:38px;
+    height:38px;
+  }
+} */
+
+
+
+
+
+/* =========================================================
+   SECTION
+========================================================= */
+
+.gtCompactCareerSection {
+  position: relative;
+  width: 100%;
+
+  min-height: 100vh;
+
+  overflow: hidden;
+
+  background:
+    linear-gradient(
+      to bottom,
+      #ffffff,
+      #f5f5f5
+    );
+
+  padding:
+    110px 6% 90px;
+}
+
+/* =========================================================
+   BACKGROUND
+========================================================= */
+
+.gtCompactGlow {
+  position: absolute;
+
+  width: 700px;
+  height: 700px;
+
+  background:
+    radial-gradient(
+      circle,
+      rgba(255,140,0,0.12),
+      transparent 70%
+    );
+
+  top: -240px;
+  right: -180px;
+
+  filter: blur(100px);
+}
+
+.gtCompactGrid {
+  position: absolute;
+  inset: 0;
+
+  background-image:
+    linear-gradient(
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(0,0,0,0.03) 1px,
+      transparent 1px
+    );
+
+  background-size: 80px 80px;
+
+  opacity: 0.25;
+}
+
+/* =========================================================
+   TOP
+========================================================= */
+
+.gtCompactTop {
+  position: relative;
+  z-index: 4;
+
+  max-width: 850px;
+
+  margin: auto;
+
+  text-align: center;
+
+  margin-bottom: 70px;
+}
+
+.gtCompactTop span {
+  display: inline-block;
+
+  margin-bottom: 20px;
+
+  color: #ff7b00;
+
+  font-size: 12px;
+
+  font-weight: 700;
+
+  letter-spacing: 4px;
+}
+
+.gtCompactTop h2 {
+  font-size:
+    clamp(3rem, 7vw, 6rem);
+
+  line-height: 0.92;
+
+  color: #111;
+
+  letter-spacing: -5px;
+}
+
+/* =========================================================
+   SLIDER
+========================================================= */
+
+.gtCompactSliderWrapper {
+  position: relative;
+
+  width: 100%;
+  max-width: 1450px;
+
+  height: 600px;
+
+  margin: auto;
+}
+
+/* =========================================================
+   SLIDE
+========================================================= */
+
+.gtCompactSlide {
+  position: absolute;
+  inset: 0;
+
+  border-radius: 42px;
+
+  overflow: hidden;
+
+  opacity: 0;
+
+  transform:
+    translateX(120px)
+    scale(0.95);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.2s ease;
+
+  pointer-events: none;
+}
+
+.gtCompactSlide.active {
+  opacity: 1;
+
+  transform:
+    translateX(0)
+    scale(1);
+
+  pointer-events: auto;
+}
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.gtCompactImage {
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  transform: scale(1.05);
+
+  animation:
+    gtZoom 8s linear infinite;
+}
+
+@keyframes gtZoom {
+
+  0% {
+    transform: scale(1.05);
+  }
+
+  100% {
+    transform: scale(1.12);
+  }
+
+}
+
+/* =========================================================
+   OVERLAY
+========================================================= */
+
+.gtCompactOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    rgba(0,0,0,0.2);
+}
+
+.gtCompactGradient {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to right,
+      rgba(0,0,0,0.88),
+      rgba(0,0,0,0.3),
+      transparent
+    );
+}
+
+/* =========================================================
+   CONTENT
+========================================================= */
+
+.gtCompactContent {
+  position: absolute;
+
+  left: 70px;
+  bottom: 70px;
+
+  z-index: 4;
+
+  max-width: 560px;
+}
+
+.gtCompactLine {
+  width: 100px;
+  height: 4px;
+
+  border-radius: 999px;
+
+  background:
+    linear-gradient(
+      to right,
+      #ff7b00,
+      transparent
+    );
+
+  margin-bottom: 26px;
+}
+
+.gtCompactContent h3 {
+  color: white;
+
+  font-size:
+    clamp(2.8rem, 5vw, 5rem);
+
+  line-height: 0.95;
+
+  letter-spacing: -3px;
+
+  margin-bottom: 24px;
+}
+
+.gtCompactContent p {
+  color:
+    rgba(255,255,255,0.82);
+
+  line-height: 1.9;
+
+  font-size: 1rem;
+
+  margin-bottom: 34px;
+}
+
+/* BUTTON */
+
+.gtCompactBtn {
+  display: inline-flex;
+  align-items: center;
+
+  gap: 10px;
+
+  padding:
+    16px 24px;
+
+  border-radius: 999px;
+
+  background:
+    rgba(255,255,255,0.14);
+
+  border:
+    1px solid rgba(255,255,255,0.16);
+
+  backdrop-filter: blur(20px);
+
+  color: white;
+
+  text-decoration: none;
+
+  transition: 0.4s ease;
+}
+
+.gtCompactBtn:hover {
+  transform:
+    translateY(-4px);
+
+  background:
+    rgba(255,255,255,0.22);
+}
+
+/* =========================================================
+   INDICATORS
+========================================================= */
+
+.gtCompactIndicators {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 40px;
+}
+
+.gtCompactDot {
+  width: 10px;
+  height: 10px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(0,0,0,0.18);
+
+  transition: 0.4s ease;
+}
+
+.activeDot {
+  width: 34px;
+
+  border-radius: 999px;
+
+  background: #ff7b00;
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 768px) {
+
+  .gtCompactCareerSection {
+    padding:
+      90px 20px 70px;
+  }
+
+  .gtCompactTop h2 {
+    font-size: 2.8rem;
+  }
+
+  .gtCompactSliderWrapper {
+    height: 500px;
+  }
+
+  .gtCompactContent {
+    left: 28px;
+    right: 28px;
+    bottom: 28px;
+  }
+
+  .gtCompactContent h3 {
+    font-size: 2.3rem;
+  }
+
+}
+
+@media (max-width: 520px) {
+
+  .gtCompactTop h2 {
+    font-size: 2.2rem;
+  }
+
+  .gtCompactSliderWrapper {
+    height: 420px;
+  }
+
+  .gtCompactSlide {
+    border-radius: 28px;
+  }
+
+  .gtCompactBtn {
+    width: 100%;
+
+    justify-content: center;
+  }
+
+}

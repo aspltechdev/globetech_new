@@ -1,0 +1,416 @@
+/* =========================================
+   WAYS IMPACT SECTION
+   Production-Level NGO Design
+========================================= */
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap");
+
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+}
+
+body{
+  font-family:"Inter",sans-serif;
+  background:#f8fafc;
+}
+
+/* =========================================
+   SECTION
+========================================= */
+
+.gsiwrapper{
+  width:100%;
+  overflow:hidden;
+  background:#f8fafc;
+  padding:10px 6%;
+  position:relative;
+}
+
+.gsicontainer{
+  max-width:1320px;
+  margin:auto;
+}
+
+/* =========================================
+   HEADER
+========================================= */
+
+.gsiheader{
+  text-align:center;
+  max-width:760px;
+  margin:auto auto 70px;
+}
+
+.gsiheader span{
+  font-size:12px;
+  letter-spacing:2px;
+  text-transform:uppercase;
+  font-weight:700;
+  color:#4f46e5;
+}
+
+.gsiheader h2{
+  font-size:36px;
+  line-height:1.08;
+  font-weight:700;
+  color:#2562e3;
+  margin:18px 0;
+  letter-spacing:-3px;
+}
+
+.gsiheader p{
+  font-size:16px;
+  line-height:1.9;
+  color:#667085;
+}
+
+/* =========================================
+   FEATURED STORY
+========================================= */
+
+.gsifeatured{
+  position:relative;
+  height:500px;
+  overflow:hidden;
+  border-radius:28px;
+  margin-bottom:28px;
+  cursor:pointer;
+  background:#111827;
+}
+
+.gsifeatured img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:1s ease;
+}
+
+.gsifeatured:hover img{
+  transform:scale(1.05);
+}
+
+/* OVERLAY */
+
+.gsifeaturedoverlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.08),
+      rgba(0,0,0,0.74)
+    );
+}
+
+/* CONTENT */
+
+.gsifeaturedcontent{
+  position:absolute;
+  left:0;
+  bottom:0;
+  z-index:3;
+  max-width:620px;
+  padding:42px;
+  color:white;
+}
+
+.gsibadge{
+  width:fit-content;
+  background:rgb(44, 120, 242);
+  border:1px solid rgba(255,255,255,0.18);
+  backdrop-filter:blur(10px);
+  padding:10px 16px;
+  border-radius:999px;
+  font-size:12px;
+  letter-spacing:1px;
+  font-weight:600;
+}
+
+.gsifeaturedcontent h2{
+  font-size:56px;
+  line-height:1.08;
+  margin:20px 0;
+  font-weight:700;
+  letter-spacing: -2px;
+}
+
+.gsifeaturedcontent p{
+  font-size:15px;
+  line-height:1.9;
+  color:rgba(255,255,255,0.82);
+  margin-bottom:28px;
+}
+
+/* BUTTON */
+
+.gsifeaturedcontent button{
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:rgb(255, 120, 53);
+  color:#f2f4f7;
+  border:none;
+  padding:14px 20px;
+  border-radius:14px;
+  cursor:pointer;
+  font-weight:600;
+  transition:0.35s ease;
+}
+
+.gsifeaturedcontent button:hover{
+  transform:translateY(-3px);
+}
+
+/* =========================================
+   STORY GRID
+========================================= */
+
+.gsistorylayout{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:24px;
+}
+
+/* =========================================
+   STORY CARD
+========================================= */
+
+.gsistorycard{
+  background:white;
+  border-radius:24px;
+  overflow:hidden;
+  border:1px solid #e5e7eb;
+  transition:0.4s ease;
+  position:relative;
+}
+
+.gsistorycard:hover{
+  transform:translateY(-6px);
+  box-shadow:
+    0 18px 40px rgba(15,23,42,0.06);
+}
+
+/* IMAGE */
+
+.gsistoryimage{
+  position:relative;
+  height:240px;
+  overflow:hidden;
+}
+
+.gsistoryimage img{
+  width:100%;
+  height:100%;
+  object-fit:cover;
+  transition:0.9s ease;
+}
+
+.gsistorycard:hover img{
+  transform:scale(1.05);
+}
+
+/* IMAGE OVERLAY */
+
+.gsistoryoverlay{
+  position:absolute;
+  inset:0;
+  background:
+    linear-gradient(
+      180deg,
+      rgba(0,0,0,0.02),
+      rgba(0,0,0,0.18)
+    );
+}
+
+/* CONTENT */
+
+.gsistorycontent{
+  padding:26px;
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  min-height:260px;
+}
+
+/* TOP */
+
+.gsistorytop{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  /* margin-bottom:22px; */
+}
+
+.gsistoryicon{
+  width:48px;
+  height:48px;
+  border-radius:14px;
+  background:#eef2ff;
+  color:#4f46e5;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+.gsistorytop span{
+  font-size:13px;
+  color:#94a3b8;
+  font-weight:700;
+}
+
+/* TYPOGRAPHY */
+
+.gsistorycontent h3{
+  font-size:24px;
+  line-height:1.3;
+  color:#111827;
+  margin-bottom:10px;
+  font-weight:700;
+}
+
+.gsistorycontent h4{
+  font-size:14px;
+  color:#4f46e5;
+  margin-bottom:16px;
+  font-weight:600;
+}
+
+.gsistorycontent p{
+  font-size:15px;
+  line-height:1.8;
+  color:#667085;
+  margin-bottom:26px;
+}
+
+/* BUTTON */
+
+.gsistorycontent button{
+  width:fit-content;
+  display:flex;
+  align-items:center;
+  gap:10px;
+  background:#3e7bff;
+  color:white;
+  border:none;
+  padding:13px 18px;
+  border-radius:12px;
+  cursor:pointer;
+  font-size:14px;
+  font-weight:600;
+  transition:0.3s ease;
+}
+
+.gsistorycontent button:hover{
+  background:#1f2937;
+  transform:translateY(-2px);
+}
+
+/* =========================================
+   SCROLL ANIMATION
+========================================= */
+
+.gsifadeup{
+  opacity:0;
+  transform:translateY(60px);
+  transition:
+    opacity 0.9s ease,
+    transform 0.9s ease;
+}
+
+.gsifadeup.show{
+  opacity:1;
+  transform:translateY(0);
+}
+
+/* =========================================
+   RESPONSIVE
+========================================= */
+
+@media(max-width:1100px){
+
+  .gsistorylayout{
+    grid-template-columns:1fr;
+  }
+
+}
+
+@media(max-width:768px){
+
+  .gsiwrapper{
+    padding:70px 20px;
+  }
+
+  .gsiheader{
+    margin-bottom:50px;
+  }
+
+  .gsiheader p{
+    font-size:15px;
+  }
+
+  .gsifeatured{
+    height:480px;
+    border-radius:24px;
+  }
+
+  .gsifeaturedcontent{
+    padding:28px;
+  }
+
+  .gsifeaturedcontent p{
+    font-size:14px;
+  }
+
+  .gsistoryimage{
+    height:220px;
+  }
+
+  .gsistorycontent{
+    min-height:auto;
+  }
+
+}
+
+@media(max-width:480px){
+
+  .gsiheader h1{
+    font-size:34px;
+  }
+
+  .gsifeatured{
+    height:430px;
+  }
+
+  .gsifeaturedcontent{
+    padding:24px;
+  }
+
+  .gsifeaturedcontent h2{
+    font-size:30px;
+  }
+
+  .gsifeaturedcontent button{
+    width:100%;
+    justify-content:center;
+  }
+
+  .gsistorycard{
+    border-radius:20px;
+  }
+
+  .gsistorycontent{
+    padding:22px;
+  }
+
+  .gsistorycontent h3{
+    font-size:22px;
+  }
+
+  .gsistorycontent button{
+    width:100%;
+    justify-content:center;
+  }
+
+}

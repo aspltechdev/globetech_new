@@ -1,0 +1,364 @@
+/* =========================================================
+   SECTION — keep original blue theme
+========================================================= */
+
+.gtSpatialGallerySection {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  overflow: hidden;
+  background: linear-gradient(135deg, #539bf9f0, #2b78d1eb, #1d72d947);
+  padding: 120px 0 140px;
+}
+
+/* =========================================================
+   GRID
+========================================================= */
+.gtSpatialGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.06) 1px, transparent 1px);
+  background-size: 90px 90px;
+  opacity: 0.2;
+}
+
+/* =========================================================
+   DYNAMIC GLOW
+========================================================= */
+.gtSpatialDynamicGlow {
+  position: absolute;
+  width: 1000px;
+  height: 1000px;
+  top: -300px;
+  right: -200px;
+  filter: blur(120px);
+  transition: background 1.4s ease;
+  pointer-events: none;
+}
+
+/* =========================================================
+   FLOATING WORDS
+========================================================= */
+.gtSpatialWords {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  z-index: 0;
+}
+.gtSpatialWords span {
+  position: absolute;
+  font-size: 8vw;
+  font-weight: 800;
+  color: rgba(255,255,255,0.05);
+  letter-spacing: -6px;
+  animation: gtWordsFloat 10s ease-in-out infinite;
+}
+.gtSpatialWords span:nth-child(1) { top: 10%; left: 6%; }
+.gtSpatialWords span:nth-child(2) { top: 58%; right: 8%; }
+.gtSpatialWords span:nth-child(3) { bottom: 8%; left: 20%; }
+@keyframes gtWordsFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-18px); }
+}
+
+/* =========================================================
+   HEADER
+========================================================= */
+.gtSpatialTop {
+  position: relative;
+  z-index: 20;
+  text-align: center;
+  max-width: 950px;
+  margin: 0 auto 80px;
+  opacity: 0;
+  transform: translateY(70px);
+  transition: opacity 1.2s ease, transform 1.2s ease;
+}
+.gtSpatialTopShow {
+  opacity: 1;
+  transform: translateY(0);
+}
+.gtSpatialTop span {
+  display: inline-flex;
+  padding: 12px 22px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.12);
+  border: 1px solid rgba(255,255,255,0.16);
+  backdrop-filter: blur(20px);
+  color: white;
+  font-size: 12px;
+  letter-spacing: 4px;
+  margin-bottom: 24px;
+}
+.gtSpatialTop h2 {
+  font-size: clamp(3rem, 8vw, 7rem);
+  line-height: 0.88;
+  letter-spacing: -6px;
+  color: white;
+  margin-bottom: 28px;
+}
+.gtSpatialTop p {
+  max-width: 700px;
+  margin: auto;
+  color: rgba(255,255,255,0.82);
+  line-height: 1.9;
+  font-size: 1rem;
+}
+
+/* =========================================================
+   MAIN LAYOUT — info panel + deck side by side
+========================================================= */
+.gtMainLayout {
+  position: relative;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  padding: 0 60px;
+  max-width: 1300px;
+  margin: 0 auto;
+}
+
+/* =========================================================
+   INFO PANEL — always visible, glassmorphism
+========================================================= */
+.gtInfoPanel {
+  flex: 0 0 340px;
+  width: 340px;
+}
+
+.gtInfoInner {
+  background: rgba(255, 255, 255, 0.10);
+  border: 1px solid rgba(255, 255, 255, 0.22);
+  backdrop-filter: blur(32px);
+  -webkit-backdrop-filter: blur(32px);
+  border-radius: 28px;
+  padding: 44px 36px;
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  min-height: 480px;
+  box-shadow:
+    0 8px 40px rgba(0,0,0,0.18),
+    inset 0 1px 0 rgba(255,255,255,0.25);
+  transition: all 0.6s cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+.gtInfoTag {
+  display: inline-block;
+  font-size: 10px;
+  font-weight: 600;
+  letter-spacing: 0.2em;
+  color: rgba(255,255,255,0.5);
+  text-transform: uppercase;
+  margin-bottom: 14px;
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  border-radius: 999px;
+  padding: 5px 14px;
+}
+
+.gtInfoTitle {
+  font-size: clamp(1.6rem, 2.8vw, 2.4rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.1;
+  letter-spacing: -1.5px;
+  margin: 0 0 18px;
+  transition: all 0.5s ease;
+}
+
+.gtInfoDesc {
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.70);
+  line-height: 1.85;
+  margin: 0 0 28px;
+  transition: all 0.5s ease;
+}
+
+.gtInfoDivider {
+  height: 1px;
+  background: rgba(255,255,255,0.15);
+  margin-bottom: 24px;
+}
+
+.gtInfoStat {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-bottom: 28px;
+}
+
+.gtInfoStatNum {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ffffff;
+  letter-spacing: -0.5px;
+  transition: all 0.5s ease;
+}
+
+.gtInfoStatLabel {
+  font-size: 11px;
+  color: rgba(255,255,255,0.45);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.gtInfoBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 24px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.15);
+  border: 1px solid rgba(255,255,255,0.28);
+  backdrop-filter: blur(10px);
+  color: white;
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.3s ease;
+  margin-bottom: 32px;
+  width: fit-content;
+}
+.gtInfoBtn:hover {
+  background: white;
+  color: #1d72d9;
+  transform: translateY(-2px);
+}
+
+/* =========================================================
+   DOTS
+========================================================= */
+.gtDots {
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  margin-top: auto;
+}
+.gtDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: rgba(255,255,255,0.25);
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  transition: all 0.3s ease;
+}
+.gtDotActive {
+  background: #ffffff;
+  width: 24px;
+  border-radius: 4px;
+}
+
+/* =========================================================
+   DECK WRAP
+========================================================= */
+.gtDeckWrap {
+  position: relative;
+  flex: 0 0 520px;
+  height: 600px;
+  margin-left: 60px;
+  /* push cards left so stack fans to the right */
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+/* =========================================================
+   DECK CARD
+========================================================= */
+.gtDeckCard {
+  position: absolute;
+  width: 380px;
+  height: 520px;
+  border-radius: 32px;
+  overflow: hidden;
+  border: 1px solid rgba(255,255,255,0.15);
+  box-shadow: 0 40px 100px rgba(0,0,0,0.35);
+  transition:
+    transform 0.85s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.85s ease,
+    filter 0.85s ease,
+    box-shadow 0.4s ease;
+  /* origin at bottom-left to fan naturally */
+  transform-origin: bottom left;
+  top: 50%;
+  left: 0;
+  margin-top: -260px; /* half of 520 */
+  will-change: transform, opacity, filter;
+}
+
+.gtDeckImg {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.gtDeckOverlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0,0,0,0.80) 0%,
+    rgba(0,0,0,0.20) 50%,
+    transparent 100%
+  );
+}
+
+/* Metric badge on front card */
+.gtDeckMetric {
+  position: absolute;
+  top: 24px;
+  left: 24px;
+  z-index: 5;
+  padding: 12px 20px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.14);
+  border: 1px solid rgba(255,255,255,0.22);
+  backdrop-filter: blur(20px);
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  animation: gtMetricFloat 4s ease-in-out infinite;
+}
+@keyframes gtMetricFloat {
+  0%, 100% { transform: translateY(0px); }
+  50% { transform: translateY(-6px); }
+}
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+@media (max-width: 1100px) {
+  .gtMainLayout {
+    flex-direction: column;
+    padding: 0 32px;
+    gap: 60px;
+  }
+  .gtInfoPanel { flex: none; width: 100%; max-width: 480px; }
+  .gtInfoInner { min-height: auto; }
+  .gtDeckWrap {
+    flex: none;
+    width: 100%;
+    height: 440px;
+    margin-left: 0;
+    justify-content: center;
+  }
+  .gtDeckCard {
+    width: 280px;
+    height: 380px;
+    margin-top: -190px;
+  }
+}
+
+@media (max-width: 600px) {
+  .gtSpatialGallerySection { padding: 80px 0 100px; }
+  .gtDeckCard { width: 220px; height: 300px; margin-top: -150px; }
+  .gtDeckWrap { height: 360px; }
+}

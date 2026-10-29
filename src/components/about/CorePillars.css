@@ -1,0 +1,329 @@
+/* =========================
+   SECTION
+========================= */
+
+.pillarSection {
+  padding: 120px 0;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.pillarHeading {
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto 70px;
+  padding: 0 20px;
+}
+
+.pillarHeading span {
+  color: #2563eb;
+  font-size: 13px;
+  font-weight: 700;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+.pillarHeading h2 {
+  margin-top: 18px;
+  font-size: clamp(2.5rem, 5vw, 5rem);
+  line-height: 1.1;
+  color: #0f172a;
+  font-weight: 700;
+}
+
+/* =========================
+   MARQUEE
+========================= */
+
+.pillarMarquee {
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+
+.pillarGrid {
+  display: flex;
+  gap: 24px;
+  width: max-content;
+
+  animation: marqueeMove 35s linear infinite;
+}
+
+.pillarMarquee:hover .pillarGrid {
+  animation-play-state: paused;
+}
+
+@keyframes marqueeMove {
+  0% {
+    transform: translateX(-50%);
+  }
+
+  100% {
+    transform: translateX(0%);
+  }
+}
+
+/* =========================
+   CARD
+========================= */
+
+.pillarCard {
+  width: 380px;
+  min-width: 380px;
+  height: 520px;
+
+  position: relative;
+
+  overflow: hidden;
+  border-radius: 28px;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.5s ease,
+    box-shadow 0.5s ease;
+}
+
+.pillarCard:hover {
+  transform: translateY(-12px);
+
+  box-shadow:
+    0 30px 60px
+      rgba(37, 99, 235, 0.18);
+}
+
+/* =========================
+   IMAGE
+========================= */
+
+.pillarImage {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+
+  transition: transform 1.2s ease;
+}
+
+.pillarCard:hover .pillarImage {
+  transform: scale(1.12);
+}
+
+/* =========================
+   OVERLAY
+========================= */
+
+.pillarOverlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.92),
+      rgba(0, 0, 0, 0.25),
+      rgba(0, 0, 0, 0.05)
+    );
+
+  z-index: 1;
+}
+
+/* =========================
+   GLOW
+========================= */
+
+.pillarGlow {
+  position: absolute;
+
+  width: 300px;
+  height: 300px;
+
+  right: -120px;
+  top: -120px;
+
+  border-radius: 50%;
+
+  background:
+    rgba(37, 99, 235, 0.3);
+
+  filter: blur(90px);
+
+  opacity: 0;
+
+  transition: opacity 0.5s ease;
+
+  z-index: 2;
+}
+
+.pillarCard:hover .pillarGlow {
+  opacity: 1;
+}
+
+/* =========================
+   LINK LAYER
+========================= */
+
+.pillarLink {
+  position: absolute;
+  inset: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+
+  text-decoration: none;
+  color: white;
+
+  z-index: 5;
+}
+
+/* =========================
+   CONTENT
+========================= */
+
+.pillarContent {
+  padding: 30px;
+}
+
+.pillarContent span {
+  width: 56px;
+  height: 56px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  border-radius: 16px;
+
+  backdrop-filter: blur(10px);
+
+  background:
+    rgba(255, 255, 255, 0.15);
+
+  margin-bottom: 18px;
+
+  font-weight: 700;
+}
+
+.pillarContent h3 {
+  font-size: 28px;
+  line-height: 1.2;
+  margin-bottom: 14px;
+  font-weight: 700;
+}
+
+.pillarContent p {
+  color:
+    rgba(255, 255, 255, 0.85);
+
+  line-height: 1.8;
+  font-size: 15px;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.pillarBtn {
+  position: absolute;
+
+  top: 24px;
+  right: 24px;
+
+  width: 58px;
+  height: 58px;
+
+  border: none;
+  border-radius: 18px;
+
+  background: white;
+  color: #2563eb;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  cursor: pointer;
+
+  transition:
+    transform 0.4s ease,
+    background 0.4s ease;
+}
+
+.pillarCard:hover .pillarBtn {
+  transform:
+    rotate(-12deg)
+    scale(1.08);
+}
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 992px) {
+  .pillarCard {
+    width: 320px;
+    min-width: 320px;
+    height: 460px;
+  }
+
+  .pillarContent h3 {
+    font-size: 24px;
+  }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 768px) {
+  .pillarSection {
+    padding: 80px 0;
+  }
+
+  .pillarHeading h2 {
+    font-size: 2.3rem;
+  }
+
+  .pillarGrid {
+    animation-duration: 25s;
+  }
+
+  .pillarCard {
+    width: 280px;
+    min-width: 280px;
+    height: 420px;
+  }
+
+  .pillarContent {
+    padding: 24px;
+  }
+
+  .pillarContent h3 {
+    font-size: 22px;
+  }
+
+  .pillarContent p {
+    font-size: 14px;
+  }
+}
+
+/* =========================
+   SMALL MOBILE
+========================= */
+
+@media (max-width: 480px) {
+  .pillarCard {
+    width: 260px;
+    min-width: 260px;
+    height: 380px;
+  }
+
+  .pillarHeading h2 {
+    font-size: 1.9rem;
+  }
+
+  .pillarBtn {
+    width: 50px;
+    height: 50px;
+  }
+}
