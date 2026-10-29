@@ -1,10 +1,11 @@
-import { Helmet } from "react-helmet-async";
+import { Helmet } from 'react-helmet-async';
 
-export default function SEO({ title, canonical }) {
+export default function SEO({ title, description, path }) {
   return (
     <Helmet>
       <title>{title}</title>
-      <link rel="canonical" href={canonical} />
+      <meta name="description" content={description} />
+      <link rel="canonical" href={`https://globetechnew.com${path}`} />
     </Helmet>
   );
 }
