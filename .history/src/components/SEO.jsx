@@ -1,11 +1,14 @@
-import { Helmet } from 'react-helmet-async';
+import SEO from "../components/SEO"; // adjust path
 
-export default function SEO({ title, description, path }) {
+export default function CanonicalTags() {
   return (
-    <Helmet>
-      <title>{title}</title>
-      <meta name="description" content={description} />
-      <link rel="canonical" href={`https://globetechnew.com${path}`} />
-    </Helmet>
-  );
+    <>
+      <SEO 
+        title="Canonical Tags | Globetech"
+        description="Learn about canonical tags"
+        path="/canonical-tags"   // <-- THIS IS THE KEY
+      />
+      {/* your page content */}
+    </>
+  )
 }
